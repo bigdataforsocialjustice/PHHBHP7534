@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Use modern statistical and data scientific tools to measure causal effects and evaluate public policy">
+
+<title>Research Methods in Public Health - Evaluation and the causal revolution</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//files/icon-512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Research Methods in Public Health - Evaluation and the causal revolution">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
+<meta property="og:site-name" content="Research Methods in Public Health">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:height" content="640">
+<meta property="og:image:width" content="1280">
+<meta name="twitter:title" content="Research Methods in Public Health - Evaluation and the causal revolution">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
+<meta name="twitter:creator" content="@andrewheiss">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="640">
+<meta name="twitter:image-width" content="1280">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Research Methods in Public Health</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/index.html" rel="" target="">
+ <span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignment/index.html" rel="" target="">
+ <span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../example/index.html" rel="" target="">
+ <span class="menu-text">Examples</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resource/index.html" rel="" target="">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../news/index.html" rel="" target="">
+ <span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://gsuevalsp2023.slack.com" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://rstudio.cloud" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#readings" id="toc-readings" class="nav-link active" data-scroll-target="#readings">Readings</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos">Videos</a></li>
+  <li><a href="#in-class-stuff" id="toc-in-class-stuff" class="nav-link" data-scroll-target="#in-class-stuff">In-class stuff</a></li>
+  <li><a href="#morning" id="toc-morning" class="nav-link" data-scroll-target="#morning">Morning</a>
+  <ul class="collapse">
+  <li><a href="#key-takeaways-for-day-1" id="toc-key-takeaways-for-day-1" class="nav-link" data-scroll-target="#key-takeaways-for-day-1">🔑Key Takeaways for Day 1</a>
+  <ul class="collapse">
+  <li><a href="#what-is-data" id="toc-what-is-data" class="nav-link" data-scroll-target="#what-is-data">What is data?</a></li>
+  <li><a href="#show-me-the-data" id="toc-show-me-the-data" class="nav-link" data-scroll-target="#show-me-the-data">Show me the data!</a></li>
+  </ul></li>
+  <li><a href="#learning-objectives-for-day-1" id="toc-learning-objectives-for-day-1" class="nav-link" data-scroll-target="#learning-objectives-for-day-1">🎯 Learning Objectives for Day 1</a></li>
+  </ul></li>
+  <li><a href="#summary-of-notes" id="toc-summary-of-notes" class="nav-link" data-scroll-target="#summary-of-notes">📃 Summary of Notes</a>
+  <ul class="collapse">
+  <li><a href="#day-1-morning-session" id="toc-day-1-morning-session" class="nav-link" data-scroll-target="#day-1-morning-session">Day 1: Morning Session</a>
+  <ul class="collapse">
+  <li><a href="#open-source-software" id="toc-open-source-software" class="nav-link" data-scroll-target="#open-source-software">Open Source Software</a></li>
+  <li><a href="#add-on-packages" id="toc-add-on-packages" class="nav-link" data-scroll-target="#add-on-packages">Add-on Packages</a></li>
+  </ul></li>
+  <li><a href="#day-1-afternoon-session" id="toc-day-1-afternoon-session" class="nav-link" data-scroll-target="#day-1-afternoon-session">Day 1: Afternoon Session</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">📦 Additional Resources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header">
+<h1 class="title display-7">Evaluation and the causal revolution</h1>
+
+<div class="date-block bg-content text-white p-2">
+  <p class="date">Content for Thursday, January 12, 2023</p>
+</div>
+</header>
+
+<section id="readings" class="level2">
+<h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<ul>
+<li>The <a href="../syllabus.html">syllabus</a>, <a href="../content/index.html">content</a>, <a href="../example/index.html">examples</a>, and <a href="../assignment/index.html">assignments</a> pages for this class</li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Chapter 1 in <em>Impact Evaluation in Practice</em> <span class="citation" data-cites="wb-eval">(<a href="#ref-wb-eval" role="doc-biblioref">Gertler et al. 2016</a>)</span></li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Chapters 1 and 2 in <em>The Effect</em> <span class="citation" data-cites="Huntington-Klein:2021">(<a href="#ref-Huntington-Klein:2021" role="doc-biblioref">Huntington-Klein 2021</a>)</span></li>
+<li><i class="fa-brands fa-youtube" aria-label="youtube"></i> DJ Patil, <a href="https://www.youtube.com/watch?v=UOoMzaWOQJA">“What Makes a Radical and Revolutionary Technology?”</a>
+<ul>
+<li><small>(DJ Patil is the former Chief Data Scientist of the United States under President Obama. He gave this forum address at Brigham Young University on February 13, 2018.)</small></li>
+</ul></li>
+<li><i class="fa-solid fa-arrow-up-right-from-square" aria-label="arrow-up-right-from-square"></i> Stephen Goldsmith, <a href="http://www.govtech.com/opinion/Next-Generation-Public-Employees-Must-Understand-Data-Policy.html">“Next Generation of Public Employees Must Understand Data and Policy”</a></li>
+<li><i class="fa-solid fa-arrow-up-right-from-square" aria-label="arrow-up-right-from-square"></i> Hadley Wickham, <a href="https://imstat.org/2014/09/04/data-science-how-is-it-different-to-statistics%E2%80%89/">“Data Science: How is it Different To Statistics?”</a></li>
+</ul>
+</section>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Important!!</strong>: In the “Class details” video, I say that there are three books for the class: the World Bank evaluation book, <em>’Metrics Matter</em>, and <em>Causal Inference: The Mixtape</em>. <a href="../syllabus.html#books">That’s not the case this semester</a>, since we’re using the new <em>The Effect</em> book, which replaces both <em>’Metrics Matter</em> and the <em>Mixtape</em>. So ignore that part of the video. The slides are updated with the correct books, though: <a href="../slides/01-slides.html#85">see here</a>.</p>
+</div>
+</div>
+<p>The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
+<p class="buttons">
+<a class="btn btn-danger" target="_blank" href="../slides/01-slides.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="../slides/01-slides.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a>
+</p>
+<ul class="nav nav-tabs" id="slide-tabs" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="introduction-tab" data-toggle="tab" href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="data-science-and-public-service-tab" data-toggle="tab" href="#data-science-and-public-service" role="tab" aria-controls="data-science-and-public-service" aria-selected="false">Data science and public service</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="evidence-evaluation-and-causation-1-tab" data-toggle="tab" href="#evidence-evaluation-and-causation-1" role="tab" aria-controls="evidence-evaluation-and-causation-1" aria-selected="false">Evidence, evaluation, and causation (1)</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="evidence-evaluation-and-causation-2-tab" data-toggle="tab" href="#evidence-evaluation-and-causation-2" role="tab" aria-controls="evidence-evaluation-and-causation-2" aria-selected="false">Evidence, evaluation, and causation (2)</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="class-details-tab" data-toggle="tab" href="#class-details" role="tab" aria-controls="class-details" aria-selected="false">Class details</a>
+</li>
+</ul>
+<div id="slide-tabs" class="tab-content">
+<div id="introduction" class="tab-pane fade show active" role="tabpanel" aria-labelledby="introduction-tab">
+<div class="ratio ratio-16x9">
+<iframe src="../slides/01-slides.html#1">
+</iframe>
+</div>
+</div>
+<div id="data-science-and-public-service" class="tab-pane fade" role="tabpanel" aria-labelledby="data-science-and-public-service-tab">
+<div class="ratio ratio-16x9">
+<iframe src="../slides/01-slides.html#ds-ps">
+</iframe>
+</div>
+</div>
+<div id="evidence-evaluation-and-causation-1" class="tab-pane fade" role="tabpanel" aria-labelledby="evidence-evaluation-and-causation-1-tab">
+<div class="ratio ratio-16x9">
+<iframe src="../slides/01-slides.html#evidence-evaluation-causation">
+</iframe>
+</div>
+</div>
+<div id="evidence-evaluation-and-causation-2" class="tab-pane fade" role="tabpanel" aria-labelledby="evidence-evaluation-and-causation-2-tab">
+<div class="ratio ratio-16x9">
+<iframe src="../slides/01-slides.html#evidence-evaluation-causation1">
+</iframe>
+</div>
+</div>
+<div id="class-details" class="tab-pane fade" role="tabpanel" aria-labelledby="class-details-tab">
+<div class="ratio ratio-16x9">
+<iframe src="../slides/01-slides.html#class-details">
+</iframe>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Fun fact</strong>: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.</p>
+</div>
+</div>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Important!!</strong>: In the “Class details” video, I say that there are three books for the class: the World Bank evaluation book, <em>’Metrics Matter</em>, and <em>Causal Inference: The Mixtape</em>. <a href="../syllabus/#books">That’s not the case this semester</a>, since we’re using the new <em>The Effect</em> book, which replaces both <em>’Metrics Matter</em> and the <em>Mixtape</em>. So ignore that part of the video. The slides are updated with the correct books, though: <a href="../slides/01-slides.html#85">see here</a>.</p>
+</div>
+</div>
+<p>Videos for each section of the lecture are <a href="https://www.youtube.com/playlist?list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC">available at this YouTube playlist</a>.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=BIhz1dz5Vws&amp;list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC">Introduction</a></li>
+<li><a href="https://www.youtube.com/watch?v=f-sOSXyeeJE&amp;list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC">Data science and public service</a></li>
+<li><a href="https://www.youtube.com/watch?v=Z2foqSMWnGU&amp;list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC">Evidence, evaluation, and causation (1)</a></li>
+<li><a href="https://www.youtube.com/watch?v=W5ChuEhAzrs&amp;list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC">Evidence, evaluation, and causation (2)</a></li>
+<li><a href="https://www.youtube.com/watch?v=D4LoEctZxHE&amp;list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC">Class details</a></li>
+</ul>
+<p>You can also watch the playlist (and skip around to different sections) here:</p>
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/playlist?list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+</section>
+<section id="in-class-stuff" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-stuff">In-class stuff</h2>
+<p>Here are all the materials we’ll use in class:</p>
+<ul>
+<li><a href="../slides/01-class.html"><strong>Session 1 in-person slides</strong></a> (<a href="../slides/01-class.pdf">PDF</a>)</li>
+</ul>
+<p>RStudio labs:</p>
+<ul>
+<li><a href="https://posit.cloud/spaces/323551/content/5254772">RStudio.cloud project</a></li>
+<li><a href="../projects/01-class.zip">Project <code>.zip</code> file</a></li>
+<li><a href="../slides/01-class_01_markdown-writing.html">Lab slides 1: Markdown and universal writing</a> (<a href="../slides/01-class_01_markdown-writing.pdf">PDF</a>)</li>
+<li><a href="../slides/01-class_02-getting-started.html">Lab slides 2: Getting started with R and RStudio</a> (<a href="../slides/01-class_02-getting-started.pdf">PDF</a>)</li>
+<li><a href="../slides/01-class_03_data-basics.html">Lab slides 3: Data basics</a> (<a href="../slides/01-class_03_data-basics.pdf">PDF</a>)</li>
+<li><a href="../slides/01-class_04_visualize-data.html">Lab slides 4: Visualize data with ggplot2</a> (<a href="../slides/01-class_04_visualize-data.pdf">PDF</a>)</li>
+<li><a href="../slides/01-class_05_transform-data.html">Lab slides 5: Transform data with dplyr</a> (<a href="../slides/01-class_05_transform-data.pdf">PDF</a>)</li>
+</ul>
+</section>
+<section id="morning" class="level1">
+<h1>Morning</h1>
+<section id="key-takeaways-for-day-1" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways-for-day-1">🔑Key Takeaways for Day 1</h2>
+<section id="what-is-data" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-data">What is data?</h3>
+<p>Data comes in a variety of formats. When we think about data we typically think about structured data, for example data that can be imported nicely into Excel or SPPS. There are a number of alternative data formats that come in a variety of data types from many different data sources. Today, I will demonstrate these data formats using existing sources. We begin to learn how to analyze the data using innovative data science packages. I have chosen to concentrate on available software that is easy to use, and can facilitate the interpretation, analysis and visualization of data beyond the typical tools (e.g., SPSS). I will note the benefits and drawbacks for each package we review.</p>
+<p><em>Note:</em> Throughout the week, I will provide examples from my own work to illustrate how I have applied these tools. This includes a couple of web scraping applications (one which scrapes data from the <a href="https://homicide.latimes.com/">Los Angeles Homicide Report</a> and one to automate downloading data from the <a href="https://www.census.gov/data/datasets.html">U.S. Census Bureau’s Household Pulse Survey</a> The goal is to show you what can be done, with the disclaimer that you will probably not be able to do this by the end of the week. Learning about data is a long-term goal but I am here to help you if at some point you want to implement any of this for your own work.</p>
+</section>
+<section id="show-me-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="show-me-the-data">Show me the data!</h3>
+<p>There is tons of data available to download on the internet from reliable sources. I am going to review the datasets that I find most interesting and useful for social work. We will select a few datasets to analyze, visualize, and map. This requires knowing how to download and merge the data for analysis. These datasets provide a rich source of contextual information for your research, including your dissertation. As you will see, knowing about them, how to use them, and how to incorporate them into your research, is extremely powerful.</p>
+<p>And, I created this website using <a href="https://obsidian.md/">Obsidian - Sharpen your thinking</a> You may want to check it out. Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as <a href="https://www.zotero.org/">Zotero | Your personal research assistant</a> which if you are not currently using as your bibliography software I encourage you to download it ASAP. Ask me if you want me to demonstrate how to use [[Zotero]] and/or [[Obsidian]] now. See the video below for some tutorials and information to help you get started.</p>
+<iframe width="580" height="420" src="https://www.youtube.com/embed/XbGJH08ZfCs" title="How to use Zotero with Obsidian featuring Eleanor Konik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</section>
+</section>
+<section id="learning-objectives-for-day-1" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives-for-day-1">🎯 Learning Objectives for Day 1</h2>
+<ul class="task-list">
+<li><input type="checkbox">Become familiar with open source software to use for different types of statistical analyses</li>
+<li><input type="checkbox">Download and install <em>jamovi</em> and <em>JASP</em> onto your laptop</li>
+<li><input type="checkbox">Learn how to install add-ons for SPSS, jamovi and JASP software</li>
+<li><input type="checkbox">Run simple descriptive statistics and create APA formatted tables</li>
+<li><input type="checkbox">Learn about the types of datasets (repositories and publicly available data) that are of great interest to social work</li>
+</ul>
+</section>
+</section>
+<section id="summary-of-notes" class="level1">
+<h1>📃 Summary of Notes</h1>
+<section id="day-1-morning-session" class="level2">
+<h2 class="anchored" data-anchor-id="day-1-morning-session">Day 1: Morning Session</h2>
+<section id="open-source-software" class="level3">
+<h3 class="anchored" data-anchor-id="open-source-software">Open Source Software</h3>
+<p>There are a wide variety of different open source and proprietary software tools that are simple to learn and make data management and analysis easier, more effective and fun. Here is my list of the most important tools to be familiar with. The items in bold are the software that we will use during the course of the week.</p>
+<p>The software is listed by availability (i.e., open source, license, package add-on)</p>
+<section id="open-source-software-1" class="level4">
+<h4 class="anchored" data-anchor-id="open-source-software-1"><span style="font-size:1.5em;">Open Source Software</span></h4>
+<ul>
+<li><strong>R</strong>: IMHO the best statistical analysis tool ever created (yes, better than python for statistics)
+<ul>
+<li>I will not be covering R but both R and RStudio (the GUI for R) can be downloaded here <a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop - Posit</a></li>
+</ul></li>
+<li><strong><a href="https://www.jamovi.org/features.html">jamovi</a></strong>: the next best option, it is built on an R framework, nobody will know you are NOT using R :)
+<ul>
+<li>jamovi is a new “3rd generation” statistical spreadsheet. designed from the ground up to be easy to use. jamovi is a compelling alternative to costly statistical products such as SPSS and SAS. It is also a simpler alternative to R that is built on top of the R statistical language</li>
+<li>🌐 <strong>Analyses</strong>: jamovi provides a complete suite of analyses for (not just) the social sciences; t-tests, ANOVAs, correlation and regression, non-parametric tests, contingency tables, reliability and factor analysis. The <a href="https://www.jamovi.org/library.html">jamovi library</a>&nbsp;contains many more libraries that will allow you to perform additional analyses from simple crosstabs to multilevel modeling and more.</li>
+<li>🌐<strong>Excel integration</strong>: jamovi is a fully functional spreadsheet, immediately familiar to anyone. Enter, copy/paste data, filter rows, compute new values, perform transforms across many columns at once – jamovi provides a streamlined spreadsheet experience, optimized for statistical data.</li>
+<li>🌐 <strong>R syntax</strong>: Love R? Check out jamovi’s “syntax mode”, where the underlying R syntax for each analysis is made available. Just copy and paste this into R for a seamless transition. Alternatively, run R code directly inside jamovi with&nbsp;<a href="https://blog.jamovi.org/2018/07/30/rj.html">the Rj Editor</a>.</li>
+<li>There are two versions of jamovi
+<ul>
+<li>jamovi Cloud</li>
+<li><a href="https://www.jamovi.org/download.html">jamovi desktop - jamovi</a> – downloads and installs jamovi onto your desktop
+<ul>
+<li>It is available for Windows, Mac and Linux</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="https://jasp-stats.org/">JASP - A Fresh Way to Do Statistics (jasp-stats.org)</a>
+<ul>
+<li>“Just Another Statistics Program” JASP offers another great alternative to SPSS</li>
+<li>In some ways JASP is better than jamovi, but it seems less stable and so it is my second best option</li>
+<li>There are some benefits to using JASP including flexibility in making plots and nice visualizations for the statistical analyses you are conducting</li>
+<li><a href="https://jasp-stats.org/download/">Click here</a> to download JASP</li>
+<li>JASP in particular provides a great way to both learn statistics and R at the same time</li>
+<li>Let’s take a look at the data library in JASP now</li>
+</ul></li>
+<li><a href="https://qgis.org/en/site/">QGIS</a>: “Quantum Geographical Information Systems” allows you to do geospatial analysis like a (ArcGIS) pro – QGIS is great for creating, editing, visualizing, analyzing and publishing geospatial information
+<ul>
+<li>The <a href="https://qgis.org/en/site/about/features.html">Applications (qgis.org)</a> page gives you a sense of all the cool things you can do with QGIS</li>
+<li>To download the software <a href="https://qgis.org/en/site/forusers/download.html">Click here</a>)</li>
+</ul></li>
+<li><a href="https://www.gnu.org/software/pspp/">PSPP - GNU Project - Free Software Foundation</a> is an open source equivalent to SPSS and it is freely downloadable. It is not very robust and so I would not recommend it. #### <span style="font-size:1.5em;">Proprietary software </span></li>
+<li>OSU has obtained a license for the following software packages:
+<ul>
+<li><strong>SPSS</strong>: its like a necessary evil - everyone must know how to use SPSS. There are some things that are actually easier in SPSS</li>
+<li><strong>SAS</strong>: ugh!</li>
+<li><strong>EXCEL</strong>: can be great to clean your data, particularly if you use the built-in functions.</li>
+<li><strong>ArcGIS Map, Pro</strong></li>
+<li><strong>jmp</strong>: this is a very cool data science program from the makers of SAS (the archaic and soon to be extinct software program)</li>
+<li>To download these software packages <a href="https://busfin.osu.edu/user/login?destination=node/3157">Log In to the Office of Business and Finance (osu.edu)</a></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="your-turn" class="level4">
+<h4 class="anchored" data-anchor-id="your-turn">❓ Your turn</h4>
+<ul class="task-list">
+<li><input type="checkbox">Download <i>jamovi</i> onto your laptop</li>
+<li><input type="checkbox">Download <i>JASP</i> onto your laptop</li>
+<li><input type="checkbox">Download <i>QGIS</i> onto your laptop</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="add-on-packages" class="level3">
+<h3 class="anchored" data-anchor-id="add-on-packages">Add-on Packages</h3>
+<ul>
+<li>[[Add-on Packages &amp; Modules]] offer additional functionality and are available for all software programs listed above</li>
+</ul>
+</section>
+</section>
+<section id="day-1-afternoon-session" class="level2">
+<h2 class="anchored" data-anchor-id="day-1-afternoon-session">Day 1: Afternoon Session</h2>
+<section id="intro-to-data-data-types" class="level4">
+<h4 class="anchored" data-anchor-id="intro-to-data-data-types">Intro to data &amp; data types:</h4>
+<p>Before starting an analysis it is important to know the kind of data that you have. This requires understanding not only the distinction between qualitative and quantitative data, but also the difference between structured and unstructured data, time series data, spatial data, etc. We wills start by briefly reviewing the different types of data that are available and the multiple ways in which data can be measured. This is of upmost importance because the analysis you choose is driven by the type of data you have. In other words, you cannot make your data fit the analysis you know, but rather you must learn how to analyze the data you have. - Qualitative v Quantitative - Structured v unstructured data - Data types - Data innovation - being creating with data: here we address the question: what really constitutes data? Over the years, I have learned that even advanced students do not really know how to properly identify data that <em>can be used</em> in an analysis. How can we identify, and more importantly utilize, different data sources in our analysis. 1. <a href="https://homicide.latimes.com/">Los Angeles Homicide Report</a>) See how I’ve scraped this website and used the data in my own work –&gt; [[Final web scrap medium|Female Homicide Victims 2000-2023]] 2. <a href="https://www.aclu.org/legislative-attacks-on-lgbtq-rights">Mapping Attacks on LGBTQ Rights in U.S. State Legislatures | American Civil Liberties Union (aclu.org)</a> 3. <a href="https://pcaky.org/information-data/child-maltreatment-and-data-statistics/">Child Maltreatment and Data Statistics – PCAKY</a> by County in Kentucky 4. <a href="https://data.chhs.ca.gov/">California Health and Human Services Open Data Portal</a> - [[Example 1]] uses the data set <a href="https://data.chhs.ca.gov/dataset/hospice-utilization-patient-demographics">Hospice Utilization - Patient Demographics - Datasets - California Health and Human Services Open Data Portal</a> to explore differences in referral types by race/ethnicity and county. 5. Other examples - Show me the data - Finding, downloading and filtering data on the Internet - Publicly Available [[Datasets]] for Social Work Research - Examples - How does the CDC’s social vulnerability index ([[SVI]]) in Franklin County compare to Los Angeles County? - What is the relationship between [[In-school suspensions and academic achievement]] for schools in the state of Ohio? - How can I download the [[area level deprivation index]] to use in my own research?</p>
+<hr>
+</section>
+<section id="your-tasks-" class="level4">
+<h4 class="anchored" data-anchor-id="your-tasks-">❓ Your tasks-</h4>
+<ul class="task-list">
+<li><input type="checkbox">Identify a dataset that is not listed above</li>
+<li><input type="checkbox">Find the codebook associated with the dataset</li>
+<li><input type="checkbox">Download the data
+<ul>
+<li>What limitations are there for analyzing the data?</li>
+<li>What types of research questions have these data been used to address?</li>
+<li>How could you use the data in your own research?</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="additional-resources" class="level1">
+<h1>📦 Additional Resources</h1>
+<ul>
+<li><a href="https://www.jamovi.org/user-manual.html">user guide - jamovi</a></li>
+<li><a href="https://www.jamovi.org/library.html">jamovi library</a></li>
+<li><a href="https://www.jamovi.org/jmv/">jmv r package - jamovi</a></li>
+<li><a href="https://www.jamovi.org/community.html">community resources - jamovi</a></li>
+<li>In addition, once jamovi is installed, there is a ‘data library’ available to you. This data library has worked examples for all modules that you install.</li>
+</ul>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-wb-eval" class="csl-entry" role="listitem">
+Gertler, Paul J., Sebastian Martinez, Patrick Premand, Laura B. Rawlings, and Christel M. J. Vermeersch. 2016. <em>Impact Evaluation in Practice</em>. 2nd ed. Inter-American Development Bank; World Bank. <a href="https://openknowledge.worldbank.org/handle/10986/25030">https://openknowledge.worldbank.org/handle/10986/25030</a>.
+</div>
+<div id="ref-Huntington-Klein:2021" class="csl-entry" role="listitem">
+Huntington-Klein, Nick. 2021. <em>The Effect: An Introduction to Research Design and Causality</em>. Boca Raton, Florida: <span>Chapman and Hall</span> / CRC. <a href="https://theeffectbook.net/">https://theeffectbook.net/</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 by <a href="https://bigdataforsocialjustice.github.io/">Gia Barboza-Salerno</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/andrewheiss/evalsp23.classes.andrewheiss.com">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
