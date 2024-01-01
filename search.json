@@ -506,14 +506,14 @@
   {
     "objectID": "content/03-content.html",
     "href": "content/03-content.html",
-    "title": "Theories of change and logic models",
+    "title": "Associations and Confounding",
     "section": "",
     "text": "Howards, P. P. (2018a). An overview of confounding. Part 1: The concept and how to address it. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 394–399. https://doi.org/10.1111/aogs.13295 (Howards 2018a)\n Howards, P. P. (2018b). An overview of confounding. Part 2: How to identify it and special situations. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 400–406. https://doi.org/10.1111/aogs.13293 (Howards 2018b)\n Chapter 3 in Impact Evaluation in Practice. (Gertler et al., n.d.)\n\n\n\n\nDownload and install R/Rstudio\nDownload and install Jamovi Desktop\nDownload and install JASP\nDownload and install Zotero\nConnect to the course Slack\n(optional) Download and install Obsidian"
   },
   {
     "objectID": "content/03-content.html#readings",
     "href": "content/03-content.html#readings",
-    "title": "Theories of change and logic models",
+    "title": "Associations and Confounding",
     "section": "",
     "text": "Howards, P. P. (2018a). An overview of confounding. Part 1: The concept and how to address it. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 394–399. https://doi.org/10.1111/aogs.13295 (Howards 2018a)\n Howards, P. P. (2018b). An overview of confounding. Part 2: How to identify it and special situations. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 400–406. https://doi.org/10.1111/aogs.13293 (Howards 2018b)\n Chapter 3 in Impact Evaluation in Practice. (Gertler et al., n.d.)\n\n\n\n\nDownload and install R/Rstudio\nDownload and install Jamovi Desktop\nDownload and install JASP\nDownload and install Zotero\nConnect to the course Slack\n(optional) Download and install Obsidian"
   },
@@ -527,16 +527,16 @@
   {
     "objectID": "content/03-content.html#videos",
     "href": "content/03-content.html#videos",
-    "title": "Theories of change and logic models",
+    "title": "Associations and Confounding",
     "section": "Videos",
     "text": "Videos"
   },
   {
     "objectID": "content/03-content.html#in-class-stuff",
     "href": "content/03-content.html#in-class-stuff",
-    "title": "Theories of change and logic models",
+    "title": "Associations and Confounding",
     "section": "In-class stuff",
-    "text": "In-class stuff\nHere are all the materials we’ll use in class:\n\nR code reproducing Howards’ Overview of Confounding, Part I Hands-on R materials:\n Introduction to the tidyverse Posit.cloud project\n Introduction to the tidyverse project .zip file\n Regression playground Posit.cloud project\n Regression playground project .zip file\nLab slides 1: Markdown and universal writing (PDF)\nLab slides 2: Getting started with R and RStudio (PDF)\nLab slides 3: Data basics (PDF)\nLab slides 4: Visualize data with ggplot2 (PDF)\nLab slides 5: Transform data with dplyr (PDF)\n\n\nLogic model for MPA/MPP program"
+    "text": "In-class stuff\nHere are all the materials we’ll use in class:\nHands-on R materials: - R code reproducing Howards’ Overview of Confounding, Part I\n\n Introduction to the tidyverse Posit.cloud project\n Introduction to the tidyverse project .zip file\n Regression playground Posit.cloud project\n Regression playground project .zip file\nLab slides 1: Markdown and universal writing (PDF)\nLab slides 2: Getting started with R and RStudio (PDF)\nLab slides 3: Data basics (PDF)\nLab slides 4: Visualize data with ggplot2 (PDF)\nLab slides 5: Transform data with dplyr (PDF)\n\n\nLogic model for MPA/MPP program\n\n\n\n\n\n\n\n📦 Additional Resources\nClick here for an example of how to do Bayesian multilevel models.\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4, 7\nPhD Specializations: 4\n\n\n\nStudent Evaluation Activity for Assessment\n\nExam 1\nProposal 1"
   },
   {
     "objectID": "content/04-content.html",
@@ -1332,9 +1332,9 @@
   {
     "objectID": "content/03-content.html#lecture-notes",
     "href": "content/03-content.html#lecture-notes",
-    "title": "Theories of change and logic models",
+    "title": "Associations and Confounding",
     "section": "Lecture Notes",
-    "text": "Lecture Notes\n\n View all slides in new window  Download PDF of all slides\n\n\n\nIntroduction\n\n\nReproducibility\n\n\nProgram theories\n\n\nLogic models & results chains\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nFun fact: If you type ? (or shift + /) while going through the slides, you can see a list of special slide-specific commands."
+    "text": "Lecture Notes\n\n View all slides in new window  Download PDF of all slides\n\n\n\nLecture Slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nFun fact: If you type ? (or shift + /) while going through the slides, you can see a list of special slide-specific commands."
   },
   {
     "objectID": "news/index.html",
