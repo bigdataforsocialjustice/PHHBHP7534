@@ -1,2 +1,5 @@
-# PHHBHP7534
-Develop, read, critique, design, and conduct high-quality scientific research in public health
+# psy-597-sem-sp2019
+Course materials for Research Methods (Instructor: Barboza-Salernp; Autumn 2024)
+
+If you would like to access rendered HTML pages of the course materials, go here:
+https://phhbhp7534.netlify.app/
