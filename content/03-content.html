@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Use modern statistical and data scientific tools to measure causal effects and evaluate public policy">
+<meta name="description" content="develop, read, critique, design, and conduct high-quality scientific research in public health">
 
 <title>Research Methods in Public Health - Theories of change and logic models</title>
 <style>
@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -66,15 +85,15 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Research Methods in Public Health - Theories of change and logic models">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
+<meta property="og:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
 <meta property="og:site-name" content="Research Methods in Public Health">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="640">
 <meta property="og:image:width" content="1280">
 <meta name="twitter:title" content="Research Methods in Public Health - Theories of change and logic models">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
-<meta name="twitter:creator" content="@andrewheiss">
+<meta name="twitter:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
+<meta name="twitter:creator" content="@bigdataforsocialjustice">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="640">
 <meta name="twitter:image-width" content="1280">
@@ -131,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://rstudio.cloud" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
+    <a class="nav-link" href="https://posit.cloud/content/yours?sort=name_asc" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -146,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/01-content.html">Course content</a></li><li class="breadcrumb-item"><a href="../content/03-content.html">3: Elements of Research Design II</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/01-content.html">Course content</a></li><li class="breadcrumb-item"><a href="../content/03-content.html">3: Associations + Confounding</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -187,25 +206,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/01-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1: Key Steps in the Research Process</span></a>
+ <span class="menu-text">1: Intro + Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/02-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2: Elements of Research Design I</span></a>
+ <span class="menu-text">2: Variables + Units of Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/03-content.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">3: Elements of Research Design II</span></a>
+ <span class="menu-text">3: Associations + Confounding</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/04-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4: Mediators and Moderators in Research</span></a>
+ <span class="menu-text">4: Mediation + Moderation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -217,19 +236,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/06-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6: Conceptual Models</span></a>
+ <span class="menu-text">6: Theory + Concepts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/07-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7: Measurement</span></a>
+ <span class="menu-text">7: Validity + Reliability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/08-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8: Scale Development</span></a>
+ <span class="menu-text">8: Measures + Scale Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -241,109 +260,109 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/10-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10: Sampling I</span></a>
+ <span class="menu-text">10: Internal + External Validity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/11-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">11: Sampling II</span></a>
+ <span class="menu-text">11: Pre-experimental designs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/12-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">12: Conducting Observational Research</span></a>
+ <span class="menu-text">12: Quasi-experimental designs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/13-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">13: Survey Research</span></a>
+ <span class="menu-text">13: Presentations + Feedback</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/14-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">14: Student presentations</span></a>
+ <span class="menu-text">14: Presentations + Feedback</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/15-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">15: Statistical Techniques: Observational Studies</span></a>
+ <span class="menu-text">15: Randomized Controlled Trials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/16-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">16: Statistical Techniques: Randomized Control Studies</span></a>
+ <span class="menu-text">16: Observational Designs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/17-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">17: Statistical Techniques: Longitudinal data</span></a>
+ <span class="menu-text">17: Ethics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/18-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">18: Statistical Techniques: Spatial analysis I</span></a>
+ <span class="menu-text">18: Exam II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/19-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">19: Statistical Techniques: Spatial analysis II</span></a>
+ <span class="menu-text">19: No Class + Spring Break</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/exam2.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">20: Exam II</span></a>
+ <span class="menu-text">20: No Class + Spring Break</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/21-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">21: Intervention Designs I</span></a>
+ <span class="menu-text">21: Sampling I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/22-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">22: Intervention Designs II</span></a>
+ <span class="menu-text">22: Sampling II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/23-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">23: Validity</span></a>
+ <span class="menu-text">23: Recruitment + Retention</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/24-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">24: Ethics</span></a>
+ <span class="menu-text">24: Data Collection + Survey Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/25-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">25: Community-Based Participatory Research</span></a>
+ <span class="menu-text">25: Analytical methods + observation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/26-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">26: Visualizing Data</span></a>
+ <span class="menu-text">26: Analytical methods + experimental</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/27-content.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">27: Dissemination</span></a>
+ <span class="menu-text">27: Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -376,8 +395,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#readings" id="toc-readings" class="nav-link active" data-scroll-target="#readings">Readings</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#readings" id="toc-readings" class="nav-link active" data-scroll-target="#readings">Readings</a>
+  <ul class="collapse">
+  <li><a href="#your-tasks" id="toc-your-tasks" class="nav-link" data-scroll-target="#your-tasks">Your tasks</a></li>
+  </ul></li>
+  <li><a href="#lecture-notes" id="toc-lecture-notes" class="nav-link" data-scroll-target="#lecture-notes">Lecture Notes</a></li>
   <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos">Videos</a></li>
   <li><a href="#in-class-stuff" id="toc-in-class-stuff" class="nav-link" data-scroll-target="#in-class-stuff">In-class stuff</a>
   <ul class="collapse">
@@ -400,14 +422,24 @@ ul.task-list li input[type="checkbox"] {
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
 <ul>
-<li><i class="fa-solid fa-book" aria-label="book"></i> Chapter 2 in <em>Impact Evaluation in Practice</em> <span class="citation" data-cites="wb-eval">(<a href="#ref-wb-eval" role="doc-biblioref"><strong>wb-eval?</strong></a>)</span></li>
-<li><i class="fa-solid fa-book" aria-label="book"></i> Chapter 2 in <em>Evaluation: A Systematic Approach</em> <span class="citation" data-cites="RossiLipseyHenry:2019">(<a href="#ref-RossiLipseyHenry:2019" role="doc-biblioref"><strong>RossiLipseyHenry:2019?</strong></a>)</span>. This is available on iCollege.</li>
-<li><i class="fa-solid fa-book" aria-label="book"></i> Chapter 3 in <em>Evaluation: A Systematic Approach</em> <span class="citation" data-cites="RossiLipseyHenry:2019">(<a href="#ref-RossiLipseyHenry:2019" role="doc-biblioref"><strong>RossiLipseyHenry:2019?</strong></a>)</span>. This is available on iCollege.</li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Howards, P. P. (2018a). An overview of confounding. Part 1: The concept and how to address it. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 394–399. https://doi.org/10.1111/aogs.13295 <span class="citation" data-cites="howards_overview_2018">(<a href="#ref-howards_overview_2018" role="doc-biblioref">Howards 2018a</a>)</span></li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Howards, P. P. (2018b). An overview of confounding. Part 2: How to identify it and special situations. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 400–406. https://doi.org/10.1111/aogs.13293 <span class="citation" data-cites="howards_overview_2018-1">(<a href="#ref-howards_overview_2018-1" role="doc-biblioref">Howards 2018b</a>)</span></li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Chapter 3 in <a href="https://openknowledge.worldbank.org/server/api/core/bitstreams/4659ef23-61ff-5df7-9b4e-89fda12b074d/content">Impact Evaluation in Practice.</a> <span class="citation" data-cites="gertler_impact_nodate">(<a href="#ref-gertler_impact_nodate" role="doc-biblioref">Gertler et al., n.d.</a>)</span></li>
+</ul>
+<section id="your-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="your-tasks">Your tasks</h3>
+<ul class="task-list">
+<li><input type="checkbox">Download and install <a href="../resource/install.html">R/Rstudio</a></li>
+<li><input type="checkbox">Download and install <a href="https://www.jamovi.org">Jamovi Desktop</a></li>
+<li><input type="checkbox">Download and install <a href="https://jasp-stats.org/download/">JASP</a></li>
+<li><input type="checkbox">Download and install <a href="../resource/zotero.html">Zotero</a></li>
+<li><input type="checkbox">Connect to the course <a href="https://app.slack.com/client/T06BQF8BPP0/C06BZJ1HHS8">Slack</a></li>
+<li><input type="checkbox">(optional) Download and install <a href="https://obsidian.md/download">Obsidian</a></li>
 </ul>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
+</section>
+<section id="lecture-notes" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-notes">Lecture Notes</h2>
 <p class="buttons">
 <a class="btn btn-danger" target="_blank" href="../slides/03-slides.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="../slides/03-slides.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a>
 </p>
@@ -467,44 +499,12 @@ Tip
 </section>
 <section id="videos" class="level2">
 <h2 class="anchored" data-anchor-id="videos">Videos</h2>
-<p>Videos for each section of the lecture are <a href="https://www.youtube.com/playlist?list=PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH">available at this YouTube playlist</a>.</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=dwsCSqczNng&amp;list=PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH">Introduction</a></li>
-<li><a href="https://www.youtube.com/watch?v=XkHUQJp5fh0&amp;list=PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH">Reproducibility</a></li>
-<li><a href="https://www.youtube.com/watch?v=Uos8RumBrzE&amp;list=PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH">Program theories</a></li>
-<li><a href="https://www.youtube.com/watch?v=8CJ7M2dTmF4&amp;list=PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH">Logic models &amp; results chains</a></li>
-</ul>
-<p>You can also watch the playlist (and skip around to different sections) here:</p>
-<div class="ratio ratio-16x9">
-<iframe src="https://www.youtube.com/embed/playlist?list=PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</div>
 </section>
 <section id="in-class-stuff" class="level2">
 <h2 class="anchored" data-anchor-id="in-class-stuff">In-class stuff</h2>
 <p>Here are all the materials we’ll use in class:</p>
 <ul>
-<li><a href="../slides/03-class.html"><strong>Session 3 FAQ slides</strong></a> (<a href="../slides/03-class.pdf">PDF</a>)</li>
-<li><a href="https://moderndive.com/1-getting-started.html#messages">Errors vs.&nbsp;warnings vs.&nbsp;messages</a> (i.e.&nbsp;what to do when R shows you red text)</li>
-<li>R Markdown examples:
-<ul>
-<li><a href="https://quarto.org/">Quarto!</a></li>
-<li>Example R Markdown file used as a code-through or step-by-step teaching document:
-<ul>
-<li>Lots of <a href="https://www.andrewheiss.com/blog/">blog posts here</a></li>
-<li>Julia Silge, <a href="https://juliasilge.com/blog/star-trek/">“Modeling human/computer interactions on Star Trek from #TidyTuesday with workflowsets”</a></li>
-<li>Bob Rudis, <a href="https://rud.is/b/2021/08/13/some-covid-donuts-to-end-the-week/">“Some Covid Donuts To End The Week”</a></li>
-<li>Holger K. von Jouanne-Diedrich, <a href="https://blog.ephorie.de/the-youth-bulge-of-afghanistan-the-hidden-force-behind-political-instability">“The “Youth Bulge” of Afghanistan: The Hidden Force behind Political Instability”</a></li>
-</ul></li>
-<li>Example R Markdown file used as a publicly-consumable document:
-<ul>
-<li>Click on the “Manuscript” menu item <a href="https://stats.andrewheiss.com/cautioning-canary/">at this site</a></li>
-<li>See <a href="https://github.com/andrewheiss/cautioning-canary/blob/master/manuscript/manuscript.Rmd">the Rmd file here</a></li>
-</ul></li>
-</ul></li>
-</ul>
-<p>Hands-on R materials:</p>
-<ul>
+<li><p><a href="../example/Confounding.html">R code</a> reproducing Howards’ <em>Overview of Confounding, Part I</em> Hands-on R materials:</p></li>
 <li><p><a href="https://posit.cloud/spaces/323551/content/5254772"><i class="fa-brands fa-r-project" aria-label="r-project"></i> Introduction to the tidyverse Posit.cloud project</a></p></li>
 <li><p><a href="../projects/01-class.zip"><i class="fa-solid fa-file-zipper" aria-label="file-zipper"></i> Introduction to the tidyverse project <code>.zip</code> file</a></p></li>
 <li><p><a href="https://posit.cloud/spaces/323551/content/5299495"><i class="fa-brands fa-r-project" aria-label="r-project"></i> Regression playground Posit.cloud project</a></p></li>
@@ -524,10 +524,21 @@ Tip
 </div>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-gertler_impact_nodate" class="csl-entry" role="listitem">
+Gertler, Paul J, Sebastian Martinez, Patrick Premand, Laura B Rawlings, and Christel M J Vermeersch. n.d. <span>“Impact Evaluation in Practice.”</span>
+</div>
+<div id="ref-howards_overview_2018" class="csl-entry" role="listitem">
+Howards, Penelope P. 2018a. <span>“An Overview of Confounding. Part 1: The Concept and How to Address It.”</span> <em>Acta Obstetricia Et Gynecologica Scandinavica</em> 97 (4): 394–99. <a href="https://doi.org/10.1111/aogs.13295">https://doi.org/10.1111/aogs.13295</a>.
+</div>
+<div id="ref-howards_overview_2018-1" class="csl-entry" role="listitem">
+———. 2018b. <span>“An Overview of Confounding. Part 2: How to Identify It and Special Situations.”</span> <em>Acta Obstetricia Et Gynecologica Scandinavica</em> 97 (4): 400–406. <a href="https://doi.org/10.1111/aogs.13293">https://doi.org/10.1111/aogs.13293</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

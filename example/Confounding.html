@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Barboza-Salerno">
+<meta name="description" content="develop, read, critique, design, and conduct high-quality scientific research in public health">
+
+<title>Research Methods in Public Health - Confounding</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//files/icon-512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../site_libs/vembedr-0.1.5.9000/css/vembedr.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta property="og:title" content="Research Methods in Public Health - Confounding">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
+<meta property="og:site-name" content="Research Methods in Public Health">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:height" content="640">
+<meta property="og:image:width" content="1280">
+<meta name="twitter:title" content="Research Methods in Public Health - Confounding">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
+<meta name="twitter:creator" content="@bigdataforsocialjustice">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="640">
+<meta name="twitter:image-width" content="1280">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Research Methods in Public Health</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/index.html" rel="" target="">
+ <span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignment/index.html" rel="" target="">
+ <span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../example/index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Examples</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resource/index.html" rel="" target="">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../news/index.html" rel="" target="">
+ <span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://gsuevalsp2023.slack.com" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://posit.cloud/content/yours?sort=name_asc" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../example/rstudio-tidyverse.html">Examples</a></li><li class="breadcrumb-item"><a href="../example/Confounding.html">Confounding</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Overview</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code examples</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Simulated data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/random-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Random numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/synthetic-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synthetic data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/rstudio-tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R, RStudio, and the tidyverse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/Confounding.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Confounding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/po-ate-cate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Potential outcomes, ATEs, and CATEs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/rcts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RCTs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/matching-ipw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matching and IPW</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/standard-errors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Robust standard errors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/confounding-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unobserved confounding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/diff-in-diff.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diff-in-diff</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/rdd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression discontinuity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/iv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instrumental variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/cace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ITT and CACE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/rdd-fuzzy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fuzzy regression discontinuity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
+  <ul>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">Preliminaries</a></li>
+  <li><a href="#step-1" id="toc-step-1" class="nav-link" data-scroll-target="#step-1">Step 1</a></li>
+  <li><a href="#confounding" id="toc-confounding" class="nav-link" data-scroll-target="#confounding">Confounding</a>
+  <ul class="collapse">
+  <li><a href="#preliminaries-wrangling-the-data-for-proper-format" id="toc-preliminaries-wrangling-the-data-for-proper-format" class="nav-link" data-scroll-target="#preliminaries-wrangling-the-data-for-proper-format">Preliminaries: Wrangling the data for proper format</a></li>
+  <li><a href="#is-age-associated-with-birth-outcomes-i.e.-is-the-counfounder-associated-with-the-outcome" id="toc-is-age-associated-with-birth-outcomes-i.e.-is-the-counfounder-associated-with-the-outcome" class="nav-link" data-scroll-target="#is-age-associated-with-birth-outcomes-i.e.-is-the-counfounder-associated-with-the-outcome">1. Is age associated with birth outcomes? (i.e., is the counfounder associated with the outcome?)</a></li>
+  <li><a href="#is-age-associated-with-magnesium-uptake-i.e.-is-the-counfounder-associated-with-the-exposure" id="toc-is-age-associated-with-magnesium-uptake-i.e.-is-the-counfounder-associated-with-the-exposure" class="nav-link" data-scroll-target="#is-age-associated-with-magnesium-uptake-i.e.-is-the-counfounder-associated-with-the-exposure">2. Is age associated with magnesium uptake? (i.e., is the counfounder associated with the exposure?)</a></li>
+  <li><a href="#age-is-not-on-the-causal-pathway-between-exposure-and-outcome" id="toc-age-is-not-on-the-causal-pathway-between-exposure-and-outcome" class="nav-link" data-scroll-target="#age-is-not-on-the-causal-pathway-between-exposure-and-outcome">3. Age is not on the causal pathway between exposure and outcome?</a></li>
+  </ul></li>
+  <li><a href="#stratification" id="toc-stratification" class="nav-link" data-scroll-target="#stratification">Stratification</a></li>
+  <li><a href="#stratified" id="toc-stratified" class="nav-link" data-scroll-target="#stratified">Stratified</a></li>
+  <li><a href="#modeling-linear-risk" id="toc-modeling-linear-risk" class="nav-link" data-scroll-target="#modeling-linear-risk">Modeling linear risk</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Confounding</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Barboza-Salerno </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This document demonstrates how to use various R packages, such as <code>epitools</code> and <code>vcm</code> to identify confounding and interaction effects in epidemiological studies. We are going to follow the hypothetical example presented in Howards, P. P. (2018). <a href="https://obgyn.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/aogs.13295">An overview of confounding. Part 1: The concept and how to address it.</a> <em>Acta Obstetricia et Gynecologica Scandinavica</em>, 97(4), 394–399. https://doi.org/10.1111/aogs.13295. Suppose we are interested in the effect of using <em>magnesium supplements</em> (E) on <em>preterm birth</em> (O). Further supposed that among pregnant women, older mothers (C = confounder) are more likely to take supplements than younger mothers, and that older maternal age is associated with increased risk of preterm birth.</p>
+<p><strong>Note</strong> the paper refers us to Figure 1a in the “companion paper” paper, however I do not see such a figure. It probably looks like this:</p>
+<p><img src="confounding.png" class="img-fluid"></p>
+<p>The data are provided in the table below:</p>
+<table class="table">
+<caption>Table 1.1: Data from the ‘idea’ study design; and disaggregated by age</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: center;">Total Population</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Older Mothers</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Younger Mothers</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;">Magnesium</td>
+<td style="text-align: center;">No Magnesium</td>
+<td style="text-align: center;">Magnesium</td>
+<td style="text-align: center;">No Magnesium</td>
+<td style="text-align: center;">Magnesium</td>
+<td style="text-align: center;">No Magnesium</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Preterm</td>
+<td style="text-align: center;">160</td>
+<td style="text-align: center;">630</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">540</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Term</td>
+<td style="text-align: center;">4840</td>
+<td style="text-align: center;">4370</td>
+<td style="text-align: center;">920</td>
+<td style="text-align: center;">410</td>
+<td style="text-align: center;">3,920</td>
+<td style="text-align: center;">3,960</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: center;">5,000</td>
+<td style="text-align: center;">5,000</td>
+<td style="text-align: center;">1,000</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">4,000</td>
+<td style="text-align: center;">4,500</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Risk</td>
+<td style="text-align: center;">0.0320</td>
+<td style="text-align: center;">0.1260</td>
+<td style="text-align: center;">0.0800</td>
+<td style="text-align: center;">0.1800</td>
+<td style="text-align: center;">0.0200</td>
+<td style="text-align: center;">0.1200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RD</td>
+<td style="text-align: center;">-0.0940</td>
+<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">-0.1000</td>
+<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">-0.1000</td>
+<td style="text-align: center;">0.0000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Make sure you install the packages required to run this lab</strong></p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools) </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels) </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effects) </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)  </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcdExtra)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcd)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"vembedr"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>) <span class="co">#disables scientific notation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<ul>
+<li><code>epitools</code> is an R package that allows you to perform basic epidemiologic calculations such as the risk ratio (RR) and odds ratio (OR).</li>
+<li><code>effects</code> is an R package that allows you to make graphical and tabular effect displays of interactions, for various statistical models with linear predictors</li>
+<li><code>gmodels</code> is an R package that allows you to display quantities of interest (e.g., odds ratios) in contingency tables</li>
+</ul>
+<p><strong>Note:</strong> the <code>car</code> library is preinstalled wtih R base, so you don’t need to install it.</p>
+<p>In this example, we will go over how to use these tools to estimate the risk ratio and odds ratios using the contingency tables reproduced in Howards, et al.&nbsp;(2018).</p>
+<section id="preliminaries" class="level2">
+<h2 class="anchored" data-anchor-id="preliminaries">Preliminaries</h2>
+<p>In the example, magnesium (or not) is the exposure (E) and preterm birth (or term) is the outcome (O).</p>
+<p>In this example, the risk difference (RD) comparing magnesium supplementation to no supplementation is the same for older and younger mothers, but the RD for the total population is biased because a higher proportion of women taking magnesium are older (20%) compared with the women not using supplements (10%).</p>
+<p>Notice the typo in the text, 10% and 20% are percentages, not propotions. In any event, this calculation was made as follows: - The proportion of older women taking magnesium is calculated as 1000/5000 = .20 - The proportion of older women NOT taking magnesium is calculated as 500/5000 = .10</p>
+<p>Note, it is important to have the table in the correct format. By default, the unexposed group (exposure = 0; here ‘no magnesium’) is in the first row, and the non-outcome (outcome = 0; here ‘term’) is in the first column. That means we would have this arrangement of the data. However, you can use the <code>epitools</code> library to change this arrangement with the rev() argument so that the analysis will use the contingency table where the exposed group (exposure = 1) is in the first row and the outcome (outcome = 1) is in the first column.</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td></td>
+<td><strong>Term</strong></td>
+<td><strong>Preterm</strong></td>
+</tr>
+<tr class="even">
+<td><strong>No mag</strong></td>
+<td>4370</td>
+<td>630</td>
+</tr>
+<tr class="odd">
+<td><strong>Mag</strong></td>
+<td>4840</td>
+<td>160</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
+<p>Load the data tables from the appendix in the format it appears in Table 1.1</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Create a matrix</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>(total <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4370</span>, <span class="dv">4840</span>, <span class="dv">630</span>, <span class="dv">160</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] 4370  630
+[2,] 4840  160</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(older <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">410</span>, <span class="dv">920</span>, <span class="dv">90</span>, <span class="dv">80</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]  410   90
+[2,]  920   80</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(younger <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">3960</span>, <span class="dv">3920</span>, <span class="dv">540</span>, <span class="dv">80</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] 3960  540
+[2,] 3920   80</code></pre>
+</div>
+</div>
+<p>The risk and RD estimates for the population are as follows:</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">Risk =</span> <span class="dv">160</span><span class="sc">/</span>(<span class="dv">160</span><span class="sc">+</span><span class="dv">4840</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.032</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> Risk <span class="sc">-</span> <span class="dv">660</span><span class="sc">/</span>(<span class="dv">660</span> <span class="sc">+</span> <span class="dv">4340</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.1</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>all_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>all_risk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1     4370      630  5000
+  Exposed2     4840      160  5000
+  Total        9210      790 10000
+
+$measure
+          risk ratio with 95% C.I.
+Predictor   estimate     lower    upper
+  Exposed1 1.0000000        NA       NA
+  Exposed2 0.2539683 0.2144727 0.300737
+
+$p.value
+          two-sided
+Predictor  midp.exact
+  Exposed1         NA
+  Exposed2          0
+          two-sided
+Predictor                                                                      fisher.exact
+  Exposed1                                                                               NA
+  Exposed2 0.000000000000000000000000000000000000000000000000000000000000000000000006874807
+          two-sided
+Predictor                                                                   chi.square
+  Exposed1                                                                          NA
+  Exposed2 0.0000000000000000000000000000000000000000000000000000000000000000000539967
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<p>The risk ratio is .254 with a 95% confidence interval (.214, .301) which is significant at the <span class="math inline">\(p &lt; .001\)</span> level. Therefore, women in the exposure group 2, (i.e., who took magnesium), had a 74.6% lower risk <span class="math inline">\((1 - .254) \times 100\)</span> of preterm birth compared to women who did not take magnesium.</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Percent change in the risk:"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(all_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Percent change in the risk: 0.746031746031746"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1     4370      630  5000
+  Exposed2     4840      160  5000
+  Total        9210      790 10000
+
+$measure
+          odds ratio with 95% C.I.
+Predictor  estimate     lower     upper
+  Exposed1 1.000000        NA        NA
+  Exposed2 0.229306 0.1918646 0.2740541
+
+$p.value
+          two-sided
+Predictor  midp.exact
+  Exposed1         NA
+  Exposed2          0
+          two-sided
+Predictor                                                                      fisher.exact
+  Exposed1                                                                               NA
+  Exposed2 0.000000000000000000000000000000000000000000000000000000000000000000000006874807
+          two-sided
+Predictor                                                                   chi.square
+  Exposed1                                                                          NA
+  Exposed2 0.0000000000000000000000000000000000000000000000000000000000000000000539967
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<p>The odds ratio is 0.229 with a 95% CI of 0.192, 0.274. The p-value is &lt;0.001. Therefore women who took magnesium had a 78% lower odds of a preterm birth compared to women who did not take magnesium.</p>
+<p>Given that you have taken Biostatistics I and II, you should be able to calculate the risk ratio, risk difference (RD), and odds ratio by hand. Here is how to do that in R:</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">160</span> <span class="sc">/</span> (<span class="dv">160</span><span class="sc">+</span><span class="dv">4840</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">630</span><span class="sc">/</span>(<span class="dv">630</span><span class="sc">+</span><span class="dv">4370</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2539683</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.094</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">OR =</span> (<span class="dv">4370</span><span class="sc">*</span><span class="dv">160</span>)<span class="sc">/</span>(<span class="dv">4840</span><span class="sc">*</span><span class="dv">630</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.229306</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="do">### OR check</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>num <span class="ot">&lt;-</span> <span class="dv">4370</span> <span class="sc">*</span> <span class="dv">160</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>denom <span class="ot">&lt;-</span> <span class="dv">4840</span> <span class="sc">*</span> <span class="dv">630</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>OR <span class="ot">&lt;-</span> num <span class="sc">/</span> denom</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>OR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.229306</code></pre>
+</div>
+</div>
+</section>
+<section id="confounding" class="level2">
+<h2 class="anchored" data-anchor-id="confounding">Confounding</h2>
+<p>Let’s suppose we are interested in whether maternal age is a confounder on the magnesium to birth outcome pathway in the figure.</p>
+<p><strong>Note:</strong> The figure is commonly referred to as a DAG, or a directed acyclic graph. A good introduction to DAGs can be accessed here:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/PiekvYYHeVQ" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+</div>
+</div>
+<p>To check if there is confounding, we need to determine if the confounder meets three criteria: 1. The confounding variable is associated with the outcome 1. The confounding variable is associated with treatment assignment 1. The confounding variable is not on the causal pathway between the exposure and outcome</p>
+<p>As the figure at the top of this document shows, the confounding variable is associated with the outcome and also with the ‘treatment.’ The confounding variable is not on the causal pathway between the exposure and outcome. For the first criterion, we look at the association between magnesium uptake and birth outcome.</p>
+<section id="preliminaries-wrangling-the-data-for-proper-format" class="level4">
+<h4 class="anchored" data-anchor-id="preliminaries-wrangling-the-data-for-proper-format">Preliminaries: Wrangling the data for proper format</h4>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"older"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">80</span>,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">920</span>,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">90</span>,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">410</span>,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">80</span>,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">3920</span>,</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">540</span>,</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">3960</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 4
+  A       E     O       count
+  &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
+1 older   mag   preterm    80
+2 older   mag   term      920
+3 older   Nomag preterm    90
+4 older   Nomag term      410
+5 younger mag   preterm    80
+6 younger mag   term     3920
+7 younger Nomag preterm   540
+8 younger Nomag term     3960</code></pre>
+</div>
+</div>
+</section>
+<section id="is-age-associated-with-birth-outcomes-i.e.-is-the-counfounder-associated-with-the-outcome" class="level4">
+<h4 class="anchored" data-anchor-id="is-age-associated-with-birth-outcomes-i.e.-is-the-counfounder-associated-with-the-outcome">1. Is age associated with birth outcomes? (i.e., is the counfounder associated with the outcome?)</h4>
+<p>This amounts to asking whether younger women had lower risk/odds of preterm birth compared to older women. To test this hypothesis, I need a 2x2 table with age of women on the row and birth outcome as column We can use the <code>margin.table()</code> to collapse any table over an ‘omitted’ dimension, like this:</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>(table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>, , A = older
+
+       O
+E       preterm term
+  mag        80  920
+  Nomag      90  410
+
+, , A = younger
+
+       O
+E       preterm term
+  mag        80 3920
+  Nomag     540 3960</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>age_outcome <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>))</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>(age_outcome_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">620</span>,  <span class="dv">170</span> , <span class="dv">7880</span>, <span class="dv">1330</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]  620 7880
+[2,]  170 1330</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>)) <span class="co">#I already formatted it so exposure = 1 and outcome = 1 is in the first cell</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1      620     7880  8500
+  Exposed2      170     1330  1500
+  Total         790     9210 10000
+
+$measure
+          risk ratio with 95% C.I.
+Predictor   estimate     lower     upper
+  Exposed1 1.0000000        NA        NA
+  Exposed2 0.9564298 0.9383823 0.9748244
+
+$p.value
+          two-sided
+Predictor       midp.exact   fisher.exact       chi.square
+  Exposed1              NA             NA               NA
+  Exposed2 0.0000003287298 0.000000322838 0.00000008943258
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1      620     7880  8500
+  Exposed2      170     1330  1500
+  Total         790     9210 10000
+
+$measure
+          odds ratio with 95% C.I.
+Predictor   estimate     lower     upper
+  Exposed1 1.0000000        NA        NA
+  Exposed2 0.6155569 0.5144876 0.7364808
+
+$p.value
+          two-sided
+Predictor       midp.exact   fisher.exact       chi.square
+  Exposed1              NA             NA               NA
+  Exposed2 0.0000003287298 0.000000322838 0.00000008943258
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<p>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.</p>
+</section>
+<section id="is-age-associated-with-magnesium-uptake-i.e.-is-the-counfounder-associated-with-the-exposure" class="level4">
+<h4 class="anchored" data-anchor-id="is-age-associated-with-magnesium-uptake-i.e.-is-the-counfounder-associated-with-the-exposure">2. Is age associated with magnesium uptake? (i.e., is the counfounder associated with the exposure?)</h4>
+<p>This amounts to asking whether younger women had lower risk/odds of magnesium uptake compared to older women?</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>(age_exposure <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         E
+A          mag Nomag
+  older   1000   500
+  younger 4000  4500</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>(age_exposure_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4500</span>, <span class="dv">1000</span>, <span class="dv">500</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] 4000 1000
+[2,] 4500  500</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1     4000     1000  5000
+  Exposed2     4500      500  5000
+  Total        8500     1500 10000
+
+$measure
+          risk ratio with 95% C.I.
+Predictor  estimate     lower     upper
+  Exposed1      1.0        NA        NA
+  Exposed2      0.5 0.4524463 0.5525517
+
+$p.value
+          two-sided
+Predictor  midp.exact                                          fisher.exact
+  Exposed1         NA                                                    NA
+  Exposed2          0 0.000000000000000000000000000000000000000000004434861
+          two-sided
+Predictor                                            chi.square
+  Exposed1                                                   NA
+  Exposed2 0.00000000000000000000000000000000000000000001498468
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1     4000     1000  5000
+  Exposed2     4500      500  5000
+  Total        8500     1500 10000
+
+$measure
+          odds ratio with 95% C.I.
+Predictor   estimate     lower     upper
+  Exposed1 1.0000000        NA        NA
+  Exposed2 0.4444444 0.3959679 0.4988558
+
+$p.value
+          two-sided
+Predictor  midp.exact                                          fisher.exact
+  Exposed1         NA                                                    NA
+  Exposed2          0 0.000000000000000000000000000000000000000000004434861
+          two-sided
+Predictor                                            chi.square
+  Exposed1                                                   NA
+  Exposed2 0.00000000000000000000000000000000000000000001498468
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<p>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.</p>
+</section>
+<section id="age-is-not-on-the-causal-pathway-between-exposure-and-outcome" class="level4">
+<h4 class="anchored" data-anchor-id="age-is-not-on-the-causal-pathway-between-exposure-and-outcome">3. Age is not on the causal pathway between exposure and outcome?</h4>
+<p>This is satisfied here.</p>
+</section>
+</section>
+<section id="stratification" class="level2">
+<h2 class="anchored" data-anchor-id="stratification">Stratification</h2>
+<p>We can check to see how much of an impact age has on the exposure to birth outcome using stratification. We do this by stratifying the groups into those who are younger and older. Then we evaluate the exposure to outcome relationship.</p>
+<p>Here is an illustration of how age is stratified into two strata (age = older mothers v younger mothers).</p>
+<p>The association between magnesium status and age can be estimated for each strata. Table3 &lt;- matrix(c(150, 50, 1600, 800), nrow = 2, ncol = 2)</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>older</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]  410   90
+[2,]  920   80</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>older_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(older_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The risk is 0.108695652173913"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease2 Disease1 Total
+  Exposed2       80      920  1000
+  Exposed1       90      410   500
+  Total         170     1330  1500
+
+$measure
+          odds ratio with 95% C.I.
+Predictor   estimate     lower     upper
+  Exposed2 1.0000000        NA        NA
+  Exposed1 0.3961353 0.2868284 0.5470976
+
+$p.value
+          two-sided
+Predictor        midp.exact     fisher.exact        chi.square
+  Exposed2               NA               NA                NA
+  Exposed1 0.00000002325107 0.00000002240313 0.000000008439284
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">920</span>)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">90</span><span class="sc">/</span>(<span class="dv">90</span><span class="sc">+</span><span class="dv">410</span>)</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.25</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>younger</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] 3960  540
+[2,] 3920   80</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>younger_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease2 Disease1 Total
+  Exposed2       80     3920  4000
+  Exposed1      540     3960  4500
+  Total         620     7880  8500
+
+$measure
+          odds ratio with 95% C.I.
+Predictor   estimate    lower     upper
+  Exposed2 1.0000000       NA        NA
+  Exposed1 0.1496599 0.117854 0.1900493
+
+$p.value
+          two-sided
+Predictor  midp.exact
+  Exposed2         NA
+  Exposed1          0
+          two-sided
+Predictor                                                                            fisher.exact
+  Exposed2                                                                                     NA
+  Exposed1 0.000000000000000000000000000000000000000000000000000000000000000000000000000001975685
+          two-sided
+Predictor                                                                      chi.square
+  Exposed2                                                                             NA
+  Exposed1 0.0000000000000000000000000000000000000000000000000000000000000000000004463894
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(younger_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The risk is 0.102040816326531"</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">3920</span>)</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">540</span><span class="sc">/</span>(<span class="dv">540</span><span class="sc">+</span><span class="dv">3960</span>)</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">mag =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"mag"</span>, <span class="dv">5000</span>), <span class="fu">rep</span>(<span class="st">"nomag"</span>, <span class="dv">5000</span>)),</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">birth =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"preterm"</span>, <span class="dv">160</span>), <span class="fu">rep</span>(<span class="st">"term"</span>, <span class="dv">4840</span> ), <span class="fu">rep</span>(<span class="st">"preterm"</span>, <span class="dv">630</span>), <span class="fu">rep</span>(<span class="st">"term"</span>, <span class="dv">4370</span>))</span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10,000 × 2
+   mag   birth  
+   &lt;chr&gt; &lt;chr&gt;  
+ 1 mag   preterm
+ 2 mag   preterm
+ 3 mag   preterm
+ 4 mag   preterm
+ 5 mag   preterm
+ 6 mag   preterm
+ 7 mag   preterm
+ 8 mag   preterm
+ 9 mag   preterm
+10 mag   preterm
+# ℹ 9,990 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>       birth
+mag     preterm term
+  mag       160 4840
+  nomag     630 4370</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic example</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mag, birth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  mag   birth       n
+  &lt;chr&gt; &lt;chr&gt;   &lt;int&gt;
+1 mag   preterm   160
+2 mag   term     4840
+3 nomag preterm   630
+4 nomag term     4370</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">160</span>,</span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">4840</span>,</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">630</span>,</span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">4370</span></span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  E     O       count
+  &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
+1 mag   preterm   160
+2 mag   term     4840
+3 Nomag preterm   630
+4 Nomag term     4370</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add margins</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(E) <span class="sc">%&gt;%</span> </span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">E_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(O) <span class="sc">%&gt;%</span> </span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">O_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
+<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb74-8"><a href="#cb74-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">margin_total =</span> <span class="fu">sum</span>(count))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 6
+  E     O       count E_totals O_totals margin_total
+  &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;        &lt;dbl&gt;
+1 mag   preterm   160     5000      790        10000
+2 mag   term     4840     5000     9210        10000
+3 Nomag preterm   630     5000      790        10000
+4 Nomag term     4370     5000     9210        10000</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(total,<span class="at">prop.t=</span><span class="cn">FALSE</span>,<span class="at">prop.r=</span><span class="cn">FALSE</span>,<span class="at">expected=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ 
+   Cell Contents
+|-------------------------|
+|                       N |
+|              Expected N |
+| Chi-square contribution |
+|           N / Col Total |
+|-------------------------|
+
+ 
+Total Observations in Table:  10000 
+
+ 
+             |  
+             |      [,1] |      [,2] | Row Total | 
+-------------|-----------|-----------|-----------|
+        [1,] |      4370 |       630 |      5000 | 
+             |  4605.000 |   395.000 |           | 
+             |    11.992 |   139.810 |           | 
+             |     0.474 |     0.797 |           | 
+-------------|-----------|-----------|-----------|
+        [2,] |      4840 |       160 |      5000 | 
+             |  4605.000 |   395.000 |           | 
+             |    11.992 |   139.810 |           | 
+             |     0.526 |     0.203 |           | 
+-------------|-----------|-----------|-----------|
+Column Total |      9210 |       790 |     10000 | 
+             |     0.921 |     0.079 |           | 
+-------------|-----------|-----------|-----------|
+
+ 
+Statistics for All Table Factors
+
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 =  303.6051     d.f. =  1     p =  0.0000000000000000000000000000000000000000000000000000000000000000000539967 
+
+Pearson's Chi-squared test with Yates' continuity correction 
+------------------------------------------------------------
+Chi^2 =  302.3145     d.f. =  1     p =  0.000000000000000000000000000000000000000000000000000000000000000000103164 
+
+ </code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio</span>(total, <span class="at">log=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> odds ratios for and 
+
+[1] 0.229306</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"older"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">120</span>,</span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">1380</span>,</span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">270</span>,</span>
+<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">1230</span>,</span>
+<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">170</span>,</span>
+<span id="cb80-8"><a href="#cb80-8" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">8330</span>,</span>
+<span id="cb80-9"><a href="#cb80-9" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">1020</span>,</span>
+<span id="cb80-10"><a href="#cb80-10" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">7480</span></span>
+<span id="cb80-11"><a href="#cb80-11" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb80-12"><a href="#cb80-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb80-13"><a href="#cb80-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 4
+  A       E     O       count
+  &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
+1 older   mag   preterm   120
+2 older   mag   term     1380
+3 older   Nomag preterm   270
+4 older   Nomag term     1230
+5 younger mag   preterm   170
+6 younger mag   term     8330
+7 younger Nomag preterm  1020
+8 younger Nomag term     7480</code></pre>
+</div>
+</div>
+</section>
+<section id="stratified" class="level2">
+<h2 class="anchored" data-anchor-id="stratified">Stratified</h2>
+<p>In R,for<em>2×2×K</em> tables,the <code>mantelhaen.test()</code> function provides a test of overall association R pooled over strata, <code>woolf_test()</code> tests for equal odds ratios across strata (similar to the Breslow-Day test),<code>andCMHtest()</code> in <code>vcdExtrapackage</code> gives generalized <code>CMHtests</code> like those provided by the cmh option in SAS. Tests of similar hypotheses can be carried out using loglinear models(<code>loglm</code>())and generalized linear models(<code>glm</code>()),described in later lectures.Here is one simple way to test for association of Admit and Gender separately for each department. <code>oddsratio</code>() calculates and tests the (log) odds ratio for each stratum.</p>
+<p>First, we need to convert the frequency table into a contingency table using the base R xtabs() function. The <a href="http://www.cookbook-r.com/Manipulating_data/Converting_between_data_frames_and_contingency_tables/">Cookbook for R</a> shows an example of this.</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (A <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>  { </span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">chisq.test</span>(table_obj[,,A]))</span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test with Yates' continuity correction
+
+data:  table_obj[, , A]
+X-squared = 65.432, df = 1, p-value = 0.0000000000000006016
+
+
+    Pearson's Chi-squared test with Yates' continuity correction
+
+data:  table_obj[, , A]
+X-squared = 651.31, df = 1, p-value &lt; 0.00000000000000022</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">oddsratio</span>(table_obj))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+z test of coefficients:
+
+         Estimate Std. Error  z value              Pr(&gt;|z|)    
+older   -0.926000   0.116510  -7.9478  0.000000000000001899 ***
+younger -1.899390   0.084359 -22.5155 &lt; 0.00000000000000022 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mantelhaen.test</span>(table_obj) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Mantel-Haenszel chi-squared test with continuity correction
+
+data:  table_obj
+Mantel-Haenszel X-squared = 690.1, df = 1, p-value &lt;
+0.00000000000000022
+alternative hypothesis: true common odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.174209 0.226675
+sample estimates:
+common odds ratio 
+        0.1987179 </code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">woolf_test</span>(table_obj) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Woolf-test on Homogeneity of Odds Ratios (no 3-Way assoc.)
+
+data:  table_obj
+X-squared = 45.792, df = 1, p-value = 0.00000000001315</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CMHtest</span>(table_obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$`A:older`
+Cochran-Mantel-Haenszel Statistics for E by O 
+    in stratum A:older 
+
+                 AltHypothesis  Chisq Df                   Prob
+cor        Nonzero correlation 66.291  1 0.00000000000000038905
+rmeans  Row mean scores differ 66.291  1 0.00000000000000038905
+cmeans  Col mean scores differ 66.291  1 0.00000000000000038905
+general    General association 66.291  1 0.00000000000000038905
+
+
+$`A:younger`
+Cochran-Mantel-Haenszel Statistics for E by O 
+    in stratum A:younger 
+
+                 AltHypothesis Chisq Df
+cor        Nonzero correlation 652.8  1
+rmeans  Row mean scores differ 652.8  1
+cmeans  Col mean scores differ 652.8  1
+general    General association 652.8  1
+                                                                                                                                                          Prob
+cor     0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000054882
+rmeans  0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000054882
+cmeans  0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000054882
+general 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000054882</code></pre>
+</div>
+</div>
+<p>In R,margin.table() collapses a table over dimensions not listed in the second argument.</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(<span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))) <span class="co">#two-wayplot </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Confounding_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid" width="672"></p>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(table_obj,<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)) <span class="co">#three-wayplot </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Confounding_files/figure-html/unnamed-chunk-39-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>A <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>A)</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>E <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>E)</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>O <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>O)</span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-5"><a href="#cb95-5" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"preterm"</span> <span class="sc">~</span> A, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb95-6"><a href="#cb95-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">test=</span><span class="st">"Wald"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table (Type II tests)
+
+Response: O == "preterm"
+  Df  Chisq            Pr(&gt;Chisq)    
+A  1 122.11 &lt; 0.00000000000000022 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = O == "preterm" ~ A, family = "binomial", data = freq_tbl, 
+    weights = freq_tbl$count)
+
+Coefficients:
+            Estimate Std. Error z value            Pr(&gt;|z|)    
+(Intercept) -1.90096    0.05429  -35.02 &lt;0.0000000000000002 ***
+Ayounger    -0.68573    0.06206  -11.05 &lt;0.0000000000000002 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 11053  on 7  degrees of freedom
+Residual deviance: 10942  on 6  degrees of freedom
+AIC: 10946
+
+Number of Fisher Scoring iterations: 6</code></pre>
+</div>
+</div>
+</section>
+<section id="modeling-linear-risk" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-linear-risk">Modeling linear risk</h2>
+<p>Add the main effect of magnesium</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod2=</span><span class="st">"Wald"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table (Type II tests)
+
+Response: O == "preterm"
+  LR Chisq Df            Pr(&gt;Chisq)    
+A   110.76  1 &lt; 0.00000000000000022 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = O == "preterm" ~ A + E, family = "binomial", data = freq_tbl, 
+    weights = freq_tbl$count)
+
+Coefficients:
+            Estimate Std. Error z value            Pr(&gt;|z|)    
+(Intercept) -2.93772    0.07623  -38.54 &lt;0.0000000000000002 ***
+Ayounger    -0.71614    0.06371  -11.24 &lt;0.0000000000000002 ***
+ENomag       1.61086    0.06681   24.11 &lt;0.0000000000000002 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 11053  on 7  degrees of freedom
+Residual deviance: 10199  on 5  degrees of freedom
+AIC: 10205
+
+Number of Fisher Scoring iterations: 6</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>eff2 <span class="ot">&lt;-</span> <span class="fu">allEffects</span>(mod2) </span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(eff2) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Confounding_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid" width="672"></p>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">effect</span>(<span class="st">"A:E"</span>, mod2),<span class="at">multiline=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>NOTE: A:E does not appear in the model</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Confounding_files/figure-html/unnamed-chunk-42-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E <span class="sc">+</span> A<span class="sc">*</span>E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod3=</span><span class="st">"Wald"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table (Type II tests)
+
+Response: O == "preterm"
+  LR Chisq Df            Pr(&gt;Chisq)    
+A   110.76  1 &lt; 0.00000000000000022 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = O == "preterm" ~ A + E + A * E, family = "binomial", 
+    data = freq_tbl, weights = freq_tbl$count)
+
+Coefficients:
+                Estimate Std. Error z value             Pr(&gt;|z|)    
+(Intercept)     -2.44235    0.09517 -25.662 &lt; 0.0000000000000002 ***
+Ayounger        -1.44947    0.12272 -11.811 &lt; 0.0000000000000002 ***
+ENomag           0.92600    0.11651   7.948   0.0000000000000019 ***
+Ayounger:ENomag  0.97339    0.14384   6.767   0.0000000000131501 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 11053  on 7  degrees of freedom
+Residual deviance: 10155  on 4  degrees of freedom
+AIC: 10163
+
+Number of Fisher Scoring iterations: 7</code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(mod1, mod2, mod3, </span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">collapse.ci =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">show.r2 =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">pred.labels =</span> <span class="fu">c</span>(<span class="st">"Intercept"</span>, <span class="st">"Age (young v older)"</span>, <span class="st">"Magnesium (No v Yes)"</span>, <span class="st">"Age x Mag (younger, no)"</span>),</span>
+<span id="cb110-5"><a href="#cb110-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dv.labels =</span> <span class="fu">c</span>(<span class="st">"Age only"</span>, <span class="st">"Age and Magnesium"</span>, <span class="st">"Model w/Interaction term"</span>),</span>
+<span id="cb110-6"><a href="#cb110-6" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.pred =</span> <span class="st">"Coeffcient"</span>,</span>
+<span id="cb110-7"><a href="#cb110-7" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.ci =</span> <span class="st">"Conf. Int (95%)"</span>,</span>
+<span id="cb110-8"><a href="#cb110-8" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.p =</span> <span class="st">"P-Value"</span></span>
+<span id="cb110-9"><a href="#cb110-9" aria-hidden="true" tabindex="-1"></a>          )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="text-align: center; border-top: double; font-style: normal; font-weight: bold; padding: 0.2cm;">&nbsp;</td>
+<td colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-top: double; font-style: normal; font-weight: bold; padding: 0.2cm;">Age only</td>
+<td colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-top: double; font-style: normal; font-weight: bold; padding: 0.2cm;">Age and Magnesium</td>
+<td colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-top: double; font-style: normal; font-weight: bold; padding: 0.2cm;">Model w/Interaction term</td>
+</tr>
+<tr class="even">
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">Coeffcient</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">Odds Ratios</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">P-Value</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">Odds Ratios</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">P-Value</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">Odds Ratios</td>
+<td style="text-align: center;">P-Value</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">Intercept</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.15<br>
+(0.13&nbsp;–&nbsp;0.17)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"><strong>&lt;0.001</strong></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.05<br>
+(0.05&nbsp;–&nbsp;0.06)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"><strong>&lt;0.001</strong></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.09<br>
+(0.07&nbsp;–&nbsp;0.10)</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">Age (young v older)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.50<br>
+(0.45&nbsp;–&nbsp;0.57)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"><strong>&lt;0.001</strong></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.49<br>
+(0.43&nbsp;–&nbsp;0.55)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"><strong>&lt;0.001</strong></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.23<br>
+(0.18&nbsp;–&nbsp;0.30)</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">Magnesium (No v Yes)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">5.01<br>
+(4.40&nbsp;–&nbsp;5.72)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"><strong>&lt;0.001</strong></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">2.52<br>
+(2.01&nbsp;–&nbsp;3.18)</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">Age x Mag (younger, no)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"></td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">2.65<br>
+(1.99&nbsp;–&nbsp;3.51)</td>
+<td style="text-align: center;"><strong>&lt;0.001</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm; border-top: 1px solid;">Observations</td>
+<td colspan="2" style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm; border-top: 1px solid;">8</td>
+<td colspan="2" style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm; border-top: 1px solid;">8</td>
+<td colspan="2" style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm; border-top: 1px solid;">8</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb111" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Confounding"</span></span>
+<span id="cb111-3"><a href="#cb111-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barboza-Salerno"</span></span>
+<span id="cb111-4"><a href="#cb111-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb111-5"><a href="#cb111-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-6"><a href="#cb111-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb111-7"><a href="#cb111-7" aria-hidden="true" tabindex="-1"></a>This document demonstrates how to use various R packages, such as <span class="in">`epitools`</span> and <span class="in">`vcm`</span> to identify confounding and interaction effects in epidemiological studies. We are going to follow the hypothetical example presented in Howards, P. P. (2018). <span class="co">[</span><span class="ot">An overview of confounding. Part 1: The concept and how to address it.</span><span class="co">](https://obgyn.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/aogs.13295)</span> *Acta Obstetricia et Gynecologica Scandinavica*, 97(4), 394–399. https://doi.org/10.1111/aogs.13295. Suppose we are interested in the effect of using *magnesium supplements* (E) on *preterm birth* (O). Further supposed that among pregnant women, older mothers (C = confounder) are more likely to take supplements than younger mothers, and that older maternal age is associated with increased risk of preterm birth.</span>
+<span id="cb111-8"><a href="#cb111-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-9"><a href="#cb111-9" aria-hidden="true" tabindex="-1"></a>**Note** the paper refers us to Figure 1a in the "companion paper" paper, however I do not see such a figure. It probably looks like this:</span>
+<span id="cb111-10"><a href="#cb111-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-11"><a href="#cb111-11" aria-hidden="true" tabindex="-1"></a><span class="al">![](confounding.png)</span></span>
+<span id="cb111-12"><a href="#cb111-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-13"><a href="#cb111-13" aria-hidden="true" tabindex="-1"></a>The data are provided in the table below:</span>
+<span id="cb111-14"><a href="#cb111-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-15"><a href="#cb111-15" aria-hidden="true" tabindex="-1"></a>|   |   |   |   |   |   |   |</span>
+<span id="cb111-16"><a href="#cb111-16" aria-hidden="true" tabindex="-1"></a>|:---|:---:|:---:|:---:|:---:|:---:|:---:|</span>
+<span id="cb111-17"><a href="#cb111-17" aria-hidden="true" tabindex="-1"></a>||Total Population|   |Older Mothers|   |Younger Mothers|   |</span>
+<span id="cb111-18"><a href="#cb111-18" aria-hidden="true" tabindex="-1"></a>||Magnesium|No Magnesium|Magnesium|No Magnesium|Magnesium|No Magnesium|</span>
+<span id="cb111-19"><a href="#cb111-19" aria-hidden="true" tabindex="-1"></a>|Preterm|160|630|80|90|80|540|</span>
+<span id="cb111-20"><a href="#cb111-20" aria-hidden="true" tabindex="-1"></a>|Term|4840|4370|920|410|3,920|3,960|</span>
+<span id="cb111-21"><a href="#cb111-21" aria-hidden="true" tabindex="-1"></a>|Total|5,000|5,000|1,000|500|4,000|4,500|</span>
+<span id="cb111-22"><a href="#cb111-22" aria-hidden="true" tabindex="-1"></a>|Risk|0.0320|0.1260|0.0800|0.1800|0.0200|0.1200|</span>
+<span id="cb111-23"><a href="#cb111-23" aria-hidden="true" tabindex="-1"></a>|RD|-0.0940|0.0000|-0.1000|0.0000|-0.1000|0.0000|</span>
+<span id="cb111-24"><a href="#cb111-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-25"><a href="#cb111-25" aria-hidden="true" tabindex="-1"></a>: Table 1.1: Data from the 'idea' study design; and disaggregated by age</span>
+<span id="cb111-26"><a href="#cb111-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-27"><a href="#cb111-27" aria-hidden="true" tabindex="-1"></a>**Make sure you install the packages required to run this lab**</span>
+<span id="cb111-28"><a href="#cb111-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-29"><a href="#cb111-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=TRUE, warning=FALSE, message=FALSE}</span></span>
+<span id="cb111-30"><a href="#cb111-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools) </span>
+<span id="cb111-31"><a href="#cb111-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels) </span>
+<span id="cb111-32"><a href="#cb111-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effects) </span>
+<span id="cb111-33"><a href="#cb111-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)  </span>
+<span id="cb111-34"><a href="#cb111-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcdExtra)</span>
+<span id="cb111-35"><a href="#cb111-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcd)</span>
+<span id="cb111-36"><a href="#cb111-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"vembedr"</span>)</span>
+<span id="cb111-37"><a href="#cb111-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb111-38"><a href="#cb111-38" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
+<span id="cb111-39"><a href="#cb111-39" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>) <span class="co">#disables scientific notation</span></span>
+<span id="cb111-40"><a href="#cb111-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-41"><a href="#cb111-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-42"><a href="#cb111-42" aria-hidden="true" tabindex="-1"></a><span class="fu"># Overview</span></span>
+<span id="cb111-43"><a href="#cb111-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`epitools`</span> is an R package that allows you to perform basic epidemiologic calculations such as the risk ratio (RR) and odds ratio (OR).</span>
+<span id="cb111-44"><a href="#cb111-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`effects`</span> is an R package that allows you to make graphical and tabular effect displays of interactions, for various statistical models with linear predictors</span>
+<span id="cb111-45"><a href="#cb111-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`gmodels`</span> is an R package that allows you to display quantities of interest (e.g., odds ratios) in contingency tables</span>
+<span id="cb111-46"><a href="#cb111-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-47"><a href="#cb111-47" aria-hidden="true" tabindex="-1"></a>**Note:** the <span class="in">`car`</span> library is preinstalled wtih R base, so you don't need to install it.</span>
+<span id="cb111-48"><a href="#cb111-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-49"><a href="#cb111-49" aria-hidden="true" tabindex="-1"></a>In this example, we will go over how to use these tools to estimate the risk ratio and odds ratios using the contingency tables reproduced in Howards, et al. (2018). </span>
+<span id="cb111-50"><a href="#cb111-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-51"><a href="#cb111-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preliminaries</span></span>
+<span id="cb111-52"><a href="#cb111-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-53"><a href="#cb111-53" aria-hidden="true" tabindex="-1"></a>In the example, magnesium (or not) is the exposure (E) and preterm birth (or term) is the outcome (O).  </span>
+<span id="cb111-54"><a href="#cb111-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-55"><a href="#cb111-55" aria-hidden="true" tabindex="-1"></a>In this example, the risk difference (RD) comparing magnesium supplementation to no supplementation is the same for older and younger mothers, but the RD for the total population is biased because a higher proportion of women taking magnesium are older (20%) compared with the women not using supplements (10%).</span>
+<span id="cb111-56"><a href="#cb111-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-57"><a href="#cb111-57" aria-hidden="true" tabindex="-1"></a>Notice the typo in the text, 10% and 20% are percentages, not propotions. In any event, this calculation was made as follows:</span>
+<span id="cb111-58"><a href="#cb111-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The proportion of older women taking magnesium is calculated as 1000/5000 = .20</span>
+<span id="cb111-59"><a href="#cb111-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The proportion of older women NOT taking magnesium is calculated as 500/5000 = .10</span>
+<span id="cb111-60"><a href="#cb111-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-61"><a href="#cb111-61" aria-hidden="true" tabindex="-1"></a>Note, it is important to have the table in the correct format. By default, the unexposed group (exposure = 0; here 'no magnesium') is in the first row, and the non-outcome (outcome = 0; here 'term') is in the first column. That means we would have this arrangement of the data. However, you can use the <span class="in">`epitools`</span> library to change this arrangement with the rev() argument so that the analysis will use the contingency table where the exposed group (exposure = 1) is in the first row and the outcome (outcome = 1) is in the first column.</span>
+<span id="cb111-62"><a href="#cb111-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-63"><a href="#cb111-63" aria-hidden="true" tabindex="-1"></a>|   |   |   |</span>
+<span id="cb111-64"><a href="#cb111-64" aria-hidden="true" tabindex="-1"></a>|---|---|---|</span>
+<span id="cb111-65"><a href="#cb111-65" aria-hidden="true" tabindex="-1"></a>||**Term**|**Preterm**|</span>
+<span id="cb111-66"><a href="#cb111-66" aria-hidden="true" tabindex="-1"></a>|**No mag**|4370|630|</span>
+<span id="cb111-67"><a href="#cb111-67" aria-hidden="true" tabindex="-1"></a>|**Mag**|4840|160|</span>
+<span id="cb111-68"><a href="#cb111-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-69"><a href="#cb111-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 1</span></span>
+<span id="cb111-70"><a href="#cb111-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-71"><a href="#cb111-71" aria-hidden="true" tabindex="-1"></a>Load the data tables from the appendix in the format it appears in Table 1.1</span>
+<span id="cb111-72"><a href="#cb111-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-73"><a href="#cb111-73" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=T}</span></span>
+<span id="cb111-74"><a href="#cb111-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Create a matrix</span></span>
+<span id="cb111-75"><a href="#cb111-75" aria-hidden="true" tabindex="-1"></a>(total <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4370</span>, <span class="dv">4840</span>, <span class="dv">630</span>, <span class="dv">160</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>))</span>
+<span id="cb111-76"><a href="#cb111-76" aria-hidden="true" tabindex="-1"></a>(older <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">410</span>, <span class="dv">920</span>, <span class="dv">90</span>, <span class="dv">80</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>))</span>
+<span id="cb111-77"><a href="#cb111-77" aria-hidden="true" tabindex="-1"></a>(younger <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">3960</span>, <span class="dv">3920</span>, <span class="dv">540</span>, <span class="dv">80</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>))</span>
+<span id="cb111-78"><a href="#cb111-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-79"><a href="#cb111-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-80"><a href="#cb111-80" aria-hidden="true" tabindex="-1"></a>The risk and RD estimates for the population are as follows:</span>
+<span id="cb111-83"><a href="#cb111-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-84"><a href="#cb111-84" aria-hidden="true" tabindex="-1"></a>(<span class="at">Risk =</span> <span class="dv">160</span><span class="sc">/</span>(<span class="dv">160</span><span class="sc">+</span><span class="dv">4840</span>))</span>
+<span id="cb111-85"><a href="#cb111-85" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> Risk <span class="sc">-</span> <span class="dv">660</span><span class="sc">/</span>(<span class="dv">660</span> <span class="sc">+</span> <span class="dv">4340</span>))</span>
+<span id="cb111-86"><a href="#cb111-86" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-87"><a href="#cb111-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-90"><a href="#cb111-90" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-91"><a href="#cb111-91" aria-hidden="true" tabindex="-1"></a>all_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-92"><a href="#cb111-92" aria-hidden="true" tabindex="-1"></a>all_risk</span>
+<span id="cb111-93"><a href="#cb111-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-94"><a href="#cb111-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-95"><a href="#cb111-95" aria-hidden="true" tabindex="-1"></a>The risk ratio is .254 with a 95% confidence interval (.214, .301) which is significant at the $p &lt; .001$ level. Therefore, women in the exposure group 2, (i.e., who took magnesium), had a 74.6% lower risk $(1 - .254) \times 100$ of preterm birth compared to women who did not take magnesium.</span>
+<span id="cb111-98"><a href="#cb111-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-99"><a href="#cb111-99" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Percent change in the risk:"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(all_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
+<span id="cb111-100"><a href="#cb111-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-103"><a href="#cb111-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-104"><a href="#cb111-104" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-105"><a href="#cb111-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-106"><a href="#cb111-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-107"><a href="#cb111-107" aria-hidden="true" tabindex="-1"></a>The odds ratio is 0.229 with a 95% CI of 0.192, 0.274. The p-value is &lt;0.001. Therefore women who took magnesium had a 78% lower odds of a preterm birth compared to women who did not take magnesium.</span>
+<span id="cb111-108"><a href="#cb111-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-109"><a href="#cb111-109" aria-hidden="true" tabindex="-1"></a>Given that you have taken Biostatistics I and II, you should be able to calculate the risk ratio, risk difference (RD), and odds ratio by hand. Here is how to do that in R:</span>
+<span id="cb111-110"><a href="#cb111-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-113"><a href="#cb111-113" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-114"><a href="#cb111-114" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb111-115"><a href="#cb111-115" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">160</span> <span class="sc">/</span> (<span class="dv">160</span><span class="sc">+</span><span class="dv">4840</span>)</span>
+<span id="cb111-116"><a href="#cb111-116" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">630</span><span class="sc">/</span>(<span class="dv">630</span><span class="sc">+</span><span class="dv">4370</span>)</span>
+<span id="cb111-117"><a href="#cb111-117" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
+<span id="cb111-118"><a href="#cb111-118" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
+<span id="cb111-119"><a href="#cb111-119" aria-hidden="true" tabindex="-1"></a>(<span class="at">OR =</span> (<span class="dv">4370</span><span class="sc">*</span><span class="dv">160</span>)<span class="sc">/</span>(<span class="dv">4840</span><span class="sc">*</span><span class="dv">630</span>))</span>
+<span id="cb111-120"><a href="#cb111-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-123"><a href="#cb111-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-124"><a href="#cb111-124" aria-hidden="true" tabindex="-1"></a><span class="do">### OR check</span></span>
+<span id="cb111-125"><a href="#cb111-125" aria-hidden="true" tabindex="-1"></a>num <span class="ot">&lt;-</span> <span class="dv">4370</span> <span class="sc">*</span> <span class="dv">160</span></span>
+<span id="cb111-126"><a href="#cb111-126" aria-hidden="true" tabindex="-1"></a>denom <span class="ot">&lt;-</span> <span class="dv">4840</span> <span class="sc">*</span> <span class="dv">630</span></span>
+<span id="cb111-127"><a href="#cb111-127" aria-hidden="true" tabindex="-1"></a>OR <span class="ot">&lt;-</span> num <span class="sc">/</span> denom</span>
+<span id="cb111-128"><a href="#cb111-128" aria-hidden="true" tabindex="-1"></a>OR</span>
+<span id="cb111-129"><a href="#cb111-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-130"><a href="#cb111-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confounding</span></span>
+<span id="cb111-131"><a href="#cb111-131" aria-hidden="true" tabindex="-1"></a>Let’s suppose we are interested in  whether maternal age is a confounder on the magnesium to birth outcome pathway in the figure.</span>
+<span id="cb111-132"><a href="#cb111-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-133"><a href="#cb111-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-134"><a href="#cb111-134" aria-hidden="true" tabindex="-1"></a>**Note:** The figure is commonly referred to as a DAG, or a directed acyclic graph. A good introduction to DAGs can be accessed here:</span>
+<span id="cb111-135"><a href="#cb111-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-136"><a href="#cb111-136" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE,echo=FALSE }</span></span>
+<span id="cb111-137"><a href="#cb111-137" aria-hidden="true" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">"https://youtu.be/PiekvYYHeVQ?list=PLliBbGBc5nn2QcZ-5K_S08wJR6kt2EK1R"</span>)</span>
+<span id="cb111-138"><a href="#cb111-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-139"><a href="#cb111-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-140"><a href="#cb111-140" aria-hidden="true" tabindex="-1"></a>To check if there is confounding, we need to determine if the confounder meets three criteria:</span>
+<span id="cb111-141"><a href="#cb111-141" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is associated with the outcome</span>
+<span id="cb111-142"><a href="#cb111-142" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is associated with treatment assignment</span>
+<span id="cb111-143"><a href="#cb111-143" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is not on the causal pathway between the exposure and outcome</span>
+<span id="cb111-144"><a href="#cb111-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-145"><a href="#cb111-145" aria-hidden="true" tabindex="-1"></a>As the figure at the top of this document shows, the confounding variable is associated with the outcome and also with the 'treatment.' The confounding variable is not on the causal pathway between the exposure and outcome. For the first criterion, we look at the association between magnesium uptake and birth outcome.</span>
+<span id="cb111-146"><a href="#cb111-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-147"><a href="#cb111-147" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Preliminaries: Wrangling the data for proper format</span></span>
+<span id="cb111-150"><a href="#cb111-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-151"><a href="#cb111-151" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb111-152"><a href="#cb111-152" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb111-153"><a href="#cb111-153" aria-hidden="true" tabindex="-1"></a>  <span class="st">"older"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">80</span>,</span>
+<span id="cb111-154"><a href="#cb111-154" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">920</span>,</span>
+<span id="cb111-155"><a href="#cb111-155" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">90</span>,</span>
+<span id="cb111-156"><a href="#cb111-156" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">410</span>,</span>
+<span id="cb111-157"><a href="#cb111-157" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">80</span>,</span>
+<span id="cb111-158"><a href="#cb111-158" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">3920</span>,</span>
+<span id="cb111-159"><a href="#cb111-159" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">540</span>,</span>
+<span id="cb111-160"><a href="#cb111-160" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">3960</span></span>
+<span id="cb111-161"><a href="#cb111-161" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-162"><a href="#cb111-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb111-163"><a href="#cb111-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb111-164"><a href="#cb111-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-165"><a href="#cb111-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-166"><a href="#cb111-166" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. Is age associated with birth outcomes? (i.e., is the counfounder associated with the outcome?)</span></span>
+<span id="cb111-167"><a href="#cb111-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-168"><a href="#cb111-168" aria-hidden="true" tabindex="-1"></a>This amounts to asking whether younger women had lower risk/odds of preterm birth compared to older women.</span>
+<span id="cb111-169"><a href="#cb111-169" aria-hidden="true" tabindex="-1"></a>To test this hypothesis, I need a 2x2 table with age of women on the row and birth outcome as column</span>
+<span id="cb111-170"><a href="#cb111-170" aria-hidden="true" tabindex="-1"></a>We can use the <span class="in">`margin.table()`</span> to collapse any table over an 'omitted' dimension, like this:</span>
+<span id="cb111-171"><a href="#cb111-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-172"><a href="#cb111-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-175"><a href="#cb111-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-176"><a href="#cb111-176" aria-hidden="true" tabindex="-1"></a>(table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl))</span>
+<span id="cb111-177"><a href="#cb111-177" aria-hidden="true" tabindex="-1"></a>age_outcome <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>))</span>
+<span id="cb111-178"><a href="#cb111-178" aria-hidden="true" tabindex="-1"></a>(age_outcome_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">620</span>,  <span class="dv">170</span> , <span class="dv">7880</span>, <span class="dv">1330</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span>
+<span id="cb111-179"><a href="#cb111-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-182"><a href="#cb111-182" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-183"><a href="#cb111-183" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>)) <span class="co">#I already formatted it so exposure = 1 and outcome = 1 is in the first cell</span></span>
+<span id="cb111-184"><a href="#cb111-184" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-185"><a href="#cb111-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-186"><a href="#cb111-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-189"><a href="#cb111-189" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-190"><a href="#cb111-190" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-191"><a href="#cb111-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-192"><a href="#cb111-192" aria-hidden="true" tabindex="-1"></a>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.</span>
+<span id="cb111-193"><a href="#cb111-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-194"><a href="#cb111-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-195"><a href="#cb111-195" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. Is age associated with magnesium uptake? (i.e., is the counfounder associated with the exposure?)</span></span>
+<span id="cb111-196"><a href="#cb111-196" aria-hidden="true" tabindex="-1"></a>This amounts to asking whether younger women had lower risk/odds of magnesium uptake compared to older women?</span>
+<span id="cb111-197"><a href="#cb111-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-200"><a href="#cb111-200" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-201"><a href="#cb111-201" aria-hidden="true" tabindex="-1"></a>(age_exposure <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)))</span>
+<span id="cb111-202"><a href="#cb111-202" aria-hidden="true" tabindex="-1"></a>(age_exposure_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4500</span>, <span class="dv">1000</span>, <span class="dv">500</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span>
+<span id="cb111-203"><a href="#cb111-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-206"><a href="#cb111-206" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-207"><a href="#cb111-207" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-208"><a href="#cb111-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-211"><a href="#cb111-211" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-212"><a href="#cb111-212" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-213"><a href="#cb111-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-214"><a href="#cb111-214" aria-hidden="true" tabindex="-1"></a>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.</span>
+<span id="cb111-215"><a href="#cb111-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-216"><a href="#cb111-216" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. Age is not on the causal pathway between exposure and outcome?  </span></span>
+<span id="cb111-217"><a href="#cb111-217" aria-hidden="true" tabindex="-1"></a>This is satisfied here.</span>
+<span id="cb111-218"><a href="#cb111-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-219"><a href="#cb111-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stratification</span></span>
+<span id="cb111-220"><a href="#cb111-220" aria-hidden="true" tabindex="-1"></a>We can check to see how much of an impact age has on the exposure to birth outcome using stratification. We do this by stratifying the groups into those who are younger and older. Then we evaluate the exposure to outcome relationship.</span>
+<span id="cb111-221"><a href="#cb111-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-222"><a href="#cb111-222" aria-hidden="true" tabindex="-1"></a>Here is an illustration of how age is stratified into two strata (age = older mothers v younger mothers).</span>
+<span id="cb111-223"><a href="#cb111-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-224"><a href="#cb111-224" aria-hidden="true" tabindex="-1"></a>The association between magnesium status and age can be estimated for each strata.</span>
+<span id="cb111-225"><a href="#cb111-225" aria-hidden="true" tabindex="-1"></a>Table3 &lt;- matrix(c(150, 50, 1600, 800), nrow = 2, ncol = 2)</span>
+<span id="cb111-226"><a href="#cb111-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-229"><a href="#cb111-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-230"><a href="#cb111-230" aria-hidden="true" tabindex="-1"></a>older</span>
+<span id="cb111-231"><a href="#cb111-231" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-232"><a href="#cb111-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-235"><a href="#cb111-235" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-236"><a href="#cb111-236" aria-hidden="true" tabindex="-1"></a>older_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-237"><a href="#cb111-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-238"><a href="#cb111-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-241"><a href="#cb111-241" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-242"><a href="#cb111-242" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(older_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
+<span id="cb111-243"><a href="#cb111-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-244"><a href="#cb111-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-247"><a href="#cb111-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-248"><a href="#cb111-248" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-249"><a href="#cb111-249" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-250"><a href="#cb111-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-253"><a href="#cb111-253" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-254"><a href="#cb111-254" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb111-255"><a href="#cb111-255" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">920</span>)</span>
+<span id="cb111-256"><a href="#cb111-256" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">90</span><span class="sc">/</span>(<span class="dv">90</span><span class="sc">+</span><span class="dv">410</span>)</span>
+<span id="cb111-257"><a href="#cb111-257" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
+<span id="cb111-258"><a href="#cb111-258" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
+<span id="cb111-259"><a href="#cb111-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-260"><a href="#cb111-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-261"><a href="#cb111-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-264"><a href="#cb111-264" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-265"><a href="#cb111-265" aria-hidden="true" tabindex="-1"></a>younger</span>
+<span id="cb111-266"><a href="#cb111-266" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-267"><a href="#cb111-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-268"><a href="#cb111-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-271"><a href="#cb111-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-272"><a href="#cb111-272" aria-hidden="true" tabindex="-1"></a>younger_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-273"><a href="#cb111-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-274"><a href="#cb111-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-275"><a href="#cb111-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-278"><a href="#cb111-278" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-279"><a href="#cb111-279" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-280"><a href="#cb111-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-283"><a href="#cb111-283" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-284"><a href="#cb111-284" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(younger_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
+<span id="cb111-285"><a href="#cb111-285" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-288"><a href="#cb111-288" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-289"><a href="#cb111-289" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb111-290"><a href="#cb111-290" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">3920</span>)</span>
+<span id="cb111-291"><a href="#cb111-291" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">540</span><span class="sc">/</span>(<span class="dv">540</span><span class="sc">+</span><span class="dv">3960</span>)</span>
+<span id="cb111-292"><a href="#cb111-292" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
+<span id="cb111-293"><a href="#cb111-293" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
+<span id="cb111-294"><a href="#cb111-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-297"><a href="#cb111-297" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-298"><a href="#cb111-298" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb111-299"><a href="#cb111-299" aria-hidden="true" tabindex="-1"></a>  <span class="at">mag =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"mag"</span>, <span class="dv">5000</span>), <span class="fu">rep</span>(<span class="st">"nomag"</span>, <span class="dv">5000</span>)),</span>
+<span id="cb111-300"><a href="#cb111-300" aria-hidden="true" tabindex="-1"></a>  <span class="at">birth =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"preterm"</span>, <span class="dv">160</span>), <span class="fu">rep</span>(<span class="st">"term"</span>, <span class="dv">4840</span> ), <span class="fu">rep</span>(<span class="st">"preterm"</span>, <span class="dv">630</span>), <span class="fu">rep</span>(<span class="st">"term"</span>, <span class="dv">4370</span>))</span>
+<span id="cb111-301"><a href="#cb111-301" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-302"><a href="#cb111-302" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>()</span>
+<span id="cb111-303"><a href="#cb111-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-306"><a href="#cb111-306" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-307"><a href="#cb111-307" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df)</span>
+<span id="cb111-308"><a href="#cb111-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-311"><a href="#cb111-311" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-312"><a href="#cb111-312" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic example</span></span>
+<span id="cb111-313"><a href="#cb111-313" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb111-314"><a href="#cb111-314" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mag, birth)</span>
+<span id="cb111-315"><a href="#cb111-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-318"><a href="#cb111-318" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-319"><a href="#cb111-319" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb111-320"><a href="#cb111-320" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb111-321"><a href="#cb111-321" aria-hidden="true" tabindex="-1"></a>  <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">160</span>,</span>
+<span id="cb111-322"><a href="#cb111-322" aria-hidden="true" tabindex="-1"></a>  <span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">4840</span>,</span>
+<span id="cb111-323"><a href="#cb111-323" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">630</span>,</span>
+<span id="cb111-324"><a href="#cb111-324" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">4370</span></span>
+<span id="cb111-325"><a href="#cb111-325" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-326"><a href="#cb111-326" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="cb111-327"><a href="#cb111-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-328"><a href="#cb111-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-331"><a href="#cb111-331" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-332"><a href="#cb111-332" aria-hidden="true" tabindex="-1"></a><span class="co"># Add margins</span></span>
+<span id="cb111-333"><a href="#cb111-333" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb111-334"><a href="#cb111-334" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(E) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-335"><a href="#cb111-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">E_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-336"><a href="#cb111-336" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(O) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-337"><a href="#cb111-337" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">O_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-338"><a href="#cb111-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb111-339"><a href="#cb111-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">margin_total =</span> <span class="fu">sum</span>(count))</span>
+<span id="cb111-340"><a href="#cb111-340" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-341"><a href="#cb111-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-344"><a href="#cb111-344" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-345"><a href="#cb111-345" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(total,<span class="at">prop.t=</span><span class="cn">FALSE</span>,<span class="at">prop.r=</span><span class="cn">FALSE</span>,<span class="at">expected=</span><span class="cn">TRUE</span>)</span>
+<span id="cb111-346"><a href="#cb111-346" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-349"><a href="#cb111-349" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-350"><a href="#cb111-350" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio</span>(total, <span class="at">log=</span><span class="cn">FALSE</span>)</span>
+<span id="cb111-351"><a href="#cb111-351" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-354"><a href="#cb111-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-355"><a href="#cb111-355" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb111-356"><a href="#cb111-356" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb111-357"><a href="#cb111-357" aria-hidden="true" tabindex="-1"></a>  <span class="st">"older"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">120</span>,</span>
+<span id="cb111-358"><a href="#cb111-358" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">1380</span>,</span>
+<span id="cb111-359"><a href="#cb111-359" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">270</span>,</span>
+<span id="cb111-360"><a href="#cb111-360" aria-hidden="true" tabindex="-1"></a>   <span class="st">"older"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">1230</span>,</span>
+<span id="cb111-361"><a href="#cb111-361" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>, <span class="st">"mag"</span>, <span class="st">"preterm"</span>, <span class="dv">170</span>,</span>
+<span id="cb111-362"><a href="#cb111-362" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"mag"</span>, <span class="st">"term"</span>,  <span class="dv">8330</span>,</span>
+<span id="cb111-363"><a href="#cb111-363" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"preterm"</span>, <span class="dv">1020</span>,</span>
+<span id="cb111-364"><a href="#cb111-364" aria-hidden="true" tabindex="-1"></a>   <span class="st">"younger"</span>,<span class="st">"Nomag"</span>,  <span class="st">"term"</span>,  <span class="dv">7480</span></span>
+<span id="cb111-365"><a href="#cb111-365" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-366"><a href="#cb111-366" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb111-367"><a href="#cb111-367" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb111-368"><a href="#cb111-368" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-369"><a href="#cb111-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-370"><a href="#cb111-370" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stratified</span></span>
+<span id="cb111-371"><a href="#cb111-371" aria-hidden="true" tabindex="-1"></a>In R,for*2×2×K* tables,the <span class="in">`mantelhaen.test()`</span> function provides a test of overall association R pooled over strata, <span class="in">`woolf_test()`</span> tests for equal odds ratios across strata (similar to the Breslow-Day test),<span class="in">` andCMHtest()`</span> in <span class="in">`vcdExtrapackage`</span> gives generalized <span class="in">`CMHtests`</span> like those provided by the cmh option in SAS. Tests of similar hypotheses can be carried out using loglinear models(<span class="in">`loglm`</span>())and generalized linear models(<span class="in">`glm`</span>()),described in later lectures.Here is one simple way to test for association of Admit and Gender separately for each department. <span class="in">`oddsratio`</span>() calculates and tests the (log) odds ratio for each stratum.</span>
+<span id="cb111-372"><a href="#cb111-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-373"><a href="#cb111-373" aria-hidden="true" tabindex="-1"></a>First, we need to convert the frequency table into a contingency table using the base R xtabs() function. The <span class="co">[</span><span class="ot">Cookbook for R</span><span class="co">](http://www.cookbook-r.com/Manipulating_data/Converting_between_data_frames_and_contingency_tables/)</span> shows an example of this. </span>
+<span id="cb111-376"><a href="#cb111-376" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-377"><a href="#cb111-377" aria-hidden="true" tabindex="-1"></a>table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl)</span>
+<span id="cb111-378"><a href="#cb111-378" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-379"><a href="#cb111-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-382"><a href="#cb111-382" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-383"><a href="#cb111-383" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (A <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb111-384"><a href="#cb111-384" aria-hidden="true" tabindex="-1"></a>  { </span>
+<span id="cb111-385"><a href="#cb111-385" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">chisq.test</span>(table_obj[,,A]))</span>
+<span id="cb111-386"><a href="#cb111-386" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb111-387"><a href="#cb111-387" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-390"><a href="#cb111-390" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-391"><a href="#cb111-391" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">oddsratio</span>(table_obj))</span>
+<span id="cb111-392"><a href="#cb111-392" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-393"><a href="#cb111-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-396"><a href="#cb111-396" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-397"><a href="#cb111-397" aria-hidden="true" tabindex="-1"></a><span class="fu">mantelhaen.test</span>(table_obj) </span>
+<span id="cb111-398"><a href="#cb111-398" aria-hidden="true" tabindex="-1"></a><span class="fu">woolf_test</span>(table_obj) </span>
+<span id="cb111-399"><a href="#cb111-399" aria-hidden="true" tabindex="-1"></a><span class="fu">CMHtest</span>(table_obj)</span>
+<span id="cb111-400"><a href="#cb111-400" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-401"><a href="#cb111-401" aria-hidden="true" tabindex="-1"></a>In R,margin.table() collapses a table over dimensions not listed in the second argument.</span>
+<span id="cb111-404"><a href="#cb111-404" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-405"><a href="#cb111-405" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(<span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))) <span class="co">#two-wayplot </span></span>
+<span id="cb111-406"><a href="#cb111-406" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(table_obj,<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)) <span class="co">#three-wayplot </span></span>
+<span id="cb111-407"><a href="#cb111-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-408"><a href="#cb111-408" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-411"><a href="#cb111-411" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-412"><a href="#cb111-412" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>A <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>A)</span>
+<span id="cb111-413"><a href="#cb111-413" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>E <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>E)</span>
+<span id="cb111-414"><a href="#cb111-414" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>O <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>O)</span>
+<span id="cb111-415"><a href="#cb111-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-416"><a href="#cb111-416" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"preterm"</span> <span class="sc">~</span> A, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb111-417"><a href="#cb111-417" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">test=</span><span class="st">"Wald"</span>) </span>
+<span id="cb111-418"><a href="#cb111-418" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1)</span>
+<span id="cb111-419"><a href="#cb111-419" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-420"><a href="#cb111-420" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modeling linear risk</span></span>
+<span id="cb111-421"><a href="#cb111-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-422"><a href="#cb111-422" aria-hidden="true" tabindex="-1"></a>Add the main effect of magnesium</span>
+<span id="cb111-425"><a href="#cb111-425" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-426"><a href="#cb111-426" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb111-427"><a href="#cb111-427" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod2=</span><span class="st">"Wald"</span>) </span>
+<span id="cb111-428"><a href="#cb111-428" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod2)</span>
+<span id="cb111-429"><a href="#cb111-429" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-430"><a href="#cb111-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-433"><a href="#cb111-433" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-434"><a href="#cb111-434" aria-hidden="true" tabindex="-1"></a>eff2 <span class="ot">&lt;-</span> <span class="fu">allEffects</span>(mod2) </span>
+<span id="cb111-435"><a href="#cb111-435" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(eff2) </span>
+<span id="cb111-436"><a href="#cb111-436" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">effect</span>(<span class="st">"A:E"</span>, mod2),<span class="at">multiline=</span><span class="cn">TRUE</span>)</span>
+<span id="cb111-437"><a href="#cb111-437" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-440"><a href="#cb111-440" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-441"><a href="#cb111-441" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E <span class="sc">+</span> A<span class="sc">*</span>E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb111-442"><a href="#cb111-442" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod3=</span><span class="st">"Wald"</span>) </span>
+<span id="cb111-443"><a href="#cb111-443" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod3)</span>
+<span id="cb111-444"><a href="#cb111-444" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-447"><a href="#cb111-447" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-448"><a href="#cb111-448" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(mod1, mod2, mod3, </span>
+<span id="cb111-449"><a href="#cb111-449" aria-hidden="true" tabindex="-1"></a>          <span class="at">collapse.ci =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb111-450"><a href="#cb111-450" aria-hidden="true" tabindex="-1"></a>          <span class="at">show.r2 =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb111-451"><a href="#cb111-451" aria-hidden="true" tabindex="-1"></a>          <span class="at">pred.labels =</span> <span class="fu">c</span>(<span class="st">"Intercept"</span>, <span class="st">"Age (young v older)"</span>, <span class="st">"Magnesium (No v Yes)"</span>, <span class="st">"Age x Mag (younger, no)"</span>),</span>
+<span id="cb111-452"><a href="#cb111-452" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dv.labels =</span> <span class="fu">c</span>(<span class="st">"Age only"</span>, <span class="st">"Age and Magnesium"</span>, <span class="st">"Model w/Interaction term"</span>),</span>
+<span id="cb111-453"><a href="#cb111-453" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.pred =</span> <span class="st">"Coeffcient"</span>,</span>
+<span id="cb111-454"><a href="#cb111-454" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.ci =</span> <span class="st">"Conf. Int (95%)"</span>,</span>
+<span id="cb111-455"><a href="#cb111-455" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.p =</span> <span class="st">"P-Value"</span></span>
+<span id="cb111-456"><a href="#cb111-456" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb111-457"><a href="#cb111-457" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 by <a href="https://bigdataforsocialjustice.github.io/">Gia Barboza-Salerno</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/andrewheiss/evalsp23.classes.andrewheiss.com">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
