@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -234,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exam1.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../content/exam1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9: Exam I</span></a>
   </div>
 </li>
@@ -380,9 +399,17 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#measurement" id="toc-measurement" class="nav-link" data-scroll-target="#measurement">Measurement</a></li>
   <li><a href="#required-reading-for-phd-students-and-recommended-for-others" id="toc-required-reading-for-phd-students-and-recommended-for-others" class="nav-link" data-scroll-target="#required-reading-for-phd-students-and-recommended-for-others">Required Reading for PhD Students (and recommended for others)</a></li>
+  <li><a href="#your-tasks-research-assignment" id="toc-your-tasks-research-assignment" class="nav-link" data-scroll-target="#your-tasks-research-assignment">Your tasks: Research Assignment</a></li>
+  <li><a href="#in-class-activities" id="toc-in-class-activities" class="nav-link" data-scroll-target="#in-class-activities">In-class activities</a></li>
   </ul></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#in-class-stuff" id="toc-in-class-stuff" class="nav-link" data-scroll-target="#in-class-stuff">In-class stuff</a></li>
+  <li><a href="#lecture-notes" id="toc-lecture-notes" class="nav-link" data-scroll-target="#lecture-notes">Lecture Notes</a></li>
+  <li><a href="#in-class-stuff" id="toc-in-class-stuff" class="nav-link" data-scroll-target="#in-class-stuff">In-class stuff</a>
+  <ul class="collapse">
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">📦 Additional Resources</a></li>
+  <li><a href="#competencies-and-knowledge" id="toc-competencies-and-knowledge" class="nav-link" data-scroll-target="#competencies-and-knowledge">Competencies and Knowledge</a></li>
+  <li><a href="#student-evaluation-activity-for-assessment" id="toc-student-evaluation-activity-for-assessment" class="nav-link" data-scroll-target="#student-evaluation-activity-for-assessment">Student Evaluation Activity for Assessment</a></li>
+  <li><a href="#advanced-mediation-models" id="toc-advanced-mediation-models" class="nav-link" data-scroll-target="#advanced-mediation-models">Advanced Mediation Models</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -414,9 +441,36 @@ ul.task-list li input[type="checkbox"] {
 <li>Andrew Hayes’ book entitled <a href="https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/reading/mediation_hayes.pdf"><em>Mediation, Moderation and Conditional Process Models</em></a> is an excellent and rigorous introduction. Read Chapters 3 <em>The Simple Mediation Model</em> and Chapter 7: <em>Fundamentals of Moderation Analysis</em>.</li>
 </ul>
 </section>
+<section id="your-tasks-research-assignment" class="level3">
+<h3 class="anchored" data-anchor-id="your-tasks-research-assignment">Your tasks: Research Assignment</h3>
+<ul>
+<li>Conduct a literature search to identify articles for your literature review</li>
+<li>Create a new Zotero collection and download the articles into that collection</li>
+</ul>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<section id="in-class-activities" class="level3">
+<h3 class="anchored" data-anchor-id="in-class-activities">In-class activities</h3>
+<ul>
+<li>Conducting a literature review</li>
+<li>Creating bibliographies in Zotero</li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pay Attention
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>PhD students: the annotated bibliography is due today by midnight. To submit the bibliography, follow [these instructions].</p>
+</div>
+</div>
+</section>
+</section>
+<section id="lecture-notes" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-notes">Lecture Notes</h2>
 <p>The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
 <p class="buttons">
 <a class="btn btn-danger" target="_blank" href="../slides/04-slides.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="../slides/04-slides.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a>
@@ -429,7 +483,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="slide-tabs" class="tab-content">
 <div id="lecture-slides" class="tab-pane fade show active" role="tabpanel" aria-labelledby="lecture-slides-tab">
 <div class="ratio ratio-16x9">
-<iframe src="../slides/04-slides.html#1">
+<iframe src="../slides/day4.html#1">
 </iframe>
 </div>
 </div>
@@ -456,11 +510,55 @@ Tip
 <li><a href="https://posit.cloud/spaces/323551/content/5299495"><i class="fa-brands fa-r-project" aria-label="r-project"></i> Regression playground Posit.cloud project</a></li>
 <li><a href="../projects/regression-example.zip"><i class="fa-solid fa-file-zipper" aria-label="file-zipper"></i> Regression playground project <code>.zip</code> file</a></li>
 </ul>
+<section id="additional-resources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-resources">📦 Additional Resources</h3>
+<ul>
+<li><a href="https://www.andrewheiss.com/blog/2021/12/01/multilevel-models-panel-data-guide/">Click here</a> for an example of how to do Bayesian multilevel models.</li>
+<li>Read Chapters 1 &amp; 2 in <a href="https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/reading/R_data_Science_partI.pdf">R for Data Science</a></li>
+<li><a href="../example/lab4/mediation_moderation.html">Mediation and Moderation in R</a></li>
+</ul>
+</section>
+<section id="competencies-and-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="competencies-and-knowledge">Competencies and Knowledge</h3>
+<ul>
+<li>Foundational knowledge: 3, 6</li>
+<li>Competencies: 9</li>
+<li>MPH Specializations: 4, 7</li>
+<li>PhD Specializations: 4, 7</li>
+</ul>
+</section>
+<section id="student-evaluation-activity-for-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="student-evaluation-activity-for-assessment">Student Evaluation Activity for Assessment</h3>
+<ul>
+<li>Exam 1</li>
+<li>Proposal 1</li>
+</ul>
+</section>
+<section id="advanced-mediation-models" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-mediation-models">Advanced Mediation Models</h3>
+<p>For an example of when I used these models in my own work, see <span class="citation" data-cites="elise_barboza_child_2021">(<a href="#ref-elise_barboza_child_2021" role="doc-biblioref">Elise Barboza and Siller 2021</a>)</span> Parallel Mediation Model:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="../example/lab4/parallel_mediators.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+</div>
+<p>Sequential mediation model:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="../example/lab4/sequential_mediators.png" class="img-fluid" style="width:80.0%"></p>
+</div>
+</div>
+
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-elise_barboza_child_2021" class="csl-entry" role="listitem">
+Elise Barboza, Gia, and Laura A. Siller. 2021. <span>“Child Maltreatment, School Bonds, and Adult Violence: A Serial Mediation Model.”</span> <em>J Interpers Violence</em> 36 (11): NP5839–73. <a href="https://doi.org/10.1177/0886260518805763">https://doi.org/10.1177/0886260518805763</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Use modern statistical and data scientific tools to measure causal effects and evaluate public policy">
+<meta name="description" content="develop, read, critique, design, and conduct high-quality scientific research in public health">
 
-<title>Program Evaluation - Randomization and matching</title>
+<title>Research Methods in Public Health - Validity + Reliability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,26 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -83,17 +64,17 @@ div.csl-indent {
 }</script>
 
 
-<meta property="og:title" content="Program Evaluation - Randomization and matching">
+<meta property="og:title" content="Research Methods in Public Health - Validity + Reliability">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
-<meta property="og:site-name" content="Program Evaluation">
+<meta property="og:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
+<meta property="og:site-name" content="Research Methods in Public Health">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="640">
 <meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Program Evaluation - Randomization and matching">
+<meta name="twitter:title" content="Research Methods in Public Health - Validity + Reliability">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
-<meta name="twitter:creator" content="@andrewheiss">
+<meta name="twitter:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
+<meta name="twitter:creator" content="@bigdataforsocialjustice">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="640">
 <meta name="twitter:image-width" content="1280">
@@ -107,7 +88,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Program Evaluation</span>
+    <span class="navbar-title">Research Methods in Public Health</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -150,7 +131,7 @@ div.csl-indent {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://rstudio.cloud" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
+    <a class="nav-link" href="https://posit.cloud/content/yours?sort=name_asc" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -165,7 +146,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/01-content.html">Course content</a></li><li class="breadcrumb-item"><a href="../content/07-content.html">7: Randomization and matching</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/01-content.html">Course content</a></li><li class="breadcrumb-item"><a href="../content/07-content.html">7: Validity + Reliability</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -206,85 +187,181 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/01-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1: Evaluation and the causal revolution</span></a>
+ <span class="menu-text">1: Intro + Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/02-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2: Regression and inference</span></a>
+ <span class="menu-text">2: Variables + Units of Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/03-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3: Theories of change and logic models</span></a>
+ <span class="menu-text">3: Associations + Confounding</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/04-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4: Measurement and DAGs</span></a>
+ <span class="menu-text">4: Mediation + Moderation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/05-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5: DAGs and potential outcomes</span></a>
+ <span class="menu-text">5: Research Questions and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/06-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6: Threats to validity</span></a>
+ <span class="menu-text">6: Theory + Concepts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/07-content.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">7: Randomization and matching</span></a>
+ <span class="menu-text">7: Validity + Reliability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/08-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8: Diff-in-diff I</span></a>
+ <span class="menu-text">8: Measures + Scale Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/09-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9: Diff-in-diff II</span></a>
+  <a href="../content/exam1.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9: Exam I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/10-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10: RDD I</span></a>
+ <span class="menu-text">10: Internal + External Validity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/11-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">11: IV I</span></a>
+ <span class="menu-text">11: Pre-experimental designs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/12-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">12: IV II &amp; RDD II</span></a>
+ <span class="menu-text">12: Quasi-experimental designs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/13-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">13: Choosing and planning ethical evaluations</span></a>
+ <span class="menu-text">13: Presentations + Feedback</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/14-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">14: Ethics, stories, and curiosity</span></a>
+ <span class="menu-text">14: Presentations + Feedback</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/15-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15: Randomized Controlled Trials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/16-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">16: Observational Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/17-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">17: Ethics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/18-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">18: Exam II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/19-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">19: No Class + Spring Break</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/exam2.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20: No Class + Spring Break</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/21-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">21: Sampling I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/22-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22: Sampling II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/23-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">23: Recruitment + Retention</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/24-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">24: Data Collection + Survey Design</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/25-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">25: Analytical methods + observation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/26-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">26: Analytical methods + experimental</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/27-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">27: Reproducible Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/28-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">28: Student Presentations I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/29-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">29: Student Presentations II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/exam3.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">30: Exam III</span></a>
   </div>
 </li>
       </ul>
@@ -301,11 +378,16 @@ div.csl-indent {
   <ul>
   <li><a href="#readings" id="toc-readings" class="nav-link active" data-scroll-target="#readings">Readings</a>
   <ul class="collapse">
-  <li><a href="#rcts-matching-and-inverse-probability-weighting" id="toc-rcts-matching-and-inverse-probability-weighting" class="nav-link" data-scroll-target="#rcts-matching-and-inverse-probability-weighting">RCTs, matching, and inverse probability weighting</a></li>
+  <li><a href="#measurement" id="toc-measurement" class="nav-link" data-scroll-target="#measurement">Measurement</a></li>
+  <li><a href="#required-reading-for-phd-students-and-recommended-for-others" id="toc-required-reading-for-phd-students-and-recommended-for-others" class="nav-link" data-scroll-target="#required-reading-for-phd-students-and-recommended-for-others">Required Reading for PhD Students (and recommended for others)</a></li>
   </ul></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos">Videos</a></li>
-  <li><a href="#in-class-stuff" id="toc-in-class-stuff" class="nav-link" data-scroll-target="#in-class-stuff">In-class stuff</a></li>
+  <li><a href="#lecture-notes" id="toc-lecture-notes" class="nav-link" data-scroll-target="#lecture-notes">Lecture Notes</a></li>
+  <li><a href="#in-class-stuff" id="toc-in-class-stuff" class="nav-link" data-scroll-target="#in-class-stuff">In-class stuff</a>
+  <ul class="collapse">
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">📦 Additional Resources</a></li>
+  <li><a href="#competencies-and-knowledge" id="toc-competencies-and-knowledge" class="nav-link" data-scroll-target="#competencies-and-knowledge">Competencies and Knowledge</a></li>
+  <li><a href="#student-evaluation-activity-for-assessment" id="toc-student-evaluation-activity-for-assessment" class="nav-link" data-scroll-target="#student-evaluation-activity-for-assessment">Student Evaluation Activity for Assessment</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -313,81 +395,46 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">Randomization and matching</h1>
+<h1 class="title display-7">Validity + Reliability</h1>
 
 <div class="date-block bg-content text-white p-2">
-  <p class="date">Content for Thursday, February 23, 2023</p>
+  <p class="date">Content for Thursday, January 18, 2024</p>
 </div>
 </header>
 
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<section id="measurement" class="level3">
+<h3 class="anchored" data-anchor-id="measurement">Measurement</h3>
 <ul>
-<li><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Andrew Heiss, “Causal Inference,” Chapter 10 in <em>R for Political Data Science: A Practical Guide</em> (2020) (Ignore the exercises!). <a href="../files/10-causal-inference.pdf">Get the PDF here.</a></li>
-<li><i class="fa-solid fa-book" aria-label="book"></i> Chapter 4 in <em>Impact Evaluation in Practice</em> <span class="citation" data-cites="wb-eval">(<a href="#ref-wb-eval" role="doc-biblioref">Gertler et al. 2016</a>)</span></li>
-<li><i class="fa-solid fa-book" aria-label="book"></i> Chapters 11 and 13 in <em>The Effect</em> <span class="citation" data-cites="Huntington-Klein:2021">(<a href="#ref-Huntington-Klein:2021" role="doc-biblioref">Huntington-Klein 2021</a>)</span>. <strong>Focus especially on section 13.3 about standard errors.</strong> And skim chapter 11; it’s an overview of regression, which we reviewed in session 2, but it also applies the language of DAGs to regression, so look for that specifically as you read.</li>
-<li><i class="fa-solid fa-podcast" aria-label="podcast"></i> Planet Money, <a href="https://www.npr.org/2019/08/30/756028025/episode-937-moving-to-opportunity">“Moving To Opportunity?,”</a> episode 937</li>
-<li><i class="fa-solid fa-arrow-up-right-from-square" aria-label="arrow-up-right-from-square"></i> Aaron Carroll, <a href="https://www.nytimes.com/2018/08/06/upshot/employer-wellness-programs-randomized-trials.html">“Workplace Wellness Programs Don’t Work Well. Why Some Studies Show Otherwise,”</a> <em>The Upshot</em>, August 6, 2018</li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Barboza-Salerno, G. E. (2020). <a href="https://www.sciencedirect.com/science/article/pii/S0190740919311533?casa_token=jQ4MhjFKvGIAAAAA:k96hYl2JhmeufTpQkkKWn1YPKkEcjdLoc2XLW6GZW2x6DQtTQkHAb8oSKLyXvnWWOykmWtvt6d-R"><em>Cognitive readiness to parent, stability and change in postpartum parenting stress and social-emotional problems in early childhood: A second order growth curve model.</em></a> Children and Youth Services Review, 113, 104958. https://doi.org/10.1016/j.childyouth.2020.104958</li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Barboza, G., &amp; Siller, L. A. (2021).<a href="https://journals.sagepub.com/doi/pdf/10.1177/0886260518805763?casa_token=atVd0dXKgIMAAAAA:1wnTWfYCyPZVWnrxwf5SNHnoFvYQ4t3PI1gDq1mJAEWpqV2fDdat0CPnMTRSm1bT2QaCzz3qW_v594A"><em>Child Maltreatment, School Bonds, and Adult Violence: A Serial Mediation Model.</em></a> Journal of Interpersonal Violence, 36(11–12), NP5839–NP5873. https://doi.org/10.1177/0886260518805763</li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Frazier, P. A., Tix, A. P., &amp; Barron, K. E. (2004). <a href="https://psycnet.apa.org/fulltext/2003-11100-011.pdf"><em>Testing Moderator and Mediator Effects in Counseling Psychology Research.</em></a> Journal of Counseling Psychology, 51(1), 115–134. https://doi.org/10.1037/0022-0167.51.1.115</li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> MacKinnon, D. P. (2011). <a href="https://journals.sagepub.com/doi/full/10.1177/1049731511414148?casa_token=DNm2rg2IflAAAAAA:SoSuLBe18QLwcFgGy5AlGPBjj443lnLhAaQ8HwlQ-BnK6rqFGsfy1zJG8HnnmsYsQOHgNzLhmqhjKgY"><em>Integrating Mediators and Moderators in Research Design.</em></a> Research on Social Work Practice, 21(6), 675–681. https://doi.org/10.1177/1049731511414148</li>
 </ul>
-<section id="rcts-matching-and-inverse-probability-weighting" class="level3">
-<h3 class="anchored" data-anchor-id="rcts-matching-and-inverse-probability-weighting">RCTs, matching, and inverse probability weighting</h3>
+</section>
+<section id="required-reading-for-phd-students-and-recommended-for-others" class="level3">
+<h3 class="anchored" data-anchor-id="required-reading-for-phd-students-and-recommended-for-others">Required Reading for PhD Students (and recommended for others)</h3>
 <ul>
-<li>The <a href="../example/rcts.html">example page on RCTs</a> shows how to use R to analyze and estimate causal effects from RCTs</li>
-<li>The <a href="../example/matching-ipw.html">example page on matching and inverse probability weighting</a> shows how to use R to close backdoors, make adjustments, and find causal effects from observational data using matching and inverse probability weighting</li>
+<li>Andrew Hayes’ book entitled <a href="https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/reading/mediation_hayes.pdf"><em>Mediation, Moderation and Conditional Process Models</em></a> is an excellent and rigorous introduction. Read Chapters 3 <em>The Simple Mediation Model</em> and Chapter 7: <em>Fundamentals of Moderation Analysis</em>.</li>
 </ul>
 </section>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<section id="lecture-notes" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-notes">Lecture Notes</h2>
 <p>The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
 <p class="buttons">
-<a class="btn btn-danger" target="_blank" href="../slides/07-slides.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="../slides/07-slides.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a>
+<a class="btn btn-danger" target="_blank" href="../slides/04-slides.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="../slides/04-slides.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a>
 </p>
 <ul class="nav nav-tabs" id="slide-tabs" role="tablist">
 <li class="nav-item">
-<a class="nav-link active" id="introduction-tab" data-toggle="tab" href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="the-magic-of-randomization-tab" data-toggle="tab" href="#the-magic-of-randomization" role="tab" aria-controls="the-magic-of-randomization" aria-selected="false">The magic of randomization</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="how-to-analyze-rcts-tab" data-toggle="tab" href="#how-to-analyze-rcts" role="tab" aria-controls="how-to-analyze-rcts" aria-selected="false">How to analyze RCTs</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="the-gold-standard-tab" data-toggle="tab" href="#the-gold-standard" role="tab" aria-controls="the-gold-standard" aria-selected="false">The “gold” standard</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="adjustment-with-matching-tab" data-toggle="tab" href="#adjustment-with-matching" role="tab" aria-controls="adjustment-with-matching" aria-selected="false">Adjustment with matching</a>
+<a class="nav-link active" id="lecture-slides-tab" data-toggle="tab" href="#lecture-slides" role="tab" aria-controls="lecture-slides" aria-selected="true">Lecture Slides</a>
 </li>
 </ul>
 <div id="slide-tabs" class="tab-content">
-<div id="introduction" class="tab-pane fade show active" role="tabpanel" aria-labelledby="introduction-tab">
+<div id="lecture-slides" class="tab-pane fade show active" role="tabpanel" aria-labelledby="lecture-slides-tab">
 <div class="ratio ratio-16x9">
-<iframe src="../slides/07-slides.html#1">
-</iframe>
-</div>
-</div>
-<div id="the-magic-of-randomization" class="tab-pane fade" role="tabpanel" aria-labelledby="the-magic-of-randomization-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/07-slides.html#magic-randomization">
-</iframe>
-</div>
-</div>
-<div id="how-to-analyze-rcts" class="tab-pane fade" role="tabpanel" aria-labelledby="how-to-analyze-rcts-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/07-slides.html#rct-how">
-</iframe>
-</div>
-</div>
-<div id="the-gold-standard" class="tab-pane fade" role="tabpanel" aria-labelledby="the-gold-standard-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/07-slides.html#gold-standard">
-</iframe>
-</div>
-</div>
-<div id="adjustment-with-matching" class="tab-pane fade" role="tabpanel" aria-labelledby="adjustment-with-matching-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/07-slides.html#matching">
+<iframe src="../slides/day7.html#1">
 </iframe>
 </div>
 </div>
@@ -406,52 +453,43 @@ Tip
 </div>
 </div>
 </section>
-<section id="videos" class="level2">
-<h2 class="anchored" data-anchor-id="videos">Videos</h2>
-<p>Videos for each section of the lecture are <a href="https://www.youtube.com/playlist?list=PLS6tnpTr39sGJURMOwN9tf9MNDN4t0JMz">available at this YouTube playlist</a>.</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=m4nKVJ-2K3I&amp;list=PLS6tnpTr39sGJURMOwN9tf9MNDN4t0JMz">Introduction</a></li>
-<li><a href="https://www.youtube.com/watch?v=-zjSixOybQE&amp;list=PLS6tnpTr39sGJURMOwN9tf9MNDN4t0JMz">The magic of randomization</a></li>
-<li><a href="https://www.youtube.com/watch?v=W0NyALrjLA4&amp;list=PLS6tnpTr39sGJURMOwN9tf9MNDN4t0JMz">How to analyze RCTs</a></li>
-<li><a href="https://www.youtube.com/watch?v=vHb2TYAze74&amp;list=PLS6tnpTr39sGJURMOwN9tf9MNDN4t0JMz">The “gold” standard</a></li>
-<li><a href="https://www.youtube.com/watch?v=jECz-SS-sqc&amp;list=PLS6tnpTr39sGJURMOwN9tf9MNDN4t0JMz">Adjustment with matching</a></li>
-</ul>
-<p>You can also watch the playlist (and skip around to different sections) here:</p>
-<div class="ratio ratio-16x9">
-<iframe src="https://www.youtube.com/embed/playlist?list=PLS6tnpTr39sGJURMOwN9tf9MNDN4t0JMz" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</div>
-</section>
 <section id="in-class-stuff" class="level2">
 <h2 class="anchored" data-anchor-id="in-class-stuff">In-class stuff</h2>
 <p>Here are all the materials we’ll use in class:</p>
 <ul>
-<li><a href="../slides/07-class.html"><strong>Session 7 FAQ slides</strong></a> (<a href="../slides/07-class.pdf">PDF</a>)</li>
-<li><a href="../projects/rcts-ipw.zip">In-class <code>.zip</code> file</a></li>
-<li><a href="https://posit.cloud/spaces/323551/content/5479370">Posit.cloud project</a></li>
+<li><a href="../slides/04-class.html"><strong>Session 4 FAQ slides</strong></a> (<a href="../slides/04-class.pdf">PDF</a>)</li>
+<li><a href="https://posit.cloud/spaces/323551/content/5299495"><i class="fa-brands fa-r-project" aria-label="r-project"></i> Regression playground Posit.cloud project</a></li>
+<li><a href="../projects/regression-example.zip"><i class="fa-solid fa-file-zipper" aria-label="file-zipper"></i> Regression playground project <code>.zip</code> file</a></li>
 </ul>
-<p>Other helpful resources:</p>
+<section id="additional-resources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-resources">📦 Additional Resources</h3>
 <ul>
-<li><a href="https://www.poverty-action.org/study/impact-mask-distribution-and-promotion-mask-uptake-and-covid-19-bangladesh">“The Impact of Mask Distribution and Promotion on Mask Uptake and COVID-19 in Bangladesh”</a></li>
-<li>Macartan Humphreys, <a href="https://macartan.github.io/i/notes/rct_faqs.html">“I saw your RCT and I have some worries! FAQs”</a></li>
-<li>Darren Dahly, <a href="https://statsepi.substack.com/p/out-of-balance">“Out of balance: A perspective on covariate adjustment in randomized experiments”</a></li>
-<li><a href="../resource/bayes.html">Bayesian stats and decison making</a></li>
-<li><a href="../example/standard-errors.html">Standard errors</a></li>
-<li><a href="../example/confounding-sensitivity.html">Unobserved confounding and sensitivity analysis</a></li>
+<li><a href="https://www.andrewheiss.com/blog/2021/12/01/multilevel-models-panel-data-guide/">Click here</a> for an example of how to do Bayesian multilevel models.</li>
+<li>Read Chapters 1 &amp; 2 in <a href="https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/reading/R_data_Science_partI.pdf">R for Data Science</a></li>
+<li><a href="../example/lab4/mediation_moderation.html">Mediation and Moderation in R</a></li>
 </ul>
-
+</section>
+<section id="competencies-and-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="competencies-and-knowledge">Competencies and Knowledge</h3>
+<ul>
+<li>Foundational knowledge: 3, 6</li>
+<li>Competencies: 2, 9</li>
+<li>MPH Specializations: 4, 7</li>
+<li>PhD Specializations: 4</li>
+</ul>
+</section>
+<section id="student-evaluation-activity-for-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="student-evaluation-activity-for-assessment">Student Evaluation Activity for Assessment</h3>
+<ul>
+<li>Exam 1</li>
+<li>Proposal 1</li>
+</ul>
 
 
 </section>
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-wb-eval" class="csl-entry" role="listitem">
-Gertler, Paul J., Sebastian Martinez, Patrick Premand, Laura B. Rawlings, and Christel M. J. Vermeersch. 2016. <em>Impact Evaluation in Practice</em>. 2nd ed. Inter-American Development Bank; World Bank. <a href="https://openknowledge.worldbank.org/handle/10986/25030">https://openknowledge.worldbank.org/handle/10986/25030</a>.
-</div>
-<div id="ref-Huntington-Klein:2021" class="csl-entry" role="listitem">
-Huntington-Klein, Nick. 2021. <em>The Effect: An Introduction to Research Design and Causality</em>. Boca Raton, Florida: <span>Chapman and Hall</span> / CRC. <a href="https://theeffectbook.net/">https://theeffectbook.net/</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -688,7 +726,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2023 by <a href="https://www.andrewheiss.com">Andrew Heiss</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 by <a href="https://bigdataforsocialjustice.github.io/">Gia Barboza-Salerno</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>

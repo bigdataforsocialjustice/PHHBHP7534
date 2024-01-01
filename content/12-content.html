@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Use modern statistical and data scientific tools to measure causal effects and evaluate public policy">
+<meta name="description" content="develop, read, critique, design, and conduct high-quality scientific research in public health">
 
-<title>Program Evaluation - Instrumental variables II + Regression discontinuity II</title>
+<title>Research Methods in Public Health – content</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,20 +64,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Program Evaluation - Instrumental variables II + Regression discontinuity II">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
-<meta property="og:site-name" content="Program Evaluation">
-<meta property="og:locale" content="en_US">
-<meta property="og:image:height" content="640">
-<meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Program Evaluation - Instrumental variables II + Regression discontinuity II">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
-<meta name="twitter:creator" content="@andrewheiss">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="640">
-<meta name="twitter:image-width" content="1280">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -88,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Program Evaluation</span>
+    <span class="navbar-title">Research Methods in Public Health</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -131,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://rstudio.cloud" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
+    <a class="nav-link" href="https://posit.cloud/content/yours?sort=name_asc" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -146,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/01-content.html">Course content</a></li><li class="breadcrumb-item"><a href="../content/12-content.html">12: IV II &amp; RDD II</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/01-content.html">Course content</a></li><li class="breadcrumb-item"><a href="../content/12-content.html">12: Quasi-experimental designs</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -187,85 +173,181 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/01-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1: Evaluation and the causal revolution</span></a>
+ <span class="menu-text">1: Intro + Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/02-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2: Regression and inference</span></a>
+ <span class="menu-text">2: Variables + Units of Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/03-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3: Theories of change and logic models</span></a>
+ <span class="menu-text">3: Associations + Confounding</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/04-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4: Measurement and DAGs</span></a>
+ <span class="menu-text">4: Mediation + Moderation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/05-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5: DAGs and potential outcomes</span></a>
+ <span class="menu-text">5: Research Questions and Hypotheses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/06-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6: Threats to validity</span></a>
+ <span class="menu-text">6: Theory + Concepts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/07-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7: Randomization and matching</span></a>
+ <span class="menu-text">7: Validity + Reliability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/08-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8: Diff-in-diff I</span></a>
+ <span class="menu-text">8: Measures + Scale Development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/09-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9: Diff-in-diff II</span></a>
+  <a href="../content/exam1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9: Exam I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/10-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10: RDD I</span></a>
+ <span class="menu-text">10: Internal + External Validity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/11-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">11: IV I</span></a>
+ <span class="menu-text">11: Pre-experimental designs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/12-content.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">12: IV II &amp; RDD II</span></a>
+ <span class="menu-text">12: Quasi-experimental designs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/13-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">13: Choosing and planning ethical evaluations</span></a>
+ <span class="menu-text">13: Presentations + Feedback</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/14-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">14: Ethics, stories, and curiosity</span></a>
+ <span class="menu-text">14: Presentations + Feedback</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/15-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15: Randomized Controlled Trials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/16-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">16: Observational Designs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/17-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">17: Ethics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/18-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">18: Exam II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/19-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">19: No Class + Spring Break</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/exam2.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">20: No Class + Spring Break</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/21-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">21: Sampling I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/22-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">22: Sampling II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/23-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">23: Recruitment + Retention</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/24-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">24: Data Collection + Survey Design</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/25-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">25: Analytical methods + observation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/26-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">26: Analytical methods + experimental</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/27-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">27: Reproducible Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/28-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">28: Student Presentations I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/29-content.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">29: Student Presentations II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/exam3.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">30: Exam III</span></a>
   </div>
 </li>
       </ul>
@@ -276,122 +358,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#readings" id="toc-readings" class="nav-link active" data-scroll-target="#readings">Readings</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos">Videos</a></li>
-  <li><a href="#in-class-stuff" id="toc-in-class-stuff" class="nav-link" data-scroll-target="#in-class-stuff">In-class stuff</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header">
-<h1 class="title display-7">Instrumental variables II + Regression discontinuity II</h1>
-
-<div class="date-block bg-content text-white p-2">
-  <p class="date">Content for Thursday, April 6, 2023</p>
-</div>
-</header>
-
-<section id="readings" class="level2">
-<h2 class="anchored" data-anchor-id="readings">Readings</h2>
-<ul>
-<li>The <a href="../example/cace.html">example page on complier average causal effects</a> shows how to use R to disentangle complier average causal effects</li>
-<li>The <a href="../example/rdd-fuzzy.html">example page on fuzzy regression discontinuity</a> shows how to use R to use instrumental variables in fuzzy regression discontinuity, both parametrically and nonparametrically</li>
-</ul>
-</section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
-<p class="buttons">
-<a class="btn btn-danger" target="_blank" href="../slides/12-slides.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="../slides/12-slides.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a>
-</p>
-<ul class="nav nav-tabs" id="slide-tabs" role="tablist">
-<li class="nav-item">
-<a class="nav-link active" id="introduction-tab" data-toggle="tab" href="#introduction" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="treatment-effects-and-compliance-tab" data-toggle="tab" href="#treatment-effects-and-compliance" role="tab" aria-controls="treatment-effects-and-compliance" aria-selected="false">Treatment effects and compliance</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="randomized-promotion-tab" data-toggle="tab" href="#randomized-promotion" role="tab" aria-controls="randomized-promotion" aria-selected="false">Randomized promotion</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" id="fuzzy-regression-discontinuity-tab" data-toggle="tab" href="#fuzzy-regression-discontinuity" role="tab" aria-controls="fuzzy-regression-discontinuity" aria-selected="false">Fuzzy regression discontinuity</a>
-</li>
-</ul>
-<div id="slide-tabs" class="tab-content">
-<div id="introduction" class="tab-pane fade show active" role="tabpanel" aria-labelledby="introduction-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/12-slides.html#1">
-</iframe>
-</div>
-</div>
-<div id="treatment-effects-and-compliance" class="tab-pane fade" role="tabpanel" aria-labelledby="treatment-effects-and-compliance-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/12-slides.html#treatment-effects">
-</iframe>
-</div>
-</div>
-<div id="randomized-promotion" class="tab-pane fade" role="tabpanel" aria-labelledby="randomized-promotion-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/12-slides.html#encouragement">
-</iframe>
-</div>
-</div>
-<div id="fuzzy-regression-discontinuity" class="tab-pane fade" role="tabpanel" aria-labelledby="fuzzy-regression-discontinuity-tab">
-<div class="ratio ratio-16x9">
-<iframe src="../slides/12-slides.html#fuzzy-rdd">
-</iframe>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Fun fact</strong>: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.</p>
-</div>
-</div>
-</section>
-<section id="videos" class="level2">
-<h2 class="anchored" data-anchor-id="videos">Videos</h2>
-<p>Videos for each section of the lecture are <a href="https://www.youtube.com/playlist?list=PLS6tnpTr39sGrbGfvdp0Gob6qAghIdiLq">available at this YouTube playlist</a>.</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=qDAFXXriFyE&amp;list=PLS6tnpTr39sGrbGfvdp0Gob6qAghIdiLq">Introduction</a></li>
-<li><a href="https://www.youtube.com/watch?v=_Ue7blCyEXk&amp;list=PLS6tnpTr39sGrbGfvdp0Gob6qAghIdiLq">Treatment effects and compliance</a></li>
-<li><a href="https://www.youtube.com/watch?v=M5cuBBuqZys&amp;list=PLS6tnpTr39sGrbGfvdp0Gob6qAghIdiLq">Randomized promotion</a></li>
-<li><a href="https://www.youtube.com/watch?v=9xGeCGRvVgE&amp;list=PLS6tnpTr39sGrbGfvdp0Gob6qAghIdiLq">Fuzzy regression discontinuity</a></li>
-</ul>
-<p>You can also watch the playlist (and skip around to different sections) here:</p>
-<div class="ratio ratio-16x9">
-<iframe src="https://www.youtube.com/embed/playlist?list=PLS6tnpTr39sGrbGfvdp0Gob6qAghIdiLq" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</div>
-</section>
-<section id="in-class-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-stuff">In-class stuff</h2>
-<p>Here are all the materials we’ll use in class:</p>
-<ul>
-<li><a href="../slides/12-class.html"><strong>Week 12 FAQ slides</strong></a> (<a href="../slides/12-class.pdf">PDF</a>)</li>
-<li><a href="../example/random-numbers.html">Generating random numbers</a></li>
-<li><a href="../example/synthetic-data.html">The ultimate guide to generating synthetic data for causal inference</a></li>
-<li><a href="https://www.dropbox.com/s/mzaaxffdhu5tllp/synthetic-data-sp23.R"><i class="fa-brands fa-r-project" aria-label="r-project"></i> Live R script</a></li>
-</ul>
 
 
-</section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,7 +605,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2023 by <a href="https://www.andrewheiss.com">Andrew Heiss</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 by <a href="https://bigdataforsocialjustice.github.io/">Gia Barboza-Salerno</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
