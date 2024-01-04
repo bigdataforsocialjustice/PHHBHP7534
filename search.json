@@ -319,7 +319,7 @@
     "href": "resource/exam1.html",
     "title": "Things you should know for Exam 1",
     "section": "",
-    "text": "You should understand…\n\n…the difference between experimental research and observational research\n…the sometimes conflicting roles of science and intuition in public administration and policy\n…the difference between the various types of evaluations and how they target specific parts of a logic model\n…the difference between identifying correlation (math) and identifying causation (philosophy and theory)\n…what it means for a relationship to be causal"
+    "text": "You should understand…"
   },
   {
     "objectID": "resource/exam1.html#evidence-causation-and-evaluation",
@@ -431,7 +431,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Class\nDay\nTopic\nWeek\n\n\n\n\n1\n1/9\nIntroduction + Overview of the research process\n1\n\n\n2\n1/11\nIntroduction to variables + Units of analysis\n1\n\n\n3\n1/16\nRelationships among variables (p. 1) + associations and confounding\n2\n\n\n4\n1/18\nRelationships among variables (p. 2) + mediation and moderation\n2\n\n\n5\n1/23\nResearch questions and hypotheses\n3\n\n\n6\n1/25\nRole of theory and conceptual models\n3\n\n\n7\n1/30\nMeasurement (p. 1): validity and reliability\n4\n\n\n8\n2/1\nMeasurement (p. 2): finding measures and scale development\n4\n\n\n9\n2/6\nExam I\n5\n\n\n10\n2/8\nInternal and external validity\n5\n\n\n11\n2/13\nPre-experimental designs\n6\n\n\n12\n2/15\nQuasi-experimental designs\n6\n\n\n13\n2/20\nStudent presentations\n7\n\n\n14\n2/22\nStudent presentations\n7\n\n\n15\n2/27\nRandomized controlled trials\n8\n\n\n16\n2/29\nObservational designs\n8\n\n\n17\n3/5\nEthics in research\n9\n\n\n18\n3/7\nExam II\n9\n\n\n19\n3/12\nNo Class - Spring Break\n10\n\n\n20\n3/14\nNo Class - Spring Break\n10\n\n\n21\n3/19\nSampling I\n11\n\n\n22\n3/21\nSampling II\n11\n\n\n23\n3/26\nRecruitment and retention\n12\n\n\n24\n3/28\nData collection and survey design\n12\n\n\n25\n4/2\nAnalytic methods: observational research\n13\n\n\n26\n4/4\nAnalytic methods: experimental design\n13\n\n\n27\n4/9\nReproducible research/dissemination\n14\n\n\n28\n4/11\nStudent presentations\n14\n\n\n29\n4/16\nStudent presentations\n15\n\n\n30\n4/18\nExam III\n15"
+    "text": "Class\nDay\nTopic\nWeek\n\n\n\n\n1\n1/9\nIntroduction + Overview of the research process\n1\n\n\n\n\nBegin thinking about a research topic\n\n\n\n2\n1/11\nIntroduction to variables + Units of analysis\n1\n\n\n3\n1/16\nRelationships among variables (p. 1) + associations and confounding\n2\n\n\n\n\nSelect a research topic\n\n\n\n4\n1/18\nRelationships among variables (p. 2) + mediation and moderation\n2\n\n\n\n\nSubmit research topic for approval\n\n\n\n5\n1/23\nResearch questions and hypotheses\n3\n\n\n6\n1/25\nRole of theory and conceptual models\n3\n\n\n\n\nAnnotated bibliography due\n\n\n\n\n\nBegin writing literature review\n\n\n\n7\n1/30\nMeasurement (p. 1): validity and reliability\n4\n\n\n\n\nBegin identifying measures to use in your study\n\n\n\n8\n2/1\nMeasurement (p. 2): finding measures and scale development\n4\n\n\n9\n2/6\nExam I \n5\n\n\n10\n2/8\nInternal and external validity\n5\n\n\n\n\nPhD students work with professor on statistical analysis\n\n\n\n\n\nPhD students: draft of literature review due\n\n\n\n11\n2/13\nPre-experimental designs\n6\n\n\n12\n2/15\nQuasi-experimental designs\n6\n\n\n\n\nPhD student run analyses for paper\n\n\n\n13\n2/20\nStudent presentations\n7\n\n\n14\n2/22\nStudent presentations\n7\n\n\n15\n2/27\nRandomized controlled trials\n8\n\n\n16\n2/29\nObservational designs\n8\n\n\n\n\nPhD students begin drafting results section\n\n\n\n17\n3/5\nEthics in research\n9\n\n\n18\n3/7\nExam II \n9\n\n\n\n\nAll students submit phase I of research project\n\n\n\n19\n3/12\nNo Class - Spring Break\n10\n\n\n20\n3/14\nNo Class - Spring Break\n10\n\n\n21\n3/19\nSampling I\n11\n\n\n\n\nBegin drafting methods section\n\n\n\n22\n3/21\nSampling II\n11\n\n\n23\n3/26\nRecruitment and retention\n12\n\n\n24\n3/28\nData collection and survey design\n12\n\n\n25\n4/2\nAnalytic methods: observational research\n13\n\n\n26\n4/4\nAnalytic methods: experimental design\n13\n\n\n\n\nPhD students complete discussion/conclusion\n\n\n\n27\n4/9\nReproducible research/dissemination\n14\n\n\n28\n4/11\nStudent presentations\n14\n\n\n29\n4/16\nStudent presentations\n15\n\n\n30\n4/18\nMPH students take Exam III \n15\n\n\n\n\nFinal Research Product (Parts I and II) is due by today"
   },
   {
     "objectID": "syllabus.html#class-format",
@@ -541,14 +541,14 @@
   {
     "objectID": "content/04-content.html",
     "href": "content/04-content.html",
-    "title": "Mediation, Moderation and Mediated Moderation",
+    "title": "Mediation, Moderation and Moderated Mediation",
     "section": "",
     "text": "Note\n\n\n\nCourse objective(s) for this module: Describe and execute the key steps in designing, conducting, and evaluating research in health behavior and health promotion."
   },
   {
     "objectID": "content/04-content.html#readings",
     "href": "content/04-content.html#readings",
-    "title": "Mediation, Moderation and Mediated Moderation",
+    "title": "Mediation, Moderation and Moderated Mediation",
     "section": "Readings",
     "text": "Readings\n\nMeasurement\n\n Barboza-Salerno, G. E. (2020). Cognitive readiness to parent, stability and change in postpartum parenting stress and social-emotional problems in early childhood: A second order growth curve model. Children and Youth Services Review, 113, 104958. https://doi.org/10.1016/j.childyouth.2020.104958\n Barboza, G., & Siller, L. A. (2021).Child Maltreatment, School Bonds, and Adult Violence: A Serial Mediation Model. Journal of Interpersonal Violence, 36(11–12), NP5839–NP5873. https://doi.org/10.1177/0886260518805763\n Frazier, P. A., Tix, A. P., & Barron, K. E. (2004). Testing Moderator and Mediator Effects in Counseling Psychology Research. Journal of Counseling Psychology, 51(1), 115–134. https://doi.org/10.1037/0022-0167.51.1.115\n MacKinnon, D. P. (2011). Integrating Mediators and Moderators in Research Design. Research on Social Work Practice, 21(6), 675–681. https://doi.org/10.1177/1049731511414148\n\n\n\nRequired Reading for PhD Students (and recommended for others)\n\nAndrew Hayes’ book entitled Mediation, Moderation and Conditional Process Models is an excellent and rigorous introduction. Read Chapters 3 The Simple Mediation Model and Chapter 7: Fundamentals of Moderation Analysis.\n\n\n\nYour tasks: Research Assignment\n\nConduct a literature search to identify articles for your literature review\nCreate a new Zotero collection and download the articles into that collection\n\n\n\nIn-class activities\n\nConducting a literature review\nCreating bibliographies in Zotero\n\n\n\n\n\n\n\nPay Attention\n\n\n\nPhD students: the annotated bibliography is due today by midnight. To submit the bibliography, follow [these instructions]."
   },
@@ -569,7 +569,7 @@
   {
     "objectID": "content/04-content.html#in-class-stuff",
     "href": "content/04-content.html#in-class-stuff",
-    "title": "Mediation, Moderation and Mediated Moderation",
+    "title": "Mediation, Moderation and Moderated Mediation",
     "section": "In-class stuff",
     "text": "In-class stuff\nHere are all the materials we’ll use in class:\n\nSession 4 FAQ slides (PDF)\n Regression playground Posit.cloud project\n Regression playground project .zip file\n\n\n📦 Additional Resources\n\nClick here for an example of how to do Bayesian multilevel models.\nRead Chapters 1 & 2 in R for Data Science\nMediation and Moderation in R\n\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4, 7\nPhD Specializations: 4, 7\n\n\n\nStudent Evaluation Activity for Assessment\n\nExam 1\nProposal 1\n\n\n\nAdvanced Mediation Models\nFor an example of when I used these models in my own work, see (Elise Barboza and Siller 2021) Parallel Mediation Model:\n\n\n\n\n\nSequential mediation model:"
   },
@@ -1521,14 +1521,14 @@
   {
     "objectID": "content/exam1.html",
     "href": "content/exam1.html",
-    "title": "Exam I",
+    "title": "Things you should know for Exam 1",
     "section": "",
-    "text": "Information about Exam 1\n\n\nThings you should know"
+    "text": "You should understand…"
   },
   {
     "objectID": "content/04-content.html#lecture-notes",
     "href": "content/04-content.html#lecture-notes",
-    "title": "Mediation, Moderation and Mediated Moderation",
+    "title": "Mediation, Moderation and Moderated Mediation",
     "section": "Lecture Notes",
     "text": "Lecture Notes\nThe slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\n View all slides in new window  Download PDF of all slides\n\n\n\nLecture Slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nFun fact: If you type ? (or shift + /) while going through the slides, you can see a list of special slide-specific commands."
   },
@@ -1615,5 +1615,152 @@
     "title": "Difference-in-differences II",
     "section": "In-class stuff",
     "text": "In-class stuff\nHere are all the materials we’ll use in class:\n\nSession 9 FAQ slides (PDF)\nSession 8 R code (from last week) (on Posit.cloud)\n\nAnd here are some useful blog posts and examples of the stuff we talked about today:\n\nHow random effects work\nTWFE diagnostics\n\nAnd Quarto stuff!\n\nQuarto\nNetlify Drop (easiest way to get a Quarto site online)\nOther ways to get Quarto stuff online\nHTML themes for R Markdown and Quarto websites\nResearch notebooks + manuscripts:\n\nPandemic Pass?\nAre Donors Really Responding?\nNGO Repression as a Predictor of Worsening Human Rights Abuses"
+  },
+  {
+    "objectID": "resource/final.html",
+    "href": "resource/final.html",
+    "title": "Research Project Assignment",
+    "section": "",
+    "text": "MPH Students: Your final submission must include a title page, abstract, Background and Significance and Methodology Sections, and references created with Zotero.\nPhD Students: Your final submission must include the elements above as well a Results and Discussion section."
+  },
+  {
+    "objectID": "resource/final.html#abstract",
+    "href": "resource/final.html#abstract",
+    "title": "Research Project Assignment",
+    "section": "Abstract:",
+    "text": "Abstract:\n\nProvide an overview of your study, focusing on methods.\nShould be no longer than 250 words\nShould include keywords that are italicized and separated by semicolons.\n\n\n\n\n\n\n\nNote\n\n\n\nThe abstract is typically finalize to include relevant findings once your study is completed.\n\n\n\n\n\n\n\n\nNote\n\n\n\nPhD students will have findings and must include results in the abstract."
+  },
+  {
+    "objectID": "resource/final.html#part-i-background-and-significance-4-5-pages",
+    "href": "resource/final.html#part-i-background-and-significance-4-5-pages",
+    "title": "Research Project Assignment",
+    "section": "Part I: Background and Significance (4-5 pages)",
+    "text": "Part I: Background and Significance (4-5 pages)\n\nProblem Statement (1-2 paragraphs)\nThe problem statement must address the following questions:\n\nWhy is this an important public health problem?\nHow many people are affected by this problem? (the numbers of people who are affected by this problem are typically what makes it a significant public health problem)\nHow does this public health problem impact other social issues or focal populations?\nWhy is your population an important one to study?\n\n\n\nLiterature Review (~4 pages)—A synthesis of the literature, not a summary\n\nDescribe what is known about the variables in your research question and the relationship between them.\nDescribe what is known about your target population\nDefine key terms and explain theories that are important for understanding your topic\nIdentify consistent findings across studies\nIdentify gaps and controversies in the literature\n\n\n\n\n\n\n\nEstablish Relevance\n\n\n\nThe more you can argue that there is very little known about this topic, the more relevant your research will be.\n\n\n\n\nResearch Questions and Hypotheses\n\nList 1-2 research questions and associated hypotheses.\n\n\nQualitative studies will contain no more than 3 tentative hypotheses.\n\n\n\n\n\n\n\nAdvanced Planning\n\n\n\nA draft of the Problem Statement, Literature Review and Research Question(s) is due by 11:59PM on Friday 3/8 Week 9, the same week as Exam I, so plan accordingly)"
+  },
+  {
+    "objectID": "resource/final.html#part-ii-methodology-4-5-pages",
+    "href": "resource/final.html#part-ii-methodology-4-5-pages",
+    "title": "Research Project Assignment",
+    "section": "Part II: Methodology (4-5 pages)",
+    "text": "Part II: Methodology (4-5 pages)\n\nDesign:\n\nWhat design (e.g. quasi-experimental) do you plan to use?\nBriefly describe how you will carry out your design\n\nSampling: Who is in your study and how are they recruited?\n\nWhat is your sampling frame?\nWhat are your inclusion/exclusion criteria?\nHow will you recruit your subjects?\nHow do you plan to conduct your sampling?\nIs there important information about your focal population that will impact sampling?\n\nEthics: How will you protect the rights of your study’s participants?\n\nWhat level, if any, of IRB review does your study require?\nWhat are the risks and benefits of the study?\nHow did you address any ethical concerns with your study?\n\nMeasures: How will you measure the concepts in your study?\n\nFor quantitative studies, operational definitions are needed.\n\nWhat is the operational definition for your independent variable?\nWhat is the operational definition for your dependent variable?\nWhat are the operational definitions for at least two control variables?\nWhat are the psychometric properties of the instruments you use in your definitions (e.g. validity, reliability)?\n\nFor qualitative studies, describe in detail the questions you plan to ask the participants in your study.\n\nProvide a deconstruction of important concepts (e.g., how is the concept of “role strain” distinguished from the concept of “role stress”)\nHow are your questions for participants based in previous findings in the literature?\nWhat consideration will be given to emergent themes and revising questions through the research process?\nA completed instrument\n\n\nData Handling and Analysis: How will you collect and examine your data?\n\nDescribe how data collection will take place\nDescribe any modifications you will make to the data in preparation for analysis (e.g., data entry, double-checking)\nDescribe your data analysis plan\n\nCritique of Methodology: Why did you decide to do your study as you did?\n\nWhat are the strengths and limitations of your sampling, measures, design, and other components?\n\nImplications and Conclusion: What is the point of your proposal?\n\nDiscuss how your study will benefit the discipline of social work.\nDiscuss how your proposal would influence policy, practice, and research.\nDiscuss how your proposal will contribute something new and important to the literature on your topic.\n\n\n\nReferences\n\nShould be APA formatted\nAll references should be contained in a Zotero file that will be submitted along with your final project"
+  },
+  {
+    "objectID": "resource/exam1.html#basics-of-research-design",
+    "href": "resource/exam1.html#basics-of-research-design",
+    "title": "Things you should know for Exam 1",
+    "section": "",
+    "text": "You should understand…"
+  },
+  {
+    "objectID": "resource/exam1.html#variables-units-of-analysis",
+    "href": "resource/exam1.html#variables-units-of-analysis",
+    "title": "Things you should know for Exam 1",
+    "section": "Variables + Units of Analysis",
+    "text": "Variables + Units of Analysis\nYou should understand…"
+  },
+  {
+    "objectID": "resource/exam1.html#association-confounding",
+    "href": "resource/exam1.html#association-confounding",
+    "title": "Things you should know for Exam 1",
+    "section": "Association + Confounding",
+    "text": "Association + Confounding\nYou should understand…"
+  },
+  {
+    "objectID": "resource/exam1.html#mediation-moderation",
+    "href": "resource/exam1.html#mediation-moderation",
+    "title": "Things you should know for Exam 1",
+    "section": "Mediation + Moderation",
+    "text": "Mediation + Moderation\nYou should understand…"
+  },
+  {
+    "objectID": "resource/exam1.html#research-questions-hypotheses",
+    "href": "resource/exam1.html#research-questions-hypotheses",
+    "title": "Things you should know for Exam 1",
+    "section": "Research Questions + Hypotheses",
+    "text": "Research Questions + Hypotheses\nYou should understand…"
+  },
+  {
+    "objectID": "resource/exam1.html#theories-concepts",
+    "href": "resource/exam1.html#theories-concepts",
+    "title": "Things you should know for Exam 1",
+    "section": "Theories + Concepts",
+    "text": "Theories + Concepts\nYou should understand…"
+  },
+  {
+    "objectID": "resource/exam1.html#validity-reliability",
+    "href": "resource/exam1.html#validity-reliability",
+    "title": "Things you should know for Exam 1",
+    "section": "Validity + Reliability",
+    "text": "Validity + Reliability\nYou should understand…"
+  },
+  {
+    "objectID": "resource/exam1.html#measures-scale-development",
+    "href": "resource/exam1.html#measures-scale-development",
+    "title": "Things you should know for Exam 1",
+    "section": "Measures + Scale Development",
+    "text": "Measures + Scale Development\nYou should understand…"
+  },
+  {
+    "objectID": "assignment/weekly-check-in.html",
+    "href": "assignment/weekly-check-in.html",
+    "title": "Weekly check-in",
+    "section": "",
+    "text": "PhD students will check in with me weekly beginning Week 4. There will be 9 weekly checkins between Weeks 4 - 12 to make sure that your research paper is on track to be completed, and that the course is going satisfactorily for you (that is, assignments and objectives are clear, you are meeting the learning objectives particularly around R/Rstudio, etc.). We do not have to meet unless you want to. You can simply email me the answers to the following questions each week:\n\nWhat three (3) things did you learn this week that you did not know?\nWhat three (3) new understandings did you take-away that makes you a more effective researcher, and what new approach will facilitate your understanding about marginalized groups?\nWhat if anything was unclear to you about the assignments, learning objectives, etc. and what can be improved?\n\nNote: this will be graded as you can see in the grading table."
+  },
+  {
+    "objectID": "content/exam1.html#basics-of-research-design",
+    "href": "content/exam1.html#basics-of-research-design",
+    "title": "Things you should know for Exam 1",
+    "section": "",
+    "text": "You should understand…"
+  },
+  {
+    "objectID": "content/exam1.html#variables-units-of-analysis",
+    "href": "content/exam1.html#variables-units-of-analysis",
+    "title": "Things you should know for Exam 1",
+    "section": "Variables + Units of Analysis",
+    "text": "Variables + Units of Analysis\nYou should understand…"
+  },
+  {
+    "objectID": "content/exam1.html#association-confounding",
+    "href": "content/exam1.html#association-confounding",
+    "title": "Things you should know for Exam 1",
+    "section": "Association + Confounding",
+    "text": "Association + Confounding\nYou should understand…"
+  },
+  {
+    "objectID": "content/exam1.html#mediation-moderation",
+    "href": "content/exam1.html#mediation-moderation",
+    "title": "Things you should know for Exam 1",
+    "section": "Mediation + Moderation",
+    "text": "Mediation + Moderation\nYou should understand…"
+  },
+  {
+    "objectID": "content/exam1.html#research-questions-hypotheses",
+    "href": "content/exam1.html#research-questions-hypotheses",
+    "title": "Things you should know for Exam 1",
+    "section": "Research Questions + Hypotheses",
+    "text": "Research Questions + Hypotheses\nYou should understand…"
+  },
+  {
+    "objectID": "content/exam1.html#theories-concepts",
+    "href": "content/exam1.html#theories-concepts",
+    "title": "Things you should know for Exam 1",
+    "section": "Theories + Concepts",
+    "text": "Theories + Concepts\nYou should understand…"
+  },
+  {
+    "objectID": "content/exam1.html#validity-reliability",
+    "href": "content/exam1.html#validity-reliability",
+    "title": "Things you should know for Exam 1",
+    "section": "Validity + Reliability",
+    "text": "Validity + Reliability\nYou should understand…"
+  },
+  {
+    "objectID": "content/exam1.html#measures-scale-development",
+    "href": "content/exam1.html#measures-scale-development",
+    "title": "Things you should know for Exam 1",
+    "section": "Measures + Scale Development",
+    "text": "Measures + Scale Development\nYou should understand…"
   }
 ]
