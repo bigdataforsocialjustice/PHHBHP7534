@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -126,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://gsuevalsp2023.slack.com" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+    <a class="nav-link" href="https://phhbhp7534.slack.com" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -216,8 +235,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/exam1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exam I</span></a>
+  <a href="../resource/exam1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Things you should know for Exam 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resource/final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Project Assignment</span></a>
   </div>
 </li>
       </ul>
@@ -290,12 +315,17 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="../files/bib/references.bib"><i class="fa-solid fa-book" aria-label="book"></i> <code>references.bib</code></a></li>
 </ul>
 <p>You can open the file in <a href="http://bibdesk.sourceforge.net/">BibDesk on macOS</a>, <a href="http://www.jabref.org/">JabRef on Windows</a>, or <a href="https://www.zotero.org/">Zotero</a> or <a href="https://www.mendeley.com/">Mendeley</a> online.</p>
-<p>The file will contain <strong>most</strong> of the pdf files of the course reading materials. For instructions on how to import a BibTex file into Zotero, <a href="http://www.zotero.org">click here</a>. If you do not know what a BibTex file is, <a href="www.bibtex.org">click here</a>.</p>
-<p>If you really want to geek out, try installing LaTex. LaTex is a software system for typesetting documents. Why will learning LaTex make your life easier? Simply because when you submit a paper for publication, it <em>must</em> be formatted for that journal. Many journals we publish in offer templates that you can download so that you do not have to worry about it.</p>
+<p>Additionally, <a href="../files/bib/bibliography-phhbhp7534.zip">this file</a> will contain <strong>most</strong> of the pdf files of the course reading materials. For instructions on how to import a BibTex file into Zotero, <a href="http://www.zotero.org">click here</a>. If you do not know what a BibTex file is, <a href="www.bibtex.org">click here</a>.</p>
+<p>If you really want to geek out, try installing <a href="https://www.latex-project.org/get/">LaTeX</a>. LaTeX is a software system for typesetting documents. Why will learning LaTeX make your life easier? Simply because when you submit a paper for publication, it <em>must</em> be formatted for that journal. Many journals we publish in offer templates that you can download so that you do not have to worry about it. To see an example, <a href="https://journals.plos.org/globalpublichealth/s/latex">click here</a> for the template to format manuscripts for the journal <em>Global Public Health</em>. The co-authored article <span class="citation" data-cites="morris_circumcision_2018">(<a href="#ref-morris_circumcision_2018" role="doc-biblioref">Morris et al. 2018</a>)</span> that I reference in class was published in this journal and can be accessed <a href="https://www.tandfonline.com/doi/full/10.1080/17441692.2016.1164737?casa_token=aP-rFIFPFFsAAAAA:tzg7FZlaSBkTmRBVGYI3xvzqNMheVRvBY6VhDVIEnZnK_R-mrUn4IZ4EqDSkRBomJ3ewrHH1zyE">here</a>.</p>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-morris_circumcision_2018" class="csl-entry" role="listitem">
+Morris, Brian J., Gia Barboza, Richard G. Wamai, and John N. Krieger. 2018. <span>“Circumcision Is a Primary Preventive Against <span>HIV</span> Infection: Critique of a Contrary Meta-Regression Analysis by van Howe.”</span> <em>Global Public Health</em> 13 (12): 1889–99. <a href="https://doi.org/10.1080/17441692.2016.1164737">https://doi.org/10.1080/17441692.2016.1164737</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
