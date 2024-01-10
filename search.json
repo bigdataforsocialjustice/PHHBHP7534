@@ -1052,16 +1052,16 @@
   {
     "objectID": "resource/zotero.html",
     "href": "resource/zotero.html",
-    "title": "Zotero",
+    "title": "So you think you know how to use Zotero?",
     "section": "",
-    "text": "And, I created this website using Obsidian - Sharpen your thinking You may want to check it out. Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as Zotero | Your personal research assistant which if you are not currently using as your bibliography software I encourage you to download it ASAP. Ask me if you want me to demonstrate how to use [[Zotero]] and/or [[Obsidian]] now. See the video below for some tutorials and information to help you get started."
+    "text": "I asked you to download Zotero as part of this week’s assignments. Zotero is a powerful reference management system. I am aware that those of you who use it have a good idea how to manage your references in Word. However, there are a lot of powerful features that most people probably are not aware of. I will go through some of these in this document.\n\n\nSometimes you want to share files with others or simply want to access your Zotero files from another account. You can do this easily if you have an online Zotero account.\nGo to Zotero.org and click “Register for a free account.” Remember your username and password.\nOpen Zotero. Click Edit –&gt; Preferences\n\n\n\nEnter your username and password as below\n\n\n\nThe click “Set up syncing”\nYou can choose your libraries or you can choose all libraries, whatever you wish.\n\n\n\nI have created a Zotero group so you can practice.\nTo create a new group for your team, Click on “Groups” then “Create a new group” as below\n\n\n\nChoose a name for your group and then select membership type. Click “Create Group”\nYou can invite group members. On the Group Settings page, select “Member Settings.” To invite members, click on Send More Invitations\n\n\n\nOnce your group is created, there will be a corresponding Group Folder in your Zotero Library\nAdd references to your group collections (folders).\nThis works just like other Zotero folders—drag your references from your Library and place them into the Group Library\n\n\n\n\n\n\nNote\n\n\n\nPhD students, set up a Zotero Group for your research project. If you are collaborating, only one person needs to do this.\n\n\n\n\n\nFor the most part, your publications are available from Google Scholar.\n\n\n\n\n\n\nNote\n\n\n\nIf you have published work, and do not have a google profile, set one up now.\n\n\nTo demonstrate I will use my profile which is here.\nClick on the checkbox next to the word “Title” like below\n\n\n\nClick “Export” select “BibTex” and then “Export all my articles.”\nIf you are using Microsoft Edge, you will see something that looks like this\n\n\n\nThese are the references in BibTex format. Right click in the webpage and “Save As” … (name it something).\nNow, import the file into Zotero as follows:\nGo to Zotero, and from the file menu select File -&gt; Import and follow the instructions below.\n\n\n\n\n\n\nA library will be created that has the same name as the imported file.\n\n\nIn Zotero, you see a library called “My Publications”\n\n\n\nGo to the library that has your publications and highlight them (Click Ctl-A on Windows). Drag them into your “My Publications” folder.\nNow, go back to the Zotero webpage, and click on your name and then “My Profile.” After dragging your publications into the folder, you will be asked to verify you created this work. Once you do that, your profile should go from this\n\n\n\nto this\n\n\n\n\n\n\n\nThis task is somewhat involved so I will demonstrate it in class.\nIf you are interested in doing this, download Obsidian - Sharpen your thinking. Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as Zotero.\nUntil then, you can explore the power by watching this video:"
   },
   {
     "objectID": "resource/zotero.html#videos",
     "href": "resource/zotero.html#videos",
-    "title": "Zotero",
+    "title": "So you think you know how to use Zotero?",
     "section": "",
-    "text": "And, I created this website using Obsidian - Sharpen your thinking You may want to check it out. Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as Zotero | Your personal research assistant which if you are not currently using as your bibliography software I encourage you to download it ASAP. Ask me if you want me to demonstrate how to use [[Zotero]] and/or [[Obsidian]] now. See the video below for some tutorials and information to help you get started."
+    "text": "And, I created this website using Obsidian - Sharpen your thinking You may want to check it out. Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as Zotero which if you are not currently using as your bibliography software I encourage you to download it ASAP. Ask me if you want me to demonstrate how to use Zotero and/or Obsidian now. See the video below for some tutorials and information to help you get started."
   },
   {
     "objectID": "resource/data.html#your-tasks",
@@ -2259,5 +2259,33 @@
     "title": "Presentation+Feedback",
     "section": "",
     "text": "NA"
+  },
+  {
+    "objectID": "resource/zotero.html#link-zotero-to-an-online-portal",
+    "href": "resource/zotero.html#link-zotero-to-an-online-portal",
+    "title": "So you think you know how to use Zotero?",
+    "section": "",
+    "text": "Sometimes you want to share files with others or simply want to access your Zotero files from another account. You can do this easily if you have an online Zotero account.\nGo to Zotero.org and click “Register for a free account.” Remember your username and password.\nOpen Zotero. Click Edit –&gt; Preferences\n\n\n\nEnter your username and password as below\n\n\n\nThe click “Set up syncing”\nYou can choose your libraries or you can choose all libraries, whatever you wish."
+  },
+  {
+    "objectID": "resource/zotero.html#creating-zotero-groups-to-share-libraries",
+    "href": "resource/zotero.html#creating-zotero-groups-to-share-libraries",
+    "title": "So you think you know how to use Zotero?",
+    "section": "",
+    "text": "I have created a Zotero group so you can practice.\nTo create a new group for your team, Click on “Groups” then “Create a new group” as below\n\n\n\nChoose a name for your group and then select membership type. Click “Create Group”\nYou can invite group members. On the Group Settings page, select “Member Settings.” To invite members, click on Send More Invitations\n\n\n\nOnce your group is created, there will be a corresponding Group Folder in your Zotero Library\nAdd references to your group collections (folders).\nThis works just like other Zotero folders—drag your references from your Library and place them into the Group Library\n\n\n\n\n\n\nNote\n\n\n\nPhD students, set up a Zotero Group for your research project. If you are collaborating, only one person needs to do this."
+  },
+  {
+    "objectID": "resource/zotero.html#add-your-publications-to-zotero-and-create-a-zotero-profile",
+    "href": "resource/zotero.html#add-your-publications-to-zotero-and-create-a-zotero-profile",
+    "title": "So you think you know how to use Zotero?",
+    "section": "",
+    "text": "For the most part, your publications are available from Google Scholar.\n\n\n\n\n\n\nNote\n\n\n\nIf you have published work, and do not have a google profile, set one up now.\n\n\nTo demonstrate I will use my profile which is here.\nClick on the checkbox next to the word “Title” like below\n\n\n\nClick “Export” select “BibTex” and then “Export all my articles.”\nIf you are using Microsoft Edge, you will see something that looks like this\n\n\n\nThese are the references in BibTex format. Right click in the webpage and “Save As” … (name it something).\nNow, import the file into Zotero as follows:\nGo to Zotero, and from the file menu select File -&gt; Import and follow the instructions below.\n\n\n\n\n\n\nA library will be created that has the same name as the imported file.\n\n\nIn Zotero, you see a library called “My Publications”\n\n\n\nGo to the library that has your publications and highlight them (Click Ctl-A on Windows). Drag them into your “My Publications” folder.\nNow, go back to the Zotero webpage, and click on your name and then “My Profile.” After dragging your publications into the folder, you will be asked to verify you created this work. Once you do that, your profile should go from this\n\n\n\nto this"
+  },
+  {
+    "objectID": "resource/zotero.html#integrating-zotero-with-obsidian",
+    "href": "resource/zotero.html#integrating-zotero-with-obsidian",
+    "title": "So you think you know how to use Zotero?",
+    "section": "",
+    "text": "This task is somewhat involved so I will demonstrate it in class.\nIf you are interested in doing this, download Obsidian - Sharpen your thinking. Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as Zotero.\nUntil then, you can explore the power by watching this video:"
   }
 ]
