@@ -305,7 +305,7 @@
     "href": "resource/r.html#footnotes",
     "title": "R",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nIf you want to be really fancy, you can use blogdown, which makes a complete website with R Markdown files. That’s actually how this site is built (see the source code). You can build your own site with this tutorial.↩︎"
+    "text": "Footnotes\n\n\nThis list of resources was compiled by Andrew Weiss↩︎"
   },
   {
     "objectID": "resource/data.html",
