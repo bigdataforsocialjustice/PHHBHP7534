@@ -536,7 +536,7 @@
     "href": "content/03-content.html#in-class-stuff",
     "title": "Associations and Confounding",
     "section": "In-class stuff",
-    "text": "In-class stuff\nHere are all the materials we’ll use in class:\nHands-on R materials:\n\nR code Overview of Confounding, Part I: Reproducing Howards’\nR code Risk and Odds Ratios: Measuring disparities and inequities\n\n\n📦 Additional Resources\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4, 7\nPhD Specializations: 4\n\n\n\nStudent Evaluation Activity for Assessment\n\nExam 1\nProposal 1"
+    "text": "In-class stuff\nHere are all the materials we’ll use in class:\nHands-on R materials:\n\nR code Overview of Confounding, Part I: Reproducing Howards’\nR code Risk and Odds Ratios: Measuring disparities and inequities\nR code Statistical Noise: Random measurement error\n\n\n📦 Additional Resources\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4, 7\nPhD Specializations: 4\n\n\n\nStudent Evaluation Activity for Assessment\n\nExam 1\nProposal 1"
   },
   {
     "objectID": "content/04-content.html",
@@ -2378,5 +2378,33 @@
     "title": "Graphics Tutorial",
     "section": "Exercise 1, Solution",
     "text": "Exercise 1, Solution\n\nex1.data &lt;- subset(my_data, state_name == \"Colorado\" & \n                           county_name == \"El Paso County\" |\n                           county_name == \"Denver County\", \n           select=c(county_name, X17, X18))\n\n#Make the plot\nggplot(data = ex1.data) + \n  geom_point(mapping = aes(x = X17, y = X18)) + \n  xlab(\"Arts, Entertainment & Recreation\") + ylab(\"Accomodation & Food Services\") + \n  ggtitle(\"Relationship Between Jobs Lost to COVID-19 by Industry Type\") + \n  facet_wrap(~county_name)"
+  },
+  {
+    "objectID": "example/bias.html",
+    "href": "example/bias.html",
+    "title": "Bias Example",
+    "section": "",
+    "text": "Click here for the Rmarkdown file associated with this webpage. By downloading the markdown file, you can run this on your computer. To save –&gt; Right Click, Save link as…"
+  },
+  {
+    "objectID": "example/bias.html#random-error-without-bias",
+    "href": "example/bias.html#random-error-without-bias",
+    "title": "Bias Example",
+    "section": "Random Error (without bias)",
+    "text": "Random Error (without bias)\nHere I plotted the Body Mass Index (BMI) as a function of age of survey respondent. BMI increases from 20 to 30 years of age before leveling off. Note, the trend line represents the average BMI for each age group. There is a lot of variability in BMI for each age.\n\n\n\n\n\n\nNote\n\n\n\nQuestion: What other factors influence BMI across age that are not included here?\n\n\nNow let’s add participant’s sex as an additional layer into the graph.\n\n\nCode\n# Scatter plot with regression line\nggplot(mydata, aes(x = age, y = bmi)) + \n  geom_point()+\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age\")\n\n\n\n\n\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi, color=sex)) + \n  geom_point() +\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age & Sex\")\n\n\n\n\n\nThere is a similar age trend for BMI for both males and females but as expected the gap increases with age.\n\nSimulating noise in the BMI measure\nBelow I add noise to the instrument that measures BMI. You can see a lot more variation around the curve. The noise in this example is random and appears that way. The curve is much less pronounced and the differences between males and females have been minimized.\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi_noisy, color=sex)) + geom_point()+\n  geom_smooth(method = \"loess\") \n\n\n\n\n\n\n\nMore randomness\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi_really_noisy, color=sex)) + geom_point()+\n  geom_smooth(method = \"loess\") \n\n\n\n\n\nNow, there is no more trend in the data, and no differences between males and females."
+  },
+  {
+    "objectID": "example/biasanswer.html",
+    "href": "example/biasanswer.html",
+    "title": "Bias Example",
+    "section": "",
+    "text": "Code\nlibrary(dplyr)\nlibrary(knitr)\nlibrary(ggplot2)\nlibrary(scatterplot3d)\nlibrary(tidyr)\n\n\n\n\nCode\n# Change the working directory on your computer\nsetwd(\"C:/Users/barboza-salerno.1/Downloads/\")\n\n# Read in the data set, note my data is located in the downloads directory\nmydata &lt;- read.csv(\n  \"confounding_ex.csv\", \n  stringsAsFactors = F, \n  na.strings = c(7,9,999)\n  )\n\n# After reading in the data, rename columns so they are descriptive\ncolnames(mydata) &lt;- c(\n  \"SEQN\",\n  \"sex\", \n  \"age\",  \n  \"hundrocigs\", \n  \"age_start\", \n  \"quit_ever\", \n  \"bmi\", \n  \"bmi_cat\"\n  )\n\n# I am transforming the categorical variables into factors that have levels.\n# It is good practice to do that as you clean the data\nmydata$sex &lt;-as.factor(mydata$sex)\nmydata$quit_ever &lt;- as.factor(mydata$quit_ever)\nmydata$hundrocigs &lt;- as.factor(mydata$hundrocigs)\nmydata$bmi_cat&lt;- as.factor(mydata$bmi_cat)\n\n# I am creating random \"noise\"\nmydata$bmi_noisy &lt;- jitter(mydata$bmi, factor=10000)\nmydata$bmi_really_noisy &lt;- jitter(mydata$bmi, factor=30000) \n\n# The tidyverse allows me to wrangle (i.e., clean) the data in one line of code!\nmydata &lt;- mydata %&gt;%\n    mutate(age_cat = cut(age, seq(0,80,20)))%&gt;%\n    mutate(\n        quit_ever = recode_factor(quit_ever, \"1\" = \"Yes\", \"2\" = \"No\") # See codebook https://wwwn.cdc.gov/Nchs/Nhanes/2015-2016/SMQ_I.htm#SMQ670\n      ) %&gt;%\n  select(quit_ever, bmi, bmi_noisy, bmi_really_noisy, age) %&gt;%\n  filter(age &lt; 80) %&gt;% tidyr::drop_na() \n\n\n\n\n\n\n\nCode\n# Scatter plot with regression line\nggplot(mydata, aes(x = age, y = bmi)) + \n  geom_point()+\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age\")\n\n\n\n\n\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi, color=quit_ever)) + \n  geom_point() +\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age & Ever Quit Smoking\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi_noisy, color=quit_ever)) + \n  geom_point()+\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age & Ever Quit Smoking\")\n\n\n\n\n\n\n\n\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi_really_noisy, color=quit_ever)) + \n  geom_point() +\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age & Ever Quit Smoking\")"
+  },
+  {
+    "objectID": "example/biasanswer.html#random-error-without-bias",
+    "href": "example/biasanswer.html#random-error-without-bias",
+    "title": "Bias Example",
+    "section": "",
+    "text": "Code\n# Scatter plot with regression line\nggplot(mydata, aes(x = age, y = bmi)) + \n  geom_point()+\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age\")\n\n\n\n\n\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi, color=quit_ever)) + \n  geom_point() +\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age & Ever Quit Smoking\")\n\n\n\n\n\n\n\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi_noisy, color=quit_ever)) + \n  geom_point()+\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age & Ever Quit Smoking\")\n\n\n\n\n\n\n\n\n\n\nCode\nggplot(mydata, aes(x = age, y = bmi_really_noisy, color=quit_ever)) + \n  geom_point() +\n  geom_smooth(method = \"loess\") + \n  ggtitle(\"BMI as a function of Age & Ever Quit Smoking\")"
   }
 ]
