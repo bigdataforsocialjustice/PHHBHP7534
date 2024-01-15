@@ -8,22 +8,6 @@
     <link href="libs/remark-css-0.0.1/middlebury-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
-    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-    <script src="libs/proj4-2.6.2/proj4.min.js"></script>
-    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-    <script src="libs/leaflet-binding-2.2.1/leaflet.js"></script>
-    <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="libs/datatables-binding-0.31/datatables.js"></script>
-    <link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-    <link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
@@ -99,878 +83,480 @@ $$ P(A) = \binom{N}{k} \cdot p^kq^{N-k}$$
  &lt;center&gt; &lt;img src="img/01/binom_jury.png" alt="Flowers" title="Proof"  width="75%" height="75%"&gt;&lt;/center&gt;
 &lt;/figure&gt;   
 ---
-# Confounding
-Once an association is found, you must ask whether it is real
-- is it due to chance?
-- could it be due to bias?
+class: inverse, center, middle
+
+# Quantifying Risk and Uncertainty
 
 ---
 
-# Course Schedule
+# Review: Categorical Measures of Association
+Information on the effect of a potential risk factor or beneficial treatment can be presented in several different ways:
+- Relative Risk (RR)
+- Odds Ratio (OR)
+- Percent decrease or increase in Odds
+
+The way risk information is presented and interpreted can have a profound effect on decision-making processes with implications for policy and treatment outcomes
 
 ---
+# Review: Categorical Measures of Association
 
-# Errors
-Two major types of errors
-- non-differential or random
-- differential or systematic
+Risk ratios (RR) and odds ratios (OR) are measures of association
+
+Measures of association quantify the potential relationship between “exposure” and “outcome” among two groups.
+
+Recall there are two types of association (+) and (-)
+
+---
+# Risk Ratios
+`\(RR\)` is the ratio of the prevalence of an outcome for the primary group of interest divided by the prevalence of an outcome in a comparison group, `\(RR = {P_p \over P_c}\)`
+
+A `\(RR\)` = 1.0 the risk is the same for both groups, if `\(RR\)` &gt; 1.0 the risk is greater for group in numerator and if `\(RR\)` &lt; 1.0 it indicates decreased risk for group in numerator.
+---
+# Risk Ratios (Example)
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/hiv_inmates.png" alt="hiv" title="hiv"  width="75%" height="75%"&gt;&lt;/center&gt;
+&lt;/figure&gt;  
+What is the risk ratio (RR) of developing tuberculosis among inmates in the east wing compared to the west wing?
+- Step 1: What percentage of East Wing inmates developed tuberculosis? This is also the ‘risk’: 
+
+--
+  - 28/157 = 17.8%
+
+---
+# Risk Ratios (Example)
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/hiv_inmates.png" alt="hiv" title="hiv"  width="75%" height="75%"&gt;&lt;/center&gt;
+&lt;/figure&gt;  
+What is the risk ratio (RR) of developing tuberculosis among inmates in the east wing compared to the west wing?
+
+- Step 2: What percentage of West Wing inmates developed tuberculosis? This is also the ‘risk’: 
+
+--
+  - 4/137 = 2.9%
+  
+---
+# Risk Ratios (Example)
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/hiv_inmates.png" alt="hiv" title="hiv"  width="75%" height="75%"&gt;&lt;/center&gt;
+&lt;/figure&gt;  
+What is the risk ratio (RR) of developing tuberculosis among inmates in the east wing compared to the west wing?
+
+- Step 3: Compute the `\(RR \rightarrow {17.8 \over 2.9} = 6.1\)` 
+
+--
+- Step 4: (Harder): Interpret the `\(RR\)`
+
+---
+# Your Turn
+Below is a table describing the number of persons who developed COVID-19 by vaccination status.
+
+What is the relative risk of developing COVID-19 among individuals who have been vaccinated (compared to those who have not?
+
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/covid_vaccinated.png" alt="hiv" title="hiv"  width="50%" height="50%"&gt;&lt;/center&gt;
+&lt;/figure&gt;  
 
 --
 
-random error: use of invalid outcome measure that equally misclassifies cases and controls
+What percent of vaccinated persons developed corona?
+
+What percent of unvaccinated persons developed corona?
+
+Compute and interpret the relative risk…
+
+--
+
+The risk of developing COVID-19 among those who are vaccinated by the Pfizer vaccine is .28 times that of those who are not.
+
+---
+# Review Odds &amp; Odds Ratios
+Recall the odds of an event or outcome, `\(A\)`, is defined as
+
+`$$Odds(A) = \large {p_A \over {1-p}_A}$$`
+
+--
+
+For example, suppose we roll a single (fair) die, compute the odds of rolling a 3:
+
+Let `\(A\)` be the event of rolling a "3", then:
+
+`$$P(A) = {1 \over 6}$$`
+
+`$$1 - P(A) = {5 \over 6}$$`
+
+`$$Odds(A) =  {\large p_A \over {1-p}_A} = { {\large 1\over 6} \over {\large 5\over 6}} \rightarrow {1:5}$$`
+
+--
+
+Interpret: The odds of rolling "3" are 1 in 5
+
+---
+# Odds Ratio (Step 1: Conditional Probability)
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/odds_tuber.png" alt="hiv" title="hiv"  width="75%" height="75%"&gt;&lt;/center&gt;
+&lt;/figure&gt;  
+
+---
+# The Odds Ratio
+The Odds Ratio (OR) is ratio of the odds for the outcome for those with risk factor to the odds for the outcome for those without the risk factor
+
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/odds_def.png" alt="hiv" title="hiv"  width="75%" height="75%"&gt;&lt;/center&gt;
+&lt;/figure&gt;  
+
+---
+# Example
+For the following data, compute the odds ratio of having a 1st preg. before (or at) age 25 (the outcome) among women who have cervical cancer (risk factor) and those who do not 
+
+BE CAREFUL -- Cancer can be a risk factor *OR* an outcome. Here it is a risk factor.
+
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/age_cervical.png" alt="hiv" title="hiv"  width="50%" height="50%"&gt;&lt;/center&gt;
+&lt;/figure&gt;  
+
+
+---
+# Example
+
+Step 1: What is the Pr(Age `\(\le\)` 25|cancer)?
+
+--
+`$${42 \over 49} = .857$$`
+
+Step 2: What is the Pr(Age `\(\le\)` 25|not cancer)?
+
+--
+`$${203  \over 317} = .640$$`
+
+What are the odds(Age `\(\le\)` 25|cancer)?
+
+--
+
+`$$5.99$$`
+
+What are the odds(Age `\(\le\)` 25|no cancer)? 
+
+--
+
+`$$1.78$$`
+
+--
+
+What is the odds ratio for Age `\(\le\)` 25 for women and other pregnant persons with cancer compared to Age `\(\le\)` 25 for those without cancer?
+
+`$${5.99 \over 1.78} = 3.37$$`
+---
+# Short cut formula
+
+You are probably used to seeing the shortcut formula
+
+The problem with shortcuts is that you do not understand how it was derived
+
+Make sure you can compute the odds 'by hand'
+
+The easy way is to use this formula
+
+`$$OR = {a \times d \over b \times c}$$`
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/easyodds.png" alt="hiv" title="hiv "width="50%" height="50%"&gt;&lt;/center&gt;
+&lt;/figure&gt; 
+
+---
+# Making Odds Interpretable
+Compute the odds as a percent increase or decrease (this is often the better interpretation because people understand percentages better than they understand odds)
+
+The percent change in the odds is defined as `$$|{(OR−1) \times 100}|$$`
+*Example*: Odds ratio = 1.89 calculate the percent change in the odds
+`$$|(1 – 1.89)| \times 100 = 89\%$$` 
+**Note:** the odds have *increased* why?
+
+*Example*: the odds of a first pregnancy among women aged 25 or younger is [(3.4 - 1) * 100 =] 240% higher among women who had cervical cancer compared to those who have not.
+
+---
+class: inverse, center, middle
+
+# Random v Systematic Error
+
+---
+# Bias &amp; Measurement Error
+
+Two major types of errors
+- Non-differential or random
+- Differential or systematic
+
+--
+
+Random error: use of invalid outcome measure that equally misclassifies cases and controls***
 
 Systematic error: use of an invalid measure that misclassifies cases in one direction and controls in another
 ---
 
-# Random error v bias
+# Random Error v Bias
 
 Chance is caused by random error
-- if the random error is due to the sample size, increase the sample
-- affects precision of estimates, chance leads to imprecision
+- Random error may or may not be able to be accounted for
+  - If the random error is due to the sample size, increase the sample
+- Random error affects the precision of your statistical estimates, i.e., makes them less precise
 
 --
 
 Bias is caused by systematic error 
+
 Can not be fixed
+
 Bias leads to inaccurate results
 
 ---
 
 # Types of Bias
+Systematic errors that may or may not be able to be addressed by your research design or analysis
 
-Selection bias 
+--
+
+Selection Bias 
 - Unrepresentative nature of samples or/and the method of participant selection distorts the exposure-outcome relationship from reality
 
--- 
+--
 
-Information (misclassification) bias
+Information (Misclassification) Bias
 - Collecting information differently between two groups leads to an error
 
 --
 
 Confounding 
-- Some other factors(variables) distort  the exposure-outcome relation.
+- Some other factors (variables) distort  the exposure-outcome relation
+- May lead to conclusion errors but if known can be addressed
+
+---
+class: inverse, center, middle
+
+# Association &amp; Confounding
+
+---
+# Proof, Association &amp; Confounding
+Once an association is found, you must ask whether it is real, OR:
+- Is the association due to chance?
+- Could the association be attributed to bias or measurement error?
 
 ---
 
-# Selection Bias
+# Association and Confounding
 
-Selection Bias occurs when the selection of participants in one group results in a different outcome than the selection for the other group
-Participants are not equally balanced or objectively represented
+It is possible for two variables to be associated without having "causation"
 
----
-# Selection Bias Examples
+There could be some other factor that is responsible for the apparent association
 
-- Berkson's bias
-- Prevalence/Incidence bias
-- Loss to follow up bias
-- Healthy worker effect
-- Volunteer bias
-- Sampling bias
-  - refusal, non-response, agreement to participate
+The other factor is called a confounder
+
+Easy example: more babies are born in areas where storks are present
 
 ---
+# Example
 
-# Controlling selection bias
-Define criteria of selection of diseased and non-diseased participants independent of exposures in a case control study
-Define criteria of selection of exposed and non-exposed participants independent of disease outcomes in a cohort study (i.e, external comparison group or loss to follow-up)
-Apply randomization, blind or mask in clinical trials
----
-# Information bias
-Information bias occurs when information is collected differently between two groups, leading to an error in the conclusion of the association
-When information is incorrect, there is misclassification
-Non-Differential misclassification: If misclassification of exposure (or disease) is unrelated to disease (or exposure) then the misclassification is non-differential. The misclassification does not differ between the two groups
-If misclassification of exposure (or disease) is related to disease (or exposure) then the misclassification is differential.  The misclassification differs between the two groups
----
-# Information bias examples
-- Interviewer bias
-- Questionnaire bias
-- Instrument bias
-- Recall bias
-- Case-definition bias
-- Data source bias
----
+Confounding is of particular concern in observational studies
 
-# Controlling infomation bias
-Have a standardized protocol for data collection
-Make sure sources and methods of data collection are similar for all study groups
-Make sure interviewers and study personnel are unaware of exposure/disease status
-Adapt a strategy to assess potential information bias
+Grodstein et. al, 1996 conducted a study that found a lower rate of heart disease in postmenopausal persons taking hormone replacement therapy, an intuitive finding to many researchers
+
+The data seems to suggest that the risk of heart disease is much lower for those taking hormone replacement
+
+&lt;figure&gt;
+ &lt;center&gt; &lt;img src="img/01/hormone_use.png" alt="hormone" title="hormone"  width="75%" height="75%"&gt;&lt;/center&gt;
+&lt;/figure&gt; 
 
 ---
+# Confounding, Proof, and Bias
+Many doctors believed that the study proved that hormone replacement lowered risk of heart disease
 
-# Bias types &amp; confounding
-Systematic errors that cannot be fixed
-- Selection bias
-- Information (misclassification) bias
+--
 
-Confounding
-- may lead to conclusion errors but if known can be addressed
+Many others did not, and worried about the possibility of confounding...
+
+--
+
+Years after the original study was published, the NIH funded a large randomized clinical trial to examine the association
+ 
+- Women were asked to have their treatment decided by a coin flip: hormonal therapy or placebo
+- When treatments are randomized, any confounding factors are equally distributed across treatment groups, and hence are less likely to impact conclusions drawn (but [see](/example/bias.qmd))
+
+[aside: start thinking about the ethics of such a study]
 
 ---
+# Redeaux
 
-# Confounding
+A study of over 68,000 women followed for about 6 years determined that women who received the hormone therapy were more likely to have heart disease compared to those receiving the placebo.
 
-Confounding occurs when the observed results between exposure and disease differs from the truth because of the influence of the third variable.
-Effect of a factor of interest is mingled with (confounded with) another factor
-The distortion can be large and lead to overestimation or underestimation of an effect.
+This clearly contradicts the findings from the earlier, observational study
+
+What factors may explain the differences across studies?***
 
 ---
-
 # Confounding
 Confounding occurs when the relationship between a given exposure and a specific disease/outcome is distorted (confused) by the influence of a third variable or group of variables (confounders)
+
 By controlling for confounding, we can obtain an unbiased estimate of the causal relationship between exposure and outcome
+
+--
+
 Two ways to deal with confounding
-- the study design phase (by randomization, restriction and matching) 
-- during data analysis (by stratification and multivariate analysis)
+
+- The study design phase (by randomization, restriction and matching) (later)
+
+--
+
+- During data analysis (by **stratification** and multivariate analysis (later))
 
 ---
 # Stratification
 A statistical technique that allows to control for confounding by creating two or more categories (strata) in which the confounding variable either does not vary or does not vary very much
 
 Two types of adjustments for confounding by stratification: 
-- pooling analysis by the Mantel-Haenszel formula; and 
-- standardization
+- Pooling analysis by the Mantel-Haenszel formula; and 
+- Standardization
+
 ---
 # Preliminary (Stratification)
-- the simplest way to control confounding during data analysis
-- preliminary step towards applying the Mantel-Haenszel formula and standardization
+- The simplest way to control confounding during data analysis
+- Preliminary step towards applying the Mantel-Haenszel formula and standardization
 
-Running example: A relationship between Down syndrom and maternal age is found. Is birth order causally associated with Down syndrome independently of the confounding effect of the maternal age?
+**Running example:** A relationship between Down syndrome and maternal age is found. 
+
+But, is birth order *causally* associated with Down syndrome independently of the *confounding effect* of the maternal age?
+
 ---
 # Stratification for Confounding: The Mantel-Haenszel Formula
 
 1) Does the frequency of Down Syndrome (O = outcome) increase with birth order (E = exposure)?
 
-&lt;figure&gt;
-  &lt;img src="img/01/order_cases.gif" alt="Research" title="Research Steps" width="100%"&gt;
-&lt;/figure&gt; 
+&lt;center&gt;&lt;figure&gt;
+  &lt;img src="img/01/order_cases.gif" alt="birth_order" title="birth_order" width="60%" height="60%"&gt;
+&lt;/figure&gt; &lt;/center&gt;
+
+From this figure, it appears that as birth order increases, so to does the number of down syndrome cases per 1,000 live births.
+
+--
+
+**Note carefully:** it is NEVER possible to assess statistical significance by eyeballing data. This is because both the number of cases in your analysis and the standard error are both factors in the statistical test.
 ---
 # Stratification for Confounding: The Mantel-Haenszel Formula
 2) Is maternal age (C) associated with Down Syndrome (O)?
-&lt;figure&gt;
-  &lt;img src="img/01/cases_age.png" alt="Research" title="Research Steps" width="100%"&gt;
-&lt;/figure&gt; 
+&lt;center&gt;&lt;figure&gt;
+  &lt;img src="img/01/cases_age.png" alt="Research" title="Research Steps" width="60%" height="60%"&gt;
+&lt;/figure&gt; &lt;/center&gt;
+
+Again, it appears that older women and pregnant persons are at higher risk of having a child with down syndrome.
+
+These differences appear drastic
 ---
 
 # Stratification for Confounding: The Mantel-Haenszel Formula
 
 Does the frequency of Down syndrome increase according to maternal age for each category of birth order? 
+&lt;center&gt;
 &lt;figure&gt;
-  &lt;img src="img/01/birth_age_cases.png" alt="Research" title="Research Steps" width="100%"&gt;
+  &lt;img src="img/01/birth_age_cases.png" alt="Research" title="Research Steps" width="50%" height="50%"&gt;
 &lt;/figure&gt; 
+&lt;/center&gt;
 
-Yes. But in each age category the birth order did not affect the frequency of Down syndrome. Thus, the crude association between birth order and Down syndrome is the mere result of the confounding effect of maternal age.
+Yes. But in each age category the birth order did not affect the frequency of Down syndrome. 
+
+Thus, the crude association between birth order and Down syndrome is the mere result of the confounding effect of maternal age.
 
 [@tripepi_stratification_2010]
 ---
 
 # Confounding
-To be a confounding factor, two conditions must be met
-- Be associated with exposure (but not a consequence of the exposure)
-Be associated with outcome
-  - independently of exposure
+&lt;center&gt;
+&lt;figure&gt;
+  &lt;img src="img/01/confounder.png" alt="Research" title="Research Steps" width="50%" height="50%"&gt;
+&lt;/figure&gt; 
+&lt;/center&gt;
+
+To be a confounding factor, two conditions must be met:
+
+- The confounding variable must be associated with the exposure (but not a consequence of the exposure)
+
+The confounding variable must be associated with outcome
+
+  - Independently of exposure
+
+The confounding variable cannot be an intermediary step in the causal pathway from the exposure of interest to the outcome of interest.
+
+---
+# Apply the rules to the running example
+
+&lt;center&gt;
+&lt;figure&gt;
+  &lt;img src="img/01/confounder_running_ex.png" alt="Research" title="Research Steps" width="50%" height="50%"&gt;
+&lt;/figure&gt; 
+&lt;/center&gt;
+
+1. The confounding variable must be associated with the exposure (but not a consequence of the exposure)
+
+- In the running example, maternal age is associated with birth order
+
+2. The confounding variable must be associated with outcome independently of exposure
+
+  - In the running example, maternal age is associated with Down Syndrome cases per 1,000 live births
   
-Also, a confounder cannot be an intermediary step in the causal pathway from the exposure of interest to the outcome of interest.
+3. The confounding variable cannot be an intermediary step in the causal pathway from the exposure of interest to the outcome of interest.
 
-In the example, maternal age is correlated with birth order and a risk factor even if birth order is low. So maternal age is confounder.
+--
+
+Summary: maternal age is correlated with birth order and a risk factor even if birth order is low. So maternal age is confounder.
+
+**Note:** There was no chart of the relationship between birth order and maternal age, there need not be. It should be obvious that as maternal age increases do does birth order.
 
 ---
-# Control of Confounding in Study Design
+# Test Your Understanding
 
-It is possible to minimize confounding by utilizing certain strategies in the design of a study
-Restriction
-Matching
-Randomization (in intervention studies only)
-There are also analytical techniques that provide a way of adjusting for confounding in the analysis, provided one has information on the status of the confounding factors in the study subjects. These techniques are:
-Stratification
-Multiple variable regression analysis (Model Fitting)
+Is birth order a confounder in the association between maternal age and Down Syndrome? *Why/Why not*?
+
+--
+&lt;center&gt;
+&lt;figure&gt;
+  &lt;img src="img/01/confounder_running_ex_flipped.png" alt="Research" title="Research Steps" width="50%" height="50%"&gt;
+&lt;/figure&gt; 
+&lt;/center&gt;
+
+1. The confounding variable must be associated with the exposure (but not a consequence of the exposure)
+
+- In the running example, is birth order associated with maternal age?
+
+2. The confounding variable must be associated with outcome independently of exposure
+
+  - In the running example, is birth order associated with Down Syndrome cases per 1,000 live births *independent* of maternal age?
+  
+3. Is birth order an **intermediary step** in the causal pathway from the maternal age to Down Syndrome?
 ---
+
 # Control of Confounding in the Analysis - Stratified
-Step 1: Find a crude association
+[See example](../example/confounding_stratification.html)
 
+[See example](../example/Confounding.qmd)
+
+[See example](../example/infant_mortality.qmd)
 ---
 
-# Notes
-
-First, if you compare the cumulative incidence in young versus old active subjects, you can see that older subjects had a higher risk of CVD than younger subjects; this was true for both obese and non-obese subjects. Therefore, age and CVD (the outcome of interest) are associated (Chi Sq). (Criteria 1)
-In addition, obesity was more common in older subjects, meaning that age and obesity were also associated(Chi-sq)(Criteria 2)
-Finally, there is no reason to think that age is an intermediary variable in the causal chain between obesity and CVD. Therefore, these observations satisfy all three of the requirements for a confounder.
-
----
-The risk ratios for the age-stratified analysis are similar, but less then the crude risk ratio (RR=1.79)
-This indicates that  there was confounding by age in the overall sample
-We saw that obese subjects were more likely to be 50 and older
-Also saw that those over  age 50 had a greater risk of CVD
-As a result; the crude analysis overestimated the true association
-between obesity and CVD, because of the greater proportion 
-of older subjects among the obese group 
-
----
 # Summary
-Comparing the crude and stratum-specific measures of association is a very practical way to determine whether confounding is present and how bad it is. 
+Comparing the crude and stratum-specific measures of association is a very practical way to determine whether confounding is present and how bad it is
+
 You calculate an overall crude (unadjusted) relative risk (or odds ratio) and compare it to the stratum-specific relative risks (or odds ratios). 
+
 If the stratum-specific measures of association are similar to the crude measure of association, then there is no confounding by that factor, and you can just use the crude measure of association. 
+
 However, if the stratified estimates of association differ from the unadjusted estimate by 10% or more, then there is evidence of confounding.
+
 ---
 # Note
 Stratified analysis works best when there are few strata (only 1 or 2 confounders have to be controlled)
+
 If the number of potential confounders is large, multivariate analysis are applied
+
 Can handle large number of confounders  (covariates) simultaneously 
+
 Based statistical regression models
----
-# Examples
 
-Researchers investigated the attitudes of patients about the use of placebo treatments in medical care. A telephone survey was used. Participants were residents in Northern California, aged 18-75 years, who had been seen by a primary care provider for a chronic health problem at least once in the previous six months.
 
-Participants were randomly selected using age stratified sampling (10 year age groups) from all residents in Northern California who met the inclusion criteria. An introductory letter describing the study’s aims was sent to 1800 residents inviting them to participate, with the opportunity to opt out of the study. Those who did not opt out were telephoned and asked to complete the survey by phone. Sample members were excluded if they had dementia or could not participate in a telephone interview because of communication barriers (hearing, language). Of the 1800 residents sampled, 1598 were reachable by mail and potentially eligible to participate. Of these, 853 completed the telephone interview, giving a response rate of 53.4% (853/1598).
-
-The researchers concluded that most patients in the survey seemed favourable to the idea of placebo treatments, and that they valued honesty and transparency in this context. Respondents suggested that doctors should consider engaging with patients to discuss their values and attitudes about the appropriateness of using treatments aimed at promoting placebo responses.
-Which of the following types of bias, if any, would the above questionnaire survey have been prone to?
-a)	Attrition bias
-b)	Non-response bias
-c)	Response bias
-d)	Selection bias
-e)	Volunteer bias
-
----
-class: inverse, middle, center
-
-# Using xaringan
-
----
-
-# xaringan
-
-Provides an R Markdown output format `xaringan::moon_reader` as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.
-
-```yaml
----
-title: "A Cool Presentation"
-output:
-  xaringan::moon_reader:
-    yolo: true
-    nature:
-      autoplay: 30000
----
-```
-
-See the help page `?xaringan::moon_reader` for all possible options that you can use.
-
----
-
-# remark.js vs xaringan
-
-Some differences between using remark.js (left) and using **xaringan** (right):
-
-.pull-left[
-1. Start with a boilerplate HTML file;
-
-1. Plain Markdown;
-
-1. Write JavaScript to autoplay slides;
-
-1. Manually configure MathJax;
-
-1. Highlight code with `*`;
-
-1. Edit Markdown source and refresh browser to see updated slides;
-]
-
-.pull-right[
-1. Start with an R Markdown document;
-
-1. R Markdown (can embed R/other code chunks);
-
-1. Provide an option `autoplay`;
-
-1. MathJax just works;&lt;sup&gt;*&lt;/sup&gt;
-
-1. Highlight code with `{{}}`;
-
-1. The RStudio addin "Infinite Moon Reader" automatically refreshes slides on changes;
-]
-
-.footnote[[*] Not really. See next page.]
-
----
-
-# Math Expressions
-
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. &amp;#36;\alpha+\beta$ renders `\(\alpha+\beta\)`. You can use the display style with double dollar signs:
-
-```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
-
-Limitations:
-
-1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-1. There should not be spaces after the opening `$` or before the closing `$`.
-
-1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
-
----
-
-# R Code
-
-
-```r
-# a boring regression
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-```
-
-```
-#               Estimate Std. Error   t value     Pr(&gt;|t|)
-# (Intercept) -17.579095  6.7584402 -2.601058 1.231882e-02
-# speed         3.932409  0.4155128  9.463990 1.489836e-12
-```
-
-```r
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
-```
-
-```
-# [1] "地爆天星" "天照"
-```
-
----
-
-# R Plots
-
-
-```r
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-abline(fit, lwd = 2)
-```
-
-![](day2_files/figure-html/cars-1.svg)&lt;!-- --&gt;
-
----
-
-# Tables
-
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
-
-
-```r
-knitr::kable(head(iris), format = 'html')
-```
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
-# HTML Widgets
-
-I have not thoroughly tested HTML widgets against **xaringan**. Some may work well, and some may not. It is a little tricky.
-
-Similarly, the Shiny mode (`runtime: shiny`) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.
-
-See the next page for two HTML widgets.
-
----
-
-
-```r
-library(leaflet)
-leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
-```
-
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-492a8487ee12c4aa0e72" style="width:100%;height:432px;"></div>
-<script type="application/json" data-for="htmlwidget-492a8487ee12c4aa0e72">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}],"setView":[[42.0285,-93.65000000000001],17,[]]},"evals":[],"jsHooks":[]}</script>
-
----
-
-
-```r
-DT::datatable(
-  head(iris, 10),
-  fillContainer = FALSE, options = list(pageLength = 8)
-)
-```
-
-<div class="datatables html-widget html-fill-item" id="htmlwidget-194e16320494a5d5a114" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-194e16320494a5d5a114">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Sepal.Length","targets":1},{"name":"Sepal.Width","targets":2},{"name":"Petal.Length","targets":3},{"name":"Petal.Width","targets":4},{"name":"Species","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-
----
-
-# Some Tips
-
-- Do not forget to try the `yolo` option of `xaringan::moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        yolo: true
-    ```
-
----
-
-# Some Tips
-
-- Slides can be automatically played if you set the `autoplay` option under `nature`, e.g. go to the next slide every 30 seconds in a lightning talk:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay: 30000
-    ```
-
-- If you want to restart the play after it reaches the last slide, you may set the sub-option `loop` to TRUE, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay:
-            interval: 30000
-            loop: true
-    ```
-
----
-
-# Some Tips
-
-- A countdown timer can be added to every page of the slides using the `countdown` option under `nature`, e.g. if you want to spend one minute on every page when you give the talk, you can set:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          countdown: 60000
-    ```
-
-    Then you will see a timer counting down from `01:00`, to `00:59`, `00:58`, ... When the time is out, the timer will continue but the time turns red.
-    
----
-
-# Some Tips
-
-- The title slide is created automatically by **xaringan**, but it is just another remark.js slide added before your other slides.
-
-    The title slide is set to `class: center, middle, inverse, title-slide` by default. You can change the classes applied to the title slide with the `titleSlideClass` option of `nature` (`title-slide` is always applied).
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          titleSlideClass: [top, left, inverse]
-    ```
-    
---
-
-- If you'd like to create your own title slide, disable **xaringan**'s title slide with the `seal = FALSE` option of `moon_reader`.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        seal: false
-    ```
-
----
-
-# Some Tips
-
-- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
-
-- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#&lt;&lt;`;
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
-
----
-
-# Some Tips
-
-
-.pull-left[
-An example using a leading `*`:
-
-    ```r
-    if (TRUE) {
-    ** message("Very important!")
-    }
-    ```
-Output:
-```r
-if (TRUE) {
-* message("Very important!")
-}
-```
-
-This is invalid R code, so it is a plain fenced code block that is not executed.
-]
-
-.pull-right[
-An example using `{{}}`:
-
-````
-```{r tidy=FALSE}
-if (TRUE) {
-*{{ message("Very important!") }}
-}
-```
-````
-Output:
-
-```r
-if (TRUE) {
-* message("Very important!") 
-}
-```
-
-```
-## Very important!
-```
-
-It is valid R code so you can run it. Note that `{{}}` can wrap an R expression of multiple lines.
-]
-
----
-
-# Some Tips
-
-An example of using the trailing comment `#&lt;&lt;` to highlight lines:
-
-````markdown
-```{r tidy=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #&lt;&lt;
-  geom_smooth()    #&lt;&lt;
-```
-````
-
-Output:
-
-
-```r
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-* geom_point() +
-* geom_smooth()
-```
-
----
-
-# Some Tips
-
-When you enable line-highlighting, you can also use the chunk option `highlight.output` to highlight specific lines of the text output from a code chunk. For example, `highlight.output = TRUE` means highlighting all lines, and `highlight.output = c(1, 3)` means highlighting the first and third line.
-
-````md
-```{r, highlight.output=c(1, 3)}
-head(iris)
-```
-````
-
-
-```
-*##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-*## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-```
-
-Question: what does `highlight.output = c(TRUE, FALSE)` mean? (Hint: think about R's recycling of vectors)
-
----
-
-# Some Tips
-
-- To make slides work offline, you need to download a copy of remark.js in advance, because **xaringan** uses the online version by default (see the help page `?xaringan::moon_reader`).
-
-- You can use `xaringan::summon_remark()` to download the latest or a specified version of remark.js. By default, it is downloaded to `libs/remark-latest.min.js`.
-
-- Then change the `chakra` option in YAML to point to this file, e.g.
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        chakra: libs/remark-latest.min.js
-    ```
-
-- If you used Google fonts in slides (the default theme uses _Yanone Kaffeesatz_, _Droid Serif_, and _Source Code Pro_), they won't work offline unless you download or install them locally. The Heroku app [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) can help you download fonts and generate the necessary CSS.
-
----
-
-# Macros
-
-- remark.js [allows users to define custom macros](https://github.com/yihui/xaringan/issues/80) (JS functions) that can be applied to Markdown text using the syntax `![:macroName arg1, arg2, ...]` or `![:macroName arg1, arg2, ...](this)`. For example, before remark.js initializes the slides, you can define a macro named `scale`:
-
-    ```js
-    remark.macros.scale = function (percentage) {
-      var url = this;
-      return '&lt;img src="' + url + '" style="width: ' + percentage + '" /&gt;';
-    };
-    ```
-
-    Then the Markdown text
-
-    ```markdown
-    ![:scale 50%](image.jpg)
-    ```
-
-    will be translated to
-    
-    ```html
-    &lt;img src="image.jpg" style="width: 50%" /&gt;
-    ```
-
----
-
-# Macros (continued)
-
-- To insert macros in **xaringan** slides, you can use the option `beforeInit` under the option `nature`, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          beforeInit: "macros.js"
-    ```
-
-    You save your remark.js macros in the file `macros.js`.
-
-- The `beforeInit` option can be used to insert arbitrary JS code before `remark.create()`. Inserting macros is just one of its possible applications.
-
----
-
-# CSS
-
-Among all options in `xaringan::moon_reader`, the most challenging but perhaps also the most rewarding one is `css`, because it allows you to customize the appearance of your slides using any CSS rules or hacks you know.
-
-You can see the default CSS file [here](https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/default.css). You can completely replace it with your own CSS files, or define new rules to override the default. See the help page `?xaringan::moon_reader` for more information.
-
----
-
-# CSS
-
-For example, suppose you want to change the font for code from the default "Source Code Pro" to "Ubuntu Mono". You can create a CSS file named, say, `ubuntu-mono.css`:
-
-```css
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-```
-
-Then set the `css` option in the YAML metadata:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "ubuntu-mono.css"]
-```
-
-Here I assume `ubuntu-mono.css` is under the same directory as your Rmd.
-
-See [yihui/xaringan#83](https://github.com/yihui/xaringan/issues/83) for an example of using the [Fira Code](https://github.com/tonsky/FiraCode) font, which supports ligatures in program code.
-
----
-
-# CSS (with Sass)
-
-**xaringan** also supports Sass support via **rmarkdown**. Suppose you want to use the same color for different elements, e.g., first heading and bold text. You can create a `.scss` file, say `mytheme.scss`, using the [sass](https://sass-lang.com/) syntax with variables:
-
-```scss
-$mycolor: #ff0000; 
-.remark-slide-content &gt; h1 { color: $mycolor; }
-.remark-slide-content strong { color: $mycolor; }
-```
-
-Then set the `css` option in the YAML metadata using this file placed under the same directory as your Rmd:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "mytheme.scss"]
-```
-
-This requires **rmarkdown** &gt;= 2.8 and the [**sass**](https://rstudio.github.io/sass/) package. You can learn more about **rmarkdown** and **sass** support in [this blog post](https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/#sass-and-scss-support-for-html-based-output) and in [**sass** overview vignette](https://rstudio.github.io/sass/articles/sass.html).
-
----
-
-# Themes
-
-Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes:
-
-
-```r
-names(xaringan:::list_css())
-```
-
-```
-##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
-##  [4] "default"          "duke-blue"        "fc-fonts"        
-##  [7] "fc"               "glasgow_template" "hygge-duke"      
-## [10] "hygge"            "ki-fonts"         "ki"              
-## [13] "kunoichi"         "lucy-fonts"       "lucy"            
-## [16] "metropolis-fonts" "metropolis"       "middlebury-fonts"
-## [19] "middlebury"       "nhsr-fonts"       "nhsr"            
-## [22] "ninjutsu"         "rladies-fonts"    "rladies"         
-## [25] "robot-fonts"      "robot"            "rutgers-fonts"   
-## [28] "rutgers"          "shinobi"          "tamu-fonts"      
-## [31] "tamu"             "uio-fonts"        "uio"             
-## [34] "uo-fonts"         "uo"               "uol-fonts"       
-## [37] "uol"              "useR-fonts"       "useR"            
-## [40] "uwm-fonts"        "uwm"              "wic-fonts"       
-## [43] "wic"
-```
-
----
-
-# Themes
-
-To use a theme, you can specify the `css` option as an array of CSS filenames (without the `.css` extensions), e.g.,
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts]
-```
-
-If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.org/en/2017/10/xaringan-themes).
-
----
-class: inverse, middle, center
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
-background-size: contain
-
-# Naruto
-
----
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-background-size: 100px
-background-position: 90% 8%
-
-# Sharingan
-
-The R package name **xaringan** was derived&lt;sup&gt;1&lt;/sup&gt; from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
-
-- the "Eye of Insight"
-
-- the "Eye of Hypnotism"
-
-I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.&lt;sup&gt;2,3&lt;/sup&gt;
-
-.footnote[
-[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
-
-[2] By comparison, bad presentations only put the audience to sleep.
-
-[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
-]
-
----
-
-# Naruto terminology
-
-The **xaringan** package borrowed a few terms from Naruto, such as
-
-- [Sharingan](https://naruto.fandom.com/wiki/Sharingan) (写輪眼; the package name)
-
-- The [moon reader](https://naruto.fandom.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
-
-- [Chakra](https://naruto.fandom.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
-
-- [Nature transformation](https://naruto.fandom.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
-
-- The [infinite moon reader](https://naruto.fandom.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
-
-- The [summoning technique](https://naruto.fandom.com/wiki/Summoning_Technique) (download remark.js from the web)
-
-You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
-
----
-
-class: center
-
-# Hand seals (印)
-
-Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
-
-![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
-
----
-
-
-
-# Thanks!
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), and [R Markdown](https://rmarkdown.rstudio.com).
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
