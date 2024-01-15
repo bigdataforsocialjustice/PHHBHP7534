@@ -97,6 +97,7 @@ ggplot(mydata, aes(x = age, y = bmi_noisy, color=sex)) + geom_point()+
 ggplot(mydata, aes(x = age, y = bmi_really_noisy, color=sex)) + geom_point()+
   geom_smooth(method = "loess") 
 ```
+
 Now, there is no more trend in the data, and no differences between males and females.
 
 # Discussion
