@@ -1,6 +1,6 @@
 ---
-title: "Threats to validity"
-date: "2023-02-16"
+title: "Theory and Concepts"
+date: "2024-01-25"
 ---
 
 ```{r slides-videos, echo=FALSE, include=FALSE}
@@ -11,32 +11,46 @@ playlist_id <- "PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ"
 
 slide_details <- tibble::tribble(
   ~youtube_id,   ~title, ~slide, ~active,
-  "46v8l60nQnI", "Introduction", "1", TRUE,
-  "N4XYXuw_IA0", "Construct validity", "construct-validity", FALSE,
-  "IziQBDzUJ6E", "Statistical conclusion validity", "statistical-conclusion-validity", FALSE,
-  "ssz2DTfrGhw", "Internal validity", "internal-validity", FALSE,
-  "uK7YN6KTRT4", "External validity", "external-validity", FALSE
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
 )
 ```
 
 
 ## Readings
 
-- {{< fa file-pdf >}} Guido Imbens, "Statistical Significance, *p*-Values, and the Reporting of Uncertainty" [@Imbens:2021]. This is available on iCollege, and [it's also free here](https://doi.org/10.1257/jep.35.3.157).
-- {{< fa arrow-up-right-from-square >}} Randall Munroe, ["Significant"](https://xkcd.com/882/)
-- {{< fa arrow-up-right-from-square >}} Alexander Coppock, ["10 Things to Know About Statistical Power"](https://egap.org/resource/10-things-to-know-about-statistical-power/)
-- {{< fa trophy >}} Play around with FiveThirtyEight, ["Hack Your Way To Scientific Glory"](https://projects.fivethirtyeight.com/p-hacking/)
-- {{< fa book >}} Chapter 9 in *Impact Evaluation in Practice* [@wb-eval]
-- {{< fa book >}} Chapter 11 in *The Effect* [@Huntington-Klein:2021]
+- {{< fa book >}} Chapter 2 in Crosby, R. A., DiClemente, R. J., & Salazar, L. F. (Eds.). (2006). [Research methods in health promotion](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/ch2_philosophy_of_science.pdf) (pp. xx, 450). Jossey-Bass.
+ [@crosby_research_2006]
+- {{< fa book >}} Earp, J. A., & Ennett, S. T. (1991). [Conceptual models for health education research and practice.](https://academic.oup.com/her/article/6/2/163/2798165?login=true) Health Education Research, 6(2), 163–171. [@earp_conceptual_1991]
+- {{< fa book >}} Chapters 1, 2 and 7 in Freudenberg, N., Klitzman, S., & Saegert, S. (n.d.). [Urban Health and Society.](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/Urban%20Health%20and%20Society_Interdisciplinary%20Approaches%20to%20Research%20and%20Practice.pdf) 
+- {{< fa book >}} Chapter 5 [*Using Public Health to Reform The Legal and Justice Response to Domestic Violence*](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/Reconsidering_Law_and_Policy_Debates_A_Public_Health_Perspective-3.pdf) in Culhane, J. G. (Ed.). (2010). Reconsidering Law and Policy Debates: A Public Health Perspective. Cambridge University Press.
 
 
-## Slides
+### Your tasks to complete today
+
+-   [ ] Email me the Annotated Bibliography by midnight tonight
+-   [ ] The subject of the email must be "*Annotated Bibliography for PHHBHP7534**"
+-   [ ] Make sure to email me a Word document of the assignment as an attachment and that you followed the instructions outlined [here](resource/annotated.qmd) to complete the assignment
+-   [ ] Complete Problem Set 3
+
+### Your tasks this week to keep you on track
+
+- Begin writing literature review
+- Start studying for [Exam 1](resource/exam1.qmd)
+
+::: {.callout-note icon=false}
+
+:::
+
+## Lecture Notes
 
 The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
 slide_buttons("/slides/06-slides")
-slide_tabs(slide_details, "/slides/06-slides.html")
+slide_tabs(slide_details, "/slides/day6.html")
 ```
 
 :::{.callout-tip}
@@ -46,58 +60,18 @@ slide_tabs(slide_details, "/slides/06-slides.html")
 
 ## Videos
 
-```{r show-youtube-list, echo=FALSE, results="asis"}
-youtube_list(slide_details, playlist_id)
-```
 
 ## In-class stuff
 
-Here are all the materials we'll use in class:
+Read my article on *Reconsidering Adverse Child Experiences*
 
-- [**Session 6 FAQ slides**](/slides/06-class.html) ([PDF](/slides/06-class.pdf))
-- [Zilch!](/resource/zilch.qmd)
-- [{{< fa brands r-project >}} Live R script](https://www.dropbox.com/s/em6jftd6hrro86f/bayes-fun.R)
-- [{{< fa file-csv >}} `restaurant_inspections.csv`](https://vincentarelbundock.github.io/Rdatasets/csv/causaldata/restaurant_inspections.csv)
+### Competencies and Knowledge
+- Foundational knowledge: 9
+- Competencies: 9
+- MPH Specializations: 3, 4
+- PhD Specializations: 3, 4
 
-```{verbatim include=FALSE}
-Playlist: https://www.youtube.com/playlist?list=PLS6tnpTr39sFJtz7egfUASfhhz6zuj7GZ
+### Student Evaluation Activity for Assessment
+- Exam 1
+- Proposal 1
 
-https://youtu.be/46v8l60nQnI
-PMAP 8521 • (6) Threats to validity: (0) Introduction
-
-Introduction to the class session on threats to validity
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/06-content/
-
-
-https://youtu.be/N4XYXuw_IA0
-PMAP 8521 • (6) Threats to validity: (1) Construct validity
-
-Discussion of threats to construct validity
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/06-content/
-
-  
-https://youtu.be/IziQBDzUJ6E
-PMAP 8521 • (6) Threats to validity: (2) Statistical conclusion validity
-
-Discussion of threats to statistical conclusion validity
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/06-content/
-  
-  
-https://youtu.be/ssz2DTfrGhw
-PMAP 8521 • (6) Threats to validity: (3) Internal validity
-
-Discussion of threats to internal validity
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/06-content/
-  
-  
-https://youtu.be/uK7YN6KTRT4
-PMAP 8521 • (6) Threats to validity: (4) External validity
-
-Discussion of threats to external validity
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/06-content/
-```

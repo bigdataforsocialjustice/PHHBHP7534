@@ -2,8 +2,8 @@ library(targets)
 library(tarchetypes)
 suppressPackageStartupMessages(library(tidyverse))
 
-class_number <- "PMAP 8521"
-base_url <- "https://evalsp23.classes.andrewheiss.com/"
+class_number <- "PHHBHP 7534"
+base_url <- "https://www.netifly.com/phhbhp7534/"
 page_suffix <- ".html"
 
 options(tidyverse.quiet = TRUE,

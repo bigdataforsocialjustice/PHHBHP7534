@@ -1,0 +1,61 @@
+---
+
+# Selection Bias
+
+Selection Bias occurs when the selection of participants in one group results in a different outcome than the selection for the other group
+Participants are not equally balanced or objectively represented
+
+---
+# Selection Bias Examples
+
+- Berkson's bias
+- Prevalence/Incidence bias
+- Loss to follow up bias
+- Healthy worker effect
+- Volunteer bias
+- Sampling bias
+  - refusal, non-response, agreement to participate
+
+---
+
+# Controlling selection bias
+Define criteria of selection of diseased and non-diseased participants independent of exposures in a case control study
+Define criteria of selection of exposed and non-exposed participants independent of disease outcomes in a cohort study (i.e, external comparison group or loss to follow-up)
+Apply randomization, blind or mask in clinical trials
+---
+# Information bias
+Information bias occurs when information is collected differently between two groups, leading to an error in the conclusion of the association
+When information is incorrect, there is misclassification
+Non-Differential misclassification: If misclassification of exposure (or disease) is unrelated to disease (or exposure) then the misclassification is non-differential. The misclassification does not differ between the two groups
+If misclassification of exposure (or disease) is related to disease (or exposure) then the misclassification is differential.  The misclassification differs between the two groups
+---
+# Information bias examples
+- Interviewer bias
+- Questionnaire bias
+- Instrument bias
+- Recall bias
+- Case-definition bias
+- Data source bias
+---
+
+# Controlling infomation bias
+Have a standardized protocol for data collection
+Make sure sources and methods of data collection are similar for all study groups
+Make sure interviewers and study personnel are unaware of exposure/disease status
+Adapt a strategy to assess potential information bias
+
+---
+---
+# Examples
+
+Researchers investigated the attitudes of patients about the use of placebo treatments in medical care. A telephone survey was used. Participants were residents in Northern California, aged 18-75 years, who had been seen by a primary care provider for a chronic health problem at least once in the previous six months.
+
+Participants were randomly selected using age stratified sampling (10 year age groups) from all residents in Northern California who met the inclusion criteria. An introductory letter describing the study’s aims was sent to 1800 residents inviting them to participate, with the opportunity to opt out of the study. Those who did not opt out were telephoned and asked to complete the survey by phone. Sample members were excluded if they had dementia or could not participate in a telephone interview because of communication barriers (hearing, language). Of the 1800 residents sampled, 1598 were reachable by mail and potentially eligible to participate. Of these, 853 completed the telephone interview, giving a response rate of 53.4% (853/1598).
+
+The researchers concluded that most patients in the survey seemed favourable to the idea of placebo treatments, and that they valued honesty and transparency in this context. Respondents suggested that doctors should consider engaging with patients to discuss their values and attitudes about the appropriateness of using treatments aimed at promoting placebo responses.
+Which of the following types of bias, if any, would the above questionnaire survey have been prone to?
+a)	Attrition bias
+b)	Non-response bias
+c)	Response bias
+d)	Selection bias
+e)	Volunteer bias

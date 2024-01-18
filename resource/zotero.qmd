@@ -1,0 +1,130 @@
+---
+title: "So you think you know how to use Zotero?"
+subtitle: "Part I"
+author: "Barboza-Salerno"
+---
+
+# Introduction
+
+I asked you to download Zotero as part of this week's assignments. Zotero is a powerful reference management system. I am aware that those of you who use it have a good idea how to manage your references in Word. However, there are a lot of powerful features that most people probably are not aware of. I will go through some of these in this document.
+
+## Link Zotero to an online portal
+
+Sometimes you want to share files with others or simply want to access your Zotero files from another account. You can do this easily if you have an online Zotero account.
+
+Go to [Zotero.org](https://www.zotero.org/user/login/) and click "Register for a free account." Remember your username and password. 
+
+Open Zotero. Click Edit --> Preferences
+<figure>
+  <img src="/slides/img/01/zotero_preferences.png" alt="Research" title="Research Steps" width="100%">
+</figure> 
+
+Enter your username and password as below
+<figure>
+  <img src="/slides/img/01/zotero_username.png" alt="Research" title="Research Steps" width="100%">
+</figure> 
+
+The click "Set up syncing"
+
+You can choose your libraries or you can choose all libraries, whatever you wish.
+
+## Creating Zotero Groups to Share Libraries
+
+I have created a [Zotero group](https://www.zotero.org/groups/5349900/phhbhp7534) so you can practice.
+
+To create a new group for your team, Click on "Groups" then "Create a new group" as below
+<figure>
+  <img src="/slides/img/01/Zotero_groups.png" alt="Research" title="Research Steps" width="100%">
+</figure> 
+
+Choose a name for your group and then select membership type. Click "Create Group"
+
+You can invite group members. On the Group Settings page, select "Member Settings." 
+To invite members, click on Send More Invitations
+
+<figure>
+  <img src="/slides/img/01/Zotero_invite.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+Once your group is created, there will be a corresponding Group Folder in your Zotero Library
+
+Add references to your group collections (folders).
+
+This works just like other Zotero folders—drag your references from your Library and place them into the Group Library
+
+:::{.callout-note}
+PhD students, set up a Zotero Group for your research project. If you are collaborating, only one person needs to do this.
+:::
+
+## Add your publications to Zotero and create a Zotero profile
+
+For the most part, your publications are available from [Google Scholar](https://scholar.google.com/). 
+
+:::{.callout-note}
+If you have published work, and do not have a google profile, set one up now.  
+:::
+
+To demonstrate I will use my profile which is [here](https://scholar.google.com/citations?user=ej_48AcAAAAJ&hl=en&authuser=1).
+
+Click on the checkbox next to the word "Title" like below
+
+<figure>
+  <img src="/slides/img/01/scholar_profile.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+Click "Export" select "BibTex" and then "Export all my articles." 
+
+If you are using Microsoft Edge, you will see something that looks like this
+<figure>
+  <img src="/slides/img/01/bibtex.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+These are the references in BibTex format. Right click in the webpage and "Save As" ... (name it something).
+
+Now, import the file into Zotero as follows:
+
+Go to Zotero, and from the file menu select File -> Import and follow the instructions below.
+
+<figure>
+  <img src="/slides/img/01/zotero_import.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+<figure>
+  <img src="/slides/img/01/zotero_select.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+A library will be created that has the same name as the imported file.
+
+### Create a Zotero Profile
+
+In Zotero, you see a library called "My Publications"
+
+<figure>
+  <img src="/slides/img/01/mypubs.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+Go to the library that has your publications and highlight them (Click Ctl-A on Windows). Drag them into your "My Publications" folder.
+
+Now, go back to the Zotero webpage, and click on your name and then "My Profile." After dragging your publications into the folder, you will be asked to verify you created this work. Once you do that, your profile should go from this
+
+<figure>
+  <img src="/slides/img/01/zotero_empty.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+to this
+
+<figure>
+  <img src="/slides/img/01/zotero_full.png" alt="Research" title="Research Steps" width="100%">
+</figure>
+
+## Integrating Zotero with Obsidian
+
+This task is somewhat involved so I will demonstrate it in class.
+
+If you are interested in doing this, download [Obsidian - Sharpen your thinking](https://obsidian.md/). Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as [Zotero](https://www.zotero.org/). 
+
+Until then, you can explore the power by watching this video:
+
+<iframe width="580" height="420" src="https://www.youtube.com/embed/XbGJH08ZfCs" title="How to use Zotero with Obsidian featuring Eleanor Konik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>

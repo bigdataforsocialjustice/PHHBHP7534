@@ -1,0 +1,54 @@
+---
+title: "Literature Review"
+---
+
+# The Literature Review
+
+## Preliminaries
+1.	Identify a topic – be very specific about the relationship between variables
+2.	Search the Literature/organize the findings – my suggestion is to use Google Scholar & my handout as an organizing tool
+3.	Survey the Literature – get an understanding of the topic and the lens by which researchers have viewed the issue/topic
+4.	Critique the literature – a critique of the literature involves identifying a research gap or research that is inconsistent on a topic.  
+
+## Begin writing
+
+Here is the topic we will research: Compared to children who are not maltreated, are maltreated children who have positive school experiences less likely to commit crime as adults. The first step as we’ve discussed on many occasions is to define these concepts. The process of going from concept to definition is called operationalization. 
+
+How are we to define each concept here? 
+
+This will help direct you in the review of research, i.e. you will search the terms that you have defined.
+
+
+### Summarize the state of the current knowledge on the topic
+#### Step 1
+First, we would want to discuss the literature showing that child maltreatment is linked to future delinquency and/or violence (this is easy to do).
+
+> Example
+>
+>“Childhood victimization has demonstrable long-term consequences in >terms of adult criminal behavior. Experiences of early childhood >victimization are significantly related to adult arrest records. >Overall, about 29% of those who were abused and neglected as children >were arrested for a criminal (nontraffic) offense as an adult, in >comparison to about 21% of the control subjects. As predicted by the >violence-breeds-violence hypothesis, individuals who were abused or >neglected as children had higher rates of violent crimes as adults; >however, the relationship was strongest for males.” (Widom, 1989, pg. >362)
+
+#### Step 2
+Next, we want to discuss literature that suggests schools are important factors in predicting violent criminal offending.
+
+Research has found that maltreated children perform significantly below their non-maltreated peers in standardized tests, grades, and grade repetitions (Eckenrode, Laird, & Doris, 1993). Leiter and Johnsen (1997) found that officially recorded maltreatment elevates the subsequent risk of lower grades, grade retention, poor attendance, and adverse behaviors in elementary school. In a more recent study, Currie & Widom (2010), found that when compared to the control group, those participants with a history of childhood maltreatment obtained one year less of education on average. This study further found that maltreated children scored lower on IQ tests and were more likely to be employed in unskilled jobs as adults. On the other hand, previously incarcerated youth who received quality educational programming performed better in school and had lower recidivism and greater employment rates (Foley, 2001), indicating that both the quality of educational programming as well as the broader school context can influence the trajectories of delinquent students.
+
+#### Step 3
+Next, we would argue that schools have not been the focus of research examining the link between child maltreatment and future violence.
+
+In an early study, high levels of academic achievement, low rates of in-school behavior problems and good attendance mediated the maltreatment- delinquency relationship among students attending school in North Carolina (Zingraff and colleagues, 1994). Conversely, Herrenkohl, Tajima, Whitney, & Huang (2005) found that physically abused who demonstrated a strong commitment to school were less likely to engage in antisocial behavior. Using data from the Chicago Longitudinal study, Topitzes  (2006) found that reading achievement and a high school diploma mediated the impact of maltreatment on adult crime. Finally, Smith, Park, Ireland, Elwyn, & Thornberry (2012) found that the long-term impact of maltreatment on arrest, crime and violence was only weakly mediated by grade point average and high school graduation but strongly mediated by an additive index of school assets. 
+#### Step 4
+We might also identify other gaps/inconsistencies in the literature at this point.
+What have these studies overlooked.
+
+- One gap may be that studies have typically focused on child abuse rather than child neglect
+
+- An inconsistency may be that some research has found racial differences in youth antisocial behavior whereas others have not (e.g. bullying)
+  
+Now we talk about why schools may be an important factor, and why.
+School connectedness has been shown to increase the likelihood of academic success (Arhar & Kromrey, 1993; Connell, Spencer, & Aber, 1994; Connell & Wellborn, 1991; Finn, 1989, 1993; Finn & Rock, 1997; Mounts & Steinberg, 1995; Voelkl, 1995). As well, students who are connected to school are more likely to be engaged and involved in school activities, have better attendance, higher levels of academic achievement, and higher school completion rates (Appleton, Christenson & Furlong, 2008). Despite variability in its elements and terminology, school connectedness is concurrently and prospectively associated with fewer internalizing (i.e. anxiety, depression) and externalizing problems (i.e. conduct disorder, aggression) (Resnick et al., 1997; Shochet, Dadds, Ham, & Montague, 2006). Research in the field of education has demonstrated that contextual factors, such as school connectedness, can mediate the developmental impact of childhood abuse and neglect (for a review see Zielinski & Bradshaw, 2006). Whereas lower levels of school connectedness have been associated with an increased risk for adolescent and chronic delinquent trajectories, violent behavior in adulthood and higher odds of arrest (Widom, Weiler, & Cottler. 1999; Herrenkohl, Huang, Tajima, & Whitney, 2003; Kaplan, Pelcovitz, & Labruna, 1999; Malinosky-Rummell & Hansen, 1993; Resnick et al., 1997; Shochet, Dadds, Ham, & Montague, 2006; Ryan, Hernandez, & Herz, 2007; Chang et al., 2003 and Lederman et al., 2004; Ireland et al., 2010), higher levels of school attachment and bonding protect at-risk youth against engagement in these high-risk behaviors (Battistich, 2003; Battistich et al., 1995; Battistich & Hom, 1997; Becker & Luthar, 2002).
+
+#### References
+Widom, C. S. (1989). Child abuse, neglect, and adult behavior: research design and findings on criminality, violence, and child abuse. American Journal of Orthopsychiatry, 59(3), 355.
+Chen, J. K., & Astor, R. A. (2011). Students’ personal traits, violence exposure, family factors, school dynamics and the perpetration of violence in Taiwanese elementary schools. Health education research, 26(1), 150-166.
+Hart, C. O., & Mueller, C. E. (2013). School delinquency and social bond factors: Exploring gendered differences among a national sample of 10th graders. Psychology in the Schools, 50(2), 116-133.
+

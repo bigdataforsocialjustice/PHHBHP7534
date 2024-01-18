@@ -1,0 +1,25 @@
+---
+title: "Pre-experimental designs"
+date: "2024-03-19"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-things.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
+)
+```
+
+## Readings
+- {{< fa book >}} Bauman KE. Chapter 4: Intervention designs. In Research Methods for Community Health and Welfare. 1980. p. 23-27 and 30-35.
+- {{< fa book >}} Shadish WR, Cook TD, Campbell DT. Chapter 4: Quasi-experimental designs that lack either a control group or lack pretest observations on the outcome. 2002. p. 106-115.
+- {{< fa book >}} Shadish WR, Cook TD, Campbell DT. Chapter 6: Quasi-experiments: Interrupted time-series designs. 2002. p. 175-181.
+- {{< fa book >}} Allen ML, Hurtado GA, Yon KJ, et al. Feasibility of a parenting program to prevent substance use among Latino youth: a community-based participatory research study. Am J Health Promot 2013; 27(4): 240-244.

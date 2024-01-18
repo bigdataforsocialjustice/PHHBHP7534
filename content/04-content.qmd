@@ -1,6 +1,6 @@
 ---
-title: "Measurement and DAGs"
-date: "2023-02-02"
+title: "Mediation, Moderation and Moderated Mediation"
+date: "2024-01-18"
 ---
 
 ```{r slides-videos, echo=FALSE, include=FALSE}
@@ -11,39 +11,58 @@ playlist_id <- "PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF"
 
 slide_details <- tibble::tribble(
   ~youtube_id,   ~title, ~slide, ~active,
-  "V9zIL7bI9WI", "Introduction", "1", TRUE,
-  "QkFhHOoYq-I", "Abstraction, stretching, and validity", "abstraction", FALSE,
-  "kJQuH3nssfI", "Causal models", "causal-models", FALSE,
-  "_qs_1B4ySWY", "Paths, doors, and adjustment", "paths-doors-adjustment", FALSE
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
 )
 ```
+
+::: callout-note
+Course objective(s) for this module: *Describe and execute the key steps
+in designing, conducting, and evaluating research in health behavior and
+health promotion.*
+:::
 
 ## Readings
 
 ### Measurement
 
-- {{< fa brands youtube >}} [The witch trial scene from *Monty Python and the Holy Grail*](https://www.youtube.com/watch?v=yp_l5ntikaU)
-- {{< fa book >}} Chapter 5 in *Evaluation: A Systematic Approach* [@RossiLipseyHenry:2019]. This is available on iCollege.
-- {{< fa book >}} Chapter 5 in *The Effect* [@Huntington-Klein:2021]
+- {{< fa book >}} Barboza-Salerno, G. E. (2020). [*Cognitive readiness to parent, stability and change in postpartum parenting stress and social-emotional problems in early childhood: A second order growth curve model.*](https://www.sciencedirect.com/science/article/pii/S0190740919311533?casa_token=jQ4MhjFKvGIAAAAA:k96hYl2JhmeufTpQkkKWn1YPKkEcjdLoc2XLW6GZW2x6DQtTQkHAb8oSKLyXvnWWOykmWtvt6d-R) Children and Youth Services Review, 113, 104958. https://doi.org/10.1016/j.childyouth.2020.104958
+- {{< fa book >}} Barboza, G., & Siller, L. A. (2021).[ *Child Maltreatment, School Bonds, and Adult Violence: A Serial Mediation Model.*](https://journals.sagepub.com/doi/pdf/10.1177/0886260518805763?casa_token=atVd0dXKgIMAAAAA:1wnTWfYCyPZVWnrxwf5SNHnoFvYQ4t3PI1gDq1mJAEWpqV2fDdat0CPnMTRSm1bT2QaCzz3qW_v594A) Journal of Interpersonal Violence, 36(11–12), NP5839–NP5873. https://doi.org/10.1177/0886260518805763
+- {{< fa book >}} Frazier, P. A., Tix, A. P., & Barron, K. E. (2004). [*Testing Moderator and Mediator Effects in Counseling Psychology Research.*](https://psycnet.apa.org/fulltext/2003-11100-011.pdf) Journal of Counseling Psychology, 51(1), 115–134. https://doi.org/10.1037/0022-0167.51.1.115
+- {{< fa book >}} MacKinnon, D. P. (2011). [*Integrating Mediators and Moderators in Research Design.*](https://journals.sagepub.com/doi/full/10.1177/1049731511414148?casa_token=DNm2rg2IflAAAAAA:SoSuLBe18QLwcFgGy5AlGPBjj443lnLhAaQ8HwlQ-BnK6rqFGsfy1zJG8HnnmsYsQOHgNzLhmqhjKgY) Research on Social Work Practice, 21(6), 675–681. https://doi.org/10.1177/1049731511414148
 
-### DAGs
+### Required Reading for PhD Students (and recommended for others)
 
-- {{< fa file-pdf >}} Julia M. Rohrer, "Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data" [@Rohrer:2018] This will be posted on iCollege.
-- {{< fa file-pdf >}} Section 2 only (pp. 4–11) from Julian Schuessler and Peter Selb, "Graphical Causal Models for Survey Inference." [@SchuesslerSelb:2019] [The PDF is available at SocArXiv.](https://osf.io/preprints/socarxiv/hbg3m/)
-- {{< fa book >}} Chapters 6 and 7 in *The Effect* [@Huntington-Klein:2021]
-
-### DAG example page
-
-- The [example page on DAGs](/example/dags.qmd) shows how to draw and analyze DAGs with both dagitty.net and R + **ggdag**
+- Andrew Hayes' book entitled [*Mediation, Moderation and Conditional Process Models*](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/reading/mediation_hayes.pdf) is an excellent and rigorous introduction. Read Chapters 3 *The Simple Mediation Model* and Chapter 7: *Fundamentals of Moderation Analysis*.
 
 
-## Slides
+### Your tasks to complete today
+
+-   [ ] Submit your research topic by emailing the topic to me by midnight tonight 
+-   [ ] The subject of the email must be "*Research Topic for PHHBHP7534**"
+-   [ ] The body should have a statement of the research topic you wish to pursue
+-   [ ] Complete Problem Set 2
+
+### In-class activities
+- Conducting a literature review
+- Creating bibliographies in Zotero
+
+::: {.callout-note icon=false}
+
+## Pay Attention
+
+PhD students: the annotated bibliography is due today by midnight. To submit the bibliography, follow [these instructions](/resources/annotated.qmd).
+
+:::
+## Lecture Notes
 
 The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
-slide_buttons("/slides/04-slides")
-slide_tabs(slide_details, "/slides/04-slides.html")
+slide_buttons("/slides/day4")
+slide_tabs(slide_details, "/slides/day4.html")
 ```
 
 :::{.callout-tip}
@@ -51,72 +70,38 @@ slide_tabs(slide_details, "/slides/04-slides.html")
 :::
 
 
-## Videos
-
-```{r show-youtube-list, echo=FALSE, results="asis"}
-youtube_list(slide_details, playlist_id)
-```
-
 ## In-class stuff
 
-Here are all the materials we'll use in class:
 
-- [**Session 4 FAQ slides**](/slides/04-class.html) ([PDF](/slides/04-class.pdf))
-- [{{< fa brands r-project >}} Regression playground Posit.cloud project](https://posit.cloud/spaces/323551/content/5299495)
-- [{{< fa file-zipper >}} Regression playground project `.zip` file](/projects/regression-example.zip)
+### 📦 Additional Resources
 
-## Bayesian statistics resources
+- Read Chapters 1 & 2 in [R for Data Science](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/reading/R_data_Science_partI.pdf)
+- [Mediation and Moderation in R](/example/lab4/mediation_moderation.html)
 
-In class I briefly mentioned the difference between frequentist and Bayesian statistics. You can see a bunch of [additional resources and examples of these two approaches to statistics here](/resource/bayes.qmd). [This huge blog post](https://www.andrewheiss.com/blog/2021/12/01/multilevel-models-panel-data-guide/) also shows how to do multilevel models with Bayesian models.
+### Competencies and Knowledge
+- Foundational knowledge: 3, 6
+- Competencies: 9
+- MPH Specializations: 4, 7
+- PhD Specializations: 4, 7
 
-
-```{verbatim include=FALSE}
-Playlist: https://www.youtube.com/playlist?list=PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF
-
-https://youtu.be/V9zIL7bI9WI
-PMAP 8521 • (4) Measurement and DAGs: (0) Introduction
-
-Introduction to the class session on outcome measurement and DAGs
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/04-content/
+### Student Evaluation Activity for Assessment
+- Exam 1
+- Proposal 1
 
 
-https://youtu.be/QkFhHOoYq-I
-PMAP 8521 • (4) Measurement and DAGs: (1) Abstraction, stretching, and validity
+### Advanced Mediation Models
 
-Discussion of how to measure abstract concepts like program outcomes using a ladder of abstraction
+For an example of when I used these models in my own work, see [@elise_barboza_child_2021]
+Parallel Mediation Model:
 
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/04-content/
-
-  
-https://youtu.be/kJQuH3nssfI
-PMAP 8521 • (4) Measurement and DAGs: (2) Causal models
-
-Introduction to causal models and DAGs
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/04-content/
-
-
-https://youtu.be/_qs_1B4ySWY
-PMAP 8521 • (4) Measurement and DAGs: (3) Paths, doors, and adjustment
-
-Discussion of how to identify associations, close backdoors, and isolate pathways in a DAG
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/04-content/
-
-  
-https://youtu.be/3euqrnD9w7c
-PMAP 8521 • Example: DAGs with Dagitty
-
-Demonstration of how to create and analyze DAGs with dagitty.net
-
-Download the data and see the polished code at https://evalf20.classes.andrewheiss.com/example/dags/
-
-
-https://youtu.be/uoAjyyToUTE
-PMAP 8521 • Example: DAGs with R and ggdag
-
-Demonstration of how to create and analyze DAGs with R and the {ggdag} package
-
-Download the data and see the polished code at https://evalf20.classes.andrewheiss.com/example/dags/
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics(here::here("example", "lab4", "parallel_mediators.png"), error = FALSE)
 ```
+
+Sequential mediation model: 
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics(here::here("example", "lab4", "sequential_mediators.png"), error = FALSE)
+```
+
+

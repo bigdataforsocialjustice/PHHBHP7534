@@ -1,0 +1,57 @@
+---
+title: "Annotated Bibliography"
+author: "Barboza-Salerno"
+---
+
+# Background:
+ 
+Research in the social sciences/public health necessitates a comprehensive understanding of previous work pertaining to the research at hand. A bibliography is a list of sources (books, journals, Web sites, periodicals, etc.) that are useful for understanding previous research on a topic. An annotated bibliography includes a summary and/or evaluation of each of the sources in the bibliography.The purpose of the annotated bibliography is to provide you with the information you need to create a thorough and authoritative literature review for your proposal. Below is a roadmap that should help you understand what is expected of this assignment. You will be assessed on your ability to find, comprehend, and *systematize* information relevant to your topic of inquiry. 
+
+::: {.callout-note icon=false}
+
+## Pay Attention
+
+This is the first step of the publishable paper we are writing together if you are a PhD student. If you are an MPH student, it would be a great idea to use this as a way to begin your ILE/APE requirement.
+
+:::
+
+## Components:
+
+### Summarize
+Summarize the articles main arguments? What is the article aiming to accomplish? What topics are covered? 
+
+You should focus on addressing the following questions:
+ 
+  - What are the differences or similarities between the articles you’ve chosen? Conflicts of past research are a good way to justify your own topic or approach.
+  - Are there any gaps in the literature on your topic?  If several studies note gaps in the existing research that you aim to address, this is also a good way to justify your work.
+  - What "things" (i.e., data, different methodology, different theoretical lens) are needed to better understand the problem you aim to address?
+
+### Assess
+
+Evaluate the article by examining how it compares with other sources in your bibliography? Is the information reliable? too subjective? valid? novel?How do the findings compare or contrast with other research?
+
+### Reflect
+
+How useful is the source and how does it fit into your research question?
+
+## Grading Notes:
+ 
+- Does your submission contain high quality, peer-reviewed research?
+- Do you present sufficient information from the cited articles that is relevant to your topic.
+- Does the submission contain at least five peer-reviewed journal articles (MPH) and 10-15 (PhD)? 
+- Are the articles recent (i.e., from the past ten years)? 
+- Does your assessment compare and contrast the articles? Does it include a basic analysis of the limitations and strengths of each article?
+- The annotations for each source are written in paragraph form.
+
+Grading Criteria:
+ 
+- **Adequacy**: Does the submission fulfill all of the requirements of the assignment?
+- **Depth**: Does the submission demonstrate an adequate level of research and engagement with the topic?
+- **Critical Thinking**: Does the submission provide clear, creative, and strong arguments, with support for those arguments in facts from empirical or theoretical literature?
+- **Communication and Presentation**: Does the submission use **proper grammar, spelling, and APA formatting?**  Is the submission logically organized and clearly written? 
+ 
+#### Resources
+There are a lot of great tools to help you organize your bibliography and write literature reviews. I wrote [this article](https://bigdataforsocialjustice.medium.com/i-hate-writing-literature-reviews-here-is-how-i-have-automated-the-process-using-software-tools-cec35a2edaea) and posted it on medium because I was curious about how they work. They have not been helpful for me, but you may enjoy learning about them. 
+
+#### References
+[1] https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/index.html

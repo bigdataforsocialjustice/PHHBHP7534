@@ -1,20 +1,205 @@
 ---
-title: Data
+title: "Data"
+author: "Barboza-Salerno"
 ---
 
-There are a ton of places to find data related to public policy and administration (as well as data on pretty much any topic you want) online:
+### What is data?
 
-- [**Data is Plural newsletter**](https://tinyletter.com/data-is-plural): Jeremy Singer-Vine sends a weekly newsletter of the most interesting public datasets he's found. You should subscribe to it. [He also has an archive of all the datasets he's highlighted.](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+Data comes in a variety of formats. When we think about data we typically think about structured data, for example data that can be imported nicely into Excel or SPPS. There are a number of alternative data formats that come in a variety of data types from many different data sources. The links below demonstrate these data formats using existing sources. We begin to learn how to analyze the data using innovative data science packages. I have chosen to concentrate on available software that is easy to use, and can facilitate the interpretation, analysis and visualization of data beyond the typical tools (e.g., SPSS). I will note the benefits and drawbacks for each package we review.
 
-- [**Google Dataset Search**](https://toolbox.google.com/datasetsearch): Google indexes thousands of public datasets; search for them here.
+*Note:* Throughout this class, I will provide examples from my own work to illustrate how I have applied these tools. This includes a couple of web scraping applications (one which scrapes data from the [Los Angeles Homicide Report](https://homicide.latimes.com/) and one to automate downloading data from the [U.S. Census Bureau's Household Pulse Survey](https://www.census.gov/data/datasets.html) The goal is to show you what can be done, with the disclaimer that you will probably not be able to do this by the end of this course. Learning about data is a long-term goal but I am here to help you if at some point you want to implement any of this for your own work.
 
-- [**Kaggle**](https://www.kaggle.com/datasets): Kaggle hosts machine learning competitions where people compete to create the fastest, most efficient, most predictive algorithms. A byproduct of these competitions is a host of fascinating datasets that are generally free and open to the public. See, for example, [the European Soccer Database](https://www.kaggle.com/hugomathien/soccer), the [Salem Witchcraft Dataset](https://www.kaggle.com/rtatman/salem-witchcraft-dataset) or results from an [Oreo flavors taste test](https://www.kaggle.com/rtatman/oreo-flavors-tastetest-ratings).
+### Show me the data!
 
-- [**360Giving**](http://www.threesixtygiving.org/data/data-registry/): Dozens of British foundations follow a standard file format for sharing grant data and have made that data available online.
+There is tons of data available to download on the internet from reliable sources. I am going to review the datasets that I find most interesting and useful for social work. We will select a few datasets to analyze, visualize, and map. This requires knowing how to download and merge the data for analysis. These datasets provide a rich source of contextual information for your research, including your dissertation. As you will see, knowing about them, how to use them, and how to incorporate them into your research, is extremely powerful.
 
-- [**US City Open Data Census**](http://us-cities.survey.okfn.org/): More than 100 US cities have committed to sharing dozens of types of data, including data about crime, budgets, campaign finance, lobbying, transit, and zoning. This site from the [Sunlight Foundation](http://sunlightfoundation.com/) and [Code for America](http://www.codeforamerica.org//) collects this data and rates cities by how well they're doing.
 
-- **Political science and economics datasets**: There's a wealth of data available for political science- and economics-related topics:
-    - [**François Briatte's extensive curated lists**](https://github.com/briatte/srqm/wiki/Data): Includes data from/about intergovernmental organizations (IGOs), nongovernmental organizations (NGOs), public opinion surveys, parliaments and legislatures, wars, human rights, elections, and municipalities.
-    - [**Thomas Leeper's list of political science datasets**](https://github.com/leeper/poliscitoys/issues/1): Good short list of useful datasets, divided by type of data (country-level data, survey data, social media data, event data, text data, etc.).
-    - [**Erik Gahner's list of political science datasets**](https://github.com/erikgahner/PolData): Huge list of useful datasets, divided by topic (governance, elections, policy, political elites, etc.)
+## 🎯 Your Tasks
+
+-   [ ] Become familiar with open source software to use for different
+    types of statistical analyses
+-   [ ] Download and install *jamovi* and *JASP* onto your laptop (as required)
+-   [ ] Learn how to install add-ons for SPSS, jamovi and JASP software
+-   [ ] Run simple descriptive statistics and create APA formatted tables
+-   [ ] Learn about the types of datasets (repositories and publicly available data) that are of great interest to public health scholars and practitioners
+
+## Open data repositories
+### Free, Publicly Available Data for Download
+
+#### Stand Alone data
+- [Adolescent Health Data](https://data.cpc.unc.edu/projects/2/view)
+	- Here is my tutorial on using the [Add Health data](https://bigdataforsocialjustice.github.io/databootcamp/add-health.html)
+
+#### Points of Interest (POI) data
+- Safegraph Places
+	- Google Places API
+
+#### Mobility data
+- [Google](https://www.google.com/covid19/mobility/) Mobility Indices
+- [Apple](https://covid19.apple.com/mobility) Mobility Indices
+- [Safegraph](https://www.safegraph.com/neighborhood-patterns) Mobility Indices  
+
+#### Data with a specific focus
+- Liquor licenses
+	- [Ohio : Liquor Control : Web Database Search](https://www.comapps.ohio.gov/liqr/liqr_apps/PermitLookup/PermitHolder.aspx)
+		- Let's look carefully at this data, we will illustrate the search tool and download option
+	- [Licensing Reports | Alcoholic Beverage Control (ca.gov)](https://www.abc.ca.gov/licensing/licensing-reports/)
+	- Search google for other states
+- [Household Debt and Credit Report - FEDERAL RESERVE BANK of NEW YORK (newyorkfed.org)](https://www.newyorkfed.org/microeconomics/hhdc) data
+- [Consumer Complaint Database | Consumer Financial Protection Bureau](https://www.consumerfinance.gov/data-research/consumer-complaints/) 
+	- This is a very cool website that is totally underutilized in our field. 
+	- Here is an example of what we can do with the [[Consumer Complaints]] database!!
+- Government sponsored racism data
+	- [Gentrification & Displacement](https://www.urbandisplacement.org/maps/los-angeles-gentrification-and-displacement/)
+		- This website has a github repository where the data are stored. It is called the [Urban Displacement Project’s GitHub](https://www.urbandisplacement.org/about/open-source/)
+		- They have made maps for several cities including this map of [Gentrification in Cleveland](https://urban-displacement.github.io/displacement-typologies/maps/cleveland_udp.html)
+		- Following their example requires really advanced programming skills, but you can still download and use the data in 
+	- Redlining
+		- [Mapping Inequality (richmond.edu)](https://dsl.richmond.edu/panorama/redlining/#loc=5/39.1/-94.58)
+		- [Historic Redlining Scores for 2010 and 2020 US Census Tracts (openicpsr.org)](https://www.openicpsr.org/openicpsr/project/141121/version/V2/view)
+		- [Mapping Redlining Grades to Today's Neighborhoods | diversitydatakids.org](https://www.diversitydatakids.org/research-library/blog/mapping-redlining-grades-todays-neighborhoods)
+	- Police data
+		- Police residence: [https://github.com/fivethirtyeight/data/tree/master/police-locals](https://github.com/fivethirtyeight/data/tree/master/police-locals)
+		- Police killings: [https://github.com/fivethirtyeight/data/tree/master/police-killings](https://github.com/fivethirtyeight/data/tree/master/police-killings) --> see how I have used [these data](fatal_police_shooting.qmd)
+		- Police deaths: [https://github.com/fivethirtyeight/data/tree/master/police-deaths](https://github.com/fivethirtyeight/data/tree/master/police-deaths)
+- Housing & Transportation data
+	-  [Welcome to The H+T Affordability Index](https://htaindex.cnt.org/) 
+		- [[Housing and Transportation Affordability Index|Click here]] to see my explanation of this data and the maps I made of Franklin County
+	- [Eviction Map & Data (Version 2.0) | Eviction Lab](https://evictionlab.org/map/?m=modeled&c=p&b=efr&s=all&r=counties&y=2018&lang=en)
+		- *Note:* it is not always easy to find the data, but you must persist. This website is no exception. See if you can locate the link to download the data before simply [clicking here](https://evictionlab.org/get-the-data) To access the data, you need to provide your email, a small price to pay for this rich data.
+		- The data can be found in the Bootcamp/ex/Eviction folder, open it now. 
+	- [Home Mortgage Disclosure Act (HMDA) Data | Consumer Financial Protection Bureau (consumerfinance.gov)](https://www.consumerfinance.gov/data-research/hmda/)
+	- [Ohio Crash Statistics System](https://ohtrafficdata.dps.ohio.gov/crashstatistics/home)
+	- The National [Walkability Index](https://edg.epa.gov/EPADataCommons/public/OA/WalkabilityIndex.zip)
+- Food
+	- [USDA ERS - Food Access Research Atlas](https://www.ers.usda.gov/data-products/food-access-research-atlas/)
+	- [SNAP Retailer Data | Food and Nutrition Service (usda.gov)](https://www.fns.usda.gov/snap/retailer/data)
+- Health data
+	- [Center for Health and Environmental Data | Department of Public Health & Environment (colorado.gov)](https://cdphe.colorado.gov/center-for-health-and-environmental-data)
+	- [Data | Centers for Disease Control and Prevention (cdc.gov)](https://data.cdc.gov/)
+		- See my note on about [Analyzing Places Data](https://bigdataforsocialjustice.github.io/databootcamp/analyzing-places-data.html)
+	- New Mexico [Community Data Collaborative](https://nmcdc.maps.arcgis.com/)
+- Housing and Urban Development
+	- [HUD Open Data Site (arcgis.com)](https://hudgis-hud.opendata.arcgis.com/)
+		- Racially or Ethnically Concentrated Areas of Poverty (R/ECAPs)
+		- Low-Income Housing Tax Credit (LIHTC): Property Level Data
+		- Location Affordability Index v1, v2 and v3
+	- Urbanization index: [https://github.com/fivethirtyeight/data/tree/master/urbanization-index](https://github.com/fivethirtyeight/data/tree/master/urbanization-index)
+	- National Center for Homelessness: [https://nche.ed.gov/data/](https://nche.ed.gov/data/)
+- [SAMSHA Home - FindTreatment.gov](https://findtreatment.gov/)
+	- I used these data to calculate accessibility to SAMSHA behavioral health centers for a 20 min travel time by public transit + walking in San Francisco![[Pasted image 20230806133127.png]]
+- Environmental Health Hazards Index
+-  Child Maltreatment
+	- Child Opportunity Index: [COI](https://www.diversitydatakids.org/)
+	- [National Data Archive on Child Abuse and Neglect](https://www.ndacan.acf.hhs.gov/) (you need to request access but it is not a difficult process)
+		- NSCAW I and II
+			- I used this data for this paper [Trajectories of post-traumatic stress and externalizing psychopathology among maltreated foster care youth_ A parallel process latent growth curve model (sciencedirectassets.com)](https://pdf.sciencedirectassets.com/271783/1-s2.0-S0145213417X00094/1-s2.0-S0145213417303381/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjELn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGNuPpvyiiEwvmsqwP%2B%2FqSyK0qWpPvGUuvkVTSwbbaIJAiEAkblain6nHu0ej1QrbGsKBxtUwHPFwhLcFpP6lj7NIiAqswUIYhAFGgwwNTkwMDM1NDY4NjUiDMUNk6Fx2P8yAkpQOyqQBS8H2teuU6ONki%2Ba%2BtwnJVua8JDmW%2Bgo5fHAyaD0UAkXsXmbplY8oHYo%2Bbnv8xdlh%2BOxllfKvG14fUPE5Ui7sK9JESZTVWIhriyU4uIJaivNcTuB6dTDAr6kygkHRQ9XYUrihRliAuNEk5GqRxE9g96PWc%2FhRx1A6zj8SKrpKKOH9ug9H25IRvKugOkKSNS0kQhu4EDXR7VmOC2Qt0dKZ6m0zzOwcpTFvRfA8Yz0CXWUo4URLWi0hptkZJrkuKcGYu7DBh8z3KZas5goe9jjGkfJ7ZNb%2FdaaHVxmAi1diC%2FXuGlB1%2FBu9T5obre2k%2F3fM6lxKyo8lWe7J2O%2FIwpYLdYfFDLWVyobBuL49FY6nsXoX4G1zPobxzI87Xyf8rfpOnZbQFx1tiX0UGqaG9cEFY%2F7fQD4ng%2BaTxYEpGfT%2BEcnGeNyTZ2hEjI71xn36W1KZNoHPRdBwrozwEWB0Kgi%2FWc%2BIyzWG4lUS%2BKvB0u87l0NiT81Xg1Z7ZiOqH765qM6dElpFPB1JJmj11Jv3Xt4WMvq6kIXpvumi%2BvU8JID%2BCVVlX%2B9xB970PLJEZt1NKnBX977%2BrdEjrXlru%2B8bCMZJ6F4X7Er3qRZ9LCkQs9ATk56dJaxCTEplKY8jRMTETaeGDg%2B41P349S3BniucI4%2FljpsdYZkNKgGO7qCLCFemmVbuq%2BtOuAs%2BEydU8tC6z0j%2FUJcJ%2FXIXkUFHdL8ehNQeJnC4HwtgXzXii195uUWPIU9BqchetQaUPNFzI0AgTjyrR0yqG%2B8VSlRvlYiARQWd69sxGOxRad%2BcEk8NhpGoS9YFmgHHpZSFx8D0f53%2ByONcwhpAUHoHaSQkK2sB3ZUvPHanXqMtH3OMPKQ6JDTksnaMJ%2BVv6YGOrEBVvtZKIhIuwsHx3uykUVdZi7%2F1h4z0glgNebGk1MT8mDQtXAbQ6cmOlMz22yIkWgR1aQVj1iWdxj2D7B2GIG98d69A5pSKhczpgUBt5MB8f4p8YxURMUdhH0a4%2FMbEu7IJN%2FKzbCroKOYdwTFVDqO2NKfjD5EKWLvxE7V3ApP3fHeCOU5LiUi3Fu7MRWMkzI7b8uJ7l6zQQnKU6TvDKdQSNetk8MSc%2FESWAxfhgZ7p3kY&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230806T173401Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYW2TLRD2R%2F20230806%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=4b18527da70434a488863f14cd88d90eb73f1f4dbcc8f3b97a5f3345c99f5985&hash=0f9ec26af8ae9365b957de4465d42dd62ea7cd3318edada555caf27d273355b7&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0145213417303381&tid=spdf-443d107e-25aa-44c2-a017-52246e64a1c0&sid=ee9e8f1581244944c83ba1d-3f714dde44fegxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=10145807535e56555759&rr=7f290738382d1074&cc=us) and also here [Longitudinal growth of post-traumatic stress and depressive symptoms following a child maltreatment allegation: An examination of violence exposure, family risk and placement type - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0190740917302967?casa_token=mhiiXl3g048AAAAA:fT6mRwOVD_bJzrLiI35y508fK-QNtR5luoV8iBMcFkeizpXoSvqsacq6YB2eEZBzF_P0KqgIrh2l)
+		- AFCARS (multiple years)
+		- Multisite Evaluation of Foster Youth Programs (Chaffee Independent Living Evaluation Project (2001-2010))
+			- I used this data for this paper [A network analysis of post-traumatic stress among youth aging out of the foster care system - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0190740922002250?casa_token=5c_B1b57YfsAAAAA:jQyniy5vclpF1vPbVEK_RPJxffV25KnEmr3wU0c4XQv_4g9PoVVaLt4m1hyH8uHIMbAYU2Y_7TlF) and also here [Early Child Adversity and Delinquent Behavior in Foster Care Youth: Do Future Expectations and Sexual Identity Moderate the Mediating Role of Posttraumatic Stress? | SpringerLink](https://link.springer.com/article/10.1007/s40653-023-00548-8)
+- Census Bureau
+	- National Survey of Child Health - Data Resource Center for Child and Adolescent Health
+  	- [Click here](https://bigdataforsocialjustice.github.io/databootcamp/national-survey-of-child-health.html) to see my analysis of these data
+	  - The data are located here: [NSCH](https://www.census.gov/programs-surveys/nsch/data/datasets.html)
+	- [Household Pulse Survey Data Tables](https://www.census.gov/programs-surveys/household-pulse-survey/data.html)
+		- I was working on a project about debt in Colorado and I wanted to use these files, but I did not want to download and unzip them by hand, so I wrote a script in R that automatically finds the data on the webpage, downloads it for each year, unzips them after they are downloaded, and makes a couple of graphs. You can take a look at the script here [[Household Pulse Survey Data Tables]] 
+	- Georeferenced Census Data
+		- [Neighborhood Atlas - Home (wisc.edu)](https://www.neighborhoodatlas.medicine.wisc.edu/)
+		- [CDC/ATSDR Social Vulnerability Index (SVI)](https://www.atsdr.cdc.gov/placeandhealth/svi/index.html)
+- Migration data portal: [https://migrationdataportal.org/data?i=stock_abs_&t=2019](https://migrationdataportal.org/data?i=stock_abs_&t=2019)
+- Global data on human trafficking: [https://www.ctdatacollaborative.org](https://www.ctdatacollaborative.org/)
+- The [Innocence Project](https://innocenceproject.org/research-resources/)
+- The national registry of exonerations: [https://www.law.umich.edu/special/exoneration/Pages/detaillist.aspx](https://www.law.umich.edu/special/exoneration/Pages/detaillist.aspx)
+- Gun violence archive: [https://www.gunviolencearchive.org/charts-and-maps](https://www.gunviolencearchive.org/charts-and-maps)
+
+#### Data Collections
+- [ICPSR (umich.edu)](https://www.icpsr.umich.edu/web/pages/ICPSR/index.html)
+- Government open data portals
+	- [LA: Information, Insights, and Analysis from the City of Angels | Los Angeles - Open Data Portal](https://data.lacity.org/)
+		- See [[A note on data mining]] with an example using this data
+	- [Open Data | City of Austin Texas | Open Data | City of Austin Texas](https://data.austintexas.gov/)
+	- [Open Data DC](https://opendata.dc.gov/)
+- Environmental Data
+	- [Open Data | US EPA](https://www.epa.gov/data)
+	- [Ohio Environmental Protection Agency (arcgis.com)](https://data-oepa.opendata.arcgis.com/)
+	- [Environmental Mapping Tools and Data | CalEPA](https://calepa.ca.gov/environmental-mapping-tools-and-data/)
+		- My favorite: [Pollution and Prejudice (arcgis.com)](https://storymaps.arcgis.com/stories/f167b251809c43778a2f9f040f43d2f5)
+- Data repositories
+	- [San Diego Regional Data Library – Providing Data For Civic and Social Development (sandiegodata.org)](https://www.sandiegodata.org/)
+		- Here is an example of how I used this data: [San Diego Regional Data Library data example](https://bigdataforsocialjustice.github.io/databootcamp/san-diego-regional-data-library-data-example.html)
+	- [Data and evidence to advance upward mobility and equity | Urban Institute](https://www.urban.org/)
+		- Education data explorer: [https://educationdata.urban.org/data-explorer/](https://educationdata.urban.org/data-explorer/)
+		- Rental Assistance Priority Index
+		- Estimated Low Income Jobs Lost to COVID-19
+		- State-by-State Spending on Kids Dataset
+		- Medicaid Spending and Prescriptions for the Treatment of Opioid Use Disorder and Opioid Overdose
+
+### Examples of Datasets and their Uses
+
+| Demographic                                 | Income                           | Employment                     | Housing                 | Neighborhood               |
+| ------------------------------------------- | -------------------------------- | ------------------------------ | ----------------------- | -------------------------- |
+| Population trends                           | HH, Family and per capita income | Jobs Proximity Index           | Rent Burden             | Environmental Health Index |
+| Age and Sex Characteristics                 | RE/Caps                          | Labor Market Engagement Index  | Available Housing Units | Environmental Health Index |
+| Race/Ethnicity                              | Special housing need profiles    |                                | Housing supply          | Social vulnerability       |
+| Disability Type                             |                                  | Transit trips                  | Home ownership          | Area Deprivation           |
+| Racial Integration                          |                                  | Low transportation cost index  | Housing condition       | Child lead poisoning       |
+| Dissimilarity Index                         |                                  | Major employers                | Affordable housing      | Food insecurity/deserts    |
+| School Proficiency Index                    |                                  | Jobs                           | Evictions               |                            |
+| Housing and Household Projections           |                                  |                                | Foreclosures            |                            |
+| **Datasets**                                |                                  |                                |                         |                            |
+| U.S. Census Bureau, American Housing Survey | Office of Housing & Urban Dev.   | Federal Reserve                | Loan originations       | CDC                        |
+| Co. Department of Local Affairs             | Point in Time Homeless estimates | Denver Office of Economic Dev. |                         | EPA                        |
+|                                             | Child opportunity index          | Lodes data                     |                         | Wisconsin Medical School   |
+|                                             |                                  |                                |                         | USDA                       |
+
+
+
+
+#### Data Types
+
+Before starting an analysis it is important to know the kind of data that you have. This requires understanding not only the distinction between qualitative and quantitative data, but also the difference between structured and unstructured data, time series data, spatial data, etc. We wills start by briefly reviewing the different types of data that are available and the multiple ways in which data can be measured. This is of particular importance because the analysis you choose is driven by the type of data you have. In other words, you cannot make your data fit the analysis you know, but rather you must learn how to analyze the data you have. 
+
+- Qualitative v Quantitative 
+- Structured v unstructured data
+- Data types 
+- Data innovation 
+    - being creative with data: here we address the question: what really constitutes data? 
+    
+Over the years, I have learned that even advanced students do not really know how to properly identify data that *can be used* in an analysis. 
+  
+Below are some examples of how I have utilized different data sources in my analyses. 
+
+1. [Los Angeles Homicide Report](https://homicide.latimes.com/) See how I've scraped this website and used the data in my own work --\> [Final web scrap medium\|Female Homicide Victims 2000-2023](https://bigdataforsocialjustice.github.io/databootcamp/final-web-scrap-medium.html) 
+
+2. [Mapping Attacks on LGBTQ Rights in U.S. State Legislatures \| American Civil Liberties Union (aclu.org)](https://www.aclu.org/legislative-attacks-on-lgbtq-rights) 
+
+3. [Child Maltreatment and Data Statistics –
+PCAKY](https://pcaky.org/information-data/child-maltreatment-and-data-statistics/) by County in Kentucky 
+
+4. [California Health and Human Services Open Data Portal](https://data.chhs.ca.gov/) - [[Example 1](https://bigdataforsocialjustice.github.io/databootcamp/example-1.html) uses the data set [Hospice Utilization - Patient Demographics - Datasets - California Health and Human Services Open Data Portal](https://data.chhs.ca.gov/dataset/hospice-utilization-patient-demographics)
+to explore differences in referral types by race/ethnicity and county. 
+
+5. Other examples 
+
+- Show me the data 
+- Finding, downloading and filtering data on the Internet 
+- Publicly available [Datasets](https://bigdataforsocialjustice.github.io/databootcamp/datasets.html) for public health research 
+- Examples 
+    - How does the CDC's social vulnerability index ([SVI]) in Franklin County compare to Los Angeles County? 
+    - What is the relationship between [In-school suspensions and academic achievement](https://bigdataforsocialjustice.github.io/databootcamp/in-school-suspensions-and-academic-achievement.html) for schools in the state of Ohio? 
+    - How can I download the [area level deprivation index]() to use in my own research? ---
+
+#### ❓ Your turn
+
+-   [ ] Identify a dataset that is not listed above
+-   [ ] Find the codebook associated with the dataset
+-   [ ] Download the data
+    -   What limitations are there for analyzing the data?
+    -   What types of research questions have these data been used to
+        address?
+    -   How could you use the data in your own research?
+
+
+
+
+

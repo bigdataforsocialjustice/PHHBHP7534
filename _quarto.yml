@@ -19,18 +19,18 @@ execute:
 
 bibliography: files/bib/references.bib
 csl: files/bib/chicago-author-date.csl
-description-meta: "Use modern statistical and data scientific tools to measure causal effects and evaluate public policy"
+description-meta: "develop, read, critique, design, and conduct high-quality scientific research in public health"
 
 website:
-  title: "Program Evaluation"
-  site-url: "https://evalsp23.classes.andrewheiss.com"
+  title: "Research Methods in Public Health"
+  site-url: "https://bigdataforsocialjustice/phhbhp7534.com"
 
   favicon: "/files/icon-512.png"
 
   twitter-card:
     image: "/files/social-image-sp23.png"
     card-style: summary_large_image
-    creator: "@andrewheiss"
+    creator: "@bigdataforsocialjustice"
     # site: "@andrewheiss"
 
   open-graph:
@@ -51,13 +51,13 @@ website:
         file: example/index.qmd
       - text: "Resources"
         file: resource/index.qmd
-      - text: "News"
-        file: news/index.qmd
+      - text: "Alerts"
+        file: alerts/index.qmd
       - icon: slack
-        href: "https://gsuevalsp2023.slack.com"
+        href: "https://phhbhp7534.slack.com"
         aria-label: Slack
       - icon: cloud-fill
-        href: "https://rstudio.cloud"
+        href: "https://posit.cloud/content/yours?sort=name_asc"
         aria-label: RStudio.cloud
 
   sidebar:
@@ -71,94 +71,99 @@ website:
             - content/index.qmd
         - section: "Course content"
           contents:
-            - text: "1: Evaluation and the causal revolution"
+            - text: "1: Intro + Overview"
               file: content/01-content.qmd
-            - text: "2: Regression and inference"
+            - text: "2: Variables + Units of Analysis"
               file: content/02-content.qmd
-            - text: "3: Theories of change and logic models"
+            - text: "3: Associations + Confounding"
               file: content/03-content.qmd
-            - text: "4: Measurement and DAGs"
+            - text: "4: Mediation + Moderation"
               file: content/04-content.qmd
-            - text: "5: DAGs and potential outcomes"
+            - text: "5: Research Questions and Hypotheses"
               file: content/05-content.qmd
-            - text: "6: Threats to validity"
+            - text: "6: Theory + Concepts"
               file: content/06-content.qmd
-            - text: "7: Randomization and matching"
+            - text: "7: Validity + Reliability"
               file: content/07-content.qmd
-            - text: "8: Diff-in-diff I"
+            - text: "8: Measures + Scale Development"
               file: content/08-content.qmd
-            - text: "9: Diff-in-diff II"
-              file: content/09-content.qmd
-            - text: "10: RDD I"
+            - text: "9: Exam I"
+              file: content/exam1.qmd
+            - text: "10: Sampling"
               file: content/10-content.qmd
-            - text: "11: IV I"
+            - text: "11: Data Collection + Survey Design"
               file: content/11-content.qmd
-            - text: "12: IV II & RDD II"
+            - text: "12: Analytical methods + observation"
               file: content/12-content.qmd
-            - text: "13: Choosing and planning ethical evaluations"
+            - text: "13: Analytical methods + experimental"
               file: content/13-content.qmd
-            - text: "14: Ethics, stories, and curiosity"
+            - text: "14: Analytical methods + geospatial"
               file: content/14-content.qmd
+            - text: "15: Analytical methods + qualitative"
+              file: content/15-content.qmd
+            - text: "16: Presentations + Feedback"
+              file: content/16-content.qmd
+            - text: "17: Presentations + Feedback"
+              file: content/17-content.qmd
+            - text: "18: Exam II"
+              file: content/18-content.qmd
+            - text: "19: No Class + Spring Break"
+              file: content/19-content.qmd
+            - text: "20: No Class + Spring Break"
+              file: content/exam2.qmd
+            - text: "21: Pre-experimental designs"
+              file: content/21-content.qmd
+            - text: "22: Quasi-experimental designs"
+              file: content/22-content.qmd
+            - text: "23: Randomized Controlled Trials"
+              file: content/23-content.qmd
+            - text: "24: Observational Designs"
+              file: content/24-content.qmd
+            - text: "25: Recruitment + Retention"
+              file: content/25-content.qmd
+            - text: "26: Ethics"
+              file: content/26-content.qmd
+            - text: "27: Reproducible Research"
+              file: content/27-content.qmd
+            - text: "28: Student Presentations I"
+              file: content/28-content.qmd
+            - text: "29: Student Presentations II"
+              file: content/29-content.qmd
+            - text: "30: Exam III"
+              file: content/exam3.qmd
 
     - title: "Assignments"
       contents:
         - section: "Overview"
           contents:
             - assignment/index.qmd
+        - section: "Research assignments"
+          contents:
+            - assignment/question.qmd
+            - resource/annotated.qmd
+            - assignment/litreview.qmd
+            - resource/final.qmd
         - section: "Other projects"
           contents:
-            - assignment/final-project.qmd
             - assignment/weekly-check-in.qmd
         - section: "Problem sets"
           contents:
             - assignment/01-problem-set.qmd
-            - assignment/02-problem-set.qmd
-            - assignment/03-problem-set.qmd
-            - assignment/04-problem-set.qmd
-            - assignment/05-problem-set.qmd
-            - assignment/06-problem-set.qmd
-            - assignment/07-problem-set.qmd
-            - assignment/08-problem-set.qmd
-            - assignment/09-problem-set.qmd
-        - section: "Evaluation"
-          contents:
-            - assignment/01-eval-background-theory.qmd
-            - assignment/02-eval-measurement.qmd
-            - assignment/03-eval-dag.qmd
-            - assignment/04-eval-threats.qmd
+
+
 
     - title: "Examples"
       contents:
         - section: "Overview"
           contents:
             - example/index.qmd
-        - section: "Simulated data"
+        - section: "Example Code"
           contents:
-            - text: "Random numbers"
-              file: example/random-numbers.qmd
-            - text: "Synthetic data"
-              file: example/synthetic-data.qmd
-        - section: "Examples"
-          contents:
-            - example/rstudio-tidyverse.qmd
-            - example/regression.qmd
-            - example/dags.qmd
-            - example/po-ate-cate.qmd
-            - text: "RCTs"
-              file: example/rcts.qmd
-            - text: "Matching and IPW"
-              file: example/matching-ipw.qmd
-            - text: "Robust standard errors"
-              file: example/standard-errors.qmd
-            - text: "Unobserved confounding"
-              file: example/confounding-sensitivity.qmd
-            - text: "Diff-in-diff"
-              file: example/diff-in-diff.qmd
-            - example/rdd.qmd
-            - example/iv.qmd
-            - text: "ITT and CACE"
-              file: example/cace.qmd
-            - example/rdd-fuzzy.qmd
+            - example/infant_mortality.qmd
+            - example/bias.qmd
+            - example/Confounding.qmd
+            - example/moderation.qmd
+
 
     - title: "Resources"
       contents:
@@ -168,19 +173,22 @@ website:
             - resource/r.qmd
             - resource/style.qmd
             - resource/data.qmd
+            - resource/opensource.qmd
             - resource/citations.qmd
-            - resource/bayes.qmd
-            - resource/zilch.qmd
+            - resource/elements.qmd
+            - resource/zotero.qmd
+            - resource/Rgraphics.qmd
         - section: "Study guides"
           contents:
             - resource/exam1.qmd
-            - resource/exam2.qmd
+            - resource/final.qmd
         - section: "Guides"
           contents:
             - resource/install.qmd
             - resource/markdown.qmd
             - resource/rmarkdown.qmd
             - resource/unzipping.qmd
+            - resource/Rgraphics.qmd
 
   page-footer:
     left: |

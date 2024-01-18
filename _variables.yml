@@ -1,33 +1,35 @@
-author: Andrew Heiss
+author: Gia Elise Barboza-Salerno
 
 instructor:
-  name: Dr. Andrew Heiss
-  name_no_title: Andrew Heiss
-  email: aheiss@gsu.edu
-  url: "https://www.andrewheiss.com"
-  twitter: andrewheiss
-  github: andrewheiss
-  office: "357 Andrew Young School"
+  name: Dr. Gia Elise Barboza-Salerno
+  name_no_title: Gia Barboza-Salerno
+  email: barboza-salerno.1@osu.edu
+  url: "https://bigdataforsocialjustice.github.io/"
+  twitter: bigdataforsocialjustice
+  github: bigdataforsocialjustice
+  office: "307 Stillman Hall"
   contact_policy: >-
-    E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
-  appointment_url: https://calendly.com/andrewheiss/
+    Please feel free to contact me at any time. I am always working anyway. You have multiple forms of contact including texting me. I will return your email or text within 3 hours. If I do not, chances are something happened, so try again. Please be aware that I am very busy and I always try my best to respond.
+  appointment_url: https://calendly.com/barboza-salerno
+  medium: Medium
+  zotero: Zotero
 
 course:
-  number: "PMAP 8521"
-  semester: "Spring 2023"
-  days: "Thursdays"
-  time: "7:15–9:45 PM"
-  location: "Aderhold Learning Center 204"
-  dates: "January 9–May 2, 2023"
-  github: "https://www.github.com/andrewheiss/evalsp23.classes.andrewheiss.com"
-  url: "https://evalsp23.classes.andrewheiss.com"
-  copyright_year: "2023"
-  slack: "https://gsuevalsp2023.slack.com"
+  number: "PHHBHP 7534"
+  semester: "Spring 2024"
+  days: "Tue/Thus"
+  time: "9:35 AM - 10:55 AM"
+  location: "Smith Lab 2186"
+  dates: "Jan 8– Apr 22, 2024"
+  github: "https://www.github.com/bigdataforsocialjustice.com/phhbhp7534/"
+  url: "https://www.netifly.com/phhbhp7534/"
+  copyright_year: "2024"
+  slack: "https://phhbhp7534.slack.com"
 
 university:
-  name: Georgia State University
-  url: "https://www.gsu.edu"
+  name: Ohio State University
+  url: "https://www.osu.edu"
 
 school:
-  name: Andrew Young School of Policy Studies
-  url: "https://aysps.gsu.edu/"
+  name: College of Public Health
+  url: "https://cph.osu.edu/"

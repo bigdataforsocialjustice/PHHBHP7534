@@ -1,11 +1,15 @@
 ---
 title: "Problem set 1"
-date: "2023-01-19"
+date: "2024-01-11"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(fig.align = "center")
 ```
+
+::: callout-note
+This assignment builds upon Public Health Foundational Knowledge GIA-1 and Foundational Competencies GIA-1.
+:::
 
 ## Task 1: Introduce yourself to R, RStudio, and the tidyverse
 
@@ -91,7 +95,7 @@ knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error 
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)
 ```
 
-4. Upload the knitted document to iCollege.
+4. Email me the knitted document **with the subject heading "Project 1"**
 
 5. `r emoji::emoji("tada")` Party! `r emoji::emoji("tada")`
 

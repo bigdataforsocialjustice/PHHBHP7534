@@ -1,0 +1,23 @@
+---
+title: "Welcome to class!"
+date: "2023-01-09T14:01"
+categories: [getting started]
+---
+
+Hello everyone!
+
+I’m Gia Elise Barboza-Salerno, your professor for PH-HBHP 7534 (Research Methods) this spring, and I’m so excited for the class! 
+
+Prelims:
+
+- Before class, I'd love to get to know each you a little first, so I've created a quick survey to fill out. I've sent you a link to it via e-mail. Please take it at your earliest convenience.
+
+- The entire course is available at a special class website at <https://phhbhp7534.netifly.com/>. Bookmark this site—it'll be your best friend for the next semester. 
+
+- **Please read the main explanatory pages at the course website at your earliest convenience.** The instructions and expectations for the class are divided across different pages, all accessible from the menu bar at the top of the site. Please read the main pages for the [syllabus](/syllabus.qmd), [schedule](/schedule.qmd), [content](/content/index.qmd), [assignments](/assignment/index.qmd), and [examples](/example/index.qmd).
+
+- Every reading and book and piece of software in this class is 100% **free** ([see the syllabus for more information about that](/syllabus.qmd#course-materials)).
+
+ 
+
+Again, I'm really excited to get started next week. This spring semester should be a blast!

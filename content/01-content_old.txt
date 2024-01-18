@@ -1,0 +1,236 @@
+---
+title: "Evaluation and the causal revolution"
+date: "2023-01-12"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-things.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "BIhz1dz5Vws", "Introduction", "1", TRUE,
+  "f-sOSXyeeJE", "Data science and public service", "ds-ps", FALSE,
+  "Z2foqSMWnGU", "Evidence, evaluation, and causation (1)", "evidence-evaluation-causation", FALSE,
+  "W5ChuEhAzrs", "Evidence, evaluation, and causation (2)", "evidence-evaluation-causation1", FALSE,
+  "D4LoEctZxHE", "Class details", "class-details", FALSE
+)
+```
+
+## Readings
+
+- The [syllabus](/syllabus.qmd), [content](/content/index.qmd), [examples](/example/index.qmd), and [assignments](/assignment/index.qmd) pages for this class
+- {{< fa book >}} Chapter 1 in *Impact Evaluation in Practice* [@wb-eval]
+- {{< fa book >}} Chapters 1 and 2 in *The Effect* [@Huntington-Klein:2021]
+- {{< fa brands youtube >}} DJ Patil, ["What Makes a Radical and Revolutionary Technology?"](https://www.youtube.com/watch?v=UOoMzaWOQJA) 
+    - <small>(DJ Patil is the former Chief Data Scientist of the United States under President Obama. He gave this forum address at Brigham Young University on February 13, 2018.)</small>
+- {{< fa arrow-up-right-from-square >}} Stephen Goldsmith, ["Next Generation of Public Employees Must Understand Data and Policy"](http://www.govtech.com/opinion/Next-Generation-Public-Employees-Must-Understand-Data-Policy.html)
+- {{< fa arrow-up-right-from-square >}} Hadley Wickham, ["Data Science: How is it Different To Statistics?"](https://imstat.org/2014/09/04/data-science-how-is-it-different-to-statistics%E2%80%89/)
+
+
+## Slides
+
+:::{.callout-warning}
+**Important!!**: In the "Class details" video, I say that there are three books for the class: the World Bank evaluation book, *'Metrics Matter*, and *Causal Inference: The Mixtape*. [That's not the case this semester](/syllabus.qmd#books), since we're using the new *The Effect* book, which replaces both *'Metrics Matter* and the *Mixtape*. So ignore that part of the video. The slides are updated with the correct books, though: [see here](/slides/01-slides.html#85).
+:::
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_buttons("/slides/01-slides")
+slide_tabs(slide_details, "/slides/01-slides.html")
+```
+
+:::{.callout-tip}
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+:::{.callout-warning}
+**Important!!**: In the "Class details" video, I say that there are three books for the class: the World Bank evaluation book, *'Metrics Matter*, and *Causal Inference: The Mixtape*. [That's not the case this semester](/syllabus/#books), since we're using the new *The Effect* book, which replaces both *'Metrics Matter* and the *Mixtape*. So ignore that part of the video. The slides are updated with the correct books, though: [see here](/slides/01-slides.html#85).
+:::
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+## In-class stuff
+
+Here are all the materials we'll use in class:
+
+- [**Session 1 in-person slides**](/slides/01-class.html) ([PDF](/slides/01-class.pdf))
+
+RStudio labs:
+
+- [RStudio.cloud project](https://posit.cloud/spaces/323551/content/5254772)
+- [Project `.zip` file](/projects/01-class.zip)
+- [Lab slides 1: Markdown and universal writing](/slides/01-class_01_markdown-writing.html) ([PDF](/slides/01-class_01_markdown-writing.pdf))
+- [Lab slides 2: Getting started with R and RStudio](/slides/01-class_02-getting-started.html) ([PDF](/slides/01-class_02-getting-started.pdf))
+- [Lab slides 3: Data basics](/slides/01-class_03_data-basics.html) ([PDF](/slides/01-class_03_data-basics.pdf))
+- [Lab slides 4: Visualize data with ggplot2](/slides/01-class_04_visualize-data.html) ([PDF](/slides/01-class_04_visualize-data.pdf))
+- [Lab slides 5: Transform data with dplyr](/slides/01-class_05_transform-data.html) ([PDF](/slides/01-class_05_transform-data.pdf))
+
+
+```{verbatim include=FALSE}
+Playlist: https://www.youtube.com/playlist?list=PLS6tnpTr39sHcnk9KcoQVzDywxWRzVWHC
+
+https://youtu.be/BIhz1dz5Vws
+PMAP 8521 • (1) Evaluation and the causal revolution: (0) Introduction
+
+Introduction to the class session on evaluation and the causal revolution
+
+Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/01-content/
+
+
+https://youtu.be/f-sOSXyeeJE
+PMAP 8521 • (1) Evaluation and the causal revolution: (1) Data science and public service
+
+Discussion of the role of data science in the public and nonprofit sectors
+
+Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/01-content/
+
+  
+https://youtu.be/Z2foqSMWnGU
+PMAP 8521 • (1) Evaluation and the causal revolution: (2.1) Evidence, evaluation, and causation
+
+Discussion of the role of evidence-based policy and program evaluation
+
+Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/01-content/
+
+
+https://youtu.be/W5ChuEhAzrs
+PMAP 8521 • (1) Evaluation and the causal revolution: (2.2) Evidence, evaluation, and causation
+
+Discussion of why causation is tricky (but also possible!) to measure
+
+Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/01-content/
+
+
+https://youtu.be/D4LoEctZxHE
+PMAP 8521 • (1) Evaluation and the causal revolution: (3) Class details
+
+Overview of how the class works
+
+Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/01-content/
+```
+
+# Morning
+
+## 🔑Key Takeaways for Day 1
+
+### What is data?
+
+Data comes in a variety of formats. When we think about data we typically think about structured data, for example data that can be imported nicely into Excel or SPPS. There are a number of alternative data formats that come in a variety of data types from many different data sources. Today, I will demonstrate these data formats using existing sources. We begin to learn how to analyze the data using innovative data science packages. I have chosen to concentrate on available software that is easy to use, and can facilitate the interpretation, analysis and visualization of data beyond the typical tools (e.g., SPSS). I will note the benefits and drawbacks for each package we review.
+
+*Note:* Throughout the week, I will provide examples from my own work to illustrate how I have applied these tools. This includes a couple of web scraping applications (one which scrapes data from the [Los Angeles Homicide Report](https://homicide.latimes.com/) and one to automate downloading data from the [U.S. Census Bureau's Household Pulse Survey](https://www.census.gov/data/datasets.html) The goal is to show you what can be done, with the disclaimer that you will probably not be able to do this by the end of the week. Learning about data is a long-term goal but I am here to help you if at some point you want to implement any of this for your own work.
+
+### Show me the data!
+
+There is tons of data available to download on the internet from reliable sources. I am going to review the datasets that I find most interesting and useful for social work. We will select a few datasets to analyze, visualize, and map. This requires knowing how to download and merge the data for analysis. These datasets provide a rich source of contextual information for your research, including your dissertation. As you will see, knowing about them, how to use them, and how to incorporate them into your research, is extremely powerful.
+
+And, I created this website using [Obsidian - Sharpen your thinking](https://obsidian.md/) You may want to check it out. Obsidian is a note-taking app that is based on markdown files. It has many useful plugins such as [Zotero | Your personal research assistant](https://www.zotero.org/) which if you are not currently using as your bibliography software I encourage you to download it ASAP. Ask me if you want me to demonstrate how to use [[Zotero]] and/or [[Obsidian]] now. See the video below for some tutorials and information to help you get started.
+
+<iframe width="580" height="420" src="https://www.youtube.com/embed/XbGJH08ZfCs" title="How to use Zotero with Obsidian featuring Eleanor Konik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## 🎯 Learning Objectives for Day 1
+- [ ] Become familiar with open source software to use for different types of statistical analyses
+- [ ] Download and install *jamovi* and *JASP* onto your laptop
+- [ ] Learn how to install add-ons for SPSS, jamovi and JASP software
+- [ ] Run simple descriptive statistics and create APA formatted tables
+- [ ] Learn about the types of datasets (repositories and publicly available data) that are of great interest to social work
+
+# 📃 Summary of Notes
+
+## Day 1: Morning Session
+
+### Open Source Software
+
+There are a wide variety of different open source and proprietary software tools that are simple to learn and make data management and analysis easier, more effective and fun. Here is my list of the most important tools to be familiar with. The items in bold are the software that we will use during the course of the week. 
+
+The software is listed by availability (i.e., open source, license, package add-on)
+
+#### <span style="font-size:1.5em;">Open Source Software</span>
+- **R**: IMHO the best statistical analysis tool ever created (yes, better than python for statistics)
+	- I will not be covering R but both R and RStudio (the GUI for R) can be downloaded here [RStudio Desktop - Posit](https://posit.co/download/rstudio-desktop/)
+- **[jamovi](https://www.jamovi.org/features.html)**: the next best option, it is built on an R framework, nobody will know you are NOT using R :)
+	- jamovi is a new “3rd generation” statistical spreadsheet. designed from the ground up to be easy to use. jamovi is a compelling alternative to costly statistical products such as SPSS and SAS. It is also a simpler alternative to R that is built on top of the R statistical language
+	- 🌐 **Analyses**: jamovi provides a complete suite of analyses for (not just) the social sciences; t-tests, ANOVAs, correlation and regression, non-parametric tests, contingency tables, reliability and factor analysis. The [jamovi library](https://www.jamovi.org/library.html) contains many more libraries that will allow you to perform additional analyses from simple crosstabs to multilevel modeling and more.
+	- 🌐**Excel integration**: jamovi is a fully functional spreadsheet, immediately familiar to anyone. Enter, copy/paste data, filter rows, compute new values, perform transforms across many columns at once – jamovi provides a streamlined spreadsheet experience, optimized for statistical data.
+	- 🌐 **R syntax**: Love R? Check out jamovi's “syntax mode”, where the underlying R syntax for each analysis is made available. Just copy and paste this into R for a seamless transition. Alternatively, run R code directly inside jamovi with [the Rj Editor](https://blog.jamovi.org/2018/07/30/rj.html).
+	- There are two versions of jamovi
+		- jamovi Cloud
+		- [jamovi desktop - jamovi](https://www.jamovi.org/download.html) -- downloads and installs jamovi onto your desktop
+			- It is available for Windows, Mac and Linux
+- [JASP - A Fresh Way to Do Statistics (jasp-stats.org)](https://jasp-stats.org/)
+	- "Just Another Statistics Program" JASP offers another great alternative to SPSS
+	- In some ways JASP is better than jamovi, but it seems less stable and so it is my second best option
+	- There are some benefits to using JASP including flexibility in making plots and nice visualizations for the statistical analyses you are conducting
+	- [Click here](https://jasp-stats.org/download/) to download JASP
+	- JASP in particular provides a great way to both learn statistics and R at the same time
+	- Let's take a look at the data library in JASP now
+- [QGIS](https://qgis.org/en/site/):  "Quantum Geographical Information Systems" allows you to do geospatial analysis like a (ArcGIS) pro -- QGIS is great for creating, editing, visualizing, analyzing and publishing geospatial information
+	- The [Applications (qgis.org)](https://qgis.org/en/site/about/features.html) page gives you a sense of all the cool things you can do with QGIS
+	- To download the software [Click here](https://qgis.org/en/site/forusers/download.html))
+- [PSPP - GNU Project - Free Software Foundation](https://www.gnu.org/software/pspp/) is an open source equivalent to SPSS and it is freely downloadable. It is not very robust and so I would not recommend it.
+#### <span style="font-size:1.5em;">Proprietary software </span>
+- OSU has obtained a license for the following software packages:
+	- **SPSS**: its like a necessary evil - everyone must know how to use SPSS. There are some things that are actually easier in SPSS
+	- **SAS**: ugh!
+	- **EXCEL**: can be great to clean your data, particularly if you use the built-in functions. 
+	- **ArcGIS Map, Pro**
+	- **jmp**: this is a very cool data science program from the makers of SAS (the archaic and soon to be extinct software program)
+	- To download these software packages [Log In to the Office of Business and Finance (osu.edu)](https://busfin.osu.edu/user/login?destination=node/3157)
+---
+
+#### ❓ Your turn
+- [ ] Download <i>jamovi</i> onto your laptop
+- [ ] Download <i>JASP</i> onto your laptop
+- [ ] Download <i>QGIS</i> onto your laptop
+---
+
+### Add-on Packages
+- [[Add-on Packages & Modules]] offer additional functionality and are available for all software programs listed above
+
+## Day 1: Afternoon Session
+
+#### Intro to data & data types: 
+
+Before starting an analysis it is important to know the kind of data that you have. This requires understanding not only the distinction between qualitative and quantitative data, but also the difference between structured and unstructured data, time series data, spatial data, etc. We wills start by briefly reviewing the different types of data that are available and the multiple ways in which data can be measured. This is of upmost importance because the analysis you choose is driven by the type of data you have. In other words, you cannot make your data fit the analysis you know, but rather you must learn how to analyze the data you have.
+- Qualitative v Quantitative
+	- Structured v unstructured data
+		- Data types
+		- Data innovation - being creating with data: here we address the question: what really constitutes data? Over the years, I have learned that even advanced students do not really know how to properly identify data that *can be used* in an analysis. How can we identify, and more importantly utilize, different data sources in our analysis.
+			1. [Los Angeles Homicide Report](https://homicide.latimes.com/)) See how I've scraped this website and used the data in my own work --> [[Final web scrap medium|Female Homicide Victims 2000-2023]]
+			2. [Mapping Attacks on LGBTQ Rights in U.S. State Legislatures | American Civil Liberties Union (aclu.org)](https://www.aclu.org/legislative-attacks-on-lgbtq-rights)
+			3. [Child Maltreatment and Data Statistics – PCAKY](https://pcaky.org/information-data/child-maltreatment-and-data-statistics/) by County in Kentucky
+			4. [California Health and Human Services Open Data Portal](https://data.chhs.ca.gov/)
+				- [[Example 1]] uses the data set [Hospice Utilization - Patient Demographics - Datasets - California Health and Human Services Open Data Portal](https://data.chhs.ca.gov/dataset/hospice-utilization-patient-demographics) to explore differences in referral types by race/ethnicity and county. 
+			5. Other examples
+- Show me the data
+	- Finding, downloading and filtering data on the Internet
+	- Publicly Available [[Datasets]] for Social Work Research
+- Examples
+	- How does the CDC's social vulnerability index ([[SVI]]) in Franklin County compare to Los Angeles County?
+	- What is the relationship between [[In-school suspensions and academic achievement]] for schools in the state of Ohio?
+	- How can I download the [[area level deprivation index]] to use in my own research?
+---
+
+#### ❓ Your tasks-
+- [ ] Identify a dataset that is not listed above
+- [ ] Find the codebook associated with the dataset
+- [ ] Download the data
+	- What limitations are there for analyzing the data?
+	- What types of research questions have these data been used to address?
+	- How could you use the data in your own research?
+---
+
+# 📦 Additional Resources
+- [user guide - jamovi](https://www.jamovi.org/user-manual.html)
+- [jamovi library](https://www.jamovi.org/library.html)
+- [jmv r package - jamovi](https://www.jamovi.org/jmv/)
+- [community resources - jamovi](https://www.jamovi.org/community.html)
+- In addition, once jamovi is installed, there is a 'data library' available to you. This data library has worked examples for all modules that you install.

@@ -1,0 +1,25 @@
+---
+title: "Analytical methods+qualitative"
+date: "2024-02-27"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-things.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
+)
+```
+
+## Readings
+- {{< fa book >}} Griffin, J. H. (2004). Black Like Me. Wings Press.
+- {{< fa book >}} Campbell, H. (2022). Hip Hop as Critical Pedagogy: Re-Imagining Education. Canadian Journal for New Scholars in Education/Revue canadienne des jeunes chercheures et chercheurs en éducation, 13(3).
+- {{< fa book >}} Lauger, T. R., & Densley, J. A. (2018). Broadcasting badness: Violence, identity, and performance in the online gang rap scene. Justice Quarterly, 35(5), 816-841.
+- {{< fa book >}} Martinez, T. A. (2007). Images of the Socially Disinherited Inner-City Youth in Rap Music. JL & Fam. Stud., 10, 111.

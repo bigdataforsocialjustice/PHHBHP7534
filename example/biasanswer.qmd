@@ -1,0 +1,112 @@
+---
+title: "Answer to challenge question"
+author: "Barboza-Salerno"
+---
+---
+title: "Bias Example"
+author: "Barboza-Salerno"
+date: "2024-01-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+# Bias
+
+### R Packages
+```{r}
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(scatterplot3d)
+library(tidyr)
+```
+
+
+```{r}
+# Change the working directory on your computer
+setwd("C:/Users/barboza-salerno.1/Downloads/")
+
+# Read in the data set, note my data is located in the downloads directory
+mydata <- read.csv(
+  "confounding_ex.csv", 
+  stringsAsFactors = F, 
+  na.strings = c(7,9,999)
+  )
+
+# After reading in the data, rename columns so they are descriptive
+colnames(mydata) <- c(
+  "SEQN",
+  "sex", 
+  "age",  
+  "hundrocigs", 
+  "age_start", 
+  "quit_ever", 
+  "bmi", 
+  "bmi_cat"
+  )
+
+# I am transforming the categorical variables into factors that have levels.
+# It is good practice to do that as you clean the data
+mydata$sex <-as.factor(mydata$sex)
+mydata$quit_ever <- as.factor(mydata$quit_ever)
+mydata$hundrocigs <- as.factor(mydata$hundrocigs)
+mydata$bmi_cat<- as.factor(mydata$bmi_cat)
+
+# I am creating random "noise"
+mydata$bmi_noisy <- jitter(mydata$bmi, factor=10000)
+mydata$bmi_really_noisy <- jitter(mydata$bmi, factor=30000) 
+
+# The tidyverse allows me to wrangle (i.e., clean) the data in one line of code!
+mydata <- mydata %>%
+    mutate(age_cat = cut(age, seq(0,80,20)))%>%
+    mutate(
+        quit_ever = recode_factor(quit_ever, "1" = "Yes", "2" = "No") # See codebook https://wwwn.cdc.gov/Nchs/Nhanes/2015-2016/SMQ_I.htm#SMQ670
+      ) %>%
+  select(quit_ever, bmi, bmi_noisy, bmi_really_noisy, age) %>%
+  filter(age < 80) %>% tidyr::drop_na() 
+
+```
+
+## Random Error (without bias)
+
+```{r}
+# Scatter plot with regression line
+ggplot(mydata, aes(x = age, y = bmi)) + 
+  geom_point()+
+  geom_smooth(method = "loess") + 
+  ggtitle("BMI as a function of Age")
+```
+
+
+```{r}
+ggplot(mydata, aes(x = age, y = bmi, color=quit_ever)) + 
+  geom_point() +
+  geom_smooth(method = "loess") + 
+  ggtitle("BMI as a function of Age & Ever Quit Smoking")
+```
+
+### Simulating noise in the BMI measure
+
+
+```{r}
+ggplot(mydata, aes(x = age, y = bmi_noisy, color=quit_ever)) + 
+  geom_point()+
+  geom_smooth(method = "loess") + 
+  ggtitle("BMI as a function of Age & Ever Quit Smoking")
+```
+
+### More randomness
+
+```{r}
+ggplot(mydata, aes(x = age, y = bmi_really_noisy, color=quit_ever)) + 
+  geom_point() +
+  geom_smooth(method = "loess") + 
+  ggtitle("BMI as a function of Age & Ever Quit Smoking")
+```
+
+# Discussion
+This is very interesting, what first appears as no difference among those who have ever quit and not looks like an interaction effect once random error is introduced into the measurement.

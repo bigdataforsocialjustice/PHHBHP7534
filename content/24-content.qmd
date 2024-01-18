@@ -1,0 +1,24 @@
+---
+title: "Observation designs"
+date: "2024-03-28"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-things.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
+)
+```
+
+## Readings
+
+- {{< fa book >}} Salazar LF, Crosby RA, DiClemente RJ. Chapter 4: Observational research designs. 2015. p. 81-114.
+- {{< fa book >}} Mann CJ. Observational research methods. Research design II: cohort, cross sectional, and case-control studies. Emerg Med J 2003; 20(1): 54-60.

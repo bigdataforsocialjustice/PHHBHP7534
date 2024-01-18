@@ -1,0 +1,116 @@
+---
+title: "Phase I and II"
+---
+
+**MPH Students:** Your final submission must include a title page, abstract, positionality statement, background and significance, theoretical lens, and methodology sections, as well as a references section created with Zotero.
+
+**PhD Students:** Your final submission must include the elements above as well a Results and Discussion section.
+
+# Phase I
+
+## Abstract (250 words)
+
+1. Provide an overview of your study, focusing on methods.
+2. Should be no longer than 250 words
+3. Should include keywords that are italicized and separated by semicolons.
+
+
+::: callout-note
+The abstract is typically finalize to include relevant findings once your study is completed. 
+:::
+
+::: callout-note
+ PhD students will have findings and must include results in the abstract.
+:::
+
+## Positionality (4-5 sentences)
+Describe your positionality (eg, the social and political context that creates your identity in terms of race, class, gender, sexuality, and ability status) and its effect on the proposed project's design, analytical process, and research impact.
+
+
+## Background and Significance (4-5 pages)
+
+### Problem Statement (1-2 paragraphs)
+
+The problem statement must address the following questions:
+
+1. Why is this an important public health problem? 
+2. How many people are affected by this problem? (the numbers of people who are affected by this problem are typically what makes it a significant public health problem)
+3. How does this public health problem impact other social issues or focal populations?
+4. Why is your population an important one to study?
+
+### Literature Review (~4 pages)—A synthesis of the literature, not a summary
+1. Describe what is known about the variables in your research question and the relationship between them. 
+2. Describe what is known about your target population
+3. Define key terms and explain theories that are important for understanding your topic
+4. Identify consistent findings across studies
+5. Identify gaps and controversies in the literature
+
+::: {.callout-tip title="Establish Relevance"}
+The more you can argue that there is very little known about this topic, the more relevant your research will be. 
+:::
+
+### Theoretical Lens (1 page)
+
+1. What theory explains *why* the relationship between your variables holds?
+2. How do the elements of your theory comport with a social justice perspective?
+
+### Research Questions and Hypotheses
+
+1. List 1-2 research questions and associated hypotheses.
+
+  - Qualitative studies will contain no more than 3 tentative hypotheses.
+
+::: {.callout-tip title="Advanced Planning"}
+A draft of the Phase I is due by 11:59PM on Friday 3/7 Week 9, the same week as [Exam II](exam2.qmd), so plan accordingly)
+:::
+
+# Phase II 
+
+## Methodology (4-5 pages)
+
+1. *Design*:
+	- What design (e.g. quasi-experimental) do you plan to use?
+	- Briefly describe how you will carry out your design
+	
+2. *Sampling*: Who is in your study and how are they recruited?
+	- What is your sampling frame?
+	- What are your inclusion/exclusion criteria?
+	- How will you recruit your subjects?
+	- How do you plan to conduct your sampling?
+	- Is there important information about your focal population that will impact sampling?
+	
+3. *Ethics*: How will you protect the rights of your study’s participants?
+	- What level, if any, of IRB review does your study require?
+	- What are the risks and benefits of the study?
+	- How did you address any ethical concerns with your study?
+	
+4. *Measures*: How will you measure the concepts in your study?
+	- For quantitative studies, operational definitions are needed.
+		- What is the operational definition for your independent variable?
+		- What is the operational definition for your dependent variable?
+		- What are the operational definitions for at least two control variables?
+		- What are the psychometric properties of the instruments you use in your definitions (e.g. validity, reliability)?
+	- For qualitative studies, describe in detail the questions you plan to ask the participants in your study. 
+		- Provide a deconstruction of important concepts (e.g., how is the concept of “role strain” distinguished from the concept of “role stress”)
+		- How are your questions for participants based in previous findings in the literature?
+		- What consideration will be given to emergent themes and revising questions through the research process?
+		- A completed instrument
+
+5. *Data Handling and Analysis:* How will you collect and examine your data?
+
+	- Describe how data collection will take place
+	- Describe any modifications you will make to the data in preparation for analysis (e.g., data entry, double-checking)
+	- Describe your data analysis plan
+
+6. *Critique of Methodology:* Why did you decide to do your study as you did?
+	- What are the strengths and limitations of your sampling, measures, design, and other components?
+
+7. *Implications and Conclusion:* What is the point of your proposal?
+	- Discuss how your study will benefit the discipline of social work.
+	- Discuss how your proposal would influence policy, practice, and research.
+	- Discuss how your proposal will contribute something new and important to the literature on your topic.
+
+### References
+
+- Should be APA formatted
+- All references should be contained in a Zotero file that will be submitted along with your final project

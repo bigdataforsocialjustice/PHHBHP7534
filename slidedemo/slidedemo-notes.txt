@@ -1,0 +1,47 @@
+
+---#1
+These are some notes for the second slide
+
+
+---#2
+Here’s some notes for the seventh slide
+
+
+---#3
+Here’s another note. This one has some different paragraph breaks. May not be able to maintain those but we’ll see.
+
+
+---#4
+
+
+---#5
+
+
+---#6
+
+
+---#7
+
+
+---#8
+
+
+---#9
+
+
+---#10
+
+
+---#11
+
+
+---#12
+
+
+---#13
+
+
+---#14
+
+
+---#15

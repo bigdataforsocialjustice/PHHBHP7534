@@ -1,0 +1,18 @@
+---
+title: ' test '
+author: Daniel Anderson
+date: 2023-12-30
+output:
+  xaringan::moon_reader:
+  lib_dir: libs
+  nature:
+    highlightStyle: github
+    highlightLines: true
+    countIncrementalSlides: false
+---
+#  Blink 
+
++ We often make ‘snap judgements’
+	+ These are not necessarily based on our intuition
+	+ These reflect unconscious bias
+![](assets/img/image1.png)

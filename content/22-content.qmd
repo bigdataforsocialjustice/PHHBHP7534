@@ -1,0 +1,24 @@
+---
+title: "Quasi-experimental designs"
+date: "2024-03-21"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-things.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
+)
+```
+
+## Readings
+- {{< fa book >}} Bauman KE. Chapter 4: Intervention designs. In Research Methods for Community Health and Welfare. 1980. p. 27-30 and 35-39.
+- {{< fa book >}} Shadish WR, Cook TD, Campbell DT. Chapter 4: Quasi-experimental designs that lack either a control group or lack pretest observations on the outcome. 2002. p. 115-122.
+- {{< fa book >}} Shadish WR, Cook TD, Campbell DT. Chapter 5: Quasi-experimental designs that use both control groups and pretests. 2002. p. 135-148.

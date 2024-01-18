@@ -8,7 +8,7 @@ For this week's problem set, you need to work through a few of RStudio's introdu
 
 You'll learn some of the basics of R, as well as some powerful methods for manipulating data with the **dplyr** package.
 
-Complete these primers. It seems like there are a lot, but they're short and go fairly quickly (especially as you get the hang of the syntax). Also, **I have no way of seeing what you do or what you get wrong or right**, and that's totally fine! If you get stuck and want to skip some (or if it gets too easy), go right ahead and skip them!
+Complete these primers. It seems like there are a lot, but they're short and go fairly quickly (especially as you get the hang of the syntax). Also, **I have no way of seeing what you do or what you get wrong or right**, and that's totally fine! If you get stuck and want to skip some (or if it gets too easy), go right ahead and skip them! If you want me to review something in class, email me and I will be happy to help.
 
 - **The Basics**
 	- [Visualization Basics](https://rstudio.cloud/learn/primers/1.1)
@@ -40,11 +40,12 @@ The content from these primers comes from the (free and online!) book [*R for Da
 
 The RStudio primers you just worked through are a great introduction to writing and running R code, but you typically won't type code in a browser when you work with R. Instead, you'll use a nicer programming environment like RStudio, which lets you type and save code in scripts, run code from those scripts, and see the output of that code, all in the same program.
 
-To get familiar with RStudio, watch this video (it's from PMAP 8921, but the content still applies here): 
+To get familiar with RStudio, watch this video: 
 
-<div class="ratio ratio-16x9">
-<iframe src="https://www.youtube.com/embed/cnQ-v1UUWyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+```{r echo = FALSE}
+vembedr::embed_url("https://youtu.be/aCUM4r1ONhg")
+```
+
 
 
 ## Part 3: RStudio Projects
@@ -57,6 +58,7 @@ When you first open RStudio, look in the area right at the top of the Console pa
 
 ```{r working-directory, echo=FALSE, out.width="50%"}
 knitr::include_graphics("/files/img/example/working-directory.png", error = FALSE)
+library(vembedr)
 ```
 
 That tilde sign (`~`) is a shortcut that stands for your user directory. On Windows this is `C:\Users\your_user_name\`; on macOS this is `/Users/your_user_name/`. With the working directory set to `~/`, R is "pointed" at that folder, and anything you save will end up in that folder, and R will expect any data that you load to be there too.
@@ -84,7 +86,7 @@ Do the following things:
 
 &nbsp;
 
-2. Skim through the content at these pages:
+2. Skim through the content at these external links:
 
     - [Using Markdown](/resource/markdown.qmd)
     - [Using R Markdown](/resource/rmarkdown.qmd)
@@ -94,9 +96,9 @@ Do the following things:
     - [Markdown Basics](http://rmarkdown.rstudio.com/lesson-8.html) (The [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) is super useful here.)
     - [Output Formats](http://rmarkdown.rstudio.com/lesson-9.html)
 
-3. Watch this video (again, it's from PMAP 8921, but the content works for this class):
+3. Watch this video:
 
-    <div class="ratio ratio-16x9">
-    <iframe src="https://www.youtube.com/embed/fT5xI1cmE2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+```{r echo = FALSE}
+vembedr::embed_url("https://youtu.be/tKUufzpoHDE")
+```
 

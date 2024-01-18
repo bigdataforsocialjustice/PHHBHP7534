@@ -1,6 +1,6 @@
 ---
-title: "Theories of change and logic models"
-date: "2023-01-26"
+title: "Associations and Confounding"
+date: "2024-01-16"
 ---
 
 ```{r slides-videos, echo=FALSE, include=FALSE}
@@ -11,27 +11,46 @@ playlist_id <- "PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH"
 
 slide_details <- tibble::tribble(
   ~youtube_id,   ~title, ~slide, ~active,
-  "dwsCSqczNng", "Introduction", "1", TRUE,
-  "XkHUQJp5fh0", "Reproducibility", "reproducibility", FALSE,
-  "Uos8RumBrzE", "Program theories", "program-theories", FALSE,
-  "8CJ7M2dTmF4", "Logic models & results chains", "logic-models", FALSE
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
 )
 ```
 
+::: callout-note
+Course objective(s) for this module: *Describe and execute the key steps
+in designing, conducting, and evaluating research in health behavior and
+health promotion.*
+:::
+
 ## Readings
 
-- {{< fa book >}} Chapter 2 in *Impact Evaluation in Practice* [@wb-eval]
-- {{< fa book >}} Chapter 2 in *Evaluation: A Systematic Approach* [@RossiLipseyHenry:2019]. This is available on iCollege.
-- {{< fa book >}} Chapter 3 in *Evaluation: A Systematic Approach* [@RossiLipseyHenry:2019]. This is available on iCollege.
+- {{< fa book >}} Howards, P. P. (2018a). An overview of confounding. Part 1: The concept and how to address it. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 394–399. https://doi.org/10.1111/aogs.13295 [@howards_overview_2018]
+- {{< fa book >}} Howards, P. P. (2018b). An overview of confounding. Part 2: How to identify it and special situations. Acta Obstetricia et Gynecologica Scandinavica, 97(4), 400–406. https://doi.org/10.1111/aogs.13293 [@howards_overview_2018-1]
+- {{< fa book >}} Chapter 3 in [Impact Evaluation in Practice.](https://openknowledge.worldbank.org/server/api/core/bitstreams/4659ef23-61ff-5df7-9b4e-89fda12b074d/content) [@gertler_impact_nodate]
+- {{< fa book >}} Chapter 7 *Telling the Story, Part II: Examining Factors that Measure the Reduction of Inequities and Disparities* in Cornelius, L. J., & Harrington, D. (2014). [A social justice approach to survey design and analysis.](https://books.google.com/books?hl=en&lr=&id=RFtuAwAAQBAJ&oi=fnd&pg=PP1&dq=social+justice+approach+to+survey+design&ots=DdB3oebcUd&sig=lTdyCQLtP0-pzWAaTk8R9H3BVGE) Pocket Guide to Social Work Research. 
 
 
-## Slides
+### Your tasks to complete today
 
-The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+-   [ ] Select a research topic 
+
+### Your tasks this week to keep you on track
+
+- Conduct a literature search to identify articles for your literature review
+- Create a new Zotero collection and begin downloading the articles into that collection
+
+### In-class activities
+- Conducting a literature review
+- Creating bibliographies in Zotero
+
+
+## Lecture Notes
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
-slide_buttons("/slides/03-slides")
-slide_tabs(slide_details, "/slides/03-slides.html")
+slide_buttons("/slides/day2")
+slide_tabs(slide_details, "/slides/day2")
 ```
 
 :::{.callout-tip}
@@ -41,79 +60,26 @@ slide_tabs(slide_details, "/slides/03-slides.html")
 
 ## Videos
 
-```{r show-youtube-list, echo=FALSE, results="asis"}
-youtube_list(slide_details, playlist_id)
-```
-
-
 ## In-class stuff
 
 Here are all the materials we'll use in class:
 
-- [**Session 3 FAQ slides**](/slides/03-class.html) ([PDF](/slides/03-class.pdf))
-- [Errors vs. warnings vs. messages](https://moderndive.com/1-getting-started.html#messages) (i.e. what to do when R shows you red text)
-- R Markdown examples:
-    - [Quarto!](https://quarto.org/)
-    - Example R Markdown file used as a code-through or step-by-step teaching document:
-        - Lots of [blog posts here](https://www.andrewheiss.com/blog/)
-        - Julia Silge, ["Modeling human/computer interactions on Star Trek from #TidyTuesday with workflowsets"](https://juliasilge.com/blog/star-trek/)
-        - Bob Rudis, ["Some Covid Donuts To End The Week"](https://rud.is/b/2021/08/13/some-covid-donuts-to-end-the-week/)
-        - Holger K. von Jouanne-Diedrich, ["The “Youth Bulge” of Afghanistan: The Hidden Force behind Political Instability"](https://blog.ephorie.de/the-youth-bulge-of-afghanistan-the-hidden-force-behind-political-instability)
-    - Example R Markdown file used as a publicly-consumable document: 
-        - Click on the "Manuscript" menu item [at this site](https://stats.andrewheiss.com/cautioning-canary/)
-        - See [the Rmd file here](https://github.com/andrewheiss/cautioning-canary/blob/master/manuscript/manuscript.Rmd)
-
 Hands-on R materials:
 
-- [{{< fa brands r-project >}} Introduction to the tidyverse Posit.cloud project](https://posit.cloud/spaces/323551/content/5254772)
-- [{{< fa file-zipper >}} Introduction to the tidyverse project `.zip` file](/projects/01-class.zip)
-- [{{< fa brands r-project >}} Regression playground Posit.cloud project](https://posit.cloud/spaces/323551/content/5299495)
-- [{{< fa file-zipper >}} Regression playground project `.zip` file](/projects/regression-example.zip)
+- [R code](/example/Confounding.qmd) *Overview of Confounding, Part I*: Reproducing Howards' 
+- [R code](/example/infant_mortality.qmd)  *Risk and Odds Ratios*: Measuring disparities and inequities
+- [R code](/example/bias.qmd)  *Statistical Noise*: Random measurement error
 
-- [Lab slides 1: Markdown and universal writing](/slides/01-class_01_markdown-writing.html) ([PDF](/slides/01-class_01_markdown-writing.pdf))
-- [Lab slides 2: Getting started with R and RStudio](/slides/01-class_02-getting-started.html) ([PDF](/slides/01-class_02-getting-started.pdf))
-- [Lab slides 3: Data basics](/slides/01-class_03_data-basics.html) ([PDF](/slides/01-class_03_data-basics.pdf))
-- [Lab slides 4: Visualize data with ggplot2](/slides/01-class_04_visualize-data.html) ([PDF](/slides/01-class_04_visualize-data.pdf))
-- [Lab slides 5: Transform data with dplyr](/slides/01-class_05_transform-data.html) ([PDF](/slides/01-class_05_transform-data.pdf))
+### 📦 Additional Resources
 
 
-### Logic model for MPA/MPP program
+### Competencies and Knowledge
+- Foundational knowledge: 3, 6
+- Competencies: 9
+- MPH Specializations: 4, 7
+- PhD Specializations: 4
 
-```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics(here::here("files", "img", "mpa-mpp-logic-model.jpg"), error = FALSE)
-```
+### Student Evaluation Activity for Assessment
+- Exam 1
+- Proposal 1
 
-```{verbatim include=FALSE}
-Playlist: https://www.youtube.com/playlist?list=PLS6tnpTr39sHjKJRcD-ebQUbcaFhc0cQH
-
-https://youtu.be/dwsCSqczNng
-PMAP 8521 • (3) Theories of change: (0) Introduction
-
-Introduction to the class session on theories of change
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/03-content/
-
-
-https://youtu.be/XkHUQJp5fh0
-PMAP 8521 • (3) Theories of change: (1) Reproducibility
-
-Discussion about the importance of reproducible data analysis practices
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/03-content/
-
-  
-https://youtu.be/Uos8RumBrzE
-PMAP 8521 • (3) Theories of change: (2) Program theories
-
-Discussion of program components, program impact theories, and the importance of basing programs on sound theories
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/03-content/
-
-
-https://youtu.be/8CJ7M2dTmF4
-PMAP 8521 • (3) Theories of change: (3) Logic models & results chains
-
-Discussion of results chains, logic models, and the difference between logic models and impact theories 
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/03-content/
-```

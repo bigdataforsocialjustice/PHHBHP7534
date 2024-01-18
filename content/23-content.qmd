@@ -1,0 +1,24 @@
+---
+title: "Randomized control trials"
+date: "2024-03-26"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-things.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
+)
+```
+
+## Readings
+- {{< fa book >}} Shadish WR, Cook TD, Campbell DT. Chapter 8: Randomized experiments: Rationale, designs, and conditions conducive to doing them. 2002. p. 246-266.
+- {{< fa book >}} Rosen L, Manor O, Engelhard D., et al. In defense of the randomized controlled trial for health promotion research. Am J Public Health 2006; 96(7): 1181-1186.
+- {{< fa book >}}  Valle CG, Diamond MA, Heiling HM, et al. Effect of an mHealth intervention on physical activity outcomes among young adult cancer survivors: The IMPACT randomized controlled trial. Cancer. (In press).

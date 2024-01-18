@@ -1,37 +1,51 @@
 ---
-title: "Difference-in-differences I"
-date: "2023-03-02"
+title: "Measures + Scale Development"
+date: "2024-02-01"
 ---
 
 ```{r slides-videos, echo=FALSE, include=FALSE}
 source(here::here("R", "slide-things.R"))
 source(here::here("R", "youtube-playlist.R"))
 
-playlist_id <- "PLS6tnpTr39sHydbEoTK9DkyKV92-uE3r-"
+playlist_id <- "PLS6tnpTr39sFVrHdTifzlyS9dsJjhEhsF"
 
 slide_details <- tibble::tribble(
   ~youtube_id,   ~title, ~slide, ~active,
-  "4y84N23Mx-o", "Introduction", "1", TRUE,
-  "ZHBZtKL7zAg", "Quasi-experiments", "quasi-experiments", FALSE,
-  "B060u1zGOWo", "Interactions & regression", "interactions-regression", FALSE,
-  "0v1aE70FhsQ", "Two wrongs make a right", "two-wrongs", FALSE,
-  "tDWoNTk8CS4", "Diff-in-diff assumptions", "diff-diff-assumptions", FALSE
+  "S4OmWxc3h3Y", "Lecture Slides", "1", TRUE
+ # "DGbLEgL4g6Y", "Drawing lines", "drawing-lines", TRUE,
+#  "n-rV1TIoIgw", "Lines, Greek, and regression", "lines-greek-regression", FALSE,
+ # "RYKsrTKWCR4", "Null worlds and statistical significance", "significance", FALSE
 )
 ```
 
 ## Readings
 
-- {{< fa book >}} Chapter 7 in *Impact Evaluation in Practice* [@wb-eval]
-- {{< fa book >}} Chapter 18 in *The Effect* [@Huntington-Klein:2021]
+### Measurement
 
+- {{< fa book >}} Chapter 3 *Developing a Foundation for the Study* in Cornelius, L. J., & Harrington, D. (2014). [A social justice approach to survey design and analysis.](https://books.google.com/books?hl=en&lr=&id=RFtuAwAAQBAJ&oi=fnd&pg=PP1&dq=social+justice+approach+to+survey+design&ots=DdB3oebcUd&sig=lTdyCQLtP0-pzWAaTk8R9H3BVGE) Pocket Guide to Social Work Research. 
+- {{< fa book >}} Barboza, G. E. (2018). [Latent Classes and Cumulative Impacts of Adverse Childhood Experiences.](https://journals.sagepub.com/doi/full/10.1177/1077559517736628?casa_token=7cXsY6LHIlsAAAAA:TC5ZvFsskmwYjam-Rfk0w0sNe2AcqSuEZyvxzLy0FAh1MZM1hPjCxyuJcFE4bEwdLSNRwKmU1nJbygg) Child Maltreatment, 23(2), 111–125. https://doi.org/10.1177/1077559517736628
 
-## Slides
+### Required Reading for PhD Students (and recommended for others)
+
+::: {.callout-note icon=false}
+
+## Pay Attention
+
+Exam 1 will be administered next class.
+
+:::
+
+### Your tasks to complete today
+
+-   [ ] Make sure that you review the study guide for Exam 1 and are prepared to take the Exam next class 
+
+## Lecture Notes
 
 The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
-slide_buttons("/slides/08-slides")
-slide_tabs(slide_details, "/slides/08-slides.html")
+slide_buttons("/slides/04-slides")
+slide_tabs(slide_details, "/slides/day8.html")
 ```
 
 :::{.callout-tip}
@@ -39,102 +53,38 @@ slide_tabs(slide_details, "/slides/08-slides.html")
 :::
 
 
-## Videos
-
-```{r show-youtube-list, echo=FALSE, results="asis"}
-youtube_list(slide_details, playlist_id)
-```
-
-
 ## In-class stuff
 
 Here are all the materials we'll use in class:
 
-- [**Session 8 FAQ slides**](/slides/08-class.html) ([PDF](/slides/08-class.pdf))
-- [Session 8 R code](/projects/week-8.zip) (on [Posit.cloud](https://posit.cloud/spaces/323551/content/5522484))
+### 📦 Additional Resources
 
 
-```{verbatim include=FALSE}
-Playlist: https://www.youtube.com/playlist?list=PLS6tnpTr39sHydbEoTK9DkyKV92-uE3r-
+### Competencies and Knowledge
+- Foundational knowledge: 3, 6
+- Competencies: 2, 9
+- MPH Specializations: 4, 7
+- PhD Specializations: 4
 
-https://youtu.be/4y84N23Mx-o
-PMAP 8521 • (8/9) Difference-in-differences I & II: (0) Introduction
-
-Introduction to the class session on difference-in-difference analysis
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/08-content/
-
-
-https://youtu.be/ZHBZtKL7zAg
-PMAP 8521 • (8/9) Difference-in-differences I & II: (1) Quasi-experiments
-
-Discussion of what makes something a quasi-experiment + overview of three common types: difference-in-differences, regression discontinuity, and instrumental variables
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/08-content/
-
-  
-https://youtu.be/B060u1zGOWo
-PMAP 8521 • (8/9) Difference-in-differences I & II: (2) Interactions & regression
-
-Discussion of how interaction terms work in regression 
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/08-content/
-  
-  
-https://youtu.be/0v1aE70FhsQ
-PMAP 8521 • (8/9) Difference-in-differences I & II: (3) Two wrongs make a right
-
-Overview of the intuition behind difference-in-differences analysis
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/08-content/
-  
-  
-https://youtu.be/tDWoNTk8CS4
-PMAP 8521 • (8/9) Difference-in-differences I & II: (4) Diff-in-diff assumptions
-
-Discussion of the main assumptions for difference-in-differences
-
-Access the slides and other materials at the course website at https://evalf20.classes.andrewheiss.com/content/08-content/
+### Student Evaluation Activity for Assessment
+- Exam 1
+- Proposal 1
 
 
-https://www.youtube.com/playlist?list=PLS6tnpTr39sHw3FevrihLn2Ly8pSCUUag
+### Advanced Latent Variable Models
 
-https://youtu.be/u5iEtpITL3s
-PMAP 8521 • Example: Diff-in-diff with R: 1: Getting started
+I have used LVM extensively in my own work. Here are some examples:
 
-Demonstration of how to create a new RStudio project and get ready to analyze data
+- Latent Class Analysis
+  - Barboza, G. E. (2015). The association between school exclusion, delinquency and subtypes of cyber-and F2F-victimizations: Identifying and predicting risk profiles and subtypes using latent class analysis. Child Abuse & Neglect, 39, 109–122.
+  - Barboza, G. E. (2018). Latent Classes and Cumulative Impacts of Adverse Childhood Experiences. Child Maltreatment, 23(2), 111–125. https://doi.org/10.1177/1077559517736628
 
-Download the data and see the polished code at https://evalf20.classes.andrewheiss.com/example/diff-in-diff/
+- Growth Mixture Models
+  - Barboza, G. E. (2020). Child Maltreatment, Delinquent Behavior, and School Factors as Predictors of Depressive Symptoms from Adolescence to Adulthood: A Growth Mixture Model. Youth & Society, 52(1), 27–54. https://doi.org/10.1177/0044118X17721803
+  - Barboza, G. E., & Schiamberg, L. (2021). Dual trajectories of parenting self‐efficacy and depressive symptoms in new, postpartum mothers and socioemotional adjustment in early childhood: A growth mixture model. Infant Mental Health Journal, 42(5), 636–654. https://doi.org/10.1002/imhj.21937
 
-
-https://youtu.be/15BprphMT1g
-PMAP 8521 • Example: Diff-in-diff with R: 2: Load and clean data
-
-Demonstration of how to load and clean some data for diff-in-diff analysis
-
-Download the data and see the polished code at https://evalf20.classes.andrewheiss.com/example/diff-in-diff/
-
-
-https://youtu.be/SkPLMBkB06o
-PMAP 8521 • Example: Diff-in-diff with R: 3: Exploratory data analysis
-
-Demonstration of how to visually explore some key diff-in-diff variables
-
-Download the data and see the polished code at https://evalf20.classes.andrewheiss.com/example/diff-in-diff/
+- Parallel Process Models
+  - Barboza, G. E., & Dominguez, S. (2017). Longitudinal growth of post-traumatic stress and depressive symptoms following a child maltreatment allegation: An examination of violence exposure, family risk and placement type. Children and Youth Services Review, 81, 368–378.
+Barboza, G. E., Dominguez, S., & Pinder, J. (2017). Trajectories of post-traumatic stress and externalizing psychopathology among maltreated foster care youth: A parallel process latent growth curve model. Child Abuse & Neglect, 72, 370–382.
 
 
-https://youtu.be/56KPL2_nSxQ
-PMAP 8521 • Example: Diff-in-diff with R: 4: Diff-in-diff manually
-
-Demonstration of how to calculate average before/after treatment/control values and then calculate the difference in differences
-
-Download the data and see the polished code at https://evalf20.classes.andrewheiss.com/example/diff-in-diff/
-
-
-https://youtu.be/2JctZFGIYWw
-PMAP 8521 • Example: Diff-in-diff with R: 5: Diff-in-diff with regression
-
-Demonstration of how to use interaction terms in regression to calculate a diff-in-diff estimate
-
-Download the data and see the polished code at https://evalf20.classes.andrewheiss.com/example/diff-in-diff/
-```

@@ -1,0 +1,181 @@
+---
+pagetitle: "Demo: ninja scaffold"
+output:
+  xaringan::moon_reader:
+    css: [default, ninjutsu, custom.css, custom-fonts.css]
+    self_contained: yes
+    lib_dir: libs
+    seal: false
+    nature:
+      ratio: "16:9"
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+---
+
+layout: true
+
+```{r, prep-chunks, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE, warning = FALSE,
+  fig.retina = 3
+)
+```
+
+```{r, prep-pkgs}
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(icons)
+```
+
+```{r, prep-plot}
+plot <- ggplot(iris, aes(Sepal.Width, Sepal.Length, colour = Species)) +
+  geom_point()
+```
+
+---
+class: split-title hide-slide-number
+
+.row[.content[
+# `r fa("user-ninja", size = 3)`
+]]
+
+.row[.content[
+# Demo: Ninja Scaffold
+## Splitting [{xaringan}](https://slides.yihui.org/xaringan/#1) slides into sections
+### Adapting [Emi Tanaka](https://emitanaka.org/)'s [Ninjutsu](https://emitanaka.org/ninja-theme/themes/kunoichi/kunoichi-theme-example.html#7)
+
+`r fa('twitter')` [mattdray](https://twitter.com/mattdray)
+`r fa('github')` [slide source](https://github.com/matt-dray/ninja-scaffold/)
+`r fa('globe')` [blogpost](https://www.rostrum.blog/2020/03/22/ninja-scaffold/) 
+]]
+
+---
+class: split-main1
+
+.row[.content[
+### Header and footer with main body between
+]]
+
+.row[.content[
+
+```{r, plot-large, fig.width=16}
+print(plot)
+```
+]]
+
+.row[
+]
+
+---
+class: split-main2
+
+.row[.content[
+### Main body split in two horizontally
+]]
+
+.row[.content[
+This slide is split into four rows that are all 100% of the width of the page:
+
+* the title (top) and footer (bottom) bars
+* the main body area (this the upper row, there's a plot in the one below)
+
+]]
+
+.row[.content.center[
+```{r, plot-wide, fig.width=15, fig.height=3}
+print(plot)
+```
+]]
+
+.row[
+]
+
+---
+class: split-main2
+
+.row[.content[
+### Vertical split in the second row of the main body
+]]
+
+.row[.content[
+This is just like the previous slide, but with one important difference: the lower row of this main body area is split in half vertically.
+
+This makes it easier to palace the table to the left and the icon to the right.
+]]
+
+.row[.content[
+.split-two[
+.column[.content[
+`r kable(head(iris), format = "html")`
+]]
+.column.center[.content[
+`r fa("r-project", size = 5)` 
+]]
+]
+]]
+
+.row[
+]
+
+---
+class: split-title hide-slide-number with-thick-border border-black
+
+.row[.content[
+]]
+
+.row[.content[
+# Class `split-title`
+]]
+
+---
+class: split-main1 with-thick-border border-black
+
+.row[.content[
+### Class `split-main1`
+]]
+
+.row[.content[
+]]
+
+.row[
+]
+
+---
+class: split-main2 with-thick-border border-black
+
+.row[.content[
+### Class `split-main2`
+]]
+
+.row[.content[
+]]
+
+.row[.content.center[
+]]
+
+.row[
+]
+
+---
+class: split-main2 with-thick-border border-black
+
+.row[.content[
+### Class `split-main2` with `split-two` on third row
+]]
+
+.row[.content[
+]]
+
+.row[.content[
+.split-two[
+.column[
+]
+.column.center[.content[
+]]
+]
+]]
+
+.row[
+]

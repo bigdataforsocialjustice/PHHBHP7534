@@ -1,8 +1,8 @@
 ---
-title: "Program Evaluation for Public Service"
-subtitle: "Combine research design, causal inference, and econometric tools to measure the effects of social programs"
+title: "Research Methods for Public Health"
+subtitle: "Develop, read, critique, design, and conduct high-quality scientific research in public health"
 details: |
-  PMAP 8521 • Spring 2023<br>Andrew Young School of Policy Studies<br>Georgia State University
+  PHHBHP 7534 • Spring 2024<br>College of Public Health<br>Ohio State University
 sidebar: false
 toc: false
 page-layout: full
@@ -32,8 +32,10 @@ withr::with_dir(here::here(), {
 - {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
 - {{< fa university >}} &nbsp; {{< var instructor.office >}}
 - {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
-- {{< fa brands twitter >}} &nbsp; [{{< var instructor.twitter >}}](https://www.twitter.com/{{< var instructor.twitter >}})
-- {{< fa calendar-check >}} &nbsp; [Schedule an appointment]({{< var instructor.appointment_url >}})
+- {{< fa brands github >}} &nbsp; [{{< var instructor.github >}}](https://www.github.com/{{< var instructor.github >}})
+- {{< fa brands github >}} &nbsp; [{{< var instructor.medium >}}](https://{{< var instructor.github >}}.medium.com)
+- {{< fa sticky-note >}} &nbsp; [{{< var instructor.zotero >}}](https://www.zotero.org/barbozag)
+- {{< fa calendar-check >}} &nbsp; [Schedule an appointment]({{< var instructor.appointment_url >}}) <br>T/TH 12:00PM-1:30PM
 :::
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
@@ -57,5 +59,7 @@ withr::with_dir(here::here(), {
 ```{r echo=FALSE}
 knitr::include_graphics(here::here("files", "img", "eval-flowchart.png"), error = FALSE)
 ```
+[@crano_principles_2014]
+
 
 :::

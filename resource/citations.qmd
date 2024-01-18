@@ -1,5 +1,5 @@
 ---
-title: Citations and bibliography
+title: Citations and Bibliography
 ---
 
 You can [download a BibTeX file](/files/bib/references.bib) of all the non-web-based readings in the course:
@@ -7,3 +7,7 @@ You can [download a BibTeX file](/files/bib/references.bib) of all the non-web-b
 - [{{< fa book >}} `references.bib`](/files/bib/references.bib)
 
 You can open the file in [BibDesk on macOS](http://bibdesk.sourceforge.net/), [JabRef on Windows](http://www.jabref.org/), or [Zotero](https://www.zotero.org/) or [Mendeley](https://www.mendeley.com/) online.
+
+Additionally, [this file](/files/bib/bibliography-phhbhp7534.zip) will contain **most** of the pdf files of the course reading materials. For instructions on how to import a BibTex file into Zotero, [click here](http://www.zotero.org). If you do not know what a BibTex file is, [click here](www.bibtex.org).
+
+If you really want to geek out, try installing [LaTeX](https://www.latex-project.org/get/). LaTeX is a software system for typesetting documents. Why will learning LaTeX make your life easier? Simply because when you submit a paper for publication, it *must* be formatted for that journal. Many journals we publish in offer templates that you can download so that you do not have to worry about it. To see an example, [click here](https://journals.plos.org/globalpublichealth/s/latex) for the template to format manuscripts for the journal *Global Public Health*. The co-authored article [@morris_circumcision_2018] that I reference in class was published in this journal and can be accessed [here](https://www.tandfonline.com/doi/full/10.1080/17441692.2016.1164737?casa_token=aP-rFIFPFFsAAAAA:tzg7FZlaSBkTmRBVGYI3xvzqNMheVRvBY6VhDVIEnZnK_R-mrUn4IZ4EqDSkRBomJ3ewrHH1zyE).

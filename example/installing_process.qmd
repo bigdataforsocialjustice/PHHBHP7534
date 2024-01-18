@@ -1,0 +1,23 @@
+---
+title: "PROCESS Macro"
+author: "Barboza-Salerno"
+---
+
+## SPSS
+
+### Installing Extensions & Custom Dialog boxes in SPSS
+SPSS offers a few different ways of incorporating additional packages. We will cover the two most common
+
+#### Custom dialog boxes
+- To install a custom dialog box go to 'Extensions' from the file menu, then "Utilities" and "Install Custom Dialog" as shown below
+![](process.png)
+
+- Compatible custom dialog packages have the file extension .spd
+- This requires you to identify and have the package downloaded onto your computer
+
+#### The Process Macro
+One of the dialog packages I use most is called PROCESS written by Andrew Hayes. It provides a user interface for mediation, moderation and mediated moderation models. We review these models in Stats II. 
+
+[Click here](https://github.com/bigdataforsocialjustice/databootcamp/blob/9328346fb7f942f6ad7d791acf37a99cc83d57d1/pptx/Mediation%2C%20Moderation%20%26%20Conditional%20Process%20Analysis%20Part%20I.pdf) to download part I of my notes on mediation, moderation and moderated mediation models I used for class based on the awesome book by [Hayes](https://www.guilford.com/books/Introduction-to-Mediation-Moderation-and-Conditional-Process-Analysis/Andrew-Hayes/9781462549030) , or [here](https://github.com/bigdataforsocialjustice/databootcamp/blob/9328346fb7f942f6ad7d791acf37a99cc83d57d1/pptx/Mediation%2C%20Moderation%20%26%20Conditional%20Process%20Analysis%20Part%20II.pdf) to download part II.  This [website](https://processmacro.org/) has more information about the process macro. 
+
+- Note: there are about 100 [process model templates](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/process_template.pdf) available for these models. 
