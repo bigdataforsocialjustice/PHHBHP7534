@@ -1,239 +1,147 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>Mediation, Moderation &amp; Conditional Process Models</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="Gia Barboza-Salerno, MA, MS, JD, PhD" />
-    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/middlebury-fonts.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
-  </head>
-  <body>
-    <textarea id="source">
-class: center, middle, inverse, title-slide
-
-.title[
-# Mediation, Moderation &amp; Conditional Process Models
-]
-.subtitle[
-## Research Methods<br/>Class 4
-]
-.author[
-### Gia Barboza-Salerno, MA, MS, JD, PhD
-]
-.institute[
-### OSU, CPH
-]
-.date[
-### 2024/01/09 (updated: 2024-01-02)
-]
-
----
-
-
-class: inverse, center, middle
-
-# Introduction
-
-Mediation, Moderation and Conditional Process Modeling
----
-
-# Bias
-
-The regression equations you learned in Biostats or Statistics examine whether independent variables have a “direct” effect on a dependent variable. 
-
---
-
-.pull-left[
-&lt;figure&gt;
-  &lt;img src="img/02/SLR-path.png" alt="SLR Path" title="SLR Path" width="100%"&gt;
-&lt;/figure&gt;
-]
-
---
-
-.pull-right[
-Direct effects are common in social science research, but “indirect” effects are also common. ]
-
----
-
-# What is Mediation?
-Mediation is present when the effects of an independent variable on a dependent variable occur fully or partially through its effects on another variable.
-
-The terms “indirect effects” and “mediation” are used interchangeably. 
-
-To remember what mediation is, think about how mediators are people who work between two people to resolve a dispute. 
-
-In statistics, mediators come between two variables.
-
----
-
-# Simple Example
-
-- Parenting by mother with no partner is associated with preschooler’s lower school readiness. 
-- The relationship is explained by the effects on mothers of the stress of a nonresident parenting partner. 
-- The stress is hypothesized to lead to less supportive parenting, which in turns affects children’s social behavior. 
-
---
-
-&lt;figure&gt;
-  &lt;img src="img/02/simple-mediation.png" alt="Mediation" title="Mediation" width="100%"&gt;
-&lt;/figure&gt;
-
----
-
-# How we used to test for mediation
-
-1. Regress the DV on the IV and evaluate the IV’s coefficient
-
-- Social Behavior on Nonresident Partner
-
-1. Regress the mediator on the IV and evaluate coefficient.
-
-- Supportive Mothering on Nonresident Partner
-
-1. Regress the DV on both the IV and the mediator.
-
-- Social Behavior on Nonresident Partner and Supportive Mothering
-
-1. Examine the magnitude and significance of the coefficients for both the IV and mediator.
-
-1.  Test the significance of the two-part indirect path using the Sobel test.
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>
+<!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PowerPoint Presentation</title><meta name="author" content="Barboza-Salerno, Gia"/><style type="text/css"> * {margin:0; padding:0; text-indent:0; }
+ body { background-color: #585858; }
+ .s1 { color: #252525; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 40pt; }
+ .s2 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s3 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 24pt; }
+ .s4 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 18pt; }
+ .s5 { color: #EE6C00; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 32pt; }
+ .s6 { color: #009568; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 32pt; }
+ .h2, h2 { color: #EE6C00; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 36pt; }
+ .s7 { color: #CE92D7; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 18pt; }
+ .s8 { color: #CE92D7; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 18.5pt; }
+ .s9 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; vertical-align: 11pt; }
+ .s10 { color: #EB7728; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 36pt; }
+ .s11 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 28pt; }
+ .s12 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 28pt; }
+ .s13 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 28pt; vertical-align: 1pt; }
+ .s14 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 28pt; }
+ .s15 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; vertical-align: -2pt; }
+ .s16 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20.5pt; vertical-align: -5pt; }
+ .s17 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; vertical-align: -1pt; }
+ .s18 { color: black; font-family:Symbol, serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 19pt; }
+ .s19 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12.5pt; vertical-align: -2pt; }
+ .s20 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 19pt; }
+ .s21 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s22 { color: black; font-family:Symbol, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s23 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s24 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s25 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s26 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 13pt; vertical-align: -3pt; }
+ .s29 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; vertical-align: 2pt; }
+ .s30 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 13pt; vertical-align: -1pt; }
+ .s31 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11.5pt; vertical-align: 5pt; }
+ .s32 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; vertical-align: -1pt; }
+ .s33 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 32pt; }
+ .s34 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 23pt; vertical-align: -6pt; }
+ .s35 { color: black; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 28pt; }
+ .s36 { color: black; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 28pt; }
+ .s37 { color: black; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 28pt; }
+ .s39 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s40 { color: black; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 15.5pt; vertical-align: -2pt; }
+ .s41 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s42 { color: black; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s43 { color: #888; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+ .s44 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s45 { color: #695D46; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s46 { color: #695D46; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 15.5pt; vertical-align: -2pt; }
+ .s47 { color: #695D46; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s49 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18.5pt; }
+ .p, p { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; margin:0pt; }
+ .s50 { color: #695D46; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s53 { color: #695D46; font-family:"Lucida Sans Unicode", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s54 { color: #695D46; font-family:"Lucida Sans Unicode", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s55 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s56 { color: #EE6C00; font-family:"Lucida Sans Unicode", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s58 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 13pt; vertical-align: -2pt; }
+ .s59 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 18pt; }
+ .s60 { color: #695D46; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s61 { color: #695D46; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 13pt; vertical-align: -3pt; }
+ .s62 { color: #695D46; font-family:Arial, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s63 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s64 { color: #695D46; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11.5pt; vertical-align: -2pt; }
+ .s65 { color: #695D46; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s66 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 24pt; }
+ .s68 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11.5pt; vertical-align: -2pt; }
+ .s69 { color: #EE6C00; font-family:"Cambria Math", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 36pt; }
+ .s70 { color: #695D46; font-family:"Cambria Math", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ h4 { color: #545454; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 26.5pt; }
+ .s72 { color: #F00; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 17.5pt; vertical-align: -6pt; }
+ .s73 { color: #545454; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 32pt; }
+ .s74 { color: #EE6C00; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ h1 { color: #EE6C00; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 40pt; }
+ .s75 { color: #695D46; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s76 { color: #695D46; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s77 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s78 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 16pt; }
+ .s79 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s80 { color: #212121; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s82 { color: #695D46; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s83 { color: #695D46; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s84 { color: #695D46; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s85 { color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 22pt; }
+ .s86 { color: #695D46; font-family:"Lucida Sans Unicode", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s87 { color: #695D46; font-family:"Lucida Sans Unicode", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18.5pt; }
+ .s88 { color: #695D46; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 18pt; }
+ .s89 { color: #695D46; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s90 { color: #4DB6AC; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 29pt; }
+ .s91 { color: #EE6C00; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 36pt; }
+ .s92 { color: #4DB6AC; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 32pt; }
+ .s93 { color: #EE6C00; font-family:"Times New Roman", serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 40pt; }
+ .s94 { color: #EE6C00; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 40pt; }
+ .s95 { color: #545454; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s96 { color: #695D46; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18.5pt; }
+ .s97 { color: #EE6C00; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18.5pt; }
+ .s98 { color: #009568; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 18.5pt; }
+ .s99 { color: #009568; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18.5pt; }
+ a { color: #CE92D7; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 14.5pt; }
+ h3 { color: black; font-family:Corbel, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 32pt; }
+ .s100 { color: #FFF; font-family:Corbel, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s101 { color: black; font-family:Corbel, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s102 { color: black; font-family:Corbel, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ .s104 { color: black; font-family:Corbel, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ .s105 { color: #276E8A; font-family:Corbel, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 34pt; }
+ .s106 { color: black; font-family:Corbel, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; vertical-align: -6pt; }
+ .s107 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s108 { color: black; font-family:Calibri, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ li {display: block; }
+ #l1 {padding-left: 0pt; }
+ #l1> li>*:first-child:before {content: "● "; color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; }
+ #l2 {padding-left: 0pt; }
+ #l2> li>*:first-child:before {content: "• "; color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 28pt; }
+ #l3 {padding-left: 0pt; }
+ #l3> li>*:first-child:before {content: "• "; color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 28pt; }
+ #l4 {padding-left: 0pt; }
+ #l4> li>*:first-child:before {content: "• "; color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 24pt; }
+ #l5 {padding-left: 0pt; }
+ #l5> li>*:first-child:before {content: "○ "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ li {display: block; }
+ #l6 {padding-left: 0pt; }
+ #l6> li>*:first-child:before {content: "● "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ li {display: block; }
+ #l7 {padding-left: 0pt; }
+ #l7> li>*:first-child:before {content: "● "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ li {display: block; }
+ #l8 {padding-left: 0pt; }
+ #l8> li>*:first-child:before {content: "◦ "; color: black; font-family:Garamond, serif; font-style: normal; font-weight: normal; text-decoration: none; }
+ #l9 {padding-left: 0pt; }
+ #l9> li>*:first-child:before {content: "◦ "; color: #252525; font-family:Garamond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ li {display: block; }
+ #l10 {padding-left: 0pt; }
+ #l10> li>*:first-child:before {content: "● "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ #l11 {padding-left: 0pt; }
+ #l11> li>*:first-child:before {content: "○ "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ #l12 {padding-left: 0pt; }
+ #l12> li>*:first-child:before {content: "○ "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ #l13 {padding-left: 0pt; }
+ #l13> li>*:first-child:before {content: "○ "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ li {display: block; }
+ #l14 {padding-left: 0pt;counter-reset: i1 1; }
+ #l14> li>*:first-child:before {counter-increment: i1; content: counter(i1, decimal)". "; color: #545454; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; }
+ #l14> li:first-child>*:first-child:before {counter-increment: i1 0;  }
+ #l15 {padding-left: 0pt; }
+ #l15> li>*:first-child:before {content: "● "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ #l16 {padding-left: 0pt;counter-reset: i3 1; }
+ #l16> li>*:first-child:before {counter-increment: i3; content: "("counter(i3, decimal)") "; color: #695D46; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18.5pt; }
+ #l16> li:first-child>*:first-child:before {counter-increment: i3 0;  }
+</style></head><body><p style="padding-top: 16pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s1" style="padding-left: 92pt;text-indent: 0pt;line-height: 87%;text-align: left;"><a name="bookmark0">&zwnj;</a>RESEARCH METHODS MEDIATION, MODERATION AND CONDITIONAL PROCESS MODELS</p><p class="s2" style="padding-top: 3pt;padding-left: 98pt;text-indent: 0pt;text-align: left;">Day 4</p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s3" style="padding-left: 790pt;text-indent: 0pt;text-align: left;"><a name="bookmark1">&zwnj;</a>Confounding</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s3" style="padding-left: 790pt;text-indent: 0pt;text-align: left;">Complete Mediation</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s3" style="padding-left: 790pt;text-indent: 0pt;text-align: left;">Moderation</p><p class="s3" style="padding-top: 25pt;padding-left: 788pt;text-indent: 0pt;text-align: left;">Independence</p><p class="s3" style="padding-top: 25pt;padding-left: 796pt;text-indent: 0pt;text-align: left;">Partial Mediation</p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p class="s4" style="text-indent: 0pt;line-height: 20pt;text-align: left;">W</p><p style="text-indent: 0pt;text-align: left;"/><p class="s5" style="padding-top: 4pt;padding-left: 121pt;text-indent: -35pt;text-align: left;"><a name="bookmark2">&zwnj;</a>Interaction Effect (Moderation)</p><p class="s6" style="padding-top: 4pt;padding-left: 116pt;text-indent: 0pt;text-align: center;">Mediation Effect</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><h2 style="padding-top: 6pt;padding-left: 35pt;text-indent: 0pt;text-align: left;"><a name="bookmark3">&zwnj;</a>The Process Macro by Andrew Hayes</h2><p style="padding-top: 16pt;padding-left: 43pt;text-indent: 0pt;text-align: left;"><a href="https://www.processmacro.org/download.html" class="s7">Download - The PROCESS macro for SPSS, SAS, and R</a></p><ul id="l1"><li data-list-text="●"><p style="padding-top: 7pt;padding-left: 83pt;text-indent: -33pt;text-align: left;"><a href="https://mathpsy.com/handbook/files/for_SPSS/Chapter%2010/templates.pdf" class="s8">templates.pdf (mathpsy.com)</a></p><p class="s9" style="padding-left: 40pt;text-indent: 0pt;text-align: left;"><span/>	<span/></p><p class="s10" style="padding-top: 6pt;padding-left: 29pt;text-indent: 0pt;text-align: left;"><a name="bookmark4">&zwnj;</a>Ordinary Least Squares Regression</p><ul id="l2"><li data-list-text="•"><p class="s11" style="padding-top: 31pt;padding-left: 52pt;text-indent: -17pt;line-height: 31pt;text-align: left;">The SLR model (which can be extended to the multivariate</p><p class="s12" style="padding-left: 52pt;text-indent: 0pt;line-height: 23pt;text-align: left;">case) is:</p><p class="s14" style="padding-top: 23pt;padding-left: 116pt;text-indent: 0pt;text-align: left;"><span class="s13">𝑌𝑌</span>𝐸𝐸<span class="s15">𝑖𝑖</span>(<span class="s13">=</span>𝑌𝑌<span class="s16">𝑖𝑖 </span>)<span class="s13">𝛽𝛽</span>=<span class="s15">0</span> <span class="s13">+</span>𝛽𝛽<span class="s16">0</span><span class="s13">𝛽𝛽</span><span class="s17">1</span>+<span class="s13">𝑋𝑋</span>𝛽𝛽<span class="s15">𝑖𝑖</span></p><p class="s13" style="padding-top: 23pt;padding-left: 3pt;text-indent: 0pt;text-align: left;"><span class="s15">1</span>+<span class="s14">𝑋𝑋</span><span class="s16">𝑖𝑖</span>𝜀𝜀<span class="s17">𝑖𝑖</span><span class="s14">+ 𝜀𝜀</span><span class="s16">𝑖𝑖</span></p><p class="s18" style="padding-left: 46pt;text-indent: 0pt;line-height: 24pt;text-align: left;"><span class="s19">1</span><span class="s20"> </span><span class="s21">&gt; 0 </span><span class="s22"></span><span class="s23"> </span><span class="s24">Positive Association</span></p><p class="s18" style="padding-top: 8pt;padding-left: 46pt;text-indent: 0pt;text-align: left;"><span class="s19">1</span><span class="s20"> </span><span class="s21">&lt; 0 </span><span class="s22"></span><span class="s23"> </span><span class="s24">Negative Association</span></p><p class="s18" style="padding-top: 8pt;padding-left: 46pt;text-indent: 0pt;text-align: left;"><span class="s19">1</span><span class="s20"> </span><span class="s21">= 0 </span><span class="s22"></span><span class="s23"> </span><span class="s24">No Association</span></p><p style="padding-top: 2pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s24" style="padding-left: 156pt;text-indent: 0pt;text-align: left;"><span class="s25">𝑌𝑌</span><span class="s26">𝑖𝑖  </span>The observed response for the <i>i</i>th trial (or row of data)</p><p class="s24" style="padding-top: 9pt;padding-left: 154pt;text-indent: 0pt;text-align: left;"><span class="s25">𝑋𝑋</span><span class="s26">𝑖𝑖  </span>A <u>known</u> constant, the level of the predictor in the <i>i</i>th trial</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s25" style="padding-top: 1pt;text-indent: 0pt;text-align: right;">𝛽𝛽<span class="s26">0</span><span class="s24">, </span>𝛽𝛽<span class="s26">1</span></p><p class="s24" style="padding-top: 1pt;padding-left: 24pt;text-indent: 0pt;text-align: left;">Unknown regression parameters</p><p class="s24" style="padding-top: 7pt;padding-left: 156pt;text-indent: 0pt;text-align: left;"><span class="s29">𝜀𝜀</span><span class="s30">𝑖𝑖   </span>Error term, <u>independently</u> and normally distributed, N(0, <span class="s25">𝜎𝜎</span><span class="s31">2</span>)</p><p class="s24" style="padding-top: 3pt;padding-left: 158pt;text-indent: 0pt;text-align: left;"><span class="s32">𝑖𝑖   </span>The index for the total number of cases in your data, <i>i = </i>1<i>, … N</i></p><p class="s10" style="padding-top: 6pt;padding-left: 52pt;text-indent: 0pt;text-align: left;"><a name="bookmark5">&zwnj;</a>Interpretation of Regression Equation</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s33" style="text-indent: 0pt;line-height: 37pt;text-align: right;">𝑦𝑦�</p><p class="s33" style="padding-left: 8pt;text-indent: 0pt;line-height: 42pt;text-align: left;">= 𝑏𝑏<span class="s34">0 </span>+ 𝑏𝑏<span class="s34">1</span>𝑥𝑥</p><ul id="l3"><li data-list-text="•"><p class="s11" style="padding-top: 21pt;padding-left: 87pt;text-indent: -18pt;line-height: 82%;text-align: left;">The magnitude of the slope <span class="s14">𝑏𝑏</span><span class="s15">1</span><span class="s14"> </span>tells how much Y is expected to change <span class="s35">per unit increase</span><span class="s36"> </span>in <span class="s37">X</span>.</p><p style="padding-top: 14pt;text-indent: 0pt;text-align: left;"><br/></p></li><li data-list-text="•"><p class="s11" style="padding-left: 87pt;text-indent: -17pt;text-align: left;"><u>Example</u>: <span class="s14">𝑦𝑦� </span>= 3 + 2x</p><ul id="l4"><li data-list-text="•"><p class="s39" style="padding-top: 2pt;padding-left: 123pt;text-indent: -17pt;text-align: left;">𝑏𝑏<span class="s40">0</span> <span class="s41">= 3, </span>𝑏𝑏<span class="s40">1</span> = 2</p></li><li data-list-text="•"><p class="s41" style="padding-top: 2pt;padding-left: 123pt;text-indent: -17pt;text-align: left;">If <span class="s42">X </span>increases by 1, <span class="s42">Y </span>is expected to increase by ?</p></li><li data-list-text="•"><p class="s41" style="padding-top: 1pt;padding-left: 123pt;text-indent: -17pt;text-align: left;">If <span class="s42">X </span>increases by 1, then the predicted value of <span class="s42">Y </span>increases by ?</p></li></ul></li></ul></li></ul><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s43" style="text-indent: 0pt;text-align: right;">6</p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark6">&zwnj;</a>Interpreting the Intercept</h2><p style="padding-top: 15pt;text-indent: 0pt;text-align: left;"><br/></p></li><li data-list-text="●"><p class="s44" style="padding-left: 86pt;text-indent: -35pt;text-align: left;">The intercept <span class="s45">𝑏𝑏</span><span class="s46">0</span><span class="s45"> </span>tells the predicted value <span class="s45">𝑦𝑦� </span>when <span class="s47">X </span>= 0.</p></li><li data-list-text="●"><p class="s44" style="padding-top: 4pt;padding-left: 86pt;text-indent: -36pt;line-height: 120%;text-align: left;"><u>Note</u>: If zero is not in or near the range of values observed for X, then the intercept has no interpretation (i.e. it represents an extrapolation).</p></li><li data-list-text="●"><p class="s44" style="padding-left: 86pt;text-indent: -36pt;line-height: 120%;text-align: left;"><u>Example</u>: Predicting the selling price of a house (Y) based on square footage (X)</p><ul id="l5"><li data-list-text="○"><p class="s49" style="padding-top: 20pt;padding-left: 134pt;text-indent: -33pt;line-height: 121%;text-align: left;">It would not make sense to have house with 0 square feet, in this case the intercept would not have an interpretation.</p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark7">&zwnj;</a>Standardizing Variables</h2><p style="padding-top: 41pt;padding-left: 38pt;text-indent: 0pt;text-align: left;">We might rescale all variables in the equation to <span class="s50">have a mean of 0.0 and a standard deviation of 1.0</span></p><p style="padding-top: 2pt;padding-left: 38pt;text-indent: 0pt;text-align: left;">before running a regression analysis.</p><p style="padding-top: 4pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 38pt;text-indent: 0pt;text-align: left;">Why might it be useful to standardize variables? What is the purpose of standardization?</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 38pt;text-indent: 0pt;line-height: 109%;text-align: left;">The most common reason to use standardized coefficients is in order to have <span class="s50">a common scale </span>with which to evaluate the contribution of each of the independent variables (IVs).</p><p style="padding-top: 2pt;text-indent: 0pt;text-align: left;"><br/></p></li></ul></li><li data-list-text="●"><p style="padding-left: 86pt;text-indent: -35pt;line-height: 120%;text-align: left;"><u>Not necessary</u> to standardize the variables (<u>Hayes, 2013</u>) since standardized coefficients are hard to interpret when dealing with interaction terms.</p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark8">&zwnj;</a>Interaction Effects with Centering</h2><p class="s44" style="padding-top: 32pt;padding-left: 38pt;text-indent: 0pt;line-height: 33pt;text-align: left;">Alternatively, we can <span style=" color: #009568;">center continuous IVs first </span>(i.e. subtract the mean from each observation), then <span style=" color: #009568;">compute the interaction term and estimate the model</span>. <span class="s53">Centering is a good idea to avoid having to interpret the effects of β when </span><span class="s47">X = 0.</span></p></li><li data-list-text="●"><p class="s55" style="padding-top: 21pt;padding-left: 86pt;text-indent: -34pt;text-align: left;"><span class="s54">β (slope) can be interpreted as the average change in DEL when (PTSS−mean(PTSS)) </span>increases by 1 unit, which is equivalent to the average change in DEL when PTSS increases by 1 unit. Hence, when we center the IV, the <span class="s56">interpretation of β remains the same</span>.</p></li><li data-list-text="●"><p class="s55" style="padding-top: 19pt;padding-left: 86pt;text-indent: -34pt;text-align: left;">Note that the <span style=" color: #EE6C00;">intercept parameter </span>has changed. Using the centered variable, the <span class="s54">interpretation of β</span><span class="s58">0</span> is now the mean level of DEL for children who have PTSS scores that are equal to the sample average.</p></li></ul><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark9">&zwnj;</a>Including an Interaction Term</h2><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 38pt;text-indent: 0pt;text-align: left;">What does it mean for two predictors in a regression model &quot;to interact&quot;?</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s50" style="padding-left: 38pt;text-indent: 0pt;text-align: left;">Two predictors interact if the effect on the response variable of one predictor depends on the value of the other predictor<span class="p">.</span></p><p class="s50" style="padding-top: 20pt;padding-left: 38pt;text-indent: 0pt;text-align: left;">Review: <span class="p">interpreting the slope coefficient in a simple and multivariate linear regression</span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 38pt;text-indent: 0pt;line-height: 120%;text-align: justify;">If an interaction effect is included in the model, the slope parameter can no longer be interpreted as the change in the mean response for each unit increase in the predictor, while the other predictors are held constant.</p><h2 style="padding-top: 6pt;padding-left: 35pt;text-indent: 0pt;text-align: left;"><a name="bookmark10">&zwnj;</a>NSCAW I Example</h2><p style="padding-top: 9pt;text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p class="s59" style="padding-left: 496pt;text-indent: 0pt;text-align: left;">Conceptual Model</p><p style="padding-top: 7pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 498pt;text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s59" style="padding-left: 500pt;text-indent: 0pt;text-align: left;">Statistical Model</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="padding-left: 40pt;text-indent: 0pt;text-align: left;">RQ: Do depressive symptoms moderate the effect of post-traumatic stress disorder</p><p style="padding-left: 40pt;text-indent: 0pt;text-align: left;">on delinquent behavior among youth involved in the child welfare system?</p><p style="text-indent: 0pt;text-align: left;"><br/></p><div class="textbox" style="border:0.8pt solid #EE6C00;display:block;min-height:74.3pt;width:917.6pt;"><p style="padding-top: 12pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s60" style="padding-left: 32pt;text-indent: 0pt;text-align: left;"><a name="bookmark11">&zwnj;</a>𝐷𝐷𝐸𝐸𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷 = 𝑏𝑏<span class="s61">0 </span>+ 𝑏𝑏<span class="s61">1</span><span class="s62">PTSS </span><span class="s63">+ </span>𝑏𝑏<span class="s61">2</span><span class="s62">DEPRESS    </span>𝐷𝐷𝐸𝐸𝐷𝐷 = 𝑏𝑏<span class="s64">0</span> + 𝑏𝑏<span class="s64">1</span><span class="s62">PTSS </span><span class="s63">+ </span>𝑏𝑏<span class="s64">2</span><span class="s62">DEPRESS </span><span class="s63">+ </span>𝑏𝑏<span class="s64">3</span><span class="s62">PTSS </span>𝑋𝑋<span class="s62">DEPRESS</span></p></div><p style="padding-left: 10pt;text-indent: 0pt;text-align: left;"/><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s65" style="padding-top: 22pt;padding-left: 38pt;text-indent: 0pt;text-align: left;">Main Effects Model</p><p class="s44" style="padding-top: 24pt;padding-left: 38pt;text-indent: 0pt;line-height: 120%;text-align: left;">For a model without interaction, we assume that the effect of `PTSS` on `DEL` is the same regardless of the level of depressive symptoms experienced among respondents.</p><p class="s66" style="padding-top: 4pt;padding-left: 38pt;text-indent: 0pt;text-align: left;">Interaction Model: Include a two- way interaction term of PTSS <i>X </i>DEPRESS</p><p class="s41" style="padding-top: 21pt;padding-left: 38pt;text-indent: 0pt;text-align: left;">For a model with interaction, we want to examine if `PTSS` effects on</p><p class="s41" style="padding-left: 38pt;text-indent: 0pt;text-align: left;">`DEL` depend, <b>or are conditonal, </b>on level of `DEPRESS`.</p><p class="s5" style="padding-top: 14pt;padding-left: 542pt;text-indent: 0pt;text-align: left;"><a name="bookmark12">&zwnj;</a>Two-way interactions:</p><p style="padding-top: 23pt;padding-left: 542pt;text-indent: 0pt;line-height: 221%;text-align: left;">Continuous x Continuous? Categorical x Categorical? Categorical x Continuous?</p><p style="padding-top: 16pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s5" style="padding-left: 542pt;text-indent: 0pt;text-align: left;">Interaction effects:</p><p style="padding-top: 23pt;padding-left: 542pt;text-indent: 0pt;text-align: left;">→ Change in slope (b<span class="s68">1</span>)</p><p style="padding-top: 4pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 542pt;text-indent: 0pt;text-align: left;">→ Change in direction (sign)</p><p style="padding-top: 4pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 542pt;text-indent: 0pt;text-align: left;">→ Change in intercept (b<span class="s68">0</span>)</p><p style="text-indent: 0pt;text-align: left;"><span/></p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark13">&zwnj;</a>Interaction Term = Cross<span class="s69">‐</span>Product Term</h2><p style="padding-top: 43pt;padding-left: 38pt;text-indent: 0pt;line-height: 119%;text-align: left;">To model interaction, we can include cross<span class="s70">‐</span>product terms of two independent variables into the multiple regression models</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 214pt;text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><h4 style="padding-top: 6pt;padding-left: 18pt;text-indent: 0pt;text-align: left;"><a name="bookmark14">&zwnj;</a><span class="h2">Interaction: </span>E(DEL)=<span style=" color: #F00;">β</span><span class="s72">0</span>+<span style=" color: #F00;">β</span><span class="s72">1</span>PTSS+<span style=" color: #F00;">β</span><span class="s72">2</span>DEPRESS + <span style=" color: #F00;">β</span><span class="s72">3</span>PTSS<span class="s73">*</span>DEPRESS + ϵ</h4><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 623pt;text-indent: 0pt;text-align: left;">Interpret the coefficient on PTSS (TRA) and Depressive symptoms (CIDI)</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 623pt;text-indent: 0pt;text-align: left;">What is the expected DEL score for welfare involved youth who have a PTSS score of 45 and a Depressive symptoms score of 50?</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 623pt;text-indent: 0pt;text-align: left;">How to interpret the interaction between PTSS and TRA?</p><h2 style="padding-top: 6pt;padding-left: 35pt;text-indent: 0pt;text-align: left;"><a name="bookmark15">&zwnj;</a>Compare Hayes book with R result</h2><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 109pt;text-indent: 0pt;text-align: left;"><span/></p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark16">&zwnj;</a>Interpretation of the Intercept</h2><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 38pt;text-indent: 0pt;text-align: left;">The intercept tells us the expected DEL score (~61.1) <span style=" color: #EE6C00;">for the &quot;average&quot; welfare-involved child:</span></p><p style="padding-top: 4pt;text-indent: 0pt;text-align: left;"><br/></p><ul id="l6"><li data-list-text="●"><p style="padding-left: 86pt;text-indent: -35pt;text-align: left;">A child with an average level of PTSS symptoms,</p></li><li data-list-text="●"><p style="padding-top: 4pt;padding-left: 86pt;text-indent: -35pt;text-align: left;">A child with an average level of depressive symptoms</p></li></ul><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark17">&zwnj;</a>Interpretation of Regression Coefficients (Main Effects)</h2><p style="padding-top: 21pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 38pt;text-indent: 0pt;line-height: 120%;text-align: left;">The coefficient for PTSS (0.0115) is the average difference between the delinquency scores for children who have an additional symptom. Hence, <span style=" color: #EE6C00;">a one unit (i.e., one additional symptom) increase in post- traumatic stress is associated with a 0.0115-unit increase in the average DEL score, holding DEPRESS constant at its mean</span></p><h1 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark18">&zwnj;</a>Interpretation of the Interaction Term</h1><p class="s55" style="padding-top: 33pt;padding-left: 38pt;text-indent: 0pt;line-height: 120%;text-align: left;">Controlling other variables constant, the results show that while a one-unit increase in PTSS is associated with a 0.0115 unit increase in the average DEL score (i.e., the main effect), the interaction term (PTSS X DEPRESS) is statistically significant at the 0.05 level, meaning that there is an interaction effect between PTSS and DEPRESS, i.e., <span style=" color: #EE6C00;">the effect of PTSS on DEL is conditional on level of depressive symptoms the child is experiencing – the effect of PTSS is different for different values of DEPRESS</span>.</p><p class="s55" style="padding-top: 17pt;padding-left: 38pt;text-indent: 0pt;line-height: 114%;text-align: justify;">This means that, <span class="s75">as DEPRESS increases</span>, a one-unit increase in PTSS <span class="s76">decreases </span>DEL scores, holding other variables constant. This is because the coefficient on the interaction term is negative.</p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark19">&zwnj;</a>Alternatively:</h2><p style="text-indent: 0pt;text-align: left;"><span/></p><p class="s74" style="padding-top: 19pt;padding-left: 42pt;text-indent: 0pt;line-height: 120%;text-align: left;">The effect of PTSS on DEL is different for different values of DEPRESS<span style=" color: #695D46;">.</span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 42pt;text-indent: 0pt;line-height: 120%;text-align: left;">When PTSS increases by 1 unit, the coefficient (=slope) of DEPRESS for DEL decreases by 0.86 units (.2132 - .0047) = 0.2085), compared to the coefficients of DEPRESS (i.e., .2132) for children who have average level of PTSS.</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 35pt;text-indent: 0pt;text-align: left;"><span/></p><p style="padding-top: 16pt;padding-left: 13pt;text-indent: 0pt;text-align: left;">This is an odd finding: depressive symptoms are protective for delinquent behavior among youth with PTSS (?)</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s77" style="padding-left: 16pt;text-indent: 0pt;text-align: left;"><span/>	</p><p style="padding-top: 10pt;padding-left: 6pt;text-indent: 0pt;text-align: left;"><a name="bookmark20">&zwnj;</a>As depressive symptoms increase the impact of PTSS on DEL is reduced</p><p style="text-indent: 0pt;text-align: left;"><span/></p><p class="s78" style="padding-top: 2pt;text-indent: 0pt;text-align: left;">When DEP is low, children with lower PTSS (BLUE LINE) have higher DEL scores</p><p style="text-indent: 0pt;text-align: left;"/><p class="s79" style="padding-top: 1pt;text-indent: 23pt;text-align: right;">BUT the impact of increasing DEP on DEL is greater for those with lower PTSS levels (RED LINE IS GREATER THAN BLUE LINE</p><p class="s79" style="text-indent: 0pt;text-align: right;">NOW)</p><p style="text-indent: 0pt;text-align: left;"/><p style="padding-left: 118pt;text-indent: 0pt;text-align: left;"><a name="bookmark21">&zwnj;</a><span/></p><h2 style="padding-top: 6pt;padding-left: 35pt;text-indent: 0pt;text-align: left;"><a name="bookmark22">&zwnj;</a>I used these methods in the following paper</h2><p style="text-indent: 0pt;text-align: left;"><br/></p><ul id="l7"><li data-list-text="●"><p class="s80" style="padding-left: 83pt;text-indent: -36pt;line-height: 120%;text-align: left;">Barboza-Salerno, G. E., &amp; Remillard, A. (2023). Early Child Adversity and Delinquent Behavior in Foster Care Youth: Do Future Expectations and Sexual Identity Moderate the Mediating Role of Posttraumatic Stress?. <i>Journal of Child &amp; Adolescent Trauma</i>, 1-13.</p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark23">&zwnj;</a>What is Mediation?</h2><p style="text-indent: 0pt;text-align: left;"><br/></p></li><li data-list-text="●"><p style="padding-left: 72pt;text-indent: -22pt;line-height: 120%;text-align: left;">Ordinary Least Squares regression examines whether independent variables have a “direct” effect on a dependent variable. Direct effects are common in public health, social work, etc. research, but “indirect” effects are also common.</p></li><li data-list-text="●"><p style="padding-left: 72pt;text-indent: -22pt;line-height: 115%;text-align: left;">The terms “indirect effects” and “mediation” are used interchangeably. To remember what mediation is, think about how <span class="s82">mediators </span>are people who work <span class="s82">between </span>two people to resolve a dispute. In statistics, mediators come between two variables.</p></li><li data-list-text="●"><p style="padding-top: 1pt;padding-left: 72pt;text-indent: -22pt;line-height: 119%;text-align: left;">Mediation is present in statistics when the effects of an independent variable on a dependent variable occur fully or partially <span class="s82">through </span>its effects on another variable.</p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark24">&zwnj;</a>What is Mediation?</h2></li><li data-list-text="●"><p style="padding-top: 42pt;padding-left: 86pt;text-indent: -36pt;line-height: 91%;text-align: left;">Mediation analysis is a statistical method used to evaluate evidence from studies designed to test hypotheses about how some causal <span class="s82">antecedent </span>variable X transmits its effect on a consequent variable Y</p></li><li data-list-text="●"><p style="padding-left: 86pt;text-indent: -36pt;line-height: 94%;text-align: left;">Note: Hayes is a psychologist, and they have different terminology, don’t be confused, antecedent means independent variable</p></li><li data-list-text="●"><p style="padding-left: 86pt;text-indent: -36pt;line-height: 94%;text-align: left;">RQ: What is the mechanism, be it emotional, cognitive, biological, or otherwise, by which X influences Y?</p></li></ul><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s2" style="padding-left: 16pt;text-indent: 0pt;text-align: center;">Direct Effect</p><p style="text-indent: 0pt;text-align: left;"/><p class="s2" style="padding-top: 1pt;padding-left: 59pt;text-indent: 0pt;text-align: center;">Indirect Effect</p><p style="text-indent: 0pt;text-align: left;"><br/></p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark25">&zwnj;</a>Conceptualizing a Mediation Process</h2><p style="padding-top: 10pt;text-indent: 0pt;text-align: left;"><br/></p><ul id="l8"><li data-list-text="◦"><p class="s55" style="padding-left: 52pt;text-indent: -14pt;text-align: left;">Mediation is ultimately a causal explanation hence the <span class="s76">assumptions are that</span></p><ul id="l9"><li data-list-text="◦"><p class="s55" style="padding-top: 6pt;padding-left: 74pt;text-indent: -14pt;text-align: left;">The relationships in the system are causal</p></li><li data-list-text="◦"><p class="s55" style="padding-top: 5pt;padding-left: 74pt;text-indent: -14pt;text-align: left;">M is causally located between X and Y</p></li><li data-list-text="◦"><p class="s55" style="padding-top: 5pt;padding-left: 74pt;text-indent: -14pt;text-align: left;">X causes M, which in turn causes Y <span class="s83"></span><span class="s84"> </span>M is located causally between X and Y</p></li></ul></li><li data-list-text="◦"><p class="s85" style="padding-top: 11pt;padding-left: 52pt;text-indent: -14pt;text-align: left;">Note about cross-sectional data</p></li></ul><h2 style="padding-top: 6pt;padding-left: 35pt;text-indent: 0pt;text-align: left;"><a name="bookmark26">&zwnj;</a>Demonstrating Causation</h2><p class="s86" style="padding-top: 39pt;padding-left: 47pt;text-indent: 0pt;line-height: 25pt;text-align: left;">4 requirements to logically infer a causal relationship</p><ul id="l10"><li data-list-text="●"><p class="s50" style="padding-left: 83pt;text-indent: -35pt;line-height: 22pt;text-align: left;">Covariation</p><ul id="l11"><li data-list-text="○"><p class="s49" style="padding-left: 131pt;text-indent: -33pt;line-height: 21pt;text-align: left;">A statistical association: if A changes, B must also change.</p></li><li data-list-text="○"><p class="s49" style="padding-top: 1pt;padding-left: 131pt;text-indent: -33pt;line-height: 20pt;text-align: left;">This is necessary, but not sufficient, i.e., not enough alone to show cause</p></li></ul></li><li data-list-text="●"><p class="s50" style="padding-left: 83pt;text-indent: -35pt;line-height: 23pt;text-align: left;">Time order</p><ul id="l12"><li data-list-text="○"><p class="s87" style="padding-left: 131pt;text-indent: -33pt;line-height: 25pt;text-align: left;">IV must come before DV</p></li><li data-list-text="○"><p class="s49" style="padding-left: 131pt;text-indent: -33pt;line-height: 19pt;text-align: left;">big problem in cross-sectional surveys</p></li><li data-list-text="○"><p class="s87" style="padding-left: 131pt;text-indent: -33pt;line-height: 24pt;text-align: left;">Note: sometimes you can make reasonable inferences</p></li></ul></li><li data-list-text="●"><p class="s50" style="padding-left: 83pt;text-indent: -35pt;line-height: 23pt;text-align: left;">Nonspurious-<span class="p">-</span><span class="s86">no third factor can explain the covariation</span></p><ul id="l13"><li data-list-text="○"><p class="s49" style="padding-left: 131pt;text-indent: -33pt;line-height: 19pt;text-align: left;">Storks and babies</p></li></ul></li><li data-list-text="●"><p class="s50" style="padding-left: 83pt;text-indent: -35pt;line-height: 24pt;text-align: left;">Theory</p><h2 style="padding-top: 6pt;padding-left: 38pt;text-indent: 0pt;text-align: left;"><a name="bookmark27">&zwnj;</a>What is Mediation?</h2><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 38pt;text-indent: 0pt;line-height: 120%;text-align: left;">Mediation refers to the effect of an independent variable (X) on a dependent variable (Y) is <span style=" color: #EE6C00;">transmitted through a third intervening/mediating variable (M)</span>. In other words, an indirect effect is when X affects M, which in turn affects Y, other things being equal. Hence, we say M mediates the effect of x1 on y.</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s82" style="padding-left: 38pt;text-indent: 0pt;text-align: left;">Note<span class="p">: M is just another independent variable in your model.</span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s50" style="padding-left: 38pt;text-indent: 0pt;text-align: left;">Any examples you can think of?</p></li><li data-list-text="●"><p style="padding-top: 23pt;padding-left: 86pt;text-indent: -35pt;text-align: left;">Parent education → <span class="s88">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="s89"> </span>→ Poverty</p></li></ul><p class="s90" style="padding-top: 3pt;padding-left: 121pt;text-indent: 0pt;text-align: center;"><a name="bookmark28">&zwnj;</a>Total Effect Model:</p><p style="padding-top: 5pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 129pt;text-indent: 0pt;text-align: left;"><span/></p><p class="s91" style="padding-top: 3pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Path diagrams</p><p style="text-indent: 0pt;text-align: left;"/><p class="s90" style="padding-top: 17pt;padding-left: 121pt;text-indent: 0pt;text-align: center;">Basic Mediation Model:</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 147pt;text-indent: 0pt;text-align: left;"><span/></p><p class="s92" style="padding-top: 3pt;padding-left: 59pt;text-indent: 0pt;text-align: center;"><a name="bookmark29">&zwnj;</a>Total Effect of X on Y in Mediation Analysis</p><p class="s93" style="padding-top: 5pt;padding-left: 59pt;text-indent: 0pt;text-align: center;">c <span class="s94">= </span>ab <span class="s94">+ </span>c<span class="s94">′</span></p><p style="padding-top: 11pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 124pt;text-indent: 0pt;text-align: left;"><span/></p><p style="padding-top: 3pt;text-indent: 0pt;text-align: left;"><br/></p><ol id="l14"><li data-list-text="1."><p class="s95" style="padding-left: 201pt;text-indent: -35pt;text-align: left;">c = the total effect of X on Y</p></li><li data-list-text="2."><p class="s95" style="padding-top: 5pt;padding-left: 201pt;text-indent: -35pt;text-align: left;">c’= the direct effect of X on Y after controlling for M</p></li><li data-list-text="3."><p class="s95" style="padding-top: 5pt;padding-left: 201pt;text-indent: -35pt;text-align: left;">ab= indirect/mediation effect of X on Y via M</p><h1 style="padding-top: 6pt;padding-left: 15pt;text-indent: 0pt;text-align: left;"><a name="bookmark30">&zwnj;</a>No Mediation, Partial Mediation &amp; Full Mediation</h1><p style="text-indent: 0pt;text-align: left;"><span/></p><ul id="l15"><li data-list-text="●"><p class="s96" style="padding-top: 32pt;padding-left: 538pt;text-indent: -33pt;line-height: 110%;text-align: left;">Model 1 (No Mediation) <span class="s49">shows the total effect between X and Y.</span></p></li><li data-list-text="●"><p class="s96" style="padding-top: 12pt;padding-left: 538pt;text-indent: -33pt;line-height: 110%;text-align: left;">Model 2 (Partial Mediation) <span class="s49">has both direct and indirect effects between X and Y.</span></p><ol id="l16"><li data-list-text="(1)"><p class="s49" style="padding-left: 565pt;text-indent: -26pt;line-height: 25pt;text-align: left;">X relates to Y <span class="s97">directly </span>via pathway c’;</p></li><li data-list-text="(2)"><p class="s49" style="padding-top: 2pt;padding-left: 565pt;text-indent: -26pt;line-height: 115%;text-align: left;">X correlates with M (mediator) through pathway a; and M relates to Y via pathway b. Pathways a and b multiply to signify the <span class="s97">indirect </span>effect.</p></li></ol></li><li data-list-text="●"><p class="s49" style="padding-top: 8pt;padding-left: 538pt;text-indent: -33pt;text-align: left;"><span class="s96">Model 3 (Full Mediation) </span>depicts the indirect effect <span class="s97">without the direct effect of X on Y</span>.</p></li></ul></li></ol><p class="s98" style="padding-top: 12pt;padding-left: 538pt;text-indent: 0pt;text-align: left;">→ <span class="s99">Check the changes in coefficients to see if mediation happens, if so, which type.</span></p><p style="padding-top: 15pt;padding-left: 5pt;text-indent: 0pt;text-align: left;"><a href="https://journals.uair.arizona.edu/index.php/jmmss/article/viewFile/17761/17484">https://journals.uair.arizona.edu/index.php/jmmss/article/viewFile/17761/17484</a></p><p style="text-indent: 0pt;text-align: left;"><span/></p><h3 style="text-indent: 0pt;line-height: 32pt;text-align: left;">-</h3><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="background:#EE6C00;border:2.0pt solid #AF4D00;display:block;min-height:43.6pt;width:72.0pt;"><p class="s100" style="padding-left: 21pt;text-indent: 0pt;line-height: 17pt;text-align: left;">Sex</p></div><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="background:#EE6C00;border:2.0pt solid #AF4D00;display:block;min-height:18.4pt;width:72.0pt;"><p class="s100" style="padding-left: 19pt;text-indent: 0pt;line-height: 16pt;text-align: left;">Age</p></div><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="background:#EE6C00;border:2.0pt solid #AF4D00;display:block;min-height:46.9pt;width:72.0pt;"><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s100" style="padding-left: 16pt;text-indent: 0pt;line-height: 21pt;text-align: left;">Race</p></div><p style="text-indent: 0pt;text-align: left;"/><p class="s101" style="text-indent: 0pt;line-height: 27pt;text-align: center;">Nonresident</p><p class="s101" style="text-indent: 0pt;text-align: center;">Partner (stressor)</p><p class="s101" style="text-indent: 0pt;line-height: 27pt;text-align: center;">x</p><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="border:4.5pt solid #AF4D00;display:block;min-height:108.9pt;width:142.2pt;"><p class="s102" style="padding-top: 9pt;padding-left: 11pt;text-indent: 0pt;text-align: center;">Supportive Mothering <i>Y</i></p></div><p style="text-indent: 0pt;text-align: left;"/><h2 style="padding-top: 6pt;padding-left: 35pt;text-indent: 0pt;text-align: left;"><a name="bookmark31">&zwnj;</a>Simple Linear Regression (in a diagram)</h2><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:115.9pt;width:142.2pt;"><p class="s102" style="text-indent: 0pt;line-height: 27pt;text-align: center;">Nonresident</p><p class="s102" style="text-indent: 0pt;text-align: center;">Partner (stressor)</p><p class="s102" style="text-indent: 0pt;line-height: 27pt;text-align: center;">x</p></div><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:108.9pt;width:142.2pt;"><p class="s102" style="padding-top: 9pt;padding-left: 24pt;text-indent: 0pt;text-align: center;">Social Behavior <i>Y</i></p></div><p style="text-indent: 0pt;text-align: left;"/><h3 style="padding-top: 26pt;padding-left: 59pt;text-indent: 0pt;text-align: center;"><a name="bookmark32">&zwnj;</a>-</h3><p class="s104" style="padding-top: 4pt;padding-left: 59pt;text-indent: 0pt;text-align: center;">P&lt;.05</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p class="s104" style="text-indent: 0pt;line-height: 18pt;text-align: left;">P&lt;.05</p><p style="text-indent: 0pt;text-align: left;"/><p class="s104" style="text-indent: 0pt;line-height: 18pt;text-align: left;">P&lt;.05</p><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:116.0pt;width:142.2pt;"><p class="s102" style="text-indent: 0pt;line-height: 27pt;text-align: center;">Nonresident</p><p class="s102" style="text-indent: 0pt;text-align: center;">Partner (stressor)</p><p class="s102" style="text-indent: 0pt;line-height: 27pt;text-align: center;">x</p></div><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:108.9pt;width:142.2pt;"><p class="s102" style="padding-top: 9pt;padding-left: 24pt;text-indent: 0pt;text-align: center;">Social Behavior y</p></div><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:108.9pt;width:142.2pt;"><p class="s102" style="padding-top: 9pt;padding-left: 16pt;text-indent: -2pt;text-align: justify;">Supportive Mothering <i>mediator</i></p></div><p style="text-indent: 0pt;text-align: left;"/><p class="s104" style="padding-left: 59pt;text-indent: 0pt;text-align: center;">P=.57</p><p style="text-indent: 0pt;text-align: left;"><span/></p><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:114.3pt;width:142.2pt;"><p class="s102" style="padding-top: 11pt;padding-left: 16pt;text-indent: -2pt;text-align: justify;">Supportive Mothering <i>mediator</i></p></div><p style="text-indent: 0pt;text-align: left;"/><p class="s105" style="padding-left: 46pt;text-indent: 0pt;line-height: 39pt;text-align: left;"><a name="bookmark33">&zwnj;</a>Mediation Model Based on Stress Theory</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:124.9pt;width:142.2pt;"><p class="s102" style="padding-top: 2pt;text-indent: 0pt;text-align: center;">Nonresident Partner (stressor)</p><p class="s102" style="text-indent: 0pt;line-height: 29pt;text-align: center;">x</p></div><p style="text-indent: 0pt;text-align: left;"/><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:114.3pt;width:142.2pt;"><p class="s102" style="padding-top: 11pt;padding-left: 24pt;text-indent: 0pt;text-align: center;">Social Behavior y</p></div><p style="text-indent: 0pt;text-align: left;"/><p class="s104" style="padding-left: 360pt;text-indent: 0pt;line-height: 248%;text-align: center;">Partial mediation Full mediation</p><p style="padding-top: 5pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s104" style="padding-left: 254pt;text-indent: 0pt;text-align: left;">The dotted line indicates no significant direct effect.</p><p class="s105" style="padding-left: 35pt;text-indent: 0pt;line-height: 39pt;text-align: left;"><a name="bookmark34">&zwnj;</a>Identifying Mediation Through Regression Results</p><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:108.9pt;width:142.2pt;"><p class="s102" style="padding-top: 9pt;padding-left: 16pt;text-indent: -2pt;text-align: justify;">Supportive Mothering <i>mediator</i></p></div><p style="text-indent: 0pt;text-align: left;"/><p class="s2" style="padding-top: 25pt;padding-left: 30pt;text-indent: 0pt;text-align: left;">Regression equations have only one dependent variable. We can’t test a mediation model in one analysis because two variables are dependent in the figure.</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p style="text-indent: 0pt;text-align: left;"><span/></p><p class="s2" style="padding-left: 30pt;text-indent: 0pt;text-align: left;">Which variables are dependent variables in the model (which are predicted by other variables)?</p><div class="textbox" style="border:4.5pt solid #226B87;display:block;min-height:108.9pt;width:142.2pt;"><p class="s102" style="padding-top: 9pt;padding-left: 24pt;text-indent: 0pt;text-align: center;">Social Behavior y</p></div><p style="text-indent: 0pt;text-align: left;"/><p class="s2" style="padding-top: 19pt;padding-left: 30pt;text-indent: 0pt;text-align: left;">Which variable is both a predictor and a predicted</p><p class="s2" style="padding-top: 2pt;padding-left: 30pt;text-indent: 0pt;line-height: 30pt;text-align: left;">variable in the figure?     <span class="s106">Nonresident</span></p><p class="s101" style="padding-left: 360pt;text-indent: 0pt;text-align: center;">Partner (stressor) x</p><p class="s104" style="padding-top: 18pt;padding-left: 40pt;text-indent: -10pt;line-height: 236%;text-align: left;">Partial mediation Full mediation</p><p class="s105" style="padding-left: 88pt;text-indent: 0pt;line-height: 38pt;text-align: left;"><a name="bookmark35">&zwnj;</a>What about Suppression?</p><p class="s107" style="padding-top: 14pt;padding-left: 88pt;text-indent: 0pt;text-align: left;">With suppression, the addition of a third variable <span class="s108">increases </span>the effect of the original independent variable. Suppression is not examined as often as mediation effects, so it isn’t clear how common it is.</p><p style="padding-top: 1pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s107" style="padding-left: 88pt;text-indent: 0pt;text-align: left;">Suppression can also be tested efficiently with “hierarchical” regression.</p><p style="padding-top: 2pt;text-indent: 0pt;text-align: left;"><br/></p><p class="s107" style="padding-left: 88pt;text-indent: 0pt;text-align: left;">The test would proceed the same as the sequence of mediation tests we just looked at. Evidence of suppression would be that a small or nonsignificant effect of an IV (like nonresident partner) in one model becomes larger and statistically significant with the addition of a variable (like supportive mothering) in a subsequent model.</p></body></html>
