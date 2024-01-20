@@ -1,0 +1,182 @@
+---
+title: "Problem set 2"
+date: "2024-01-26"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "center")
+```
+
+::: callout-note
+This assignment builds upon Public Health Foundational Knowledge GIA-1 and Foundational Competencies GIA-1. 
+**Note** to submit this email me with the subject "Problem Set 2"
+:::
+
+## Task 1: Confounding
+
+1. Go the the example page for this week, ["Coundounding"](/example/Confounding.qmd), and work through the analyses I replicated based on the article for that week.
+
+Please make sure you are familiar with how to interpret and calculate risk ratios (RR) and odds ratios (ORs)
+
+
+## Task 2: Make an RStudio Project
+
+1. Use either RStudio.cloud or RStudio on your computer (preferably RStudio on your computer! [Follow these instructions to get started!](/resource/install.qmd)) to create a new RStudio Project. Refer to the [example page you read in Task 1 for instructions](/example/rstudio-tidyverse.qmd#part-3-rstudio-projects)
+
+2. Create a folder named "data" in the project folder you just made.
+
+3. Download this **SPSS** file and place it in that folder:
+
+    - [{{< fa file-csv >}} `moderation.sav`](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/moderation.sav)
+
+4. In RStudio, go to "File" > "New File…" > "R Markdown…" and click "OK" in the dialog without changing anything.
+
+5. Run the following code
+
+
+::: callout-note
+Answer the questions A - K below. You can simply type text in the white space, and write R code in the chunks.
+**Note**: I have written all of the code except for J. and K. below. The code you need to answer J and K can be found [here](/example/moderation.qmd)
+:::
+
+**A. Go through the code and identify which each package is doing.** Note that the code opens .SAV files not .CSV files so it is slightly different from what we have seen before.
+
+```{r}
+library(foreign)
+library(dplyr)
+library(epitools)
+library(effects)
+library(epitools)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+setwd("C:/Users/barboza-salerno.1/Downloads/")
+moderation_example = tibble::as_tibble(read.spss("moderation.sav", use.value.labels = F, to.data.frame = T))
+moderation_example
+
+```
+
+
+# Learning R: Data Wrangling
+
+The following code uses the language of tidyverse to select, filter, factor, recode, and clean the data.
+Go line by line and explain what each line is doing (hint, the best way I have found to learn is to run each line and see how the data changes). For example, run this:
+
+`library(dplyr)
+
+moderation_example %>%
+  dplyr::select(tra1, sexab)`
+
+then run this
+
+`library(dplyr)
+
+moderation_example %>%
+  dplyr::select(tra1, sexab) %>%
+  dplyr::filter(!is.na(sexab))`  
+
+etc  
+```{r}
+moderation_example %>%
+  dplyr::select(tra1, sexab) %>%
+  dplyr::filter(!is.na(sexab)) %>%
+  dplyr::mutate(sex = dplyr::recode(sexab, `1` = "Yes", `0` = "No")) %>%
+  dplyr::mutate(PTSD = cut(tra1, breaks = c(33, 64, 88), include.lowest = T, labels = c("No PTSD", "PTSD"))) %>%
+  dplyr::select(-sexab, -tra1)
+```
+
+```{r  results='hide'}
+df <- moderation_example %>%
+  dplyr::select(tra1, sexab) %>%
+  dplyr::filter(!is.na(sexab)) %>%
+  dplyr::mutate(sex = dplyr::recode(sexab, `1` = "Yes", `0` = "No")) %>%
+  dplyr::mutate(PTSD = cut(tra1, breaks = c(33, 64, 88), include.lowest = T, labels = c("No PTSD", "PTSD"))) %>%
+  dplyr::select(-sexab, -tra1)
+```
+
+Assign the new data table to an object call it `df`
+```{r}
+table(df$sex, df$PTSD)
+```
+Re-arrange the numbers in the table so that we have sexual abuse (Yes) and PTSD (Yes) in the first cell.
+
+```{r}
+(total <- matrix(c(47, 168, 289, 1275), nrow = 2, ncol = 2))
+```
+
+#### B. Interpret the RR of PTSD for those who were sexually abused (versus not) below
+
+#### C. Compute the percent change in the risk below
+
+```{r}
+(all_risk <- riskratio.wald(total, rev = c("neither")))
+```
+
+#### D. Interpret the odds ratio below
+
+#### Calculate the percent change in the odds below
+
+```{r}
+oddsratio.wald(total, rev = c("neither"))
+```
+
+#### Moderation
+
+Is the association between DEL and PTSS the same for youth who have been sexually abused and not?
+
+```{r}
+df <- moderation_example %>%
+  dplyr::select(bcdel1, tra1, sexab) %>%
+  dplyr::filter(!is.na(sexab), !is.na(tra1)) %>%
+  dplyr::mutate(sex =  dplyr::recode(sexab, `1` = "Yes", `0` = "No")) %>%
+  dplyr::mutate(tra1_mean = tra1-mean(tra1)) %>%
+  dplyr::select(-tra1)
+
+levels(df$sex) <- c("No","Yes")
+
+```
+
+```{r}
+(fit <- lm(bcdel1 ~ tra1_mean:sex, data = df))
+summary(fit)
+```
+
+#### E. Interpret the intercept of the model above
+#### F. Is the interaction significant?
+#### G. Interpret the interaction 
+#### G. Interpret the 2 plots below
+
+The `effects` package is another nice way to visualze the interaction effects. Let's practice below.
+```{r}
+interact <- effect('tra1_mean:sex', fit,
+                      xlevels=list(tra1_mean = c(-15, 0, 30)),
+                      se=TRUE, confidence.level=.95, typical=mean)
+
+interact<-as.data.frame(interact)
+interact$sex<-factor(interact$sex, levels=c("No", "Yes"))
+
+```
+
+```{r}
+p1 <- ggplot(data=interact, aes(x=tra1_mean, y=fit, group=sex))+
+  coord_cartesian(ylim = c(50,70))+  
+  #For ylim, specify the range of your DV (in our case, 50-70)
+  geom_line(size=2, aes(color=sex))+
+  ylab("DEL")+
+  xlab("PTSS")+
+  ggtitle("PTSS and Sex Abuse as Predictors of Delinquent Behaviors")+
+  theme_bw()+ 
+  theme(panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank())+
+  scale_fill_grey()
+p1
+
+```
+#### I. Interpret the visualization: 
+Does higher levels of PTSS matter more for engagement in delinquent behaviors for youth who have been sexually abused? Why/Why not?
+
+#### J. Write the Code for the Conceptual Model
+
+#### K. Write the Code for the Statistical Model

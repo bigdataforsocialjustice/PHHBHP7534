@@ -321,6 +321,19 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Please download the <a href="ps2_md.Rmd">markdown file</a> so you can run the code on your computer. Please attempt to replicate my example below BEFORE downloading the code. Remember the 10 minute rule. Right click –&gt; Save As …</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>This assignment builds upon Public Health Foundational Knowledge GIA-1 and Foundational Competencies GIA-1. <strong>Note</strong> to submit this email me with the subject “Problem Set 2”</p>
 </div>
 </div>
@@ -546,7 +559,7 @@ attr(,"method")
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> moderation_example <span class="sc">%&gt;%</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(bcdel1, tra1, sexab) <span class="sc">%&gt;%</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sexab), <span class="sc">!</span><span class="fu">is.na</span>(tra1)) <span class="sc">%&gt;%</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">recode</span>(sexab, <span class="st">`</span><span class="at">1</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Yes"</span>, <span class="st">`</span><span class="at">0</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"No"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sex =</span>  dplyr<span class="sc">::</span><span class="fu">recode</span>(sexab, <span class="st">`</span><span class="at">1</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Yes"</span>, <span class="st">`</span><span class="at">0</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"No"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">tra1_mean =</span> tra1<span class="sc">-</span><span class="fu">mean</span>(tra1)) <span class="sc">%&gt;%</span></span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>tra1)</span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
