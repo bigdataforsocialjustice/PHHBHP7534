@@ -391,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)  </span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcdExtra)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcd)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"vembedr"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vembedr)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>) <span class="co">#disables scientific notation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -540,6 +540,7 @@ Note
 <pre><code>[1] -0.1</code></pre>
 </div>
 </div>
+<p>Note: please refer to the appendix in the paper referenced above to understand where these numbers came from!</p>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
@@ -585,10 +586,10 @@ attr(,"method")
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Percent change in the risk:"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(all_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Percent change in the risk:"</span>, (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(all_risk<span class="sc">$</span>measure)[<span class="dv">2</span>])<span class="sc">*</span><span class="dv">100</span>, <span class="at">sep =</span> <span class="st">" "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Percent change in the risk: 0.746031746031746"</code></pre>
+<pre><code>[1] "Percent change in the risk: 74.6031746031746"</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -851,7 +852,20 @@ attr(,"method")
 [1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
 </div>
 </div>
-<p>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.</p>
+<p>Younger women had a lower risk (RR = 0.956; 95% CI: 0.9383823, 0.9748244) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Test your understanding: the null hypothesis is that the odds are equal. What is <span class="math inline">\(H_0\)</span>. If I know that 1 is in the confidence interval, do I reject or not reject the <span class="math inline">\(H_0\)</span>?</p>
+</div>
+</div>
 </section>
 <section id="is-age-associated-with-magnesium-uptake-i.e.-is-the-counfounder-associated-with-the-exposure" class="level4">
 <h4 class="anchored" data-anchor-id="is-age-associated-with-magnesium-uptake-i.e.-is-the-counfounder-associated-with-the-exposure">2. Is age associated with magnesium uptake? (i.e., is the counfounder associated with the exposure?)</h4>
@@ -949,7 +963,7 @@ attr(,"method")
 [1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
 </div>
 </div>
-<p>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.</p>
+<p>Younger women had a lower risk (RR = 0.500; 95% CI: 0.4524463 0.5525517) and odds (OR = 0.444; 95% CI: 0.3959679 0.4988558) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.</p>
 </section>
 <section id="age-is-not-on-the-causal-pathway-between-exposure-and-outcome" class="level4">
 <h4 class="anchored" data-anchor-id="age-is-not-on-the-causal-pathway-between-exposure-and-outcome">3. Age is not on the causal pathway between exposure and outcome?</h4>
@@ -2024,7 +2038,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb111-36"><a href="#cb111-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)  </span>
 <span id="cb111-37"><a href="#cb111-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcdExtra)</span>
 <span id="cb111-38"><a href="#cb111-38" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcd)</span>
-<span id="cb111-39"><a href="#cb111-39" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"vembedr"</span>)</span>
+<span id="cb111-39"><a href="#cb111-39" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vembedr)</span>
 <span id="cb111-40"><a href="#cb111-40" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb111-41"><a href="#cb111-41" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
 <span id="cb111-42"><a href="#cb111-42" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>) <span class="co">#disables scientific notation</span></span>
@@ -2091,311 +2105,315 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb111-105"><a href="#cb111-105" aria-hidden="true" tabindex="-1"></a>(<span class="at">Risk =</span> <span class="dv">160</span><span class="sc">/</span>(<span class="dv">160</span><span class="sc">+</span><span class="dv">4840</span>))</span>
 <span id="cb111-106"><a href="#cb111-106" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> Risk <span class="sc">-</span> <span class="dv">660</span><span class="sc">/</span>(<span class="dv">660</span> <span class="sc">+</span> <span class="dv">4340</span>))</span>
 <span id="cb111-107"><a href="#cb111-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-108"><a href="#cb111-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-111"><a href="#cb111-111" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-112"><a href="#cb111-112" aria-hidden="true" tabindex="-1"></a>all_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
-<span id="cb111-113"><a href="#cb111-113" aria-hidden="true" tabindex="-1"></a>all_risk</span>
-<span id="cb111-114"><a href="#cb111-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-115"><a href="#cb111-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-116"><a href="#cb111-116" aria-hidden="true" tabindex="-1"></a>The risk ratio is .254 with a 95% confidence interval (.214, .301) which is significant at the $p &lt; .001$ level. Therefore, women in the exposure group 2, (i.e., who took magnesium), had a 74.6% lower risk $(1 - .254) \times 100$ of preterm birth compared to women who did not take magnesium.</span>
-<span id="cb111-119"><a href="#cb111-119" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-120"><a href="#cb111-120" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Percent change in the risk:"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(all_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
-<span id="cb111-121"><a href="#cb111-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-124"><a href="#cb111-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-125"><a href="#cb111-125" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
-<span id="cb111-126"><a href="#cb111-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-127"><a href="#cb111-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-128"><a href="#cb111-128" aria-hidden="true" tabindex="-1"></a>The odds ratio is 0.229 with a 95% CI of 0.192, 0.274. The p-value is &lt;0.001. Therefore women who took magnesium had a 78% lower odds of a preterm birth compared to women who did not take magnesium.</span>
-<span id="cb111-129"><a href="#cb111-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-130"><a href="#cb111-130" aria-hidden="true" tabindex="-1"></a>Given that you have taken Biostatistics I and II, you should be able to calculate the risk ratio, risk difference (RD), and odds ratio by hand. Here is how to do that in R:</span>
-<span id="cb111-131"><a href="#cb111-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-134"><a href="#cb111-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-135"><a href="#cb111-135" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
-<span id="cb111-136"><a href="#cb111-136" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">160</span> <span class="sc">/</span> (<span class="dv">160</span><span class="sc">+</span><span class="dv">4840</span>)</span>
-<span id="cb111-137"><a href="#cb111-137" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">630</span><span class="sc">/</span>(<span class="dv">630</span><span class="sc">+</span><span class="dv">4370</span>)</span>
-<span id="cb111-138"><a href="#cb111-138" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
-<span id="cb111-139"><a href="#cb111-139" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
-<span id="cb111-140"><a href="#cb111-140" aria-hidden="true" tabindex="-1"></a>(<span class="at">OR =</span> (<span class="dv">4370</span><span class="sc">*</span><span class="dv">160</span>)<span class="sc">/</span>(<span class="dv">4840</span><span class="sc">*</span><span class="dv">630</span>))</span>
-<span id="cb111-141"><a href="#cb111-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-144"><a href="#cb111-144" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-145"><a href="#cb111-145" aria-hidden="true" tabindex="-1"></a><span class="do">### OR check</span></span>
-<span id="cb111-146"><a href="#cb111-146" aria-hidden="true" tabindex="-1"></a>num <span class="ot">&lt;-</span> <span class="dv">4370</span> <span class="sc">*</span> <span class="dv">160</span></span>
-<span id="cb111-147"><a href="#cb111-147" aria-hidden="true" tabindex="-1"></a>denom <span class="ot">&lt;-</span> <span class="dv">4840</span> <span class="sc">*</span> <span class="dv">630</span></span>
-<span id="cb111-148"><a href="#cb111-148" aria-hidden="true" tabindex="-1"></a>OR <span class="ot">&lt;-</span> num <span class="sc">/</span> denom</span>
-<span id="cb111-149"><a href="#cb111-149" aria-hidden="true" tabindex="-1"></a>OR</span>
-<span id="cb111-150"><a href="#cb111-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-151"><a href="#cb111-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confounding</span></span>
-<span id="cb111-152"><a href="#cb111-152" aria-hidden="true" tabindex="-1"></a>Let’s suppose we are interested in  whether maternal age is a confounder on the magnesium to birth outcome pathway in the figure.</span>
-<span id="cb111-153"><a href="#cb111-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-154"><a href="#cb111-154" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=False }</span>
-<span id="cb111-155"><a href="#cb111-155" aria-hidden="true" tabindex="-1"></a>The figure is commonly referred to as a DAG, or a directed acyclic graph. A good introduction to DAGs can be accessed here:</span>
-<span id="cb111-156"><a href="#cb111-156" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb111-157"><a href="#cb111-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-158"><a href="#cb111-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE,echo=FALSE }</span></span>
-<span id="cb111-159"><a href="#cb111-159" aria-hidden="true" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">"https://youtu.be/PiekvYYHeVQ?list=PLliBbGBc5nn2QcZ-5K_S08wJR6kt2EK1R"</span>)</span>
-<span id="cb111-160"><a href="#cb111-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-161"><a href="#cb111-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-162"><a href="#cb111-162" aria-hidden="true" tabindex="-1"></a>To check if there is confounding, we need to determine if the confounder meets three criteria:</span>
-<span id="cb111-163"><a href="#cb111-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-164"><a href="#cb111-164" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is associated with the outcome</span>
-<span id="cb111-165"><a href="#cb111-165" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is associated with treatment assignment</span>
-<span id="cb111-166"><a href="#cb111-166" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is not on the causal pathway between the exposure and outcome</span>
-<span id="cb111-167"><a href="#cb111-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-168"><a href="#cb111-168" aria-hidden="true" tabindex="-1"></a>As the figure at the top of this document shows, the confounding variable is associated with the outcome and also with the 'treatment.' </span>
-<span id="cb111-169"><a href="#cb111-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-170"><a href="#cb111-170" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
-<span id="cb111-171"><a href="#cb111-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-172"><a href="#cb111-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pay Attention</span></span>
-<span id="cb111-173"><a href="#cb111-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-174"><a href="#cb111-174" aria-hidden="true" tabindex="-1"></a>Note: by definition, the confounding variable is not on the causal pathway between the exposure and outcome. </span>
-<span id="cb111-175"><a href="#cb111-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-176"><a href="#cb111-176" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb111-177"><a href="#cb111-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-178"><a href="#cb111-178" aria-hidden="true" tabindex="-1"></a>For the first criterion, we look at the association between magnesium uptake and birth outcome.</span>
-<span id="cb111-179"><a href="#cb111-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-180"><a href="#cb111-180" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Preliminaries: Wrangling the data for proper format</span></span>
-<span id="cb111-183"><a href="#cb111-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-184"><a href="#cb111-184" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb111-185"><a href="#cb111-185" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
-<span id="cb111-186"><a href="#cb111-186" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Older"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">80</span>,</span>
-<span id="cb111-187"><a href="#cb111-187" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">920</span>,</span>
-<span id="cb111-188"><a href="#cb111-188" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">90</span>,</span>
-<span id="cb111-189"><a href="#cb111-189" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">410</span>,</span>
-<span id="cb111-190"><a href="#cb111-190" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">80</span>,</span>
-<span id="cb111-191"><a href="#cb111-191" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">3920</span>,</span>
-<span id="cb111-192"><a href="#cb111-192" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">540</span>,</span>
-<span id="cb111-193"><a href="#cb111-193" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">3960</span></span>
-<span id="cb111-194"><a href="#cb111-194" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-195"><a href="#cb111-195" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb111-196"><a href="#cb111-196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
-<span id="cb111-197"><a href="#cb111-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-198"><a href="#cb111-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-199"><a href="#cb111-199" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. Is age associated with birth outcomes? (i.e., is the counfounder associated with the outcome?)</span></span>
-<span id="cb111-200"><a href="#cb111-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-201"><a href="#cb111-201" aria-hidden="true" tabindex="-1"></a>This amounts to asking whether younger women had lower risk/odds of preterm birth compared to older women.</span>
-<span id="cb111-202"><a href="#cb111-202" aria-hidden="true" tabindex="-1"></a>To test this hypothesis, I need a 2x2 table with age of women on the row and birth outcome as column</span>
-<span id="cb111-203"><a href="#cb111-203" aria-hidden="true" tabindex="-1"></a>We can use the <span class="in">`margin.table()`</span> to collapse any table over an 'omitted' dimension, like this:</span>
-<span id="cb111-204"><a href="#cb111-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-108"><a href="#cb111-108" aria-hidden="true" tabindex="-1"></a>Note: please refer to the appendix in the paper referenced above to understand where these numbers came from!</span>
+<span id="cb111-109"><a href="#cb111-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-112"><a href="#cb111-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-113"><a href="#cb111-113" aria-hidden="true" tabindex="-1"></a>all_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-114"><a href="#cb111-114" aria-hidden="true" tabindex="-1"></a>all_risk</span>
+<span id="cb111-115"><a href="#cb111-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-116"><a href="#cb111-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-117"><a href="#cb111-117" aria-hidden="true" tabindex="-1"></a>The risk ratio is .254 with a 95% confidence interval (.214, .301) which is significant at the $p &lt; .001$ level. Therefore, women in the exposure group 2, (i.e., who took magnesium), had a 74.6% lower risk $(1 - .254) \times 100$ of preterm birth compared to women who did not take magnesium.</span>
+<span id="cb111-120"><a href="#cb111-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-121"><a href="#cb111-121" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Percent change in the risk:"</span>, (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(all_risk<span class="sc">$</span>measure)[<span class="dv">2</span>])<span class="sc">*</span><span class="dv">100</span>, <span class="at">sep =</span> <span class="st">" "</span>))</span>
+<span id="cb111-122"><a href="#cb111-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-125"><a href="#cb111-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-126"><a href="#cb111-126" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-127"><a href="#cb111-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-128"><a href="#cb111-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-129"><a href="#cb111-129" aria-hidden="true" tabindex="-1"></a>The odds ratio is 0.229 with a 95% CI of 0.192, 0.274. The p-value is &lt;0.001. Therefore women who took magnesium had a 78% lower odds of a preterm birth compared to women who did not take magnesium.</span>
+<span id="cb111-130"><a href="#cb111-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-131"><a href="#cb111-131" aria-hidden="true" tabindex="-1"></a>Given that you have taken Biostatistics I and II, you should be able to calculate the risk ratio, risk difference (RD), and odds ratio by hand. Here is how to do that in R:</span>
+<span id="cb111-132"><a href="#cb111-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-135"><a href="#cb111-135" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-136"><a href="#cb111-136" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb111-137"><a href="#cb111-137" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">160</span> <span class="sc">/</span> (<span class="dv">160</span><span class="sc">+</span><span class="dv">4840</span>)</span>
+<span id="cb111-138"><a href="#cb111-138" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">630</span><span class="sc">/</span>(<span class="dv">630</span><span class="sc">+</span><span class="dv">4370</span>)</span>
+<span id="cb111-139"><a href="#cb111-139" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
+<span id="cb111-140"><a href="#cb111-140" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
+<span id="cb111-141"><a href="#cb111-141" aria-hidden="true" tabindex="-1"></a>(<span class="at">OR =</span> (<span class="dv">4370</span><span class="sc">*</span><span class="dv">160</span>)<span class="sc">/</span>(<span class="dv">4840</span><span class="sc">*</span><span class="dv">630</span>))</span>
+<span id="cb111-142"><a href="#cb111-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-145"><a href="#cb111-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-146"><a href="#cb111-146" aria-hidden="true" tabindex="-1"></a><span class="do">### OR check</span></span>
+<span id="cb111-147"><a href="#cb111-147" aria-hidden="true" tabindex="-1"></a>num <span class="ot">&lt;-</span> <span class="dv">4370</span> <span class="sc">*</span> <span class="dv">160</span></span>
+<span id="cb111-148"><a href="#cb111-148" aria-hidden="true" tabindex="-1"></a>denom <span class="ot">&lt;-</span> <span class="dv">4840</span> <span class="sc">*</span> <span class="dv">630</span></span>
+<span id="cb111-149"><a href="#cb111-149" aria-hidden="true" tabindex="-1"></a>OR <span class="ot">&lt;-</span> num <span class="sc">/</span> denom</span>
+<span id="cb111-150"><a href="#cb111-150" aria-hidden="true" tabindex="-1"></a>OR</span>
+<span id="cb111-151"><a href="#cb111-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-152"><a href="#cb111-152" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confounding</span></span>
+<span id="cb111-153"><a href="#cb111-153" aria-hidden="true" tabindex="-1"></a>Let’s suppose we are interested in  whether maternal age is a confounder on the magnesium to birth outcome pathway in the figure.</span>
+<span id="cb111-154"><a href="#cb111-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-155"><a href="#cb111-155" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=False }</span>
+<span id="cb111-156"><a href="#cb111-156" aria-hidden="true" tabindex="-1"></a>The figure is commonly referred to as a DAG, or a directed acyclic graph. A good introduction to DAGs can be accessed here:</span>
+<span id="cb111-157"><a href="#cb111-157" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb111-158"><a href="#cb111-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-159"><a href="#cb111-159" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = TRUE,echo=FALSE }</span></span>
+<span id="cb111-160"><a href="#cb111-160" aria-hidden="true" tabindex="-1"></a><span class="fu">embed_url</span>(<span class="st">"https://youtu.be/PiekvYYHeVQ?list=PLliBbGBc5nn2QcZ-5K_S08wJR6kt2EK1R"</span>)</span>
+<span id="cb111-161"><a href="#cb111-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-162"><a href="#cb111-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-163"><a href="#cb111-163" aria-hidden="true" tabindex="-1"></a>To check if there is confounding, we need to determine if the confounder meets three criteria:</span>
+<span id="cb111-164"><a href="#cb111-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-165"><a href="#cb111-165" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is associated with the outcome</span>
+<span id="cb111-166"><a href="#cb111-166" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is associated with treatment assignment</span>
+<span id="cb111-167"><a href="#cb111-167" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The confounding variable is not on the causal pathway between the exposure and outcome</span>
+<span id="cb111-168"><a href="#cb111-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-169"><a href="#cb111-169" aria-hidden="true" tabindex="-1"></a>As the figure at the top of this document shows, the confounding variable is associated with the outcome and also with the 'treatment.' </span>
+<span id="cb111-170"><a href="#cb111-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-171"><a href="#cb111-171" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
+<span id="cb111-172"><a href="#cb111-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-173"><a href="#cb111-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pay Attention</span></span>
+<span id="cb111-174"><a href="#cb111-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-175"><a href="#cb111-175" aria-hidden="true" tabindex="-1"></a>Note: by definition, the confounding variable is not on the causal pathway between the exposure and outcome. </span>
+<span id="cb111-176"><a href="#cb111-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-177"><a href="#cb111-177" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb111-178"><a href="#cb111-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-179"><a href="#cb111-179" aria-hidden="true" tabindex="-1"></a>For the first criterion, we look at the association between magnesium uptake and birth outcome.</span>
+<span id="cb111-180"><a href="#cb111-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-181"><a href="#cb111-181" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Preliminaries: Wrangling the data for proper format</span></span>
+<span id="cb111-184"><a href="#cb111-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-185"><a href="#cb111-185" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb111-186"><a href="#cb111-186" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb111-187"><a href="#cb111-187" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Older"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">80</span>,</span>
+<span id="cb111-188"><a href="#cb111-188" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">920</span>,</span>
+<span id="cb111-189"><a href="#cb111-189" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">90</span>,</span>
+<span id="cb111-190"><a href="#cb111-190" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">410</span>,</span>
+<span id="cb111-191"><a href="#cb111-191" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">80</span>,</span>
+<span id="cb111-192"><a href="#cb111-192" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">3920</span>,</span>
+<span id="cb111-193"><a href="#cb111-193" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">540</span>,</span>
+<span id="cb111-194"><a href="#cb111-194" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">3960</span></span>
+<span id="cb111-195"><a href="#cb111-195" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-196"><a href="#cb111-196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb111-197"><a href="#cb111-197" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb111-198"><a href="#cb111-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-199"><a href="#cb111-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-200"><a href="#cb111-200" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. Is age associated with birth outcomes? (i.e., is the counfounder associated with the outcome?)</span></span>
+<span id="cb111-201"><a href="#cb111-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-202"><a href="#cb111-202" aria-hidden="true" tabindex="-1"></a>This amounts to asking whether younger women had lower risk/odds of preterm birth compared to older women.</span>
+<span id="cb111-203"><a href="#cb111-203" aria-hidden="true" tabindex="-1"></a>To test this hypothesis, I need a 2x2 table with age of women on the row and birth outcome as column</span>
+<span id="cb111-204"><a href="#cb111-204" aria-hidden="true" tabindex="-1"></a>We can use the <span class="in">`margin.table()`</span> to collapse any table over an 'omitted' dimension, like this:</span>
 <span id="cb111-205"><a href="#cb111-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-208"><a href="#cb111-208" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-209"><a href="#cb111-209" aria-hidden="true" tabindex="-1"></a>(table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl))</span>
-<span id="cb111-210"><a href="#cb111-210" aria-hidden="true" tabindex="-1"></a>age_outcome <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>))</span>
-<span id="cb111-211"><a href="#cb111-211" aria-hidden="true" tabindex="-1"></a>(age_outcome_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">620</span>,  <span class="dv">170</span> , <span class="dv">7880</span>, <span class="dv">1330</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span>
-<span id="cb111-212"><a href="#cb111-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-215"><a href="#cb111-215" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-216"><a href="#cb111-216" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>)) <span class="co">#I already formatted it so exposure = 1 and outcome = 1 is in the first cell</span></span>
-<span id="cb111-217"><a href="#cb111-217" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-218"><a href="#cb111-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-206"><a href="#cb111-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-209"><a href="#cb111-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-210"><a href="#cb111-210" aria-hidden="true" tabindex="-1"></a>(table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl))</span>
+<span id="cb111-211"><a href="#cb111-211" aria-hidden="true" tabindex="-1"></a>age_outcome <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>))</span>
+<span id="cb111-212"><a href="#cb111-212" aria-hidden="true" tabindex="-1"></a>(age_outcome_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">620</span>,  <span class="dv">170</span> , <span class="dv">7880</span>, <span class="dv">1330</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span>
+<span id="cb111-213"><a href="#cb111-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-216"><a href="#cb111-216" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-217"><a href="#cb111-217" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>)) <span class="co">#I already formatted it so exposure = 1 and outcome = 1 is in the first cell</span></span>
+<span id="cb111-218"><a href="#cb111-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb111-219"><a href="#cb111-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-222"><a href="#cb111-222" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-223"><a href="#cb111-223" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
-<span id="cb111-224"><a href="#cb111-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-225"><a href="#cb111-225" aria-hidden="true" tabindex="-1"></a>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.</span>
-<span id="cb111-226"><a href="#cb111-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-220"><a href="#cb111-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-223"><a href="#cb111-223" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-224"><a href="#cb111-224" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_outcome_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-225"><a href="#cb111-225" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-226"><a href="#cb111-226" aria-hidden="true" tabindex="-1"></a>Younger women had a lower risk (RR = 0.956; 95% CI: 0.9383823, 0.9748244) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.</span>
 <span id="cb111-227"><a href="#cb111-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-228"><a href="#cb111-228" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. Is age associated with magnesium uptake? (i.e., is the counfounder associated with the exposure?)</span></span>
-<span id="cb111-229"><a href="#cb111-229" aria-hidden="true" tabindex="-1"></a>This amounts to asking whether younger women had lower risk/odds of magnesium uptake compared to older women?</span>
+<span id="cb111-228"><a href="#cb111-228" aria-hidden="true" tabindex="-1"></a>:::{.callout-note} </span>
+<span id="cb111-229"><a href="#cb111-229" aria-hidden="true" tabindex="-1"></a>Test your understanding: the null hypothesis is that the odds are equal. What is $H_0$. If I know that 1 is in the confidence interval, do I reject or not reject the $H_0$?</span>
 <span id="cb111-230"><a href="#cb111-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-233"><a href="#cb111-233" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-234"><a href="#cb111-234" aria-hidden="true" tabindex="-1"></a>(age_exposure <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)))</span>
-<span id="cb111-235"><a href="#cb111-235" aria-hidden="true" tabindex="-1"></a>(age_exposure_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4500</span>, <span class="dv">1000</span>, <span class="dv">500</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span>
-<span id="cb111-236"><a href="#cb111-236" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-239"><a href="#cb111-239" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-240"><a href="#cb111-240" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
-<span id="cb111-241"><a href="#cb111-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-244"><a href="#cb111-244" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-245"><a href="#cb111-245" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
-<span id="cb111-246"><a href="#cb111-246" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-247"><a href="#cb111-247" aria-hidden="true" tabindex="-1"></a>Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.</span>
-<span id="cb111-248"><a href="#cb111-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-249"><a href="#cb111-249" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. Age is not on the causal pathway between exposure and outcome?  </span></span>
-<span id="cb111-250"><a href="#cb111-250" aria-hidden="true" tabindex="-1"></a>This is satisfied here.</span>
-<span id="cb111-251"><a href="#cb111-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-252"><a href="#cb111-252" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stratification</span></span>
-<span id="cb111-253"><a href="#cb111-253" aria-hidden="true" tabindex="-1"></a>We can check to see how much of an impact age has on the exposure to birth outcome using stratification. We do this by stratifying the groups into those who are younger and older. Then we evaluate the exposure to outcome relationship.</span>
-<span id="cb111-254"><a href="#cb111-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-255"><a href="#cb111-255" aria-hidden="true" tabindex="-1"></a>Here is an illustration of how age is stratified into two strata (age = older mothers v younger mothers).</span>
-<span id="cb111-256"><a href="#cb111-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-257"><a href="#cb111-257" aria-hidden="true" tabindex="-1"></a>The association between magnesium status and age can be estimated for each strata.</span>
-<span id="cb111-258"><a href="#cb111-258" aria-hidden="true" tabindex="-1"></a>Table3 &lt;- matrix(c(150, 50, 1600, 800), nrow = 2, ncol = 2)</span>
-<span id="cb111-259"><a href="#cb111-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-262"><a href="#cb111-262" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-263"><a href="#cb111-263" aria-hidden="true" tabindex="-1"></a>older</span>
-<span id="cb111-264"><a href="#cb111-264" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-265"><a href="#cb111-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-268"><a href="#cb111-268" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-269"><a href="#cb111-269" aria-hidden="true" tabindex="-1"></a>older_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
-<span id="cb111-270"><a href="#cb111-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-271"><a href="#cb111-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-274"><a href="#cb111-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-275"><a href="#cb111-275" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(older_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
-<span id="cb111-276"><a href="#cb111-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-277"><a href="#cb111-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-280"><a href="#cb111-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-281"><a href="#cb111-281" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
-<span id="cb111-282"><a href="#cb111-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-283"><a href="#cb111-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-286"><a href="#cb111-286" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-287"><a href="#cb111-287" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
-<span id="cb111-288"><a href="#cb111-288" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">920</span>)</span>
-<span id="cb111-289"><a href="#cb111-289" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">90</span><span class="sc">/</span>(<span class="dv">90</span><span class="sc">+</span><span class="dv">410</span>)</span>
-<span id="cb111-290"><a href="#cb111-290" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
-<span id="cb111-291"><a href="#cb111-291" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
-<span id="cb111-292"><a href="#cb111-292" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-293"><a href="#cb111-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-294"><a href="#cb111-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-297"><a href="#cb111-297" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-298"><a href="#cb111-298" aria-hidden="true" tabindex="-1"></a>younger</span>
-<span id="cb111-299"><a href="#cb111-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-300"><a href="#cb111-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-301"><a href="#cb111-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-304"><a href="#cb111-304" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-305"><a href="#cb111-305" aria-hidden="true" tabindex="-1"></a>younger_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
-<span id="cb111-306"><a href="#cb111-306" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-307"><a href="#cb111-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-308"><a href="#cb111-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-311"><a href="#cb111-311" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-312"><a href="#cb111-312" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
-<span id="cb111-313"><a href="#cb111-313" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-316"><a href="#cb111-316" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-317"><a href="#cb111-317" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(younger_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
-<span id="cb111-318"><a href="#cb111-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-321"><a href="#cb111-321" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-322"><a href="#cb111-322" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
-<span id="cb111-323"><a href="#cb111-323" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">3920</span>)</span>
-<span id="cb111-324"><a href="#cb111-324" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">540</span><span class="sc">/</span>(<span class="dv">540</span><span class="sc">+</span><span class="dv">3960</span>)</span>
-<span id="cb111-325"><a href="#cb111-325" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
-<span id="cb111-326"><a href="#cb111-326" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
-<span id="cb111-327"><a href="#cb111-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-330"><a href="#cb111-330" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-331"><a href="#cb111-331" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb111-332"><a href="#cb111-332" aria-hidden="true" tabindex="-1"></a>  <span class="at">mag =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Mag"</span>, <span class="dv">5000</span>), <span class="fu">rep</span>(<span class="st">"NoMag"</span>, <span class="dv">5000</span>)),</span>
-<span id="cb111-333"><a href="#cb111-333" aria-hidden="true" tabindex="-1"></a>  <span class="at">birth =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Preterm"</span>, <span class="dv">160</span>), <span class="fu">rep</span>(<span class="st">"Term"</span>, <span class="dv">4840</span> ), <span class="fu">rep</span>(<span class="st">"Preterm"</span>, <span class="dv">630</span>), <span class="fu">rep</span>(<span class="st">"Term"</span>, <span class="dv">4370</span>))</span>
-<span id="cb111-334"><a href="#cb111-334" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-335"><a href="#cb111-335" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>()</span>
-<span id="cb111-336"><a href="#cb111-336" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-339"><a href="#cb111-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-340"><a href="#cb111-340" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df)</span>
-<span id="cb111-341"><a href="#cb111-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-344"><a href="#cb111-344" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-345"><a href="#cb111-345" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic example</span></span>
-<span id="cb111-346"><a href="#cb111-346" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
-<span id="cb111-347"><a href="#cb111-347" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mag, birth)</span>
-<span id="cb111-348"><a href="#cb111-348" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-351"><a href="#cb111-351" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-352"><a href="#cb111-352" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb111-353"><a href="#cb111-353" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
-<span id="cb111-354"><a href="#cb111-354" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">160</span>,</span>
-<span id="cb111-355"><a href="#cb111-355" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">4840</span>,</span>
-<span id="cb111-356"><a href="#cb111-356" aria-hidden="true" tabindex="-1"></a>  <span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">630</span>,</span>
-<span id="cb111-357"><a href="#cb111-357" aria-hidden="true" tabindex="-1"></a>  <span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">4370</span></span>
-<span id="cb111-358"><a href="#cb111-358" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-359"><a href="#cb111-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="cb111-360"><a href="#cb111-360" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-361"><a href="#cb111-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-364"><a href="#cb111-364" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-365"><a href="#cb111-365" aria-hidden="true" tabindex="-1"></a><span class="co"># Add margins</span></span>
-<span id="cb111-366"><a href="#cb111-366" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="sc">%&gt;%</span> </span>
-<span id="cb111-367"><a href="#cb111-367" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(E) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-368"><a href="#cb111-368" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">E_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-369"><a href="#cb111-369" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(O) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-370"><a href="#cb111-370" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">O_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-371"><a href="#cb111-371" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb111-372"><a href="#cb111-372" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">margin_total =</span> <span class="fu">sum</span>(count))</span>
-<span id="cb111-373"><a href="#cb111-373" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-374"><a href="#cb111-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-377"><a href="#cb111-377" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-378"><a href="#cb111-378" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(total,<span class="at">prop.t=</span><span class="cn">FALSE</span>,<span class="at">prop.r=</span><span class="cn">FALSE</span>,<span class="at">expected=</span><span class="cn">TRUE</span>)</span>
-<span id="cb111-379"><a href="#cb111-379" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-382"><a href="#cb111-382" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-383"><a href="#cb111-383" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio</span>(total, <span class="at">log=</span><span class="cn">FALSE</span>)</span>
-<span id="cb111-384"><a href="#cb111-384" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-387"><a href="#cb111-387" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-388"><a href="#cb111-388" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb111-389"><a href="#cb111-389" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
-<span id="cb111-390"><a href="#cb111-390" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Older"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">120</span>,</span>
-<span id="cb111-391"><a href="#cb111-391" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">1380</span>,</span>
-<span id="cb111-392"><a href="#cb111-392" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">270</span>,</span>
-<span id="cb111-393"><a href="#cb111-393" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">1230</span>,</span>
-<span id="cb111-394"><a href="#cb111-394" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">170</span>,</span>
-<span id="cb111-395"><a href="#cb111-395" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">8330</span>,</span>
-<span id="cb111-396"><a href="#cb111-396" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">1020</span>,</span>
-<span id="cb111-397"><a href="#cb111-397" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">7480</span></span>
-<span id="cb111-398"><a href="#cb111-398" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
-<span id="cb111-399"><a href="#cb111-399" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb111-400"><a href="#cb111-400" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
-<span id="cb111-401"><a href="#cb111-401" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-402"><a href="#cb111-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-403"><a href="#cb111-403" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stratified</span></span>
-<span id="cb111-404"><a href="#cb111-404" aria-hidden="true" tabindex="-1"></a>In R,for*2×2×K* tables,the <span class="in">`mantelhaen.test()`</span> function provides a test of overall association R pooled over strata, <span class="in">`woolf_test()`</span> tests for equal odds ratios across strata (similar to the Breslow-Day test),<span class="in">` andCMHtest()`</span> in <span class="in">`vcdExtrapackage`</span> gives generalized <span class="in">`CMHtests`</span> like those provided by the cmh option in SAS. Tests of similar hypotheses can be carried out using loglinear models(<span class="in">`loglm`</span>())and generalized linear models(<span class="in">`glm`</span>()),described in later lectures.Here is one simple way to test for association of Admit and Gender separately for each department. <span class="in">`oddsratio`</span>() calculates and tests the (log) odds ratio for each stratum.</span>
-<span id="cb111-405"><a href="#cb111-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-406"><a href="#cb111-406" aria-hidden="true" tabindex="-1"></a>First, we need to convert the frequency table into a contingency table using the base R xtabs() function. The <span class="co">[</span><span class="ot">Cookbook for R</span><span class="co">](http://www.cookbook-r.com/Manipulating_data/Converting_between_data_frames_and_contingency_tables/)</span> shows an example of this. </span>
-<span id="cb111-409"><a href="#cb111-409" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-410"><a href="#cb111-410" aria-hidden="true" tabindex="-1"></a>table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl)</span>
-<span id="cb111-411"><a href="#cb111-411" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-412"><a href="#cb111-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-415"><a href="#cb111-415" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-416"><a href="#cb111-416" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (A <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
-<span id="cb111-417"><a href="#cb111-417" aria-hidden="true" tabindex="-1"></a>  { </span>
-<span id="cb111-418"><a href="#cb111-418" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">chisq.test</span>(table_obj[,,A]))</span>
-<span id="cb111-419"><a href="#cb111-419" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb111-420"><a href="#cb111-420" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-423"><a href="#cb111-423" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-424"><a href="#cb111-424" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">oddsratio</span>(table_obj))</span>
-<span id="cb111-425"><a href="#cb111-425" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-426"><a href="#cb111-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-429"><a href="#cb111-429" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-430"><a href="#cb111-430" aria-hidden="true" tabindex="-1"></a><span class="fu">mantelhaen.test</span>(table_obj) </span>
-<span id="cb111-431"><a href="#cb111-431" aria-hidden="true" tabindex="-1"></a><span class="fu">woolf_test</span>(table_obj) </span>
-<span id="cb111-432"><a href="#cb111-432" aria-hidden="true" tabindex="-1"></a><span class="fu">CMHtest</span>(table_obj)</span>
-<span id="cb111-433"><a href="#cb111-433" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-434"><a href="#cb111-434" aria-hidden="true" tabindex="-1"></a>In R,margin.table() collapses a table over dimensions not listed in the second argument.</span>
-<span id="cb111-437"><a href="#cb111-437" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-438"><a href="#cb111-438" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(<span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))) <span class="co">#two-wayplot </span></span>
-<span id="cb111-439"><a href="#cb111-439" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(table_obj,<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)) <span class="co">#three-wayplot </span></span>
-<span id="cb111-440"><a href="#cb111-440" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-441"><a href="#cb111-441" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-444"><a href="#cb111-444" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-445"><a href="#cb111-445" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>A <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>A)</span>
-<span id="cb111-446"><a href="#cb111-446" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>E <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>E)</span>
-<span id="cb111-447"><a href="#cb111-447" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>O <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>O)</span>
-<span id="cb111-448"><a href="#cb111-448" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-449"><a href="#cb111-449" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"Preterm"</span> <span class="sc">~</span> A, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
-<span id="cb111-450"><a href="#cb111-450" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">test=</span><span class="st">"Wald"</span>) </span>
-<span id="cb111-451"><a href="#cb111-451" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1)</span>
-<span id="cb111-452"><a href="#cb111-452" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-453"><a href="#cb111-453" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modeling linear risk</span></span>
-<span id="cb111-454"><a href="#cb111-454" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-455"><a href="#cb111-455" aria-hidden="true" tabindex="-1"></a>Add the main effect of magnesium</span>
-<span id="cb111-458"><a href="#cb111-458" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-459"><a href="#cb111-459" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"Preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
-<span id="cb111-460"><a href="#cb111-460" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod2=</span><span class="st">"Wald"</span>) </span>
-<span id="cb111-461"><a href="#cb111-461" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod2)</span>
-<span id="cb111-462"><a href="#cb111-462" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-463"><a href="#cb111-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-466"><a href="#cb111-466" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-467"><a href="#cb111-467" aria-hidden="true" tabindex="-1"></a>eff2 <span class="ot">&lt;-</span> <span class="fu">allEffects</span>(mod2) </span>
-<span id="cb111-468"><a href="#cb111-468" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(eff2, <span class="at">xlab =</span> <span class="st">"AGE"</span>, <span class="at">ylab =</span> <span class="st">"Outcome == Preterm"</span>) </span>
-<span id="cb111-469"><a href="#cb111-469" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">effect</span>(<span class="st">"A:E"</span>, mod2),<span class="at">multiline=</span><span class="cn">TRUE</span>, <span class="at">xlab =</span> <span class="st">"AGE"</span>, <span class="at">ylab =</span> <span class="st">"Outcome == Preterm"</span>)</span>
-<span id="cb111-470"><a href="#cb111-470" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-471"><a href="#cb111-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-474"><a href="#cb111-474" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-475"><a href="#cb111-475" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"Preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E <span class="sc">+</span> A<span class="sc">*</span>E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
-<span id="cb111-476"><a href="#cb111-476" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod3=</span><span class="st">"Wald"</span>) </span>
-<span id="cb111-477"><a href="#cb111-477" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod3)</span>
-<span id="cb111-478"><a href="#cb111-478" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb111-479"><a href="#cb111-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb111-482"><a href="#cb111-482" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb111-483"><a href="#cb111-483" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(mod1, mod2, mod3, </span>
-<span id="cb111-484"><a href="#cb111-484" aria-hidden="true" tabindex="-1"></a>          <span class="at">collapse.ci =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb111-485"><a href="#cb111-485" aria-hidden="true" tabindex="-1"></a>          <span class="at">show.r2 =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb111-486"><a href="#cb111-486" aria-hidden="true" tabindex="-1"></a>          <span class="at">pred.labels =</span> <span class="fu">c</span>(<span class="st">"Intercept"</span>, <span class="st">"Age (Young v Older)"</span>, <span class="st">"Magnesium (No v Yes)"</span>, <span class="st">"Age x Mag (Younger, No)"</span>),</span>
-<span id="cb111-487"><a href="#cb111-487" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dv.labels =</span> <span class="fu">c</span>(<span class="st">"Age only"</span>, <span class="st">"Age and Magnesium"</span>, <span class="st">"Model w/Interaction term"</span>),</span>
-<span id="cb111-488"><a href="#cb111-488" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.pred =</span> <span class="st">"Coeffcient"</span>,</span>
-<span id="cb111-489"><a href="#cb111-489" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.ci =</span> <span class="st">"Conf. Int (95%)"</span>,</span>
-<span id="cb111-490"><a href="#cb111-490" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.p =</span> <span class="st">"P-Value"</span></span>
-<span id="cb111-491"><a href="#cb111-491" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb111-492"><a href="#cb111-492" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-231"><a href="#cb111-231" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb111-232"><a href="#cb111-232" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. Is age associated with magnesium uptake? (i.e., is the counfounder associated with the exposure?)</span></span>
+<span id="cb111-233"><a href="#cb111-233" aria-hidden="true" tabindex="-1"></a>This amounts to asking whether younger women had lower risk/odds of magnesium uptake compared to older women?</span>
+<span id="cb111-234"><a href="#cb111-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-237"><a href="#cb111-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-238"><a href="#cb111-238" aria-hidden="true" tabindex="-1"></a>(age_exposure <span class="ot">&lt;-</span> <span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)))</span>
+<span id="cb111-239"><a href="#cb111-239" aria-hidden="true" tabindex="-1"></a>(age_exposure_tbl<span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4500</span>, <span class="dv">1000</span>, <span class="dv">500</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol=</span> <span class="dv">2</span>))</span>
+<span id="cb111-240"><a href="#cb111-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-243"><a href="#cb111-243" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-244"><a href="#cb111-244" aria-hidden="true" tabindex="-1"></a><span class="fu">riskratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-245"><a href="#cb111-245" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-248"><a href="#cb111-248" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-249"><a href="#cb111-249" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(age_exposure_tbl, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span>
+<span id="cb111-250"><a href="#cb111-250" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-251"><a href="#cb111-251" aria-hidden="true" tabindex="-1"></a>Younger women had a lower risk (RR = 0.500; 95% CI: 0.4524463 0.5525517) and odds (OR = 0.444; 95% CI: 0.3959679 0.4988558) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.</span>
+<span id="cb111-252"><a href="#cb111-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-253"><a href="#cb111-253" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. Age is not on the causal pathway between exposure and outcome?  </span></span>
+<span id="cb111-254"><a href="#cb111-254" aria-hidden="true" tabindex="-1"></a>This is satisfied here.</span>
+<span id="cb111-255"><a href="#cb111-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-256"><a href="#cb111-256" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stratification</span></span>
+<span id="cb111-257"><a href="#cb111-257" aria-hidden="true" tabindex="-1"></a>We can check to see how much of an impact age has on the exposure to birth outcome using stratification. We do this by stratifying the groups into those who are younger and older. Then we evaluate the exposure to outcome relationship.</span>
+<span id="cb111-258"><a href="#cb111-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-259"><a href="#cb111-259" aria-hidden="true" tabindex="-1"></a>Here is an illustration of how age is stratified into two strata (age = older mothers v younger mothers).</span>
+<span id="cb111-260"><a href="#cb111-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-261"><a href="#cb111-261" aria-hidden="true" tabindex="-1"></a>The association between magnesium status and age can be estimated for each strata.</span>
+<span id="cb111-262"><a href="#cb111-262" aria-hidden="true" tabindex="-1"></a>Table3 &lt;- matrix(c(150, 50, 1600, 800), nrow = 2, ncol = 2)</span>
+<span id="cb111-263"><a href="#cb111-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-266"><a href="#cb111-266" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-267"><a href="#cb111-267" aria-hidden="true" tabindex="-1"></a>older</span>
+<span id="cb111-268"><a href="#cb111-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-269"><a href="#cb111-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-272"><a href="#cb111-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-273"><a href="#cb111-273" aria-hidden="true" tabindex="-1"></a>older_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-274"><a href="#cb111-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-275"><a href="#cb111-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-278"><a href="#cb111-278" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-279"><a href="#cb111-279" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(older_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
+<span id="cb111-280"><a href="#cb111-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-281"><a href="#cb111-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-284"><a href="#cb111-284" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-285"><a href="#cb111-285" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(older, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-286"><a href="#cb111-286" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-287"><a href="#cb111-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-290"><a href="#cb111-290" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-291"><a href="#cb111-291" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb111-292"><a href="#cb111-292" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">920</span>)</span>
+<span id="cb111-293"><a href="#cb111-293" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">90</span><span class="sc">/</span>(<span class="dv">90</span><span class="sc">+</span><span class="dv">410</span>)</span>
+<span id="cb111-294"><a href="#cb111-294" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
+<span id="cb111-295"><a href="#cb111-295" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
+<span id="cb111-296"><a href="#cb111-296" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-297"><a href="#cb111-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-298"><a href="#cb111-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-301"><a href="#cb111-301" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-302"><a href="#cb111-302" aria-hidden="true" tabindex="-1"></a>younger</span>
+<span id="cb111-303"><a href="#cb111-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-304"><a href="#cb111-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-305"><a href="#cb111-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-308"><a href="#cb111-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-309"><a href="#cb111-309" aria-hidden="true" tabindex="-1"></a>younger_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-310"><a href="#cb111-310" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-311"><a href="#cb111-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-312"><a href="#cb111-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-315"><a href="#cb111-315" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-316"><a href="#cb111-316" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(younger, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>))</span>
+<span id="cb111-317"><a href="#cb111-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-320"><a href="#cb111-320" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-321"><a href="#cb111-321" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The risk is"</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fu">unlist</span>(younger_risk<span class="sc">$</span>measure)[<span class="dv">2</span>], <span class="at">sep =</span> <span class="st">" "</span>))</span>
+<span id="cb111-322"><a href="#cb111-322" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-325"><a href="#cb111-325" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-326"><a href="#cb111-326" aria-hidden="true" tabindex="-1"></a><span class="do">### RR check</span></span>
+<span id="cb111-327"><a href="#cb111-327" aria-hidden="true" tabindex="-1"></a>risk1 <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">/</span> (<span class="dv">80</span><span class="sc">+</span><span class="dv">3920</span>)</span>
+<span id="cb111-328"><a href="#cb111-328" aria-hidden="true" tabindex="-1"></a>risk2 <span class="ot">&lt;-</span> <span class="dv">540</span><span class="sc">/</span>(<span class="dv">540</span><span class="sc">+</span><span class="dv">3960</span>)</span>
+<span id="cb111-329"><a href="#cb111-329" aria-hidden="true" tabindex="-1"></a>(RR <span class="ot">&lt;-</span> risk2<span class="sc">/</span>risk1)</span>
+<span id="cb111-330"><a href="#cb111-330" aria-hidden="true" tabindex="-1"></a>(<span class="at">RD =</span> risk2 <span class="sc">-</span> risk1)</span>
+<span id="cb111-331"><a href="#cb111-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-334"><a href="#cb111-334" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-335"><a href="#cb111-335" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb111-336"><a href="#cb111-336" aria-hidden="true" tabindex="-1"></a>  <span class="at">mag =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Mag"</span>, <span class="dv">5000</span>), <span class="fu">rep</span>(<span class="st">"NoMag"</span>, <span class="dv">5000</span>)),</span>
+<span id="cb111-337"><a href="#cb111-337" aria-hidden="true" tabindex="-1"></a>  <span class="at">birth =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Preterm"</span>, <span class="dv">160</span>), <span class="fu">rep</span>(<span class="st">"Term"</span>, <span class="dv">4840</span> ), <span class="fu">rep</span>(<span class="st">"Preterm"</span>, <span class="dv">630</span>), <span class="fu">rep</span>(<span class="st">"Term"</span>, <span class="dv">4370</span>))</span>
+<span id="cb111-338"><a href="#cb111-338" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-339"><a href="#cb111-339" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>()</span>
+<span id="cb111-340"><a href="#cb111-340" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-343"><a href="#cb111-343" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-344"><a href="#cb111-344" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df)</span>
+<span id="cb111-345"><a href="#cb111-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-348"><a href="#cb111-348" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-349"><a href="#cb111-349" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic example</span></span>
+<span id="cb111-350"><a href="#cb111-350" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb111-351"><a href="#cb111-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(mag, birth)</span>
+<span id="cb111-352"><a href="#cb111-352" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-355"><a href="#cb111-355" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-356"><a href="#cb111-356" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb111-357"><a href="#cb111-357" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb111-358"><a href="#cb111-358" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">160</span>,</span>
+<span id="cb111-359"><a href="#cb111-359" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">4840</span>,</span>
+<span id="cb111-360"><a href="#cb111-360" aria-hidden="true" tabindex="-1"></a>  <span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">630</span>,</span>
+<span id="cb111-361"><a href="#cb111-361" aria-hidden="true" tabindex="-1"></a>  <span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">4370</span></span>
+<span id="cb111-362"><a href="#cb111-362" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-363"><a href="#cb111-363" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="cb111-364"><a href="#cb111-364" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-365"><a href="#cb111-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-368"><a href="#cb111-368" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-369"><a href="#cb111-369" aria-hidden="true" tabindex="-1"></a><span class="co"># Add margins</span></span>
+<span id="cb111-370"><a href="#cb111-370" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb111-371"><a href="#cb111-371" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(E) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-372"><a href="#cb111-372" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">E_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-373"><a href="#cb111-373" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(O) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-374"><a href="#cb111-374" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">O_totals =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-375"><a href="#cb111-375" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb111-376"><a href="#cb111-376" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">margin_total =</span> <span class="fu">sum</span>(count))</span>
+<span id="cb111-377"><a href="#cb111-377" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-378"><a href="#cb111-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-381"><a href="#cb111-381" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-382"><a href="#cb111-382" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(total,<span class="at">prop.t=</span><span class="cn">FALSE</span>,<span class="at">prop.r=</span><span class="cn">FALSE</span>,<span class="at">expected=</span><span class="cn">TRUE</span>)</span>
+<span id="cb111-383"><a href="#cb111-383" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-386"><a href="#cb111-386" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-387"><a href="#cb111-387" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio</span>(total, <span class="at">log=</span><span class="cn">FALSE</span>)</span>
+<span id="cb111-388"><a href="#cb111-388" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-391"><a href="#cb111-391" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-392"><a href="#cb111-392" aria-hidden="true" tabindex="-1"></a>freq_tbl <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb111-393"><a href="#cb111-393" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>A, <span class="sc">~</span>E, <span class="sc">~</span>O, <span class="sc">~</span>count,</span>
+<span id="cb111-394"><a href="#cb111-394" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Older"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">120</span>,</span>
+<span id="cb111-395"><a href="#cb111-395" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">1380</span>,</span>
+<span id="cb111-396"><a href="#cb111-396" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">270</span>,</span>
+<span id="cb111-397"><a href="#cb111-397" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Older"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">1230</span>,</span>
+<span id="cb111-398"><a href="#cb111-398" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>, <span class="st">"Mag"</span>, <span class="st">"Preterm"</span>, <span class="dv">170</span>,</span>
+<span id="cb111-399"><a href="#cb111-399" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"Mag"</span>, <span class="st">"Term"</span>,  <span class="dv">8330</span>,</span>
+<span id="cb111-400"><a href="#cb111-400" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Preterm"</span>, <span class="dv">1020</span>,</span>
+<span id="cb111-401"><a href="#cb111-401" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Younger"</span>,<span class="st">"NoMag"</span>,  <span class="st">"Term"</span>,  <span class="dv">7480</span></span>
+<span id="cb111-402"><a href="#cb111-402" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb111-403"><a href="#cb111-403" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb111-404"><a href="#cb111-404" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb111-405"><a href="#cb111-405" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-406"><a href="#cb111-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-407"><a href="#cb111-407" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stratified</span></span>
+<span id="cb111-408"><a href="#cb111-408" aria-hidden="true" tabindex="-1"></a>In R,for*2×2×K* tables,the <span class="in">`mantelhaen.test()`</span> function provides a test of overall association R pooled over strata, <span class="in">`woolf_test()`</span> tests for equal odds ratios across strata (similar to the Breslow-Day test),<span class="in">` andCMHtest()`</span> in <span class="in">`vcdExtrapackage`</span> gives generalized <span class="in">`CMHtests`</span> like those provided by the cmh option in SAS. Tests of similar hypotheses can be carried out using loglinear models(<span class="in">`loglm`</span>())and generalized linear models(<span class="in">`glm`</span>()),described in later lectures.Here is one simple way to test for association of Admit and Gender separately for each department. <span class="in">`oddsratio`</span>() calculates and tests the (log) odds ratio for each stratum.</span>
+<span id="cb111-409"><a href="#cb111-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-410"><a href="#cb111-410" aria-hidden="true" tabindex="-1"></a>First, we need to convert the frequency table into a contingency table using the base R xtabs() function. The <span class="co">[</span><span class="ot">Cookbook for R</span><span class="co">](http://www.cookbook-r.com/Manipulating_data/Converting_between_data_frames_and_contingency_tables/)</span> shows an example of this. </span>
+<span id="cb111-413"><a href="#cb111-413" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-414"><a href="#cb111-414" aria-hidden="true" tabindex="-1"></a>table_obj <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(count <span class="sc">~</span> E  <span class="sc">+</span> O <span class="sc">+</span> A, <span class="at">data=</span>freq_tbl)</span>
+<span id="cb111-415"><a href="#cb111-415" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-416"><a href="#cb111-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-419"><a href="#cb111-419" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-420"><a href="#cb111-420" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (A <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb111-421"><a href="#cb111-421" aria-hidden="true" tabindex="-1"></a>  { </span>
+<span id="cb111-422"><a href="#cb111-422" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">chisq.test</span>(table_obj[,,A]))</span>
+<span id="cb111-423"><a href="#cb111-423" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb111-424"><a href="#cb111-424" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-427"><a href="#cb111-427" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-428"><a href="#cb111-428" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">oddsratio</span>(table_obj))</span>
+<span id="cb111-429"><a href="#cb111-429" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-430"><a href="#cb111-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-433"><a href="#cb111-433" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-434"><a href="#cb111-434" aria-hidden="true" tabindex="-1"></a><span class="fu">mantelhaen.test</span>(table_obj) </span>
+<span id="cb111-435"><a href="#cb111-435" aria-hidden="true" tabindex="-1"></a><span class="fu">woolf_test</span>(table_obj) </span>
+<span id="cb111-436"><a href="#cb111-436" aria-hidden="true" tabindex="-1"></a><span class="fu">CMHtest</span>(table_obj)</span>
+<span id="cb111-437"><a href="#cb111-437" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-438"><a href="#cb111-438" aria-hidden="true" tabindex="-1"></a>In R,margin.table() collapses a table over dimensions not listed in the second argument.</span>
+<span id="cb111-441"><a href="#cb111-441" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-442"><a href="#cb111-442" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(<span class="fu">margin.table</span>(table_obj,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))) <span class="co">#two-wayplot </span></span>
+<span id="cb111-443"><a href="#cb111-443" aria-hidden="true" tabindex="-1"></a><span class="fu">fourfold</span>(table_obj,<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)) <span class="co">#three-wayplot </span></span>
+<span id="cb111-444"><a href="#cb111-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-445"><a href="#cb111-445" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-448"><a href="#cb111-448" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-449"><a href="#cb111-449" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>A <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>A)</span>
+<span id="cb111-450"><a href="#cb111-450" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>E <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>E)</span>
+<span id="cb111-451"><a href="#cb111-451" aria-hidden="true" tabindex="-1"></a>freq_tbl<span class="sc">$</span>O <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(freq_tbl<span class="sc">$</span>O)</span>
+<span id="cb111-452"><a href="#cb111-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-453"><a href="#cb111-453" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"Preterm"</span> <span class="sc">~</span> A, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb111-454"><a href="#cb111-454" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">test=</span><span class="st">"Wald"</span>) </span>
+<span id="cb111-455"><a href="#cb111-455" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1)</span>
+<span id="cb111-456"><a href="#cb111-456" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-457"><a href="#cb111-457" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modeling linear risk</span></span>
+<span id="cb111-458"><a href="#cb111-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-459"><a href="#cb111-459" aria-hidden="true" tabindex="-1"></a>Add the main effect of magnesium</span>
+<span id="cb111-462"><a href="#cb111-462" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-463"><a href="#cb111-463" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"Preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb111-464"><a href="#cb111-464" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod2=</span><span class="st">"Wald"</span>) </span>
+<span id="cb111-465"><a href="#cb111-465" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod2)</span>
+<span id="cb111-466"><a href="#cb111-466" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-467"><a href="#cb111-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-470"><a href="#cb111-470" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-471"><a href="#cb111-471" aria-hidden="true" tabindex="-1"></a>eff2 <span class="ot">&lt;-</span> <span class="fu">allEffects</span>(mod2) </span>
+<span id="cb111-472"><a href="#cb111-472" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(eff2, <span class="at">xlab =</span> <span class="st">"AGE"</span>, <span class="at">ylab =</span> <span class="st">"Outcome == Preterm"</span>) </span>
+<span id="cb111-473"><a href="#cb111-473" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">effect</span>(<span class="st">"A:E"</span>, mod2),<span class="at">multiline=</span><span class="cn">TRUE</span>, <span class="at">xlab =</span> <span class="st">"AGE"</span>, <span class="at">ylab =</span> <span class="st">"Outcome == Preterm"</span>)</span>
+<span id="cb111-474"><a href="#cb111-474" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-475"><a href="#cb111-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-478"><a href="#cb111-478" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-479"><a href="#cb111-479" aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span><span class="fu">glm</span>(O <span class="sc">==</span> <span class="st">"Preterm"</span> <span class="sc">~</span> A <span class="sc">+</span> E <span class="sc">+</span> A<span class="sc">*</span>E, <span class="at">data=</span> freq_tbl, <span class="at">weights=</span>freq_tbl<span class="sc">$</span>count,<span class="at">family=</span><span class="st">"binomial"</span>) </span>
+<span id="cb111-480"><a href="#cb111-480" aria-hidden="true" tabindex="-1"></a><span class="fu">Anova</span>(mod1,<span class="at">mod3=</span><span class="st">"Wald"</span>) </span>
+<span id="cb111-481"><a href="#cb111-481" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod3)</span>
+<span id="cb111-482"><a href="#cb111-482" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb111-483"><a href="#cb111-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-486"><a href="#cb111-486" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb111-487"><a href="#cb111-487" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(mod1, mod2, mod3, </span>
+<span id="cb111-488"><a href="#cb111-488" aria-hidden="true" tabindex="-1"></a>          <span class="at">collapse.ci =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb111-489"><a href="#cb111-489" aria-hidden="true" tabindex="-1"></a>          <span class="at">show.r2 =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb111-490"><a href="#cb111-490" aria-hidden="true" tabindex="-1"></a>          <span class="at">pred.labels =</span> <span class="fu">c</span>(<span class="st">"Intercept"</span>, <span class="st">"Age (Young v Older)"</span>, <span class="st">"Magnesium (No v Yes)"</span>, <span class="st">"Age x Mag (Younger, No)"</span>),</span>
+<span id="cb111-491"><a href="#cb111-491" aria-hidden="true" tabindex="-1"></a>                  <span class="at">dv.labels =</span> <span class="fu">c</span>(<span class="st">"Age only"</span>, <span class="st">"Age and Magnesium"</span>, <span class="st">"Model w/Interaction term"</span>),</span>
+<span id="cb111-492"><a href="#cb111-492" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.pred =</span> <span class="st">"Coeffcient"</span>,</span>
+<span id="cb111-493"><a href="#cb111-493" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.ci =</span> <span class="st">"Conf. Int (95%)"</span>,</span>
+<span id="cb111-494"><a href="#cb111-494" aria-hidden="true" tabindex="-1"></a>                  <span class="at">string.p =</span> <span class="st">"P-Value"</span></span>
+<span id="cb111-495"><a href="#cb111-495" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb111-496"><a href="#cb111-496" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
