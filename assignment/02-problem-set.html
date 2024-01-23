@@ -488,26 +488,26 @@ See ?effectsTheme for details.</code></pre>
 <section id="c.-compute-the-percent-change-in-the-risk-below" class="level4">
 <h4 class="anchored" data-anchor-id="c.-compute-the-percent-change-in-the-risk-below">C. Compute the percent change in the risk below</h4>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>(all_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>(all_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"both"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$data
           Outcome
-Predictor  Disease1 Disease2 Total
-  Exposed1       47      289   336
-  Exposed2      168     1275  1443
-  Total         215     1564  1779
+Predictor  Disease2 Disease1 Total
+  Exposed2     1275      168  1443
+  Exposed1      289       47   336
+  Total        1564      215  1779
 
 $measure
           risk ratio with 95% C.I.
 Predictor  estimate     lower    upper
-  Exposed1 1.000000        NA       NA
-  Exposed2 1.027272 0.9800954 1.076719
+  Exposed2 1.000000        NA       NA
+  Exposed1 1.201477 0.8893302 1.623186
 
 $p.value
           two-sided
 Predictor  midp.exact fisher.exact chi.square
-  Exposed1         NA           NA         NA
-  Exposed2  0.2388193    0.2285094  0.2348268
+  Exposed2         NA           NA         NA
+  Exposed1  0.2388193    0.2285094  0.2348268
 
 $correction
 [1] FALSE
