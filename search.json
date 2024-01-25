@@ -2462,5 +2462,138 @@
     "title": "Simple Mediation",
     "section": "The conceptual model",
     "text": "The conceptual model\nThe conceptual model that illustrates those relationships is provided below. For the simple mediation model, both conceptual and statistical diagrams are the same. NOTE that I changed the model number from 1 to 4, see the Hayes macro template I provided to you in the lecture.\n\n\n\n\n\n\nNote\n\n\n\nNote that by including the \\n between the space in the word “Sexual Abuse” I am telling R to mimic a hard carriage return so that the words appear on different lines.\n\n\n\n\nCode\nlabels=list(X=\"Sexual\\nAbuse\",M=\"PTSS\",Y=\"DELIN\")\n\n\nNotice I used the option rady to increase the y dimension of the box so that the words “Sex Abuse” will fit. Try running the code without the option to demonstrate the difference in output.\nNote m use of the package processR below.\n\n\nCode\nprocessR::pmacroModel(4,labels=labels, rady = 0.07)\n\n\n\n\n\n\n\nCode\nprocessR::statisticalDiagram(4,labels=labels, rady = 0.07)\n\n\n\n\n\nNote that we must remove missing values before the model will run. This is part of the ‘trial and error’ common in R programming.\nBelow is the same code we used before to mean center the variable for PTSS (tra1).\n\n\nCode\nmediation_example$tra1_mean &lt;- \n  mediation_example$tra1 - mean(mediation_example$tra1, na.rm = T)\n\n\nBelow is a quick plot using Base R to visualize the variables.\n\n\nCode\nplot(y=mediation_example$bcdel1, \n     x=mediation_example$tra1_mean,\n     xlab = \"PTSS\", ylab = \"DELINQ\")\n\n\n\n\n\n\n\nCode\ncor(mediation_example$tra1_mean, mediation_example$bcdel1)\n\n\n[1] 0.1356008\n\n\n\n\nCode\nresult &lt;- process(\n  data = mediation_example, \n  y = \"bcdel1\", \n  x = \"sexab\", \n  m = \"tra1\", \n  total = 1, \n  normal = 1, \n  model = 4, \n  seed = 31216)\n\n\n\n\n\nModel 4 Results\n\n\n\n\n\nModel 4 Effects"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html",
+    "href": "assignment/03-problem-set.html",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "For this assignment submit an Rmarkdown file and send it to my email with the subject “Problem Set 3” by Feb 1, 2024.\n\n\n\n\n\n\nNote\n\n\n\nHint: This assignment asks you to replicate my mediation analysis code by replacing the independent and mediator variables.\n\n\n\nlibrary(foreign)\nlibrary(dplyr)\nlibrary(processR)\n\nWe are still using the dataset we used in the moderation example for this assignment. However, we will test whether depressive symptoms (cidi1) mediates the association between post-traumatic stress symptoms (tra1) and delinquent behaviors (bcdel1).\n\n\n\n\n\n\nNote\n\n\n\nYou should have familiarity with the most common measures for psychological ‘disorders.’ For example, the CIDI questions (which stands for Composite International Diagnostic Interview) are here. The CIDI scale is meant to assess major depressive disorder by asking respondents the questions listed in the diagnostic assessment. We will talk about measurement next week, for now ask yourself whether you think this is a good question (E1, page 24): In the past 12 months, have you had a period of two weeks or longer when you felt sad or depressed or empty?\n\n\n\nsetwd(\"C:/Users/barboza-salerno.1/Downloads/\")\nsource(\"process.R\")\n\n\n********************* PROCESS for R Version 4.3.1 ********************* \n \n           Written by Andrew F. Hayes, Ph.D.  www.afhayes.com              \n   Documentation available in Hayes (2022). www.guilford.com/p/hayes3   \n \n*********************************************************************** \n \nPROCESS is now ready for use.\nCopyright 2020-2023 by Andrew F. Hayes ALL RIGHTS RESERVED\nWorkshop schedule at http://haskayne.ucalgary.ca/CCRAM\n \n\nmediation_example = tibble::as_tibble(read.spss(\"moderation.sav\", use.value.labels = F, to.data.frame = T))\n\nRemove missingness (na)\n\nmediation_example &lt;- mediation_example %&gt;% \n  dplyr::filter(!is.na(tra1) & !is.na(cidi1) & !is.na(bcdel1))\n\n\n\nThe conceptual model that illustrates those relationships is provided below. For the simple mediation model, both conceptual and statistical diagrams are the same. NOTE simple mediation is model 4, see the Hayes macro template I provided to you in the lecture.\n\nlabels=list(X=\"PTSS\",M=\"CIDI\",Y=\"DELIN\")\n\nNotice I used the option rady to increase the y dimension of the box so that the words will fit.\nNote the use of the package processR below.\n\n\n\n\nprocessR::pmacroModel(4,labels=labels, rady = 0.07)\n\n\n\n\n\n\n\n\n\n\n\n\nNote that we must remove missing values before the model will run. This is part of the ‘trial and error’ common in R programming. Whereas we removed missing values above, it is good practice to include the option na.rm = T anytime you are calculating the mean, standard deviation, or any other descriptive measure. If you do not include this option, and your variable has missing data, R will NOT calculate the statistic, leaving you sad and frustrated.\nBelow is the same code we used before to mean center the variable for PTSS (tra1).\n\nmediation_example$tra1_mean &lt;- \n  mediation_example$tra1 - mean(mediation_example$tra1, na.rm = T)\n\n\n\n\nBelow is a quick plot using Base R to visualize the variables.\n\n\n\n\nplot(y=mediation_example$bcdel1, \n     x=mediation_example$tra1_mean,\n     xlab = \"PTSS\", ylab = \"DELINQ\")\n\n\n\n\n\n\n\n\nplot(y=mediation_example$tra1_mean, \n     x=mediation_example$cidi1_mean,\n     xlab = \"PTSS\", ylab = \"CIDI\")\nabline(v = mean(mediation_example$tra1_mean), col = \"blue\", lwd = 4, lty = 4) \nabline(h = mean(mediation_example$cidi1_mean), col = \"blue\", lwd = 4, lty = 4) \n\n\n\n\n\n\n\n\n\n\nQuadrants\n\n\n\n\n\n\ncor(mediation_example$tra1_mean, mediation_example$cidi1_mean)\n\n[1] 0.5221195\n\ncor(mediation_example$bcdel1, mediation_example$cidi1_mean)\n\n[1] 0.2328237\n\n\n\n\n\n\n\n[1] 0.1236077\n\n\nHere is the result for the mediation model.\n\nresult &lt;- process(\n  data = mediation_example, \n  y = \"bcdel1\", \n  x = \"tra1\", \n  m = \"cidi1\", \n  total = 1, \n  normal = 1, \n  model = 4, \n  seed = 31216)\n\n\n\n\nModel 4 Results\n\n\n\n\n\nModel 4 Effects\n\n\n\n\n\nThe Total effect of X on Y: is the effect of …\nThe direct effect labeled Direct effect of X on Y: summarizes the effect of …\nThe indirect effect labeled Indirect effect(s) of X on Y: is the …"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#the-conceptual-model",
+    "href": "assignment/03-problem-set.html#the-conceptual-model",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "The conceptual model that illustrates those relationships is provided below. For the simple mediation model, both conceptual and statistical diagrams are the same. NOTE simple mediation is model 4, see the Hayes macro template I provided to you in the lecture.\n\nlabels=list(X=\"PTSS\",M=\"CIDI\",Y=\"DELIN\")\n\nNotice I used the option rady to increase the y dimension of the box so that the words will fit.\nNote the use of the package processR below."
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#a.-describe-the-conceptual-model",
+    "href": "assignment/03-problem-set.html#a.-describe-the-conceptual-model",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "processR::pmacroModel(4,labels=labels, rady = 0.07)"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#write-the-code-to-display-the-statistical-diagram-below",
+    "href": "assignment/03-problem-set.html#write-the-code-to-display-the-statistical-diagram-below",
+    "title": "Simple Mediation",
+    "section": "",
+    "text": "Note that we must remove missing values before the model will run. This is part of the ‘trial and error’ common in R programming. Whereas we removed missing values above, it is good practice to include the option na.rm = T anytime you are calculating the mean, standard deviation, or any other descriptive measure. If you do not include this option, and your variable has missing data, R will NOT calculate the statistic, leaving you sad and frustrated.\nBelow is the same code we used before to mean center the variable for PTSS (tra1). Write the code to mean center the cidi1 variable.\n\nmediation_example$tra1_mean &lt;- \n  mediation_example$tra1 - mean(mediation_example$tra1, na.rm = T)\n\nBelow is a quick plot using Base R to visualize the variables."
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#describe-the-relationship-between-the-two-variables-ptss-and-delinq",
+    "href": "assignment/03-problem-set.html#describe-the-relationship-between-the-two-variables-ptss-and-delinq",
+    "title": "Simple Mediation",
+    "section": "",
+    "text": "plot(y=mediation_example$bcdel1, \n     x=mediation_example$tra1_mean,\n     xlab = \"PTSS\", ylab = \"DELINQ\")"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#describe-the-relationship-between-the-two-variables-tra1-and-cidi1.",
+    "href": "assignment/03-problem-set.html#describe-the-relationship-between-the-two-variables-tra1-and-cidi1.",
+    "title": "Simple Mediation",
+    "section": "",
+    "text": "plot(y=mediation_example$tra1_mean, \n     x=mediation_example$cidi1_mean,\n     xlab = \"PTSS\", ylab = \"CIDI\")\nabline(v = mean(mediation_example$tra1_mean), col = \"blue\", lwd = 4, lty = 4) \nabline(h = mean(mediation_example$cidi1_mean), col = \"blue\", lwd = 4, lty = 4)"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant.",
+    "href": "assignment/03-problem-set.html#the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant.",
+    "title": "Simple Mediation",
+    "section": "",
+    "text": "Quadrants"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#below-is-the-code-that-returns-the-correlation-between-the-variables.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.",
+    "href": "assignment/03-problem-set.html#below-is-the-code-that-returns-the-correlation-between-the-variables.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.",
+    "title": "Simple Mediation",
+    "section": "",
+    "text": "cor(mediation_example$tra1_mean, mediation_example$cidi1_mean)\n\n[1] 0.5221195\n\ncor(mediation_example$bcdel1, mediation_example$cidi1_mean)\n\n[1] 0.2328237\n\n\n\n\n[1] 0.1236077\n\n\n\nresult &lt;- process(\n  data = mediation_example, \n  y = \"bcdel1\", \n  x = \"tra1\", \n  m = \"cidi1\", \n  total = 1, \n  normal = 1, \n  model = 4, \n  seed = 31216)\n\n\n\n\nModel 4 Results\n\n\n\n\n\nModel 4 Effects"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#does-depressive-symptoms-mediate-the-relationship-between-ptss-and-delinq-what-is-an-implication-that-follows-from-the-result",
+    "href": "assignment/03-problem-set.html#does-depressive-symptoms-mediate-the-relationship-between-ptss-and-delinq-what-is-an-implication-that-follows-from-the-result",
+    "title": "Simple Mediation",
+    "section": "Does depressive symptoms mediate the relationship between PTSS and DELINQ? What is an implication that follows from the result?",
+    "text": "Does depressive symptoms mediate the relationship between PTSS and DELINQ? What is an implication that follows from the result?"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#b.-write-the-code-to-display-the-statistical-diagram-below",
+    "href": "assignment/03-problem-set.html#b.-write-the-code-to-display-the-statistical-diagram-below",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Note that we must remove missing values before the model will run. This is part of the ‘trial and error’ common in R programming. Whereas we removed missing values above, it is good practice to include the option na.rm = T anytime you are calculating the mean, standard deviation, or any other descriptive measure. If you do not include this option, and your variable has missing data, R will NOT calculate the statistic, leaving you sad and frustrated.\nBelow is the same code we used before to mean center the variable for PTSS (tra1).\n\nmediation_example$tra1_mean &lt;- \n  mediation_example$tra1 - mean(mediation_example$tra1, na.rm = T)"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#c.-write-the-code-to-mean-center-the-cidi1-variable.",
+    "href": "assignment/03-problem-set.html#c.-write-the-code-to-mean-center-the-cidi1-variable.",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Below is a quick plot using Base R to visualize the variables."
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#d.-describe-the-relationship-between-the-two-variables-ptss-and-delinq",
+    "href": "assignment/03-problem-set.html#d.-describe-the-relationship-between-the-two-variables-ptss-and-delinq",
+    "title": "Simple Mediation",
+    "section": "",
+    "text": "plot(y=mediation_example$bcdel1, \n     x=mediation_example$tra1_mean,\n     xlab = \"PTSS\", ylab = \"DELINQ\")"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#e.-describe-the-relationship-between-the-two-variables-tra1-and-cidi1.",
+    "href": "assignment/03-problem-set.html#e.-describe-the-relationship-between-the-two-variables-tra1-and-cidi1.",
+    "title": "Simple Mediation",
+    "section": "",
+    "text": "plot(y=mediation_example$tra1_mean, \n     x=mediation_example$cidi1_mean,\n     xlab = \"PTSS\", ylab = \"CIDI\")\nabline(v = mean(mediation_example$tra1_mean), col = \"blue\", lwd = 4, lty = 4) \nabline(h = mean(mediation_example$cidi1_mean), col = \"blue\", lwd = 4, lty = 4)"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#f.-the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant.",
+    "href": "assignment/03-problem-set.html#f.-the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant.",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Quadrants"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#below-is-the-code-that-returns-the-correlation-between-the-variables.",
+    "href": "assignment/03-problem-set.html#below-is-the-code-that-returns-the-correlation-between-the-variables.",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "cor(mediation_example$tra1_mean, mediation_example$cidi1_mean)\n\n[1] 0.5221195\n\ncor(mediation_example$bcdel1, mediation_example$cidi1_mean)\n\n[1] 0.2328237"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#g.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.-the-result-is-below.",
+    "href": "assignment/03-problem-set.html#g.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.-the-result-is-below.",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "[1] 0.1236077\n\n\nHere is the result for the mediation model.\n\nresult &lt;- process(\n  data = mediation_example, \n  y = \"bcdel1\", \n  x = \"tra1\", \n  m = \"cidi1\", \n  total = 1, \n  normal = 1, \n  model = 4, \n  seed = 31216)\n\n\n\n\nModel 4 Results\n\n\n\n\n\nModel 4 Effects"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#h.-complete-the-sentences",
+    "href": "assignment/03-problem-set.html#h.-complete-the-sentences",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "The Total effect of X on Y: is the effect of …\nThe direct effect labeled Direct effect of X on Y: summarizes the effect of …\nThe indirect effect labeled Indirect effect(s) of X on Y: is the …"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#d.-describe-the-relationship-between-the-two-variables-ptss-tra1_mean-and-delinq",
+    "href": "assignment/03-problem-set.html#d.-describe-the-relationship-between-the-two-variables-ptss-tra1_mean-and-delinq",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "plot(y=mediation_example$bcdel1, \n     x=mediation_example$tra1_mean,\n     xlab = \"PTSS\", ylab = \"DELINQ\")"
+  },
+  {
+    "objectID": "assignment/03-problem-set.html#e.-describe-the-relationship-between-the-two-variables-tra1-tra1_mean-and-cidi1-cidi1_mean.",
+    "href": "assignment/03-problem-set.html#e.-describe-the-relationship-between-the-two-variables-tra1-tra1_mean-and-cidi1-cidi1_mean.",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "plot(y=mediation_example$tra1_mean, \n     x=mediation_example$cidi1_mean,\n     xlab = \"PTSS\", ylab = \"CIDI\")\nabline(v = mean(mediation_example$tra1_mean), col = \"blue\", lwd = 4, lty = 4) \nabline(h = mean(mediation_example$cidi1_mean), col = \"blue\", lwd = 4, lty = 4)"
   }
 ]

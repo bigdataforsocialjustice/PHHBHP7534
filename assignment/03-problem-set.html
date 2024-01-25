@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Use modern statistical and data scientific tools to measure causal effects and evaluate public policy">
+<meta name="author" content="Barboza-Salerno">
+<meta name="description" content="develop, read, critique, design, and conduct high-quality scientific research in public health">
 
-<title>Program Evaluation - Problem set 3</title>
+<title>Research Methods in Public Health - Problem Set 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -64,17 +99,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Program Evaluation - Problem set 3">
+<meta property="og:title" content="Research Methods in Public Health - Problem Set 3">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
-<meta property="og:site-name" content="Program Evaluation">
+<meta property="og:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
+<meta property="og:site-name" content="Research Methods in Public Health">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="640">
 <meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Program Evaluation - Problem set 3">
+<meta name="twitter:title" content="Research Methods in Public Health - Problem Set 3">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://evalsp23.classes.andrewheiss.com/files/social-image-sp23.png">
-<meta name="twitter:creator" content="@andrewheiss">
+<meta name="twitter:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
+<meta name="twitter:creator" content="@bigdataforsocialjustice">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="640">
 <meta name="twitter:image-width" content="1280">
@@ -88,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Program Evaluation</span>
+    <span class="navbar-title">Research Methods in Public Health</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -122,16 +157,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../news/index.html" rel="" target="">
- <span class="menu-text">News</span></a>
+    <a class="nav-link" href="../alerts/index.html" rel="" target="">
+ <span class="menu-text">Alerts</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://gsuevalsp2023.slack.com" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
+    <a class="nav-link" href="https://phhbhp7534.slack.com" rel="" target=""><i class="bi bi-slack" role="img" aria-label="Slack">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://rstudio.cloud" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
+    <a class="nav-link" href="https://posit.cloud/content/yours?sort=name_asc" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="RStudio.cloud">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -146,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignment/01-problem-set.html">Problem sets</a></li><li class="breadcrumb-item"><a href="../assignment/03-problem-set.html">Problem set 3</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignment/01-problem-set.html">Problem sets</a></li><li class="breadcrumb-item"><a href="../assignment/03-problem-set.html">Problem Set 3</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -178,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Other projects</span></a>
+ <span class="menu-text">Research assignments</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -186,10 +221,39 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignment/final-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final project</span></a>
+  <a href="../assignment/question.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Question</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resource/annotated.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Annotated Bibliography</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignment/litreview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literature Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resource/final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Phase I and II</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Other projects</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignment/weekly-check-in.html" class="sidebar-item-text sidebar-link">
@@ -200,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Problem sets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignment/01-problem-set.html" class="sidebar-item-text sidebar-link">
@@ -222,78 +286,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignment/03-problem-set.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Problem set 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/04-problem-set.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Problem set 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/05-problem-set.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Problem set 5</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/06-problem-set.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Problem set 6</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/07-problem-set.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Problem set 7</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/08-problem-set.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Problem set 8</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/09-problem-set.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Problem set 9</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Evaluation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/01-eval-background-theory.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Background and theory</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/02-eval-measurement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Measurement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/03-eval-dag.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Causal model</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/04-eval-threats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Threats to validity</span></a>
+ <span class="menu-text">Problem Set 3</span></a>
   </div>
 </li>
       </ul>
@@ -308,7 +301,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#problem-set-3" id="toc-problem-set-3" class="nav-link active" data-scroll-target="#problem-set-3">Problem set 3</a>
+  <ul class="collapse">
+  <li><a href="#the-conceptual-model" id="toc-the-conceptual-model" class="nav-link" data-scroll-target="#the-conceptual-model">The conceptual model</a></li>
+  <li><a href="#a.-describe-the-conceptual-model" id="toc-a.-describe-the-conceptual-model" class="nav-link" data-scroll-target="#a.-describe-the-conceptual-model">A. Describe the conceptual model</a></li>
+  <li><a href="#b.-write-the-code-to-display-the-statistical-diagram-below" id="toc-b.-write-the-code-to-display-the-statistical-diagram-below" class="nav-link" data-scroll-target="#b.-write-the-code-to-display-the-statistical-diagram-below">B. Write the code to display the statistical diagram below</a></li>
+  <li><a href="#c.-write-the-code-to-mean-center-the-cidi1-variable." id="toc-c.-write-the-code-to-mean-center-the-cidi1-variable." class="nav-link" data-scroll-target="#c.-write-the-code-to-mean-center-the-cidi1-variable.">C. Write the code to mean center the <code>cidi1</code> variable.</a></li>
+  <li><a href="#d.-describe-the-relationship-between-the-two-variables-ptss-tra1_mean-and-delinq" id="toc-d.-describe-the-relationship-between-the-two-variables-ptss-tra1_mean-and-delinq" class="nav-link" data-scroll-target="#d.-describe-the-relationship-between-the-two-variables-ptss-tra1_mean-and-delinq">D. Describe the relationship between the two variables PTSS (tra1_mean) and DELINQ</a></li>
+  <li><a href="#e.-describe-the-relationship-between-the-two-variables-tra1-tra1_mean-and-cidi1-cidi1_mean." id="toc-e.-describe-the-relationship-between-the-two-variables-tra1-tra1_mean-and-cidi1-cidi1_mean." class="nav-link" data-scroll-target="#e.-describe-the-relationship-between-the-two-variables-tra1-tra1_mean-and-cidi1-cidi1_mean.">E. Describe the relationship between the two variables, TRA1 (tra1_mean) and CIDI1 (cidi1_mean).</a></li>
+  <li><a href="#f.-the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant." id="toc-f.-the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant." class="nav-link" data-scroll-target="#f.-the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant.">F. The above figure has four quadrants that can be labeled as shown below. Describe each of the quadrants and think of an implication of being in each quadrant.</a></li>
+  <li><a href="#below-is-the-code-that-returns-the-correlation-between-the-variables." id="toc-below-is-the-code-that-returns-the-correlation-between-the-variables." class="nav-link" data-scroll-target="#below-is-the-code-that-returns-the-correlation-between-the-variables.">Below is the code that returns the correlation between the variables.</a></li>
+  <li><a href="#g.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.-the-result-is-below." id="toc-g.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.-the-result-is-below." class="nav-link" data-scroll-target="#g.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.-the-result-is-below.">G. Write the code to return the correlation between tra1_mean and bcdel1. The result is below.</a></li>
+  <li><a href="#h.-complete-the-sentences" id="toc-h.-complete-the-sentences" class="nav-link" data-scroll-target="#h.-complete-the-sentences">H. Complete the sentences</a></li>
+  <li><a href="#i.-verify-that-the-a-path-multiplied-by-the-b-path-is-equal-to-the-mediation-effect." id="toc-i.-verify-that-the-a-path-multiplied-by-the-b-path-is-equal-to-the-mediation-effect." class="nav-link" data-scroll-target="#i.-verify-that-the-a-path-multiplied-by-the-b-path-is-equal-to-the-mediation-effect.">I. Verify that the a path multiplied by the b path is equal to the mediation effect.</a></li>
+  <li><a href="#j.-the-proportion-of-the-total-effect-ptss-effect-on-delinq-that-is-mediated-by-depressive-symptoms-is-defined-as-the-ratio-of-the-indirect-to-the-total-effect.-what-proportion-of-the-total-effect-is-mediated-by-depressive-symptoms" id="toc-j.-the-proportion-of-the-total-effect-ptss-effect-on-delinq-that-is-mediated-by-depressive-symptoms-is-defined-as-the-ratio-of-the-indirect-to-the-total-effect.-what-proportion-of-the-total-effect-is-mediated-by-depressive-symptoms" class="nav-link" data-scroll-target="#j.-the-proportion-of-the-total-effect-ptss-effect-on-delinq-that-is-mediated-by-depressive-symptoms-is-defined-as-the-ratio-of-the-indirect-to-the-total-effect.-what-proportion-of-the-total-effect-is-mediated-by-depressive-symptoms">J. The proportion of the total effect (PTSS’ effect on DELINQ) that is mediated by depressive symptoms is defined as the ratio of the indirect to the total effect. What proportion of the total effect is mediated by depressive symptoms?</a></li>
+  <li><a href="#k.-do-depressive-symptoms-mediate-the-relationship-between-ptss-and-delinq-what-is-an-implication-that-follows-from-the-result" id="toc-k.-do-depressive-symptoms-mediate-the-relationship-between-ptss-and-delinq-what-is-an-implication-that-follows-from-the-result" class="nav-link" data-scroll-target="#k.-do-depressive-symptoms-mediate-the-relationship-between-ptss-and-delinq-what-is-an-implication-that-follows-from-the-result">K. Do depressive symptoms mediate the relationship between PTSS and DELINQ? What is an implication that follows from the result?</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul>
 </nav>
     </div>
@@ -316,13 +325,16 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">Problem set 3</h1>
+<h1 class="title display-7">Problem Set 3</h1>
 
 <div class="date-block bg-assignment text-white p-2">
-  <p class="date">Due by 11:59 PM on Thursday, March 2, 2023</p>
+  <p class="date">Due by 11:59 PM on Thursday, February 1, 2024</p>
 </div>
 </header>
 
+<section id="problem-set-3" class="level1">
+<h1>Problem set 3</h1>
+<p>For this assignment submit an Rmarkdown file and send it to my email with the subject “Problem Set 3” by Feb 1, 2024.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -333,51 +345,190 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>IMPORTANT</strong>: This looks like a lot of work, but again, it’s mostly copying/pasting chunks of code and changing things.</p>
+<p><strong>Hint:</strong> This assignment asks you to replicate my mediation analysis code by replacing the independent and mediator variables.</p>
 </div>
 </div>
-<p>For this problem set, you’ll practice analyzing RCTs and working with matching and inverse probability weighting. These two examples will be incredibly useful for you:</p>
-<ul>
-<li><a href="../example/rcts.html">RCTs</a></li>
-<li><a href="../example/matching-ipw.html">Matching and IPW</a></li>
-</ul>
-<p>You’ll be doing all your R work in R Markdown this time (and from now on). You can download a zipped file of a pre-made project here:</p>
-<ul>
-<li><a href="../projects/problem-set-3.zip"><i class="fa-solid fa-file-archive" aria-label="file-archive"></i> <code>problem-set-3.zip</code></a></li>
-</ul>
-<p>And as always, if you’re struggling, <em>please</em> talk to me. Work with classmates too (especially for this assignment!). Don’t suffer in silence!</p>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<ol type="1">
-<li><p>If you’re using R on your own computer, download this file, <a href="../resource/unzipping.html"><em>unzip it</em></a>, and double click on the file named <code>problem-set-3.Rproj</code>: <a href="../projects/problem-set-3.zip"><i class="fa-solid fa-file-archive" aria-label="file-archive"></i> <code>problem-set-3.zip</code></a></p>
-<p>You’ll need to make sure you have these packages installed on your computer: <code>tidyverse</code>, <code>MatchIt</code>, <code>modelsummary</code>, and <code>patchwork</code>. If you try to load one of those packages with <code>library(tidyverse)</code> or <code>library(MatchIt)</code>, etc., and R gives an error that the package is missing, use the “Packages” panel in RStudio to install it.</p>
-<p>(Alternatively, you can open the project named “Problem Set 3” on RStudio.cloud and complete the assignment in your browser without needing to install anything. If you don’t have access to the class RStudio.cloud account, <em>please let me know as soon as possible</em>. <a href="https://rstudio.cloud/spaces/269500/content/4357649">This link should take you to the project</a>—if it doesn’t, log in and look for the project named “Problem Set 3.”)</p></li>
-<li><p>Rename the R Markdown file named <code>your-name_problem-set-3.Rmd</code> to something that matches your name and open it in RStudio.</p></li>
-<li><p>Complete the tasks given in the R Markdown file. There are questions <strong>marked in bold</strong> (e.g.&nbsp;<code>**What is the ATE?**</code>). Your job is to answer those questions. You don’t need to put your answers in bold, and you can remove the question text if you want.</p>
-<p>Fill out code in the empty chunks provided (you can definitely copy, paste, and adapt from other code in the document or <a href="../example/rcts.html">the example page on RCTs</a> and <a href="../example/matching-ipw.html">the example page on matching and IPW</a>—don’t try to write everything from scratch!).</p>
-<p>You’ll need to insert your own code chunks. Rather than typing them by hand (that’s tedious!), use the “Insert” button at the top of the editing window, or press <kbd>⌥</kbd> + <kbd>⌘</kbd> + <kbd>I</kbd> on macOS, or <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>I</kbd> on Windows.</p>
-<div class="cell" data-layout-align="center">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(processR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We are still using the dataset we used in the <a href="example/moderation.qmd">moderation example</a> for this assignment. However, we will test whether depressive symptoms (cidi1) mediates the association between post-traumatic stress symptoms (tra1) and delinquent behaviors (bcdel1).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You should have familiarity with the most common measures for psychological ‘disorders.’ For example, the CIDI questions (which stands for Composite International Diagnostic Interview) are <a href="https://www.cdc.gov/nchs/data/nhanes/cidi_quex.pdf">here</a>. The CIDI scale is meant to assess major depressive disorder by asking respondents the questions listed in the diagnostic assessment. We will talk about measurement next week, for now ask yourself whether you think this is a good question (E1, page 24): In the past 12 months, have you had a period of two weeks or longer when you felt sad or depressed or empty?</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/barboza-salerno.1/Downloads/"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"process.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+********************* PROCESS for R Version 4.3.1 ********************* 
+ 
+           Written by Andrew F. Hayes, Ph.D.  www.afhayes.com              
+   Documentation available in Hayes (2022). www.guilford.com/p/hayes3   
+ 
+*********************************************************************** 
+ 
+PROCESS is now ready for use.
+Copyright 2020-2023 by Andrew F. Hayes ALL RIGHTS RESERVED
+Workshop schedule at http://haskayne.ucalgary.ca/CCRAM
+ </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mediation_example <span class="ot">=</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(<span class="fu">read.spss</span>(<span class="st">"moderation.sav"</span>, <span class="at">use.value.labels =</span> F, <span class="at">to.data.frame =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Remove missingness (na)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mediation_example <span class="ot">&lt;-</span> mediation_example <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(tra1) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(cidi1) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(bcdel1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="the-conceptual-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-conceptual-model">The conceptual model</h2>
+<p>The conceptual model that illustrates those relationships is provided below. For the simple mediation model, both conceptual and statistical diagrams are the same. <strong>NOTE</strong> simple mediation is model 4, see the Hayes macro template I provided to you in the lecture.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>labels<span class="ot">=</span><span class="fu">list</span>(<span class="at">X=</span><span class="st">"PTSS"</span>,<span class="at">M=</span><span class="st">"CIDI"</span>,<span class="at">Y=</span><span class="st">"DELIN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Notice I used the option <code>rady</code> to increase the y dimension of the box so that the words will fit.</p>
+<p>Note the use of the package <code>processR</code> below.</p>
+</section>
+<section id="a.-describe-the-conceptual-model" class="level2">
+<h2 class="anchored" data-anchor-id="a.-describe-the-conceptual-model">A. Describe the conceptual model</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>processR<span class="sc">::</span><span class="fu">pmacroModel</span>(<span class="dv">4</span>,<span class="at">labels=</span>labels, <span class="at">rady =</span> <span class="fl">0.07</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
+<p><img src="03-problem-set_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="b.-write-the-code-to-display-the-statistical-diagram-below" class="level2">
+<h2 class="anchored" data-anchor-id="b.-write-the-code-to-display-the-statistical-diagram-below">B. Write the code to display the statistical diagram below</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="03-problem-set_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Note that we must remove missing values before the model will run. This is part of the ‘trial and error’ common in R programming. Whereas we removed missing values above, it is <strong>good practice</strong> to include the option <code>na.rm = T</code> <strong>anytime you are calculating the mean, standard deviation, or any other descriptive measure.</strong> If you do not include this option, and your variable has missing data, R will NOT calculate the statistic, leaving you sad and frustrated.</p>
+<p>Below is the same code we used before to mean center the variable for PTSS (tra1).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mediation_example<span class="sc">$</span>tra1_mean <span class="ot">&lt;-</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  mediation_example<span class="sc">$</span>tra1 <span class="sc">-</span> <span class="fu">mean</span>(mediation_example<span class="sc">$</span>tra1, <span class="at">na.rm =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="c.-write-the-code-to-mean-center-the-cidi1-variable." class="level2">
+<h2 class="anchored" data-anchor-id="c.-write-the-code-to-mean-center-the-cidi1-variable.">C. Write the code to mean center the <code>cidi1</code> variable.</h2>
+<p>Below is a quick plot using <code>Base R</code> to visualize the variables.</p>
+</section>
+<section id="d.-describe-the-relationship-between-the-two-variables-ptss-tra1_mean-and-delinq" class="level2">
+<h2 class="anchored" data-anchor-id="d.-describe-the-relationship-between-the-two-variables-ptss-tra1_mean-and-delinq">D. Describe the relationship between the two variables PTSS (tra1_mean) and DELINQ</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y=</span>mediation_example<span class="sc">$</span>bcdel1, </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">x=</span>mediation_example<span class="sc">$</span>tra1_mean,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"PTSS"</span>, <span class="at">ylab =</span> <span class="st">"DELINQ"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="03-problem-set_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="e.-describe-the-relationship-between-the-two-variables-tra1-tra1_mean-and-cidi1-cidi1_mean." class="level2">
+<h2 class="anchored" data-anchor-id="e.-describe-the-relationship-between-the-two-variables-tra1-tra1_mean-and-cidi1-cidi1_mean.">E. Describe the relationship between the two variables, TRA1 (tra1_mean) and CIDI1 (cidi1_mean).</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y=</span>mediation_example<span class="sc">$</span>tra1_mean, </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">x=</span>mediation_example<span class="sc">$</span>cidi1_mean,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"PTSS"</span>, <span class="at">ylab =</span> <span class="st">"CIDI"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">mean</span>(mediation_example<span class="sc">$</span>tra1_mean), <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">4</span>, <span class="at">lty =</span> <span class="dv">4</span>) </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="fu">mean</span>(mediation_example<span class="sc">$</span>cidi1_mean), <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">4</span>, <span class="at">lty =</span> <span class="dv">4</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="03-problem-set_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="f.-the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant." class="level2">
+<h2 class="anchored" data-anchor-id="f.-the-above-figure-has-four-quadrants-that-can-be-labeled-as-shown-below.-describe-each-of-the-quadrants-and-think-of-an-implication-of-being-in-each-quadrant.">F. The above figure has four quadrants that can be labeled as shown below. Describe each of the quadrants and think of an implication of being in each quadrant.</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../../../files/img/assignments/insert-chunk-button.png" class="img-fluid figure-img" style="width:19.0%"></p>
+<p><img src="../slides/img/01/quads.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Quadrants</figcaption>
 </figure>
 </div>
+</section>
+<section id="below-is-the-code-that-returns-the-correlation-between-the-variables." class="level2">
+<h2 class="anchored" data-anchor-id="below-is-the-code-that-returns-the-correlation-between-the-variables.">Below is the code that returns the correlation between the variables.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(mediation_example<span class="sc">$</span>tra1_mean, mediation_example<span class="sc">$</span>cidi1_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5221195</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(mediation_example<span class="sc">$</span>bcdel1, mediation_example<span class="sc">$</span>cidi1_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2328237</code></pre>
 </div>
 </div>
-<p>Remember that you can run an entire chunk by clicking on the green play arrow in the top right corner of the chunk. You can also run lines of code line-by-line if you place your cursor on some R code and press <kbd>⌘</kbd> + <kbd>enter</kbd> (for macOS users) or <kbd>ctrl</kbd> + <kbd>enter</kbd> (for Windows users).</p>
-<p>Make sure you run each chunk sequentially. If you run a chunk in the middle of the document without running previous ones, it might not work, since previous chunks might do things that later chunks depend on.</p></li>
-<li><p>When you’re all done, click on the “Knit” button at the top of the editing window and create a Word or PDF version (if you’ve <a href="../resource/install.html#install-tinytex">installed <strong>tinytex</strong></a>) of your document. Upload that file to iCollege. <strong>Do not upload a knitted HTML file</strong> (they don’t on iCollege).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+</section>
+<section id="g.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.-the-result-is-below." class="level2">
+<h2 class="anchored" data-anchor-id="g.-write-the-code-to-return-the-correlation-between-tra1_mean-and-bcdel1.-the-result-is-below.">G. Write the code to return the correlation between tra1_mean and bcdel1. The result is below.</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1236077</code></pre>
+</div>
+</div>
+<p>Here is the result for the mediation model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">process</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mediation_example, </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="st">"bcdel1"</span>, </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="st">"tra1"</span>, </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">m =</span> <span class="st">"cidi1"</span>, </span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">total =</span> <span class="dv">1</span>, </span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">normal =</span> <span class="dv">1</span>, </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="dv">4</span>, </span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">seed =</span> <span class="dv">31216</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../../../files/img/assignments/knit-button.png" class="img-fluid figure-img" style="width:30.0%"></p>
+<p><img src="../slides/img/01/ps3med.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Model 4 Results</figcaption>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../slides/img/01/ps3effects.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Model 4 Effects</figcaption>
+</figure>
 </div>
-</div></li>
-</ol>
+</section>
+<section id="h.-complete-the-sentences" class="level2">
+<h2 class="anchored" data-anchor-id="h.-complete-the-sentences">H. Complete the sentences</h2>
+<p>The <code>Total effect of X on Y:</code> is the effect of …</p>
+<p>The direct effect labeled <code>Direct effect of X on Y:</code> summarizes the effect of …</p>
+<p>The indirect effect labeled <code>Indirect effect(s) of X on Y:</code> is the …</p>
+</section>
+<section id="i.-verify-that-the-a-path-multiplied-by-the-b-path-is-equal-to-the-mediation-effect." class="level2">
+<h2 class="anchored" data-anchor-id="i.-verify-that-the-a-path-multiplied-by-the-b-path-is-equal-to-the-mediation-effect.">I. Verify that the a path multiplied by the b path is equal to the mediation effect.</h2>
+</section>
+<section id="j.-the-proportion-of-the-total-effect-ptss-effect-on-delinq-that-is-mediated-by-depressive-symptoms-is-defined-as-the-ratio-of-the-indirect-to-the-total-effect.-what-proportion-of-the-total-effect-is-mediated-by-depressive-symptoms" class="level2">
+<h2 class="anchored" data-anchor-id="j.-the-proportion-of-the-total-effect-ptss-effect-on-delinq-that-is-mediated-by-depressive-symptoms-is-defined-as-the-ratio-of-the-indirect-to-the-total-effect.-what-proportion-of-the-total-effect-is-mediated-by-depressive-symptoms">J. The proportion of the total effect (PTSS’ effect on DELINQ) that is mediated by depressive symptoms is defined as the ratio of the indirect to the total effect. What proportion of the total effect is mediated by depressive symptoms?</h2>
+</section>
+<section id="k.-do-depressive-symptoms-mediate-the-relationship-between-ptss-and-delinq-what-is-an-implication-that-follows-from-the-result" class="level2">
+<h2 class="anchored" data-anchor-id="k.-do-depressive-symptoms-mediate-the-relationship-between-ptss-and-delinq-what-is-an-implication-that-follows-from-the-result">K. Do depressive symptoms mediate the relationship between PTSS and DELINQ? What is an implication that follows from the result?</h2>
+</section>
+</section>
+<section id="additional-resources" class="level1">
+<h1>Additional Resources</h1>
+<ul>
+<li>MacKinnon, D. P. (2008). Introduction to statistical mediation analysis. New York, NY: Lawrence Erlbaum Associates.</li>
+<li>Revelle, W. (2017) How to use the psych package for mediation/moderation/regression analysis. <a href="http://personality-project.org/r/psych/HowTo/mediation.pdf">.pdf</a></li>
+<li>Rosseel, Y. (2012). Lavaan: An R package for structural equation modeling and more. Version 0.5–12 (BETA). Journal of statistical software, 48(2), 1-36. <a href="http://lavaan.ugent.be/">website</a></li>
+<li>Rucker, D. D., Preacher, K. J., Tormala, Z. L., &amp; Petty, R. E. (2011). Mediation analysis in social psychology: Current practices and new recommendations. Social and Personality Psychology Compass, 5(6), 359-371. <a href="http://quantpsy.org/pubs/rucker_preacher_tormala_petty_2011.pdf">.pdf</a></li>
+</ul>
 
 
 </section>
@@ -619,11 +770,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2023 by <a href="https://www.andrewheiss.com">Andrew Heiss</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-left">Content <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2024 by <a href="https://bigdataforsocialjustice.github.io/">Gia Barboza-Salerno</a> <br> All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/andrewheiss/evalsp23.classes.andrewheiss.com">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></div>
+    <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/bigdataforsocialjustice.com/phhbhp7534/">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></div>
   </div>
 </footer>
 
