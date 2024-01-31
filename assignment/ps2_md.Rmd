@@ -3,10 +3,6 @@ title: "Problem set 2"
 date: "2024-01-26"
 ---
 
-::: callout-note
-Please download the [markdown file](ps2_md.Rmd) so you can run the code on your computer. Please attempt to replicate my example below BEFORE downloading the code. Remember the 10 minute rule. Right click --> Save As ...
-:::
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(fig.align = "center")
 ```
@@ -115,7 +111,7 @@ Re-arrange the numbers in the table so that we have sexual abuse (Yes) and PTSD 
 #### C. Compute the percent change in the risk below
 
 ```{r}
-(all_risk <- riskratio.wald(total, rev = c("both")))
+(all_risk <- riskratio.wald(total, rev = c("neither")))
 ```
 
 #### D. Interpret the odds ratio below

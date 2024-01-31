@@ -1,0 +1,12 @@
+%%[ ProductName: Distiller ]%%
+OpenSans-Regular not found, using Courier.
+%%[ Error: invalidfont; OffendingCommand: xshow ]%%
+
+Stack:
+[153 93 123 45 94 92 45 132 127 39 0]
+(	
+)
+
+
+%%[ Flushing: rest of job (to end-of-file) will be ignored ]%%
+%%[ Warning: PostScript error. No PDF file produced. ] %%

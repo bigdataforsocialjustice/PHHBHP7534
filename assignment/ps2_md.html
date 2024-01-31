@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-01-26">
+
+<title>Problem set 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="ps2_md_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ps2_md_files/libs/quarto-html/quarto.js"></script>
+<script src="ps2_md_files/libs/quarto-html/popper.min.js"></script>
+<script src="ps2_md_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ps2_md_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ps2_md_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ps2_md_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ps2_md_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ps2_md_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ps2_md_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem set 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 26, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This assignment builds upon Public Health Foundational Knowledge GIA-1 and Foundational Competencies GIA-1. <strong>Note</strong> to submit this email me with the subject “Problem Set 2”</p>
+</div>
+</div>
+<section id="task-1-confounding" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-confounding">Task 1: Confounding</h2>
+<ol type="1">
+<li>Go the the example page for this week, <a href="/example/Confounding.qmd">“Coundounding”</a>, and work through the analyses I replicated based on the article for that week.</li>
+</ol>
+<p>Please make sure you are familiar with how to interpret and calculate risk ratios (RR) and odds ratios (ORs)</p>
+</section>
+<section id="task-2-make-an-rstudio-project" class="level2">
+<h2 class="anchored" data-anchor-id="task-2-make-an-rstudio-project">Task 2: Make an RStudio Project</h2>
+<ol type="1">
+<li><p>Use either RStudio.cloud or RStudio on your computer (preferably RStudio on your computer! <a href="/resource/install.qmd">Follow these instructions to get started!</a>) to create a new RStudio Project. Refer to the <a href="/example/rstudio-tidyverse.qmd#part-3-rstudio-projects">example page you read in Task 1 for instructions</a></p></li>
+<li><p>Create a folder named “data” in the project folder you just made.</p></li>
+<li><p>Download this <strong>SPSS</strong> file and place it in that folder:</p>
+<ul>
+<li><a href="https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/moderation.sav"> <code>moderation.sav</code></a></li>
+</ul></li>
+<li><p>In RStudio, go to “File” &gt; “New File…” &gt; “R Markdown…” and click “OK” in the dialog without changing anything.</p></li>
+<li><p>Run the following code</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Answer the questions A - K below. You can simply type text in the white space, and write R code in the chunks. <strong>Note</strong>: I have written all of the code except for J. and K. below. The code you need to answer J and K can be found <a href="/example/moderation.qmd">here</a></p>
+</div>
+</div>
+<p><strong>A. Go through the code and identify which each package is doing.</strong> Note that the code opens .SAV files not .CSV files so it is slightly different from what we have seen before.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effects)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: carData</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>lattice theme set by effectsTheme()
+See ?effectsTheme for details.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/barboza-salerno.1/Downloads/"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>moderation_example <span class="ot">=</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(<span class="fu">read.spss</span>(<span class="st">"moderation.sav"</span>, <span class="at">use.value.labels =</span> F, <span class="at">to.data.frame =</span> T))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>moderation_example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,064 × 5
+   NSCAWID  tra1 cidi1 bcdel1 sexab
+     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+ 1  200003    39    50     56     0
+ 2  200006    36    49     73    NA
+ 3  200007    71    74     50     1
+ 4  200008    47    46     61     0
+ 5  200011    55    39     50     0
+ 6  200016    33    46     50     0
+ 7  200018    61    63     70     0
+ 8  200021    64    54     51    NA
+ 9  200025    51    53     57     0
+10  200028    58    60     61     1
+# ℹ 2,054 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="learning-r-data-wrangling" class="level1">
+<h1>Learning R: Data Wrangling</h1>
+<p>The following code uses the language of tidyverse to select, filter, factor, recode, and clean the data. Go line by line and explain what each line is doing (hint, the best way I have found to learn is to run each line and see how the data changes). For example, run this:</p>
+<p>`library(dplyr)</p>
+<p>moderation_example %&gt;% dplyr::select(tra1, sexab)`</p>
+<p>then run this</p>
+<p>`library(dplyr)</p>
+<p>moderation_example %&gt;% dplyr::select(tra1, sexab) %&gt;% dplyr::filter(!is.na(sexab))`</p>
+<p>etc</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>moderation_example <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(tra1, sexab) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sexab)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sex =</span> dplyr<span class="sc">::</span><span class="fu">recode</span>(sexab, <span class="st">`</span><span class="at">1</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Yes"</span>, <span class="st">`</span><span class="at">0</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"No"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">PTSD =</span> <span class="fu">cut</span>(tra1, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">33</span>, <span class="dv">64</span>, <span class="dv">88</span>), <span class="at">include.lowest =</span> T, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"No PTSD"</span>, <span class="st">"PTSD"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>sexab, <span class="sc">-</span>tra1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,881 × 2
+   sex   PTSD   
+   &lt;chr&gt; &lt;fct&gt;  
+ 1 No    No PTSD
+ 2 Yes   PTSD   
+ 3 No    No PTSD
+ 4 No    No PTSD
+ 5 No    No PTSD
+ 6 No    No PTSD
+ 7 No    No PTSD
+ 8 Yes   No PTSD
+ 9 No    No PTSD
+10 No    No PTSD
+# ℹ 1,871 more rows</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> moderation_example <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(tra1, sexab) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sexab)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sex =</span> dplyr<span class="sc">::</span><span class="fu">recode</span>(sexab, <span class="st">`</span><span class="at">1</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Yes"</span>, <span class="st">`</span><span class="at">0</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"No"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">PTSD =</span> <span class="fu">cut</span>(tra1, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">33</span>, <span class="dv">64</span>, <span class="dv">88</span>), <span class="at">include.lowest =</span> T, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"No PTSD"</span>, <span class="st">"PTSD"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>sexab, <span class="sc">-</span>tra1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Assign the new data table to an object call it <code>df</code></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>sex, df<span class="sc">$</span>PTSD)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     
+      No PTSD PTSD
+  No     1275  168
+  Yes     289   47</code></pre>
+</div>
+</div>
+<p>Re-arrange the numbers in the table so that we have sexual abuse (Yes) and PTSD (Yes) in the first cell.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(total <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">47</span>, <span class="dv">168</span>, <span class="dv">289</span>, <span class="dv">1275</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]   47  289
+[2,]  168 1275</code></pre>
+</div>
+</div>
+<section id="b.-interpret-the-rr-of-ptsd-for-those-who-were-sexually-abused-versus-not-below" class="level4">
+<h4 class="anchored" data-anchor-id="b.-interpret-the-rr-of-ptsd-for-those-who-were-sexually-abused-versus-not-below">B. Interpret the RR of PTSD for those who were sexually abused (versus not) below</h4>
+</section>
+<section id="c.-compute-the-percent-change-in-the-risk-below" class="level4">
+<h4 class="anchored" data-anchor-id="c.-compute-the-percent-change-in-the-risk-below">C. Compute the percent change in the risk below</h4>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>(all_risk <span class="ot">&lt;-</span> <span class="fu">riskratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1       47      289   336
+  Exposed2      168     1275  1443
+  Total         215     1564  1779
+
+$measure
+          risk ratio with 95% C.I.
+Predictor  estimate     lower    upper
+  Exposed1 1.000000        NA       NA
+  Exposed2 1.027272 0.9800954 1.076719
+
+$p.value
+          two-sided
+Predictor  midp.exact fisher.exact chi.square
+  Exposed1         NA           NA         NA
+  Exposed2  0.2388193    0.2285094  0.2348268
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+</section>
+<section id="d.-interpret-the-odds-ratio-below" class="level4">
+<h4 class="anchored" data-anchor-id="d.-interpret-the-odds-ratio-below">D. Interpret the odds ratio below</h4>
+</section>
+<section id="calculate-the-percent-change-in-the-odds-below" class="level4">
+<h4 class="anchored" data-anchor-id="calculate-the-percent-change-in-the-odds-below">Calculate the percent change in the odds below</h4>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">oddsratio.wald</span>(total, <span class="at">rev =</span> <span class="fu">c</span>(<span class="st">"neither"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$data
+          Outcome
+Predictor  Disease1 Disease2 Total
+  Exposed1       47      289   336
+  Exposed2      168     1275  1443
+  Total         215     1564  1779
+
+$measure
+          odds ratio with 95% C.I.
+Predictor  estimate     lower    upper
+  Exposed1 1.000000        NA       NA
+  Exposed2 1.234244 0.8717485 1.747474
+
+$p.value
+          two-sided
+Predictor  midp.exact fisher.exact chi.square
+  Exposed1         NA           NA         NA
+  Exposed2  0.2388193    0.2285094  0.2348268
+
+$correction
+[1] FALSE
+
+attr(,"method")
+[1] "Unconditional MLE &amp; normal approximation (Wald) CI"</code></pre>
+</div>
+</div>
+</section>
+<section id="moderation" class="level4">
+<h4 class="anchored" data-anchor-id="moderation">Moderation</h4>
+<p>Is the association between DEL and PTSS the same for youth who have been sexually abused and not?</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> moderation_example <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(bcdel1, tra1, sexab) <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(sexab), <span class="sc">!</span><span class="fu">is.na</span>(tra1)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sex =</span>  dplyr<span class="sc">::</span><span class="fu">recode</span>(sexab, <span class="st">`</span><span class="at">1</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Yes"</span>, <span class="st">`</span><span class="at">0</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"No"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">tra1_mean =</span> tra1<span class="sc">-</span><span class="fu">mean</span>(tra1)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>tra1)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(df<span class="sc">$</span>sex) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"No"</span>,<span class="st">"Yes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>(fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(bcdel1 <span class="sc">~</span> tra1_mean<span class="sc">:</span>sex, <span class="at">data =</span> df))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = bcdel1 ~ tra1_mean:sex, data = df)
+
+Coefficients:
+     (Intercept)   tra1_mean:sexNo  tra1_mean:sexYes  
+         60.8302            0.1109            0.1413  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = bcdel1 ~ tra1_mean:sex, data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-14.433  -9.121  -1.356   7.207  31.883 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      60.83024    0.22911 265.512  &lt; 2e-16 ***
+tra1_mean:sexNo   0.11086    0.02268   4.889 1.11e-06 ***
+tra1_mean:sexYes  0.14127    0.04673   3.023  0.00254 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 9.571 on 1747 degrees of freedom
+  (29 observations deleted due to missingness)
+Multiple R-squared:  0.01858,   Adjusted R-squared:  0.01746 
+F-statistic: 16.54 on 2 and 1747 DF,  p-value: 7.679e-08</code></pre>
+</div>
+</div>
+</section>
+<section id="e.-interpret-the-intercept-of-the-model-above" class="level4">
+<h4 class="anchored" data-anchor-id="e.-interpret-the-intercept-of-the-model-above">E. Interpret the intercept of the model above</h4>
+</section>
+<section id="f.-is-the-interaction-significant" class="level4">
+<h4 class="anchored" data-anchor-id="f.-is-the-interaction-significant">F. Is the interaction significant?</h4>
+</section>
+<section id="g.-interpret-the-interaction" class="level4">
+<h4 class="anchored" data-anchor-id="g.-interpret-the-interaction">G. Interpret the interaction</h4>
+</section>
+<section id="g.-interpret-the-2-plots-below" class="level4">
+<h4 class="anchored" data-anchor-id="g.-interpret-the-2-plots-below">G. Interpret the 2 plots below</h4>
+<p>The <code>effects</code> package is another nice way to visualze the interaction effects. Let’s practice below.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>interact <span class="ot">&lt;-</span> <span class="fu">effect</span>(<span class="st">'tra1_mean:sex'</span>, fit,</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">xlevels=</span><span class="fu">list</span>(<span class="at">tra1_mean =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">15</span>, <span class="dv">0</span>, <span class="dv">30</span>)),</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">se=</span><span class="cn">TRUE</span>, <span class="at">confidence.level=</span>.<span class="dv">95</span>, <span class="at">typical=</span>mean)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>interact<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(interact)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>interact<span class="sc">$</span>sex<span class="ot">&lt;-</span><span class="fu">factor</span>(interact<span class="sc">$</span>sex, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>interact, <span class="fu">aes</span>(<span class="at">x=</span>tra1_mean, <span class="at">y=</span>fit, <span class="at">group=</span>sex))<span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">50</span>,<span class="dv">70</span>))<span class="sc">+</span>  </span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#For ylim, specify the range of your DV (in our case, 50-70)</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">2</span>, <span class="fu">aes</span>(<span class="at">color=</span>sex))<span class="sc">+</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"DEL"</span>)<span class="sc">+</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"PTSS"</span>)<span class="sc">+</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"PTSS and Sex Abuse as Predictors of Delinquent Behaviors"</span>)<span class="sc">+</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span> </span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major=</span><span class="fu">element_blank</span>(),</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor=</span><span class="fu">element_blank</span>())<span class="sc">+</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_grey</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ps2_md_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="i.-interpret-the-visualization" class="level4">
+<h4 class="anchored" data-anchor-id="i.-interpret-the-visualization">I. Interpret the visualization:</h4>
+<p>Does higher levels of PTSS matter more for engagement in delinquent behaviors for youth who have been sexually abused? Why/Why not?</p>
+</section>
+<section id="j.-write-the-code-for-the-conceptual-model" class="level4">
+<h4 class="anchored" data-anchor-id="j.-write-the-code-for-the-conceptual-model">J. Write the Code for the Conceptual Model</h4>
+</section>
+<section id="k.-write-the-code-for-the-statistical-model" class="level4">
+<h4 class="anchored" data-anchor-id="k.-write-the-code-for-the-statistical-model">K. Write the Code for the Statistical Model</h4>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

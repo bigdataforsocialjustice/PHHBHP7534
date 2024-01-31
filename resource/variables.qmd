@@ -1,0 +1,67 @@
+---
+title: "Variables"
+---
+
+# Variables and the Unit of Analysis
+
+Variables are characteristics of the “things” that we are studying, commonly called _cases_.
+
+The kind of “thing” that is being studied is called the _unit of analysis_.
+
+1. _Individuals_ constitute the unit of analysis for much empirical research in social work. A particular research project focuses on a particular set or _population_ of individuals. Relevant characteristics of individuals concerning which data may be collected include: _gender_, _race_, _education_, home removal, length of time in foster care, _depressive symptoms_, etc., so these are all examples of _variables_ that pertain to _individuals_. Other kinds of empirical research may focus on individuals but on more specialized populations such as _mandatory reporters or persons who use substances_. Variables of interest pertaining to substance users include _polysubstance use, age, residence, and type of social networks_, etc. The type of empirical research that I conduct focuses on a different unit of analysis because I study neighborhood effects of health and well-being. Therefore, the unit of analysis is the neighborhood, typically defined as the census tract in which persons live, travel, etc.
+
+2. Geographic units of analysis include nations, counties, census tracts, census blocks, and zip codes. The variables apply to the whole unit under investigation and inferences must be carefully made to that unit otherwise you will commit an ecological fallacy. An ecological fallacy is when inferences about lower-level units are made from analyses of higher level units. The most frequently used example is the crime rate. Knowing that the crime rate is high in a county says _nothing about the types of individuals who are committing the crime, including their socio-economic status and demographic characteristics._
+
+3. _Households_ often constitute the unit of analysis in social work research. Census data including the Current Population Survey and the Panel Study of Income Dynamics are surveys of households whereby the _household_ is the unit of analysis. Variables pertaining to households include _size_ (number of people in the household), _type_ (single- parent, no children, etc.), _income_, _type of dwelling_ (detached house, town house, apartment, etc.), etc.
+
+By definition, variables _vary_ — that is, they take on different _values_, either from _case to case_ at a particular time (this is called _cross-sectional analysis_), e.g., respondents in a survey, and/or from _time to time_ for a particular case or set of cases (this is called _longitudinal analysis_), e.g., intimate partner violence (IPV) prevalence in Los Angeles County during the COVID-19 pandemic.
+
+Variables are the building blocks of empirical research. Researchers ask such questions as the following:
+
+1. What is the _average_ or _typical_ value of a variable in a set of cases? For example, what is the level of depressive symptoms among youth who are in the foster care system, or what is the prevalence of trauma among firefighters, etc.?
+
+2. How are the values of a variable _distributed_ in a set of data, i.e., do most of the same cases have about the same value (_low dispersion_) or do different cases have very different values (_high dispersion_). For example, do all foster youth have about the same level of depressive symptoms or do some have few while others have a lot?
+
+3. How are two variables _related_ or _associated_ in a set of data? For example, how are depressive symptoms related to length of time in foster care?
+
+4. Does one variable have _causal impact_ on another variable? For example, does the trauma associated with home removal cause depressive symptoms in adulthood?
+
+# Variables and Their Values
+
+Variables vary, thus, associated with every variable is a range (often a list) of possible _values_.
+
+Education level is a variable (pertaining to individuals and which can vary both over cases different people have different levels of education at a given point in time and over time a given person's education level may change over time). In the U.S. context, possible values of ‘educational attainment’ include high school grad, GED attainment, grad school, some college, etc. Some variables, such as ‘experienced traumatic head injury’ have just two possible values, YES and NO, and special care must be taken to analyze it. HEIGHT is a physical variable pertaining to individuals with values that are real numbers (expressed in units such as inches, centimeters, or feet). SIZE a variable pertaining to households with values that are natural (whole) numbers. LEVEL OF TURNOUT is a variable pertaining to elections (or to different jurisdictions in a given election), with values ranging potentially from 0% to 100%.
+
+# Types of Variables
+
+Every variable has at least two possible values. (Otherwise a variable could not vary, i.e., take on different values from case to case or from time to time.) A variable is _dichotomous_ if it has _exactly_ two possible values (often “yes” and “no”), e.g., traumatic brain injury. However, most variables have three or more — or quite likely an infinite number of — possible values.
+
+A variable is _qualitative_ if its values are given by _words_ (e.g., gender, race). However, in a data array the values are typically recorded in terms of _numerical codes_ (e.g. 1 = female; 2 = male; 3 = non-binary, etc.).
+
+A variable is _quantitative_ if its values are given by _numbers_ (e.g., income, number of years of schooling). In a dataset, such values are typically recorded in terms of their actual numerical values.
+
+# Levels of Measurement
+
+It is useful to refine the qualitative/quantitative distinction by further distinguishing among different _types_ of variables — or (equivalently) among different _levels of measurement_ of pertaining to variables.
+
+1. A _nominal_ variable (or a variable _measured at the nominal level_) has values that are _unordered_ categories. Given two cases and a nominal variable, we can observe that they have the same value or different values, but (if they have different values) we cannot say that one has the “higher” value and the other “lower,” etc. The numerical codes for nominal variables must be assigned /to values in some manner which is arbitrary. For example, female could be coded 1, or 2, or 1000 the order _does not matter_.
+
+2. An _ordinal_ variable (or a variable _measured at the ordinal level_) has values that fall into some kind of natural ordering, often (but not always) running from low to high, i.e. a frequency. Given two cases and an ordinal variable, we can observe that they have the same value or they have different values, and _also_ (if they have different values) that one has the “higher” value and the other “lower,” etc., but we _cannot_ say _how much_ higher or lower. An example is, “during the last week, how many times did you engage in bullying, “never, at least once, two – four times, five or more.’
+
+Likert variables with closed-form values running from STRONGLY AGREE (or APPROVE) to STRONGLY DISAGREE (or DISAPPROVE) are also ordinal in nature.
+
+3. An _interval_ variable (or a variable _measured at the interval level_) has values that are _real numbers_ that can appropriately be added together, subtracted one from another, and averaged. Given two cases and an interval variable, we can say they have the same value or they have different values, and also (if they have different values) that one has the higher value and the other lower, etc., and _also_ (since we can subtract one value from another) _how much_ higher or lower one value is than the other, i.e., we can determine the magnitude of the _interval_ separating them and thus say how “far apart” the cases are with respect to the variable.
+
+4. A _ratio_ variable (or a variable _measured at the ratio level_) is an interval variable that has values that are real numbers such that one can appropriately _divide_ the value of one by the value of another (i.e., compute their _ratio_) and say, for example, than one case has _twice_ the value of another. This requires that the variable have a _non-arbitrary zero value_, which re- presents in some sense the complete absence of the characteristic or property to which the variable refers.
+
+	- Examples of interval variables that are _not_ ratio include SAT or IQ SCORE and temperature (Fahrenheit or Celsius).
+
+	- Examples of ratio variables include number of children (0 is meaningful) or age (pertaining to individuals).
+
+_Quantitative_ [interval and ratio] variables may be either “discrete” or “continuous.” (Qualitative [nominal and ordinal] variables are almost always treated as discrete variables.)
+
+1. A _discrete_ variable has a finite (and typically small) number of possible values that usually correspond to _whole numbers_ (integers) only. Number of children (in households) and similar _counts_ provide examples of discrete variables.
+
+2. A _continuous_ variable can have _any real number_ (at least within some range) as a value (i.e., including fractional values between the integers). A continuous variable has (in principle) an _infinite number_ of possible values, so that additional possible values always lie between any two distinct values of the variable. Height, weight and age are examples of continuous variables.
+
+Some variables are in principle discrete but are “virtually” continuous because they have so many possible (numerical) values. Examples may include age, etc.

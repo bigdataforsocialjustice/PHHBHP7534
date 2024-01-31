@@ -36,7 +36,7 @@ library(effects)
 library(car)  
 library(vcdExtra)
 library(vcd)
-library("vembedr")
+library(vembedr)
 library(tidyverse)
 library(sjPlot)
 options(scipen=999) #disables scientific notation
@@ -103,6 +103,7 @@ The risk and RD estimates for the population are as follows:
 (Risk = 160/(160+4840))
 (RD = Risk - 660/(660 + 4340))
 ```
+Note: please refer to the appendix in the paper referenced above to understand where these numbers came from!
 
 ```{r}
 all_risk <- riskratio.wald(total, rev = c("neither"))
@@ -111,7 +112,7 @@ all_risk
 ```
 The risk ratio is .254 with a 95% confidence interval (.214, .301) which is significant at the $p < .001$ level. Therefore, women in the exposure group 2, (i.e., who took magnesium), had a 74.6% lower risk $(1 - .254) \times 100$ of preterm birth compared to women who did not take magnesium.
 ```{r}
-print(paste("Percent change in the risk:", 1 - unlist(all_risk$measure)[2], sep = " "))
+print(paste("Percent change in the risk:", (1 - unlist(all_risk$measure)[2])*100, sep = " "))
 ```
 ```{r}
 oddsratio.wald(total, rev = c("neither"))
@@ -202,9 +203,12 @@ riskratio.wald(age_outcome_tbl, rev = c("neither")) #I already formatted it so e
 ```{r}
 oddsratio.wald(age_outcome_tbl, rev = c("neither"))
 ```
-Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.
+Younger women had a lower risk (RR = 0.956; 95% CI: 0.9383823, 0.9748244) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of preterm birth compared to older women. This result is significant. The first criterion is satisfied.
 
+:::{.callout-note} 
+Test your understanding: the null hypothesis is that the odds are equal. What is $H_0$. If I know that 1 is in the confidence interval, do I reject or not reject the $H_0$?
 
+:::
 #### 2. Is age associated with magnesium uptake? (i.e., is the counfounder associated with the exposure?)
 This amounts to asking whether younger women had lower risk/odds of magnesium uptake compared to older women?
 
@@ -218,7 +222,7 @@ riskratio.wald(age_exposure_tbl, rev = c("neither"))
 ```{r}
 oddsratio.wald(age_exposure_tbl, rev = c("neither"))
 ```
-Younger women had a lower risk (RR = 0.671; 95% CI: 0..582, 0.774) and odds (OR = 0.616; 95% CI: 0.514, 0.736 ) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.
+Younger women had a lower risk (RR = 0.500; 95% CI: 0.4524463 0.5525517) and odds (OR = 0.444; 95% CI: 0.3959679 0.4988558) of magnesium uptake compared to older women. This result is significant. The second criterion is satisfied.
 
 #### 3. Age is not on the causal pathway between exposure and outcome?  
 This is satisfied here.

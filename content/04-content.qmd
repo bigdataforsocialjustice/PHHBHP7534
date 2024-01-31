@@ -41,7 +41,7 @@ health promotion.*
 ### Your tasks to complete today
 
 -   [ ] Submit your research topic by emailing the topic to me by midnight tonight 
--   [ ] The subject of the email must be "*Research Topic for PHHBHP7534**"
+-   [ ] The subject of the email must be "*Research Topic for PHHBHP7534*"
 -   [ ] The body should have a statement of the research topic you wish to pursue
 -   [ ] Complete Problem Set 2
 
@@ -53,17 +53,14 @@ health promotion.*
 
 ## Pay Attention
 
-PhD students: the annotated bibliography is due today by midnight. To submit the bibliography, follow [these instructions](/resources/annotated.qmd).
+PhD students: the annotated bibliography is due next week. To submit the bibliography, follow [these instructions](/resources/annotated.qmd).
 
 :::
 ## Lecture Notes
 
 The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
 
-```{r show-slide-tabs, echo=FALSE, results="asis"}
-slide_buttons("/slides/day4")
-slide_tabs(slide_details, "/slides/day4.html")
-```
+The lecture notes for today can be downloaded [here](/slides/day4.pdf)
 
 :::{.callout-tip}
 **Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
@@ -77,6 +74,7 @@ slide_tabs(slide_details, "/slides/day4.html")
 
 - Read Chapters 1 & 2 in [R for Data Science](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/reading/R_data_Science_partI.pdf)
 - [Mediation and Moderation in R](/example/lab4/mediation_moderation.html)
+- [Class Example](/example/moderation.qmd)
 
 ### Competencies and Knowledge
 - Foundational knowledge: 3, 6
@@ -103,5 +101,11 @@ Sequential mediation model:
 ```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics(here::here("example", "lab4", "sequential_mediators.png"), error = FALSE)
 ```
+
+### Additional Resources
+
+[Moderation by Hayes](http://www.afhayes.com/public/chapter16.pdf)
+
+[Interpreting Interactions](https://www3.nd.edu/~rwilliam/stats2/l55.pdf) 
 
 

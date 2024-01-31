@@ -1,50 +1,153 @@
 ---
-title: "Problem set 3"
-date: "2023-03-02"
+title: "Problem Set 3"
+author: "Barboza-Salerno"
+date: "2024-02-01"
 ---
 
-:::{.callout-note}
-**IMPORTANT**: This looks like a lot of work, but again, it's mostly copying/pasting chunks of code and changing things.
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+# Problem set 3
+
+For this assignment submit an Rmarkdown file and send it to my email with the subject "Problem Set 3" by Feb 1, 2024.
+
+::: {.callout-note}
+**Hint:** This assignment asks you to replicate my mediation analysis code by replacing the independent and mediator variables.
 :::
 
-For this problem set, you'll practice analyzing RCTs and working with matching and inverse probability weighting. These two examples will be incredibly useful for you:
+```{r}
+library(foreign)
+library(dplyr)
+library(processR)
+```
 
-- [RCTs](/example/rcts.qmd)
-- [Matching and IPW](/example/matching-ipw.qmd)
+We are still using the dataset we used in the [moderation example](example/moderation.qmd) for this assignment. However, we will test whether depressive symptoms (cidi1) mediates the association between post-traumatic stress symptoms (tra1) and delinquent behaviors (bcdel1).
 
-You'll be doing all your R work in R Markdown this time (and from now on). You can download a zipped file of a pre-made project here:
+::: {.callout-note}
+You should have familiarity with the most common measures for psychological 'disorders.' For example, the CIDI questions (which stands for Composite International Diagnostic Interview) are [here](https://www.cdc.gov/nchs/data/nhanes/cidi_quex.pdf). The CIDI scale is meant to assess major depressive disorder by asking respondents the questions listed in the diagnostic assessment. We will talk about measurement next week, for now ask yourself whether you think this is a good question (E1, page 24): In the past 12 months, have you had a period of two weeks or longer when you felt sad or depressed or empty? 
+:::
 
-- [{{< fa file-archive >}} `problem-set-3.zip`](/projects/problem-set-3.zip)
+```{r}
+setwd("C:/Users/barboza-salerno.1/Downloads/")
+source("process.R")
+mediation_example = tibble::as_tibble(read.spss("moderation.sav", use.value.labels = F, to.data.frame = T))
 
-And as always, if you're struggling, *please* talk to me. Work with classmates too (especially for this assignment!). Don't suffer in silence!
+```
+
+Remove missingness (na)
+
+```{r}
+mediation_example <- mediation_example %>% 
+  dplyr::filter(!is.na(tra1) & !is.na(cidi1) & !is.na(bcdel1))
+```
+
+## The conceptual model
+The conceptual model that illustrates those relationships is provided below. For the simple mediation model, both conceptual and statistical diagrams are the same. **NOTE** simple mediation is model 4, see the Hayes macro template I provided to you in the lecture.
 
 
-## Instructions
+```{r}
+labels=list(X="PTSS",M="CIDI",Y="DELIN")
+```
 
-1. If you're using R on your own computer, download this file, [*unzip it*](/resource/unzipping.qmd), and double click on the file named `problem-set-3.Rproj`: [{{< fa file-archive >}} `problem-set-3.zip`](/projects/problem-set-3.zip)
+Notice I used the option `rady` to increase the y dimension of the box so that the words will fit. 
 
-   You'll need to make sure you have these packages installed on your computer: `tidyverse`, `MatchIt`, `modelsummary`, and `patchwork`. If you try to load one of those packages with `library(tidyverse)` or `library(MatchIt)`, etc., and R gives an error that the package is missing, use the "Packages" panel in RStudio to install it.
+Note the use of the package `processR` below.
 
-   (Alternatively, you can open the project named "Problem Set 3" on RStudio.cloud and complete the assignment in your browser without needing to install anything. If you don't have access to the class RStudio.cloud account, *please let me know as soon as possible*. [This link should take you to the project](https://rstudio.cloud/spaces/269500/content/4357649)—if it doesn't, log in and look for the project named "Problem Set 3.")
+## A. Describe the conceptual model
+```{r}
+processR::pmacroModel(4,labels=labels, rady = 0.07)
+```
 
-2. Rename the R Markdown file named `your-name_problem-set-3.Rmd` to something that matches your name and open it in RStudio.
+## B. Write the code to display the statistical diagram below
 
-3. Complete the tasks given in the R Markdown file. There are questions **marked in bold** (e.g. `**What is the ATE?**`). Your job is to answer those questions. You don't need to put your answers in bold, and you can remove the question text if you want.
+```{r, echo = FALSE}
+processR::statisticalDiagram(4,labels=labels, rady = 0.07)
+```
 
-   Fill out code in the empty chunks provided (you can definitely copy, paste, and adapt from other code in the document or [the example page on RCTs](/example/rcts.qmd) and [the example page on matching and IPW](/example/matching-ipw.qmd)—don't try to write everything from scratch!). 
+Note that we must remove missing values before the model will run. This is part of the 'trial and error' common in R programming. Whereas we removed missing values above, it is **good practice** to include the option `na.rm = T` **anytime you are calculating the mean, standard deviation, or any other descriptive measure.** If you do not include this option, and your variable has missing data, R will NOT calculate the statistic, leaving you sad and frustrated.
 
-   You'll need to insert your own code chunks. Rather than typing them by hand (that's tedious!), use the "Insert" button at the top of the editing window, or press  <kbd>⌥</kbd> + <kbd>⌘</kbd> + <kbd>I</kbd> on macOS, or <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>I</kbd> on Windows.
+Below is the same code we used before to mean center the variable for PTSS (tra1). 
 
-   ```{r insert-chunk-button, echo=FALSE, out.width="19%", fig.align="center"}
-   knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error = FALSE)
-   ```
+```{r}
+mediation_example$tra1_mean <- 
+  mediation_example$tra1 - mean(mediation_example$tra1, na.rm = T)
+```
 
-   Remember that you can run an entire chunk by clicking on the green play arrow in the top right corner of the chunk. You can also run lines of code line-by-line if you place your cursor on some R code and press <kbd>⌘</kbd> + <kbd>enter</kbd> (for macOS users) or <kbd>ctrl</kbd> + <kbd>enter</kbd> (for Windows users).
+## C. Write the code to mean center the `cidi1` variable.
+```{r, echo = F}
+mediation_example$cidi1_mean <- 
+  mediation_example$cidi1 - mean(mediation_example$cidi1, na.rm = T)
+```
 
-   Make sure you run each chunk sequentially. If you run a chunk in the middle of the document without running previous ones, it might not work, since previous chunks might do things that later chunks depend on.
+Below is a quick plot using `Base R` to visualize the variables.
 
-4. When you're all done, click on the "Knit" button at the top of the editing window and create a Word or PDF version (if you've [installed **tinytex**](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege. **Do not upload a knitted HTML file** (they don't on iCollege).
+## D. Describe the relationship between the two variables PTSS (tra1_mean) and DELINQ
 
-   ```{r knit-button, echo=FALSE, out.width="30%", fig.align="center"}
-   knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)
-   ```
+```{r}
+plot(y=mediation_example$bcdel1, 
+     x=mediation_example$tra1_mean,
+     xlab = "PTSS", ylab = "DELINQ")
+```
+
+## E. Describe the relationship between the two variables, TRA1 (tra1_mean) and CIDI1 (cidi1_mean). 
+```{r}
+plot(y=mediation_example$tra1_mean, 
+     x=mediation_example$cidi1_mean,
+     xlab = "CIDI", ylab = "PTSS")
+abline(h = mean(mediation_example$tra1_mean), col = "blue", lwd = 4, lty = 4) 
+abline(v = mean(mediation_example$cidi1_mean), col = "blue", lwd = 4, lty = 4) 
+```
+
+## F. The above figure has four quadrants that can be labeled as shown below. Describe each of the quadrants and think of an implication of being in each quadrant.
+
+![Quadrants](../slides/img/01/quads.png)
+
+## Below is the code that returns the correlation between the variables. 
+
+```{r}
+
+cor(mediation_example$tra1_mean, mediation_example$cidi1_mean)
+cor(mediation_example$bcdel1, mediation_example$cidi1_mean)
+```
+## G. Write the code to return the correlation between tra1_mean and bcdel1. The result is below.
+```{r, echo = F}
+cor(mediation_example$tra1_mean, mediation_example$bcdel1)
+```
+
+Here is the result for the mediation model.
+```{r results = 'hide'}
+result <- process(
+  data = mediation_example, 
+  y = "bcdel1", 
+  x = "tra1", 
+  m = "cidi1", 
+  total = 1, 
+  normal = 1, 
+  model = 4, 
+  seed = 31216)
+```
+
+![Model 4 Results](../slides/img/01/ps3med.png)
+
+![Model 4 Effects](../slides/img/01/ps3effects.png)
+
+## H. Complete the sentences
+The `Total effect of X on Y:` is the effect of ...
+
+The direct effect labeled `Direct effect of X on Y:` summarizes the effect of ...
+
+The indirect effect labeled `Indirect effect(s) of X on Y:` is the ...
+
+## I. Verify that the a path multiplied by the b path is equal to the mediation effect.
+
+## J. The proportion of the total effect (PTSS' effect on DELINQ) that is mediated by depressive symptoms is defined as the ratio of the indirect to the total effect. What proportion of the total effect is mediated by depressive symptoms?
+
+## K. Do depressive symptoms mediate the relationship between PTSS and DELINQ? What is an implication that follows from the result?
+
+# Additional Resources
+
+- MacKinnon, D. P. (2008). Introduction to statistical mediation analysis. New York, NY: Lawrence Erlbaum Associates.
+- Revelle, W. (2017) How to use the psych package for mediation/moderation/regression analysis. [.pdf](http://personality-project.org/r/psych/HowTo/mediation.pdf)
+- Rosseel, Y. (2012). Lavaan: An R package for structural equation modeling and more. Version 0.5–12 (BETA). Journal of statistical software, 48(2), 1-36. [website](http://lavaan.ugent.be/)
+- Rucker, D. D., Preacher, K. J., Tormala, Z. L., & Petty, R. E. (2011). Mediation analysis in social psychology: Current practices and new recommendations. Social and Personality Psychology Compass, 5(6), 359-371. [.pdf](http://quantpsy.org/pubs/rucker_preacher_tormala_petty_2011.pdf)

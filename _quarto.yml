@@ -149,8 +149,8 @@ website:
         - section: "Problem sets"
           contents:
             - assignment/01-problem-set.qmd
-
-
+            - assignment/02-problem-set.qmd
+            - assignment/03-problem-set.qmd
 
     - title: "Examples"
       contents:
@@ -163,6 +163,7 @@ website:
             - example/bias.qmd
             - example/Confounding.qmd
             - example/moderation.qmd
+            - example/mediation.qmd
 
 
     - title: "Resources"
@@ -178,6 +179,8 @@ website:
             - resource/elements.qmd
             - resource/zotero.qmd
             - resource/Rgraphics.qmd
+            - resource/annotated.qmd
+            - resource/variables.qmd
         - section: "Study guides"
           contents:
             - resource/exam1.qmd
