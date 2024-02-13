@@ -482,19 +482,25 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Learn more about sjPlot with 'browseVignettes("sjPlot")'.</code></pre>
+</div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m1,</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"age"</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m1,</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"age"</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Data were 'prettified'. Consider using `terms="age [all]"` to get smooth
@@ -507,8 +513,8 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># levels for sex</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(dat<span class="sc">$</span>sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># levels for sex</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(dat<span class="sc">$</span>sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "female" "male"  </code></pre>
@@ -517,17 +523,17 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save model</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex,</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save model</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex,</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -553,7 +559,7 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="st">"sexmale"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="st">"sexmale"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> sexmale 
@@ -563,8 +569,8 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># prob(disease) for sex = female</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># prob(disease) for sex = female</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept) 
@@ -574,7 +580,7 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(<span class="fu">table</span>(dat<span class="sc">$</span>heart_disease, dat<span class="sc">$</span>sex))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(<span class="fu">table</span>(dat<span class="sc">$</span>heart_disease, dat<span class="sc">$</span>sex))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -587,12 +593,12 @@ X-squared = 21.852, df = 1, p-value = 2.946e-06</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m2,</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>)),</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m2,</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>)),</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>        1 
@@ -602,12 +608,12 @@ X-squared = 21.852, df = 1, p-value = 2.946e-06</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m2,</span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"sex"</span></span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m2,</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"sex"</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="logistic_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
@@ -616,27 +622,27 @@ X-squared = 21.852, df = 1, p-value = 2.946e-06</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frame of new patient</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>new_patient <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="dv">32</span>,</span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"female"</span></span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frame of new patient</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>new_patient <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="dv">32</span>,</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"female"</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex <span class="sc">+</span> age,</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m3,</span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> new_patient,</span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print prediction</span></span>
-<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex <span class="sc">+</span> age,</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m3,</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> new_patient,</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print prediction</span></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         1 
@@ -646,13 +652,13 @@ X-squared = 21.852, df = 1, p-value = 2.946e-06</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. age, sex and chest pain on prob of disease</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m3,</span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"age"</span>,  <span class="st">"sex"</span>),</span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ci.lvl =</span> <span class="cn">NA</span> <span class="co"># remove confidence bands</span></span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. age, sex and chest pain on prob of disease</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m3,</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"age"</span>,  <span class="st">"sex"</span>),</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ci.lvl =</span> <span class="cn">NA</span> <span class="co"># remove confidence bands</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Data were 'prettified'. Consider using `terms="age [all]"` to get smooth
@@ -665,11 +671,11 @@ X-squared = 21.852, df = 1, p-value = 2.946e-06</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(m3, m2,</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.ci =</span> <span class="cn">FALSE</span>, <span class="co"># remove CI</span></span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.aic =</span> <span class="cn">TRUE</span>, <span class="co"># display AIC</span></span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">p.style =</span> <span class="st">"numeric_stars"</span> <span class="co"># display p-values and stars</span></span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(m3, m2,</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.ci =</span> <span class="cn">FALSE</span>, <span class="co"># remove CI</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.aic =</span> <span class="cn">TRUE</span>, <span class="co"># display AIC</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">p.style =</span> <span class="st">"numeric_stars"</span> <span class="co"># display p-values and stars</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table data-quarto-postprocess="true" class="table table-sm table-striped small">
@@ -734,7 +740,7 @@ X-squared = 21.852, df = 1, p-value = 2.946e-06</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pROC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pROC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Type 'citation("pROC")' for a citation.</code></pre>
@@ -752,10 +758,10 @@ Attaching package: 'pROC'</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save roc object</span></span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">roc</span>(heart_disease <span class="sc">~</span> <span class="fu">fitted</span>(m3),</span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat</span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save roc object</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">roc</span>(heart_disease <span class="sc">~</span> <span class="fu">fitted</span>(m3),</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat</span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Setting levels: control = no disease, case = disease</code></pre>
@@ -765,8 +771,8 @@ Attaching package: 'pROC'</code></pre>
 </div>
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve</span></span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="logistic_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
@@ -775,7 +781,7 @@ Attaching package: 'pROC'</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>auc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>auc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Area under the curve: 0.713</code></pre>
@@ -784,9 +790,9 @@ Attaching package: 'pROC'</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve with AUC in title</span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste0</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(res<span class="sc">$</span>auc, <span class="dv">2</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve with AUC in title</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste0</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(res<span class="sc">$</span>auc, <span class="dv">2</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="logistic_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
@@ -795,34 +801,37 @@ Attaching package: 'pROC'</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stderr">
+<pre><code>#Uighur</code></pre>
+</div>
 </div>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print table of results</span></span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(m3, <span class="at">exponentiate =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print table of results</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(m3, <span class="at">exponentiate =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 
-<div id="xpwfjctnla" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xpwfjctnla table {
+<div id="xkqddscxfk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xkqddscxfk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xpwfjctnla thead, #xpwfjctnla tbody, #xpwfjctnla tfoot, #xpwfjctnla tr, #xpwfjctnla td, #xpwfjctnla th {
+#xkqddscxfk thead, #xkqddscxfk tbody, #xkqddscxfk tfoot, #xkqddscxfk tr, #xkqddscxfk td, #xkqddscxfk th {
   border-style: none;
 }
 
-#xpwfjctnla p {
+#xkqddscxfk p {
   margin: 0;
   padding: 0;
 }
 
-#xpwfjctnla .gt_table {
+#xkqddscxfk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -848,12 +857,12 @@ Attaching package: 'pROC'</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_caption {
+#xkqddscxfk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xpwfjctnla .gt_title {
+#xkqddscxfk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -865,7 +874,7 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-width: 0;
 }
 
-#xpwfjctnla .gt_subtitle {
+#xkqddscxfk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -877,7 +886,7 @@ Attaching package: 'pROC'</code></pre>
   border-top-width: 0;
 }
 
-#xpwfjctnla .gt_heading {
+#xkqddscxfk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -889,13 +898,13 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_bottom_border {
+#xkqddscxfk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_col_headings {
+#xkqddscxfk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -910,7 +919,7 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_col_heading {
+#xkqddscxfk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -930,7 +939,7 @@ Attaching package: 'pROC'</code></pre>
   overflow-x: hidden;
 }
 
-#xpwfjctnla .gt_column_spanner_outer {
+#xkqddscxfk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -942,15 +951,15 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 4px;
 }
 
-#xpwfjctnla .gt_column_spanner_outer:first-child {
+#xkqddscxfk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xpwfjctnla .gt_column_spanner_outer:last-child {
+#xkqddscxfk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xpwfjctnla .gt_column_spanner {
+#xkqddscxfk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -962,11 +971,11 @@ Attaching package: 'pROC'</code></pre>
   width: 100%;
 }
 
-#xpwfjctnla .gt_spanner_row {
+#xkqddscxfk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xpwfjctnla .gt_group_heading {
+#xkqddscxfk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -992,7 +1001,7 @@ Attaching package: 'pROC'</code></pre>
   text-align: left;
 }
 
-#xpwfjctnla .gt_empty_group_heading {
+#xkqddscxfk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1007,15 +1016,15 @@ Attaching package: 'pROC'</code></pre>
   vertical-align: middle;
 }
 
-#xpwfjctnla .gt_from_md > :first-child {
+#xkqddscxfk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xpwfjctnla .gt_from_md > :last-child {
+#xkqddscxfk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xpwfjctnla .gt_row {
+#xkqddscxfk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1034,7 +1043,7 @@ Attaching package: 'pROC'</code></pre>
   overflow-x: hidden;
 }
 
-#xpwfjctnla .gt_stub {
+#xkqddscxfk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1047,7 +1056,7 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xpwfjctnla .gt_stub_row_group {
+#xkqddscxfk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1061,15 +1070,15 @@ Attaching package: 'pROC'</code></pre>
   vertical-align: top;
 }
 
-#xpwfjctnla .gt_row_group_first td {
+#xkqddscxfk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xpwfjctnla .gt_row_group_first th {
+#xkqddscxfk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xpwfjctnla .gt_summary_row {
+#xkqddscxfk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1079,16 +1088,16 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xpwfjctnla .gt_first_summary_row {
+#xkqddscxfk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_first_summary_row.thick {
+#xkqddscxfk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xpwfjctnla .gt_last_summary_row {
+#xkqddscxfk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1098,7 +1107,7 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_grand_summary_row {
+#xkqddscxfk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1108,7 +1117,7 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xpwfjctnla .gt_first_grand_summary_row {
+#xkqddscxfk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1118,7 +1127,7 @@ Attaching package: 'pROC'</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_last_grand_summary_row_top {
+#xkqddscxfk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1128,11 +1137,11 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_striped {
+#xkqddscxfk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xpwfjctnla .gt_table_body {
+#xkqddscxfk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1141,7 +1150,7 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_footnotes {
+#xkqddscxfk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1155,7 +1164,7 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_footnote {
+#xkqddscxfk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1164,7 +1173,7 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xpwfjctnla .gt_sourcenotes {
+#xkqddscxfk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1178,7 +1187,7 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xpwfjctnla .gt_sourcenote {
+#xkqddscxfk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1186,63 +1195,63 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xpwfjctnla .gt_left {
+#xkqddscxfk .gt_left {
   text-align: left;
 }
 
-#xpwfjctnla .gt_center {
+#xkqddscxfk .gt_center {
   text-align: center;
 }
 
-#xpwfjctnla .gt_right {
+#xkqddscxfk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xpwfjctnla .gt_font_normal {
+#xkqddscxfk .gt_font_normal {
   font-weight: normal;
 }
 
-#xpwfjctnla .gt_font_bold {
+#xkqddscxfk .gt_font_bold {
   font-weight: bold;
 }
 
-#xpwfjctnla .gt_font_italic {
+#xkqddscxfk .gt_font_italic {
   font-style: italic;
 }
 
-#xpwfjctnla .gt_super {
+#xkqddscxfk .gt_super {
   font-size: 65%;
 }
 
-#xpwfjctnla .gt_footnote_marks {
+#xkqddscxfk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xpwfjctnla .gt_asterisk {
+#xkqddscxfk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xpwfjctnla .gt_indent_1 {
+#xkqddscxfk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xpwfjctnla .gt_indent_2 {
+#xkqddscxfk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xpwfjctnla .gt_indent_3 {
+#xkqddscxfk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xpwfjctnla .gt_indent_4 {
+#xkqddscxfk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xpwfjctnla .gt_indent_5 {
+#xkqddscxfk .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1287,15 +1296,15 @@ Attaching package: 'pROC'</code></pre>
 <div class="cell">
 <details open="">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(finalfit)</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="co"># set variables</span></span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>dependent <span class="ot">&lt;-</span> <span class="st">"heart_disease"</span></span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>independent <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>)</span>
-<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>independent_final <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>, <span class="st">"chest_pain"</span>)</span>
-<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">|&gt;</span> <span class="fu">or_plot</span>(dependent, independent,</span>
-<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">table_text_size =</span> <span class="fl">3.5</span> <span class="co"># reduce text size</span></span>
-<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(finalfit)</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="co"># set variables</span></span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>dependent <span class="ot">&lt;-</span> <span class="st">"heart_disease"</span></span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>independent <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>)</span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>independent_final <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>, <span class="st">"chest_pain"</span>)</span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">|&gt;</span> <span class="fu">or_plot</span>(dependent, independent,</span>
+<span id="cb74-8"><a href="#cb74-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">table_text_size =</span> <span class="fl">3.5</span> <span class="co"># reduce text size</span></span>
+<span id="cb74-9"><a href="#cb74-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Waiting for profiling to be done...
@@ -1601,301 +1610,301 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb74" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Logistic Regression"</span></span>
-<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barboza-Salerno"</span></span>
-<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a>title: "Logistic Regression"</span>
-<span id="cb74-8"><a href="#cb74-8" aria-hidden="true" tabindex="-1"></a>author: "Barboza-Salerno"</span>
-<span id="cb74-9"><a href="#cb74-9" aria-hidden="true" tabindex="-1"></a>date: "2024-02-11"</span>
-<span id="cb74-10"><a href="#cb74-10" aria-hidden="true" tabindex="-1"></a>output: html_document</span>
-<span id="cb74-11"><a href="#cb74-11" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb74-12"><a href="#cb74-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-13"><a href="#cb74-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup, include=FALSE}</span></span>
-<span id="cb74-14"><a href="#cb74-14" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb74-15"><a href="#cb74-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-16"><a href="#cb74-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-17"><a href="#cb74-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Dataset</span></span>
-<span id="cb74-18"><a href="#cb74-18" aria-hidden="true" tabindex="-1"></a>The data is a <span class="in">`mixed variable`</span> dataset containing 14 variables of 297 patients for their heart disease diagnosis. The data comes in an R package called <span class="co">[</span><span class="ot">`kmed`</span><span class="co">](https://search.r-project.org/CRAN/refmans/kmed/html/heart.html)</span> which you can read about on your own. Patients were diagnosed with heart disease in four classes. We will used this dataset to illustrate how multiple risk factors are related to a heart disease diagnosis, such as age (years), sex (FALSE = female; TRUE = male), chest pain (1 = typical angina, 2 = atypical angina, 3 = non-anginal pain, and 4 = asymptomatic) and thalach (max heart rate achieved).</span>
-<span id="cb74-19"><a href="#cb74-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-22"><a href="#cb74-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-23"><a href="#cb74-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kmed)</span>
-<span id="cb74-24"><a href="#cb74-24" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> heart</span>
-<span id="cb74-25"><a href="#cb74-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-26"><a href="#cb74-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-29"><a href="#cb74-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-30"><a href="#cb74-30" aria-hidden="true" tabindex="-1"></a><span class="co"># select variables</span></span>
-<span id="cb74-31"><a href="#cb74-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb74-32"><a href="#cb74-32" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
-<span id="cb74-33"><a href="#cb74-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
-<span id="cb74-34"><a href="#cb74-34" aria-hidden="true" tabindex="-1"></a>    age,</span>
-<span id="cb74-35"><a href="#cb74-35" aria-hidden="true" tabindex="-1"></a>    sex,</span>
-<span id="cb74-36"><a href="#cb74-36" aria-hidden="true" tabindex="-1"></a>    cp,</span>
-<span id="cb74-37"><a href="#cb74-37" aria-hidden="true" tabindex="-1"></a>    thalach,</span>
-<span id="cb74-38"><a href="#cb74-38" aria-hidden="true" tabindex="-1"></a>    class</span>
-<span id="cb74-39"><a href="#cb74-39" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb74-40"><a href="#cb74-40" aria-hidden="true" tabindex="-1"></a><span class="co"># print dataset's structure</span></span>
-<span id="cb74-41"><a href="#cb74-41" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dat)</span>
-<span id="cb74-42"><a href="#cb74-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-43"><a href="#cb74-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-46"><a href="#cb74-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-47"><a href="#cb74-47" aria-hidden="true" tabindex="-1"></a><span class="co"># rename variables</span></span>
-<span id="cb74-48"><a href="#cb74-48" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
-<span id="cb74-49"><a href="#cb74-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
-<span id="cb74-50"><a href="#cb74-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">chest_pain =</span> cp,</span>
-<span id="cb74-51"><a href="#cb74-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">max_heartrate =</span> thalach,</span>
-<span id="cb74-52"><a href="#cb74-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">heart_disease =</span> class</span>
-<span id="cb74-53"><a href="#cb74-53" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb74-54"><a href="#cb74-54" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-55"><a href="#cb74-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-58"><a href="#cb74-58" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-59"><a href="#cb74-59" aria-hidden="true" tabindex="-1"></a><span class="co"># recode sex</span></span>
-<span id="cb74-60"><a href="#cb74-60" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>sex,</span>
-<span id="cb74-61"><a href="#cb74-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb74-62"><a href="#cb74-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"female"</span>, <span class="st">"male"</span>)</span>
-<span id="cb74-63"><a href="#cb74-63" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-64"><a href="#cb74-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-65"><a href="#cb74-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-68"><a href="#cb74-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-69"><a href="#cb74-69" aria-hidden="true" tabindex="-1"></a><span class="co"># recode chest_pain</span></span>
-<span id="cb74-70"><a href="#cb74-70" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>chest_pain <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>chest_pain,</span>
-<span id="cb74-71"><a href="#cb74-71" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb74-72"><a href="#cb74-72" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"typical angina"</span>, <span class="st">"atypical angina"</span>, <span class="st">"non-anginal pain"</span>, <span class="st">"asymptomatic"</span>)</span>
-<span id="cb74-73"><a href="#cb74-73" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-74"><a href="#cb74-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-75"><a href="#cb74-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-78"><a href="#cb74-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-79"><a href="#cb74-79" aria-hidden="true" tabindex="-1"></a><span class="co"># recode heart_disease into 2 classes</span></span>
-<span id="cb74-80"><a href="#cb74-80" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>heart_disease <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(dat<span class="sc">$</span>heart_disease <span class="sc">==</span> <span class="dv">0</span>,</span>
-<span id="cb74-81"><a href="#cb74-81" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span>,</span>
-<span id="cb74-82"><a href="#cb74-82" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span></span>
-<span id="cb74-83"><a href="#cb74-83" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-84"><a href="#cb74-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-85"><a href="#cb74-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-88"><a href="#cb74-88" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-89"><a href="#cb74-89" aria-hidden="true" tabindex="-1"></a><span class="co"># set labels for heart_disease</span></span>
-<span id="cb74-90"><a href="#cb74-90" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>heart_disease <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>heart_disease,</span>
-<span id="cb74-91"><a href="#cb74-91" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
-<span id="cb74-92"><a href="#cb74-92" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"no disease"</span>, <span class="st">"disease"</span>)</span>
-<span id="cb74-93"><a href="#cb74-93" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-94"><a href="#cb74-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-95"><a href="#cb74-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-98"><a href="#cb74-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-99"><a href="#cb74-99" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(dat<span class="sc">$</span>heart_disease)</span>
-<span id="cb74-100"><a href="#cb74-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-101"><a href="#cb74-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-104"><a href="#cb74-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-105"><a href="#cb74-105" aria-hidden="true" tabindex="-1"></a><span class="co"># save model</span></span>
-<span id="cb74-106"><a href="#cb74-106" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> age,</span>
-<span id="cb74-107"><a href="#cb74-107" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
-<span id="cb74-108"><a href="#cb74-108" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
-<span id="cb74-109"><a href="#cb74-109" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-110"><a href="#cb74-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-111"><a href="#cb74-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-114"><a href="#cb74-114" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-115"><a href="#cb74-115" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m1)</span>
-<span id="cb74-116"><a href="#cb74-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-117"><a href="#cb74-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-120"><a href="#cb74-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-121"><a href="#cb74-121" aria-hidden="true" tabindex="-1"></a><span class="co"># OR for age</span></span>
-<span id="cb74-122"><a href="#cb74-122" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m1)[<span class="st">"age"</span>])</span>
-<span id="cb74-123"><a href="#cb74-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-124"><a href="#cb74-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-127"><a href="#cb74-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-128"><a href="#cb74-128" aria-hidden="true" tabindex="-1"></a><span class="co"># prob(heart disease) for age = 0</span></span>
-<span id="cb74-129"><a href="#cb74-129" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m1)[<span class="dv">1</span>]) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(m1)[<span class="dv">1</span>]))</span>
-<span id="cb74-130"><a href="#cb74-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-131"><a href="#cb74-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-134"><a href="#cb74-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-135"><a href="#cb74-135" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% CI for the OR for age</span></span>
-<span id="cb74-136"><a href="#cb74-136" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">confint</span>(m1,</span>
-<span id="cb74-137"><a href="#cb74-137" aria-hidden="true" tabindex="-1"></a>  <span class="at">parm =</span> <span class="st">"age"</span></span>
-<span id="cb74-138"><a href="#cb74-138" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb74-139"><a href="#cb74-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-142"><a href="#cb74-142" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-143"><a href="#cb74-143" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
-<span id="cb74-144"><a href="#cb74-144" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m1,</span>
-<span id="cb74-145"><a href="#cb74-145" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">age =</span> <span class="fu">c</span>(<span class="dv">30</span>)),</span>
-<span id="cb74-146"><a href="#cb74-146" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
-<span id="cb74-147"><a href="#cb74-147" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-148"><a href="#cb74-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-149"><a href="#cb74-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-152"><a href="#cb74-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-153"><a href="#cb74-153" aria-hidden="true" tabindex="-1"></a>pred</span>
-<span id="cb74-154"><a href="#cb74-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-155"><a href="#cb74-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-158"><a href="#cb74-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-159"><a href="#cb74-159" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
-<span id="cb74-160"><a href="#cb74-160" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m1,</span>
-<span id="cb74-161"><a href="#cb74-161" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">age =</span> <span class="fu">c</span>(<span class="dv">30</span>)),</span>
-<span id="cb74-162"><a href="#cb74-162" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span>,</span>
-<span id="cb74-163"><a href="#cb74-163" aria-hidden="true" tabindex="-1"></a>  <span class="at">se =</span> <span class="cn">TRUE</span></span>
-<span id="cb74-164"><a href="#cb74-164" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-165"><a href="#cb74-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-166"><a href="#cb74-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-167"><a href="#cb74-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-170"><a href="#cb74-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-171"><a href="#cb74-171" aria-hidden="true" tabindex="-1"></a>pred<span class="sc">$</span>fit</span>
-<span id="cb74-172"><a href="#cb74-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-175"><a href="#cb74-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-176"><a href="#cb74-176" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% confidence interval for the prediction</span></span>
-<span id="cb74-177"><a href="#cb74-177" aria-hidden="true" tabindex="-1"></a>lower <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">-</span> (<span class="fu">qnorm</span>(<span class="fl">0.975</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
-<span id="cb74-178"><a href="#cb74-178" aria-hidden="true" tabindex="-1"></a>upper <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">+</span> (<span class="fu">qnorm</span>(<span class="fl">0.975</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
-<span id="cb74-179"><a href="#cb74-179" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(lower, upper)</span>
-<span id="cb74-180"><a href="#cb74-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-183"><a href="#cb74-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-184"><a href="#cb74-184" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% confidence interval for the prediction</span></span>
-<span id="cb74-185"><a href="#cb74-185" aria-hidden="true" tabindex="-1"></a>lower <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">-</span> (<span class="fl">1.96</span> <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
-<span id="cb74-186"><a href="#cb74-186" aria-hidden="true" tabindex="-1"></a>upper <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">+</span> (<span class="fl">1.96</span> <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
-<span id="cb74-187"><a href="#cb74-187" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(lower, upper)</span>
-<span id="cb74-188"><a href="#cb74-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-191"><a href="#cb74-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-192"><a href="#cb74-192" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
-<span id="cb74-193"><a href="#cb74-193" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb74-194"><a href="#cb74-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-195"><a href="#cb74-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-198"><a href="#cb74-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-199"><a href="#cb74-199" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
-<span id="cb74-200"><a href="#cb74-200" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m1,</span>
-<span id="cb74-201"><a href="#cb74-201" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
-<span id="cb74-202"><a href="#cb74-202" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"age"</span></span>
-<span id="cb74-203"><a href="#cb74-203" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb74-204"><a href="#cb74-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
-<span id="cb74-205"><a href="#cb74-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-206"><a href="#cb74-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-209"><a href="#cb74-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-210"><a href="#cb74-210" aria-hidden="true" tabindex="-1"></a><span class="co"># levels for sex</span></span>
-<span id="cb74-211"><a href="#cb74-211" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(dat<span class="sc">$</span>sex)</span>
-<span id="cb74-212"><a href="#cb74-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-213"><a href="#cb74-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-216"><a href="#cb74-216" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-217"><a href="#cb74-217" aria-hidden="true" tabindex="-1"></a><span class="co"># save model</span></span>
-<span id="cb74-218"><a href="#cb74-218" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex,</span>
-<span id="cb74-219"><a href="#cb74-219" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
-<span id="cb74-220"><a href="#cb74-220" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
-<span id="cb74-221"><a href="#cb74-221" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-222"><a href="#cb74-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-223"><a href="#cb74-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-226"><a href="#cb74-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-227"><a href="#cb74-227" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m2)</span>
-<span id="cb74-228"><a href="#cb74-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-229"><a href="#cb74-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-232"><a href="#cb74-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-233"><a href="#cb74-233" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="st">"sexmale"</span>])</span>
-<span id="cb74-234"><a href="#cb74-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-235"><a href="#cb74-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-238"><a href="#cb74-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-239"><a href="#cb74-239" aria-hidden="true" tabindex="-1"></a><span class="co"># prob(disease) for sex = female</span></span>
-<span id="cb74-240"><a href="#cb74-240" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]))</span>
-<span id="cb74-241"><a href="#cb74-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-242"><a href="#cb74-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-245"><a href="#cb74-245" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-246"><a href="#cb74-246" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(<span class="fu">table</span>(dat<span class="sc">$</span>heart_disease, dat<span class="sc">$</span>sex))</span>
-<span id="cb74-247"><a href="#cb74-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-250"><a href="#cb74-250" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-251"><a href="#cb74-251" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
-<span id="cb74-252"><a href="#cb74-252" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m2,</span>
-<span id="cb74-253"><a href="#cb74-253" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>)),</span>
-<span id="cb74-254"><a href="#cb74-254" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
-<span id="cb74-255"><a href="#cb74-255" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-256"><a href="#cb74-256" aria-hidden="true" tabindex="-1"></a>pred</span>
-<span id="cb74-257"><a href="#cb74-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-260"><a href="#cb74-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-261"><a href="#cb74-261" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
-<span id="cb74-262"><a href="#cb74-262" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m2,</span>
-<span id="cb74-263"><a href="#cb74-263" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
-<span id="cb74-264"><a href="#cb74-264" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"sex"</span></span>
-<span id="cb74-265"><a href="#cb74-265" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb74-266"><a href="#cb74-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span>
-<span id="cb74-267"><a href="#cb74-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-268"><a href="#cb74-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-271"><a href="#cb74-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-272"><a href="#cb74-272" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frame of new patient</span></span>
-<span id="cb74-273"><a href="#cb74-273" aria-hidden="true" tabindex="-1"></a>new_patient <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb74-274"><a href="#cb74-274" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="dv">32</span>,</span>
-<span id="cb74-275"><a href="#cb74-275" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"female"</span></span>
-<span id="cb74-276"><a href="#cb74-276" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-277"><a href="#cb74-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-278"><a href="#cb74-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-281"><a href="#cb74-281" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-282"><a href="#cb74-282" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex <span class="sc">+</span> age,</span>
-<span id="cb74-283"><a href="#cb74-283" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
-<span id="cb74-284"><a href="#cb74-284" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
-<span id="cb74-285"><a href="#cb74-285" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-286"><a href="#cb74-286" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
-<span id="cb74-287"><a href="#cb74-287" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m3,</span>
-<span id="cb74-288"><a href="#cb74-288" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> new_patient,</span>
-<span id="cb74-289"><a href="#cb74-289" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
-<span id="cb74-290"><a href="#cb74-290" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-291"><a href="#cb74-291" aria-hidden="true" tabindex="-1"></a><span class="co"># print prediction</span></span>
-<span id="cb74-292"><a href="#cb74-292" aria-hidden="true" tabindex="-1"></a>pred</span>
-<span id="cb74-293"><a href="#cb74-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-296"><a href="#cb74-296" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-297"><a href="#cb74-297" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. age, sex and chest pain on prob of disease</span></span>
-<span id="cb74-298"><a href="#cb74-298" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m3,</span>
-<span id="cb74-299"><a href="#cb74-299" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
-<span id="cb74-300"><a href="#cb74-300" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"age"</span>,  <span class="st">"sex"</span>),</span>
-<span id="cb74-301"><a href="#cb74-301" aria-hidden="true" tabindex="-1"></a>  <span class="at">ci.lvl =</span> <span class="cn">NA</span> <span class="co"># remove confidence bands</span></span>
-<span id="cb74-302"><a href="#cb74-302" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb74-303"><a href="#cb74-303" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span>
-<span id="cb74-304"><a href="#cb74-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-305"><a href="#cb74-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-308"><a href="#cb74-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-309"><a href="#cb74-309" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(m3, m2,</span>
-<span id="cb74-310"><a href="#cb74-310" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.ci =</span> <span class="cn">FALSE</span>, <span class="co"># remove CI</span></span>
-<span id="cb74-311"><a href="#cb74-311" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.aic =</span> <span class="cn">TRUE</span>, <span class="co"># display AIC</span></span>
-<span id="cb74-312"><a href="#cb74-312" aria-hidden="true" tabindex="-1"></a>  <span class="at">p.style =</span> <span class="st">"numeric_stars"</span> <span class="co"># display p-values and stars</span></span>
-<span id="cb74-313"><a href="#cb74-313" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-314"><a href="#cb74-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-315"><a href="#cb74-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-318"><a href="#cb74-318" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-319"><a href="#cb74-319" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pROC)</span>
-<span id="cb74-320"><a href="#cb74-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-321"><a href="#cb74-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-324"><a href="#cb74-324" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-325"><a href="#cb74-325" aria-hidden="true" tabindex="-1"></a><span class="co"># save roc object</span></span>
-<span id="cb74-326"><a href="#cb74-326" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">roc</span>(heart_disease <span class="sc">~</span> <span class="fu">fitted</span>(m3),</span>
-<span id="cb74-327"><a href="#cb74-327" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat</span>
-<span id="cb74-328"><a href="#cb74-328" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-329"><a href="#cb74-329" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve</span></span>
-<span id="cb74-330"><a href="#cb74-330" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb74-331"><a href="#cb74-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-332"><a href="#cb74-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-335"><a href="#cb74-335" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-336"><a href="#cb74-336" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>auc</span>
-<span id="cb74-337"><a href="#cb74-337" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-338"><a href="#cb74-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-341"><a href="#cb74-341" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-342"><a href="#cb74-342" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve with AUC in title</span></span>
-<span id="cb74-343"><a href="#cb74-343" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb74-344"><a href="#cb74-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste0</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(res<span class="sc">$</span>auc, <span class="dv">2</span>)))</span>
-<span id="cb74-345"><a href="#cb74-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-348"><a href="#cb74-348" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-349"><a href="#cb74-349" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb74-350"><a href="#cb74-350" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-351"><a href="#cb74-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-354"><a href="#cb74-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-355"><a href="#cb74-355" aria-hidden="true" tabindex="-1"></a><span class="co"># print table of results</span></span>
-<span id="cb74-356"><a href="#cb74-356" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(m3, <span class="at">exponentiate =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb74-357"><a href="#cb74-357" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-360"><a href="#cb74-360" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-361"><a href="#cb74-361" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(finalfit)</span>
-<span id="cb74-362"><a href="#cb74-362" aria-hidden="true" tabindex="-1"></a><span class="co"># set variables</span></span>
-<span id="cb74-363"><a href="#cb74-363" aria-hidden="true" tabindex="-1"></a>dependent <span class="ot">&lt;-</span> <span class="st">"heart_disease"</span></span>
-<span id="cb74-364"><a href="#cb74-364" aria-hidden="true" tabindex="-1"></a>independent <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>)</span>
-<span id="cb74-365"><a href="#cb74-365" aria-hidden="true" tabindex="-1"></a>independent_final <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>, <span class="st">"chest_pain"</span>)</span>
-<span id="cb74-366"><a href="#cb74-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-367"><a href="#cb74-367" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">|&gt;</span> <span class="fu">or_plot</span>(dependent, independent,</span>
-<span id="cb74-368"><a href="#cb74-368" aria-hidden="true" tabindex="-1"></a>  <span class="at">table_text_size =</span> <span class="fl">3.5</span> <span class="co"># reduce text size</span></span>
-<span id="cb74-369"><a href="#cb74-369" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb74-370"><a href="#cb74-370" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb74-371"><a href="#cb74-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-374"><a href="#cb74-374" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb74-375"><a href="#cb74-375" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
-<span id="cb74-376"><a href="#cb74-376" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(m3)</span>
-<span id="cb74-377"><a href="#cb74-377" aria-hidden="true" tabindex="-1"></a><span class="st">``</span></span>
+<div class="sourceCode" id="cb77" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Logistic Regression"</span></span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barboza-Salerno"</span></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb77-7"><a href="#cb77-7" aria-hidden="true" tabindex="-1"></a>title: "Logistic Regression"</span>
+<span id="cb77-8"><a href="#cb77-8" aria-hidden="true" tabindex="-1"></a>author: "Barboza-Salerno"</span>
+<span id="cb77-9"><a href="#cb77-9" aria-hidden="true" tabindex="-1"></a>date: "2024-02-11"</span>
+<span id="cb77-10"><a href="#cb77-10" aria-hidden="true" tabindex="-1"></a>output: html_document</span>
+<span id="cb77-11"><a href="#cb77-11" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb77-12"><a href="#cb77-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-13"><a href="#cb77-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb77-14"><a href="#cb77-14" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb77-15"><a href="#cb77-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-16"><a href="#cb77-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-17"><a href="#cb77-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Dataset</span></span>
+<span id="cb77-18"><a href="#cb77-18" aria-hidden="true" tabindex="-1"></a>The data is a <span class="in">`mixed variable`</span> dataset containing 14 variables of 297 patients for their heart disease diagnosis. The data comes in an R package called <span class="co">[</span><span class="ot">`kmed`</span><span class="co">](https://search.r-project.org/CRAN/refmans/kmed/html/heart.html)</span> which you can read about on your own. Patients were diagnosed with heart disease in four classes. We will used this dataset to illustrate how multiple risk factors are related to a heart disease diagnosis, such as age (years), sex (FALSE = female; TRUE = male), chest pain (1 = typical angina, 2 = atypical angina, 3 = non-anginal pain, and 4 = asymptomatic) and thalach (max heart rate achieved).</span>
+<span id="cb77-19"><a href="#cb77-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-22"><a href="#cb77-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-23"><a href="#cb77-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kmed)</span>
+<span id="cb77-24"><a href="#cb77-24" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> heart</span>
+<span id="cb77-25"><a href="#cb77-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-26"><a href="#cb77-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-29"><a href="#cb77-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-30"><a href="#cb77-30" aria-hidden="true" tabindex="-1"></a><span class="co"># select variables</span></span>
+<span id="cb77-31"><a href="#cb77-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb77-32"><a href="#cb77-32" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
+<span id="cb77-33"><a href="#cb77-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb77-34"><a href="#cb77-34" aria-hidden="true" tabindex="-1"></a>    age,</span>
+<span id="cb77-35"><a href="#cb77-35" aria-hidden="true" tabindex="-1"></a>    sex,</span>
+<span id="cb77-36"><a href="#cb77-36" aria-hidden="true" tabindex="-1"></a>    cp,</span>
+<span id="cb77-37"><a href="#cb77-37" aria-hidden="true" tabindex="-1"></a>    thalach,</span>
+<span id="cb77-38"><a href="#cb77-38" aria-hidden="true" tabindex="-1"></a>    class</span>
+<span id="cb77-39"><a href="#cb77-39" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb77-40"><a href="#cb77-40" aria-hidden="true" tabindex="-1"></a><span class="co"># print dataset's structure</span></span>
+<span id="cb77-41"><a href="#cb77-41" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dat)</span>
+<span id="cb77-42"><a href="#cb77-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-43"><a href="#cb77-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-46"><a href="#cb77-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-47"><a href="#cb77-47" aria-hidden="true" tabindex="-1"></a><span class="co"># rename variables</span></span>
+<span id="cb77-48"><a href="#cb77-48" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
+<span id="cb77-49"><a href="#cb77-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb77-50"><a href="#cb77-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">chest_pain =</span> cp,</span>
+<span id="cb77-51"><a href="#cb77-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">max_heartrate =</span> thalach,</span>
+<span id="cb77-52"><a href="#cb77-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">heart_disease =</span> class</span>
+<span id="cb77-53"><a href="#cb77-53" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb77-54"><a href="#cb77-54" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-55"><a href="#cb77-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-58"><a href="#cb77-58" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-59"><a href="#cb77-59" aria-hidden="true" tabindex="-1"></a><span class="co"># recode sex</span></span>
+<span id="cb77-60"><a href="#cb77-60" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>sex <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>sex,</span>
+<span id="cb77-61"><a href="#cb77-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb77-62"><a href="#cb77-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"female"</span>, <span class="st">"male"</span>)</span>
+<span id="cb77-63"><a href="#cb77-63" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-64"><a href="#cb77-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-65"><a href="#cb77-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-68"><a href="#cb77-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-69"><a href="#cb77-69" aria-hidden="true" tabindex="-1"></a><span class="co"># recode chest_pain</span></span>
+<span id="cb77-70"><a href="#cb77-70" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>chest_pain <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>chest_pain,</span>
+<span id="cb77-71"><a href="#cb77-71" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb77-72"><a href="#cb77-72" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"typical angina"</span>, <span class="st">"atypical angina"</span>, <span class="st">"non-anginal pain"</span>, <span class="st">"asymptomatic"</span>)</span>
+<span id="cb77-73"><a href="#cb77-73" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-74"><a href="#cb77-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-75"><a href="#cb77-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-78"><a href="#cb77-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-79"><a href="#cb77-79" aria-hidden="true" tabindex="-1"></a><span class="co"># recode heart_disease into 2 classes</span></span>
+<span id="cb77-80"><a href="#cb77-80" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>heart_disease <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(dat<span class="sc">$</span>heart_disease <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb77-81"><a href="#cb77-81" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span>,</span>
+<span id="cb77-82"><a href="#cb77-82" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span></span>
+<span id="cb77-83"><a href="#cb77-83" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-84"><a href="#cb77-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-85"><a href="#cb77-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-88"><a href="#cb77-88" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-89"><a href="#cb77-89" aria-hidden="true" tabindex="-1"></a><span class="co"># set labels for heart_disease</span></span>
+<span id="cb77-90"><a href="#cb77-90" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>heart_disease <span class="ot">&lt;-</span> <span class="fu">factor</span>(dat<span class="sc">$</span>heart_disease,</span>
+<span id="cb77-91"><a href="#cb77-91" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb77-92"><a href="#cb77-92" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"no disease"</span>, <span class="st">"disease"</span>)</span>
+<span id="cb77-93"><a href="#cb77-93" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-94"><a href="#cb77-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-95"><a href="#cb77-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-98"><a href="#cb77-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-99"><a href="#cb77-99" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(dat<span class="sc">$</span>heart_disease)</span>
+<span id="cb77-100"><a href="#cb77-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-101"><a href="#cb77-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-104"><a href="#cb77-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-105"><a href="#cb77-105" aria-hidden="true" tabindex="-1"></a><span class="co"># save model</span></span>
+<span id="cb77-106"><a href="#cb77-106" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> age,</span>
+<span id="cb77-107"><a href="#cb77-107" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
+<span id="cb77-108"><a href="#cb77-108" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
+<span id="cb77-109"><a href="#cb77-109" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-110"><a href="#cb77-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-111"><a href="#cb77-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-114"><a href="#cb77-114" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-115"><a href="#cb77-115" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m1)</span>
+<span id="cb77-116"><a href="#cb77-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-117"><a href="#cb77-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-120"><a href="#cb77-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-121"><a href="#cb77-121" aria-hidden="true" tabindex="-1"></a><span class="co"># OR for age</span></span>
+<span id="cb77-122"><a href="#cb77-122" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m1)[<span class="st">"age"</span>])</span>
+<span id="cb77-123"><a href="#cb77-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-124"><a href="#cb77-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-127"><a href="#cb77-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-128"><a href="#cb77-128" aria-hidden="true" tabindex="-1"></a><span class="co"># prob(heart disease) for age = 0</span></span>
+<span id="cb77-129"><a href="#cb77-129" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m1)[<span class="dv">1</span>]) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(m1)[<span class="dv">1</span>]))</span>
+<span id="cb77-130"><a href="#cb77-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-131"><a href="#cb77-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-134"><a href="#cb77-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-135"><a href="#cb77-135" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% CI for the OR for age</span></span>
+<span id="cb77-136"><a href="#cb77-136" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">confint</span>(m1,</span>
+<span id="cb77-137"><a href="#cb77-137" aria-hidden="true" tabindex="-1"></a>  <span class="at">parm =</span> <span class="st">"age"</span></span>
+<span id="cb77-138"><a href="#cb77-138" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb77-139"><a href="#cb77-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-142"><a href="#cb77-142" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-143"><a href="#cb77-143" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
+<span id="cb77-144"><a href="#cb77-144" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m1,</span>
+<span id="cb77-145"><a href="#cb77-145" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">age =</span> <span class="fu">c</span>(<span class="dv">30</span>)),</span>
+<span id="cb77-146"><a href="#cb77-146" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
+<span id="cb77-147"><a href="#cb77-147" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-148"><a href="#cb77-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-149"><a href="#cb77-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-152"><a href="#cb77-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-153"><a href="#cb77-153" aria-hidden="true" tabindex="-1"></a>pred</span>
+<span id="cb77-154"><a href="#cb77-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-155"><a href="#cb77-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-158"><a href="#cb77-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-159"><a href="#cb77-159" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
+<span id="cb77-160"><a href="#cb77-160" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m1,</span>
+<span id="cb77-161"><a href="#cb77-161" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">age =</span> <span class="fu">c</span>(<span class="dv">30</span>)),</span>
+<span id="cb77-162"><a href="#cb77-162" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span>,</span>
+<span id="cb77-163"><a href="#cb77-163" aria-hidden="true" tabindex="-1"></a>  <span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb77-164"><a href="#cb77-164" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-165"><a href="#cb77-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-166"><a href="#cb77-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-167"><a href="#cb77-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-170"><a href="#cb77-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-171"><a href="#cb77-171" aria-hidden="true" tabindex="-1"></a>pred<span class="sc">$</span>fit</span>
+<span id="cb77-172"><a href="#cb77-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-175"><a href="#cb77-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-176"><a href="#cb77-176" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% confidence interval for the prediction</span></span>
+<span id="cb77-177"><a href="#cb77-177" aria-hidden="true" tabindex="-1"></a>lower <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">-</span> (<span class="fu">qnorm</span>(<span class="fl">0.975</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
+<span id="cb77-178"><a href="#cb77-178" aria-hidden="true" tabindex="-1"></a>upper <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">+</span> (<span class="fu">qnorm</span>(<span class="fl">0.975</span>) <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
+<span id="cb77-179"><a href="#cb77-179" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(lower, upper)</span>
+<span id="cb77-180"><a href="#cb77-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-183"><a href="#cb77-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-184"><a href="#cb77-184" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% confidence interval for the prediction</span></span>
+<span id="cb77-185"><a href="#cb77-185" aria-hidden="true" tabindex="-1"></a>lower <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">-</span> (<span class="fl">1.96</span> <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
+<span id="cb77-186"><a href="#cb77-186" aria-hidden="true" tabindex="-1"></a>upper <span class="ot">&lt;-</span> pred<span class="sc">$</span>fit <span class="sc">+</span> (<span class="fl">1.96</span> <span class="sc">*</span> pred<span class="sc">$</span>se.fit)</span>
+<span id="cb77-187"><a href="#cb77-187" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(lower, upper)</span>
+<span id="cb77-188"><a href="#cb77-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-191"><a href="#cb77-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-192"><a href="#cb77-192" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
+<span id="cb77-193"><a href="#cb77-193" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb77-194"><a href="#cb77-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-195"><a href="#cb77-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-198"><a href="#cb77-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-199"><a href="#cb77-199" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb77-200"><a href="#cb77-200" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m1,</span>
+<span id="cb77-201"><a href="#cb77-201" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
+<span id="cb77-202"><a href="#cb77-202" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"age"</span></span>
+<span id="cb77-203"><a href="#cb77-203" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb77-204"><a href="#cb77-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb77-205"><a href="#cb77-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-206"><a href="#cb77-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-209"><a href="#cb77-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-210"><a href="#cb77-210" aria-hidden="true" tabindex="-1"></a><span class="co"># levels for sex</span></span>
+<span id="cb77-211"><a href="#cb77-211" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(dat<span class="sc">$</span>sex)</span>
+<span id="cb77-212"><a href="#cb77-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-213"><a href="#cb77-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-216"><a href="#cb77-216" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-217"><a href="#cb77-217" aria-hidden="true" tabindex="-1"></a><span class="co"># save model</span></span>
+<span id="cb77-218"><a href="#cb77-218" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex,</span>
+<span id="cb77-219"><a href="#cb77-219" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
+<span id="cb77-220"><a href="#cb77-220" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
+<span id="cb77-221"><a href="#cb77-221" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-222"><a href="#cb77-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-223"><a href="#cb77-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-226"><a href="#cb77-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-227"><a href="#cb77-227" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m2)</span>
+<span id="cb77-228"><a href="#cb77-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-229"><a href="#cb77-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-232"><a href="#cb77-232" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-233"><a href="#cb77-233" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="st">"sexmale"</span>])</span>
+<span id="cb77-234"><a href="#cb77-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-235"><a href="#cb77-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-238"><a href="#cb77-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-239"><a href="#cb77-239" aria-hidden="true" tabindex="-1"></a><span class="co"># prob(disease) for sex = female</span></span>
+<span id="cb77-240"><a href="#cb77-240" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(m2)[<span class="dv">1</span>]))</span>
+<span id="cb77-241"><a href="#cb77-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-242"><a href="#cb77-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-245"><a href="#cb77-245" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-246"><a href="#cb77-246" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(<span class="fu">table</span>(dat<span class="sc">$</span>heart_disease, dat<span class="sc">$</span>sex))</span>
+<span id="cb77-247"><a href="#cb77-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-250"><a href="#cb77-250" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-251"><a href="#cb77-251" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
+<span id="cb77-252"><a href="#cb77-252" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m2,</span>
+<span id="cb77-253"><a href="#cb77-253" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>)),</span>
+<span id="cb77-254"><a href="#cb77-254" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
+<span id="cb77-255"><a href="#cb77-255" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-256"><a href="#cb77-256" aria-hidden="true" tabindex="-1"></a>pred</span>
+<span id="cb77-257"><a href="#cb77-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-260"><a href="#cb77-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-261"><a href="#cb77-261" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb77-262"><a href="#cb77-262" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m2,</span>
+<span id="cb77-263"><a href="#cb77-263" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
+<span id="cb77-264"><a href="#cb77-264" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="st">"sex"</span></span>
+<span id="cb77-265"><a href="#cb77-265" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb77-266"><a href="#cb77-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span>
+<span id="cb77-267"><a href="#cb77-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-268"><a href="#cb77-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-271"><a href="#cb77-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-272"><a href="#cb77-272" aria-hidden="true" tabindex="-1"></a><span class="co"># create data frame of new patient</span></span>
+<span id="cb77-273"><a href="#cb77-273" aria-hidden="true" tabindex="-1"></a>new_patient <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb77-274"><a href="#cb77-274" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="dv">32</span>,</span>
+<span id="cb77-275"><a href="#cb77-275" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"female"</span></span>
+<span id="cb77-276"><a href="#cb77-276" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-277"><a href="#cb77-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-278"><a href="#cb77-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-281"><a href="#cb77-281" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-282"><a href="#cb77-282" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">glm</span>(heart_disease <span class="sc">~</span> sex <span class="sc">+</span> age,</span>
+<span id="cb77-283"><a href="#cb77-283" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat,</span>
+<span id="cb77-284"><a href="#cb77-284" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
+<span id="cb77-285"><a href="#cb77-285" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-286"><a href="#cb77-286" aria-hidden="true" tabindex="-1"></a><span class="co"># predict probability to develop heart disease</span></span>
+<span id="cb77-287"><a href="#cb77-287" aria-hidden="true" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m3,</span>
+<span id="cb77-288"><a href="#cb77-288" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> new_patient,</span>
+<span id="cb77-289"><a href="#cb77-289" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"response"</span></span>
+<span id="cb77-290"><a href="#cb77-290" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-291"><a href="#cb77-291" aria-hidden="true" tabindex="-1"></a><span class="co"># print prediction</span></span>
+<span id="cb77-292"><a href="#cb77-292" aria-hidden="true" tabindex="-1"></a>pred</span>
+<span id="cb77-293"><a href="#cb77-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-296"><a href="#cb77-296" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-297"><a href="#cb77-297" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. age, sex and chest pain on prob of disease</span></span>
+<span id="cb77-298"><a href="#cb77-298" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(m3,</span>
+<span id="cb77-299"><a href="#cb77-299" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"pred"</span>,</span>
+<span id="cb77-300"><a href="#cb77-300" aria-hidden="true" tabindex="-1"></a>  <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"age"</span>,  <span class="st">"sex"</span>),</span>
+<span id="cb77-301"><a href="#cb77-301" aria-hidden="true" tabindex="-1"></a>  <span class="at">ci.lvl =</span> <span class="cn">NA</span> <span class="co"># remove confidence bands</span></span>
+<span id="cb77-302"><a href="#cb77-302" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb77-303"><a href="#cb77-303" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Prob(heart disease)"</span>)</span>
+<span id="cb77-304"><a href="#cb77-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-305"><a href="#cb77-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-308"><a href="#cb77-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-309"><a href="#cb77-309" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_model</span>(m3, m2,</span>
+<span id="cb77-310"><a href="#cb77-310" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.ci =</span> <span class="cn">FALSE</span>, <span class="co"># remove CI</span></span>
+<span id="cb77-311"><a href="#cb77-311" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.aic =</span> <span class="cn">TRUE</span>, <span class="co"># display AIC</span></span>
+<span id="cb77-312"><a href="#cb77-312" aria-hidden="true" tabindex="-1"></a>  <span class="at">p.style =</span> <span class="st">"numeric_stars"</span> <span class="co"># display p-values and stars</span></span>
+<span id="cb77-313"><a href="#cb77-313" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-314"><a href="#cb77-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-315"><a href="#cb77-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-318"><a href="#cb77-318" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-319"><a href="#cb77-319" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pROC)</span>
+<span id="cb77-320"><a href="#cb77-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-321"><a href="#cb77-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-324"><a href="#cb77-324" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-325"><a href="#cb77-325" aria-hidden="true" tabindex="-1"></a><span class="co"># save roc object</span></span>
+<span id="cb77-326"><a href="#cb77-326" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">roc</span>(heart_disease <span class="sc">~</span> <span class="fu">fitted</span>(m3),</span>
+<span id="cb77-327"><a href="#cb77-327" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat</span>
+<span id="cb77-328"><a href="#cb77-328" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-329"><a href="#cb77-329" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve</span></span>
+<span id="cb77-330"><a href="#cb77-330" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb77-331"><a href="#cb77-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-332"><a href="#cb77-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-335"><a href="#cb77-335" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-336"><a href="#cb77-336" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>auc</span>
+<span id="cb77-337"><a href="#cb77-337" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-338"><a href="#cb77-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-341"><a href="#cb77-341" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-342"><a href="#cb77-342" aria-hidden="true" tabindex="-1"></a><span class="co"># plot ROC curve with AUC in title</span></span>
+<span id="cb77-343"><a href="#cb77-343" aria-hidden="true" tabindex="-1"></a><span class="fu">ggroc</span>(res, <span class="at">legacy.axes =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb77-344"><a href="#cb77-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste0</span>(<span class="st">"AUC = "</span>, <span class="fu">round</span>(res<span class="sc">$</span>auc, <span class="dv">2</span>)))</span>
+<span id="cb77-345"><a href="#cb77-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-348"><a href="#cb77-348" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-349"><a href="#cb77-349" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb77-350"><a href="#cb77-350" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-351"><a href="#cb77-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-354"><a href="#cb77-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-355"><a href="#cb77-355" aria-hidden="true" tabindex="-1"></a><span class="co"># print table of results</span></span>
+<span id="cb77-356"><a href="#cb77-356" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(m3, <span class="at">exponentiate =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb77-357"><a href="#cb77-357" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-360"><a href="#cb77-360" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-361"><a href="#cb77-361" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(finalfit)</span>
+<span id="cb77-362"><a href="#cb77-362" aria-hidden="true" tabindex="-1"></a><span class="co"># set variables</span></span>
+<span id="cb77-363"><a href="#cb77-363" aria-hidden="true" tabindex="-1"></a>dependent <span class="ot">&lt;-</span> <span class="st">"heart_disease"</span></span>
+<span id="cb77-364"><a href="#cb77-364" aria-hidden="true" tabindex="-1"></a>independent <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>)</span>
+<span id="cb77-365"><a href="#cb77-365" aria-hidden="true" tabindex="-1"></a>independent_final <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"sex"</span>, <span class="st">"chest_pain"</span>)</span>
+<span id="cb77-366"><a href="#cb77-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-367"><a href="#cb77-367" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">|&gt;</span> <span class="fu">or_plot</span>(dependent, independent,</span>
+<span id="cb77-368"><a href="#cb77-368" aria-hidden="true" tabindex="-1"></a>  <span class="at">table_text_size =</span> <span class="fl">3.5</span> <span class="co"># reduce text size</span></span>
+<span id="cb77-369"><a href="#cb77-369" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-370"><a href="#cb77-370" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb77-371"><a href="#cb77-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-374"><a href="#cb77-374" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb77-375"><a href="#cb77-375" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb77-376"><a href="#cb77-376" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(m3)</span>
+<span id="cb77-377"><a href="#cb77-377" aria-hidden="true" tabindex="-1"></a><span class="st">``</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
