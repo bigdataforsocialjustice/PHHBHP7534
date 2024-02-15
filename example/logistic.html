@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="twitter:image-width" content="1280">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -150,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../example/index.html" rel="" target="">
+    <a class="nav-link active" href="../example/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Examples</span></a>
   </li>  
   <li class="nav-item">
@@ -177,10 +177,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../example/infant_mortality.html">Example Code</a></li><li class="breadcrumb-item"><a href="../example/logistic.html">Logistic Regression</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Overview</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code examples</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Example Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/infant_mortality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Infant Mortality Example</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/bias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bias Example</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/Confounding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confounding &amp; Association</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/moderation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Moderation Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/mediation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simple Mediation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/reading_from_web.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading files from the web</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../example/logistic.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Logistic Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -485,7 +572,7 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>Learn more about sjPlot with 'browseVignettes("sjPlot")'.</code></pre>
+<pre><code>Install package "strengejacke" from GitHub (`devtools::install_github("strengejacke/strengejacke")`) to load all sj-packages at once!</code></pre>
 </div>
 <details open="">
 <summary>Code</summary>
@@ -804,7 +891,7 @@ Attaching package: 'pROC'</code></pre>
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>#Uighur</code></pre>
+<pre><code>#BlackLivesMatter</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -815,23 +902,23 @@ Attaching package: 'pROC'</code></pre>
 </details>
 <div class="cell-output-display">
 
-<div id="xkqddscxfk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xkqddscxfk table {
+<div id="pyptvsnptm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pyptvsnptm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xkqddscxfk thead, #xkqddscxfk tbody, #xkqddscxfk tfoot, #xkqddscxfk tr, #xkqddscxfk td, #xkqddscxfk th {
+#pyptvsnptm thead, #pyptvsnptm tbody, #pyptvsnptm tfoot, #pyptvsnptm tr, #pyptvsnptm td, #pyptvsnptm th {
   border-style: none;
 }
 
-#xkqddscxfk p {
+#pyptvsnptm p {
   margin: 0;
   padding: 0;
 }
 
-#xkqddscxfk .gt_table {
+#pyptvsnptm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -857,12 +944,12 @@ Attaching package: 'pROC'</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_caption {
+#pyptvsnptm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xkqddscxfk .gt_title {
+#pyptvsnptm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -874,7 +961,7 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-width: 0;
 }
 
-#xkqddscxfk .gt_subtitle {
+#pyptvsnptm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -886,7 +973,7 @@ Attaching package: 'pROC'</code></pre>
   border-top-width: 0;
 }
 
-#xkqddscxfk .gt_heading {
+#pyptvsnptm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -898,13 +985,13 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_bottom_border {
+#pyptvsnptm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_col_headings {
+#pyptvsnptm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -919,7 +1006,7 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_col_heading {
+#pyptvsnptm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -939,7 +1026,7 @@ Attaching package: 'pROC'</code></pre>
   overflow-x: hidden;
 }
 
-#xkqddscxfk .gt_column_spanner_outer {
+#pyptvsnptm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -951,15 +1038,15 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 4px;
 }
 
-#xkqddscxfk .gt_column_spanner_outer:first-child {
+#pyptvsnptm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xkqddscxfk .gt_column_spanner_outer:last-child {
+#pyptvsnptm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xkqddscxfk .gt_column_spanner {
+#pyptvsnptm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -971,11 +1058,11 @@ Attaching package: 'pROC'</code></pre>
   width: 100%;
 }
 
-#xkqddscxfk .gt_spanner_row {
+#pyptvsnptm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xkqddscxfk .gt_group_heading {
+#pyptvsnptm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1001,7 +1088,7 @@ Attaching package: 'pROC'</code></pre>
   text-align: left;
 }
 
-#xkqddscxfk .gt_empty_group_heading {
+#pyptvsnptm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1016,15 +1103,15 @@ Attaching package: 'pROC'</code></pre>
   vertical-align: middle;
 }
 
-#xkqddscxfk .gt_from_md > :first-child {
+#pyptvsnptm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xkqddscxfk .gt_from_md > :last-child {
+#pyptvsnptm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xkqddscxfk .gt_row {
+#pyptvsnptm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1043,7 +1130,7 @@ Attaching package: 'pROC'</code></pre>
   overflow-x: hidden;
 }
 
-#xkqddscxfk .gt_stub {
+#pyptvsnptm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1056,7 +1143,7 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xkqddscxfk .gt_stub_row_group {
+#pyptvsnptm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1070,15 +1157,15 @@ Attaching package: 'pROC'</code></pre>
   vertical-align: top;
 }
 
-#xkqddscxfk .gt_row_group_first td {
+#pyptvsnptm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xkqddscxfk .gt_row_group_first th {
+#pyptvsnptm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xkqddscxfk .gt_summary_row {
+#pyptvsnptm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1088,16 +1175,16 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xkqddscxfk .gt_first_summary_row {
+#pyptvsnptm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_first_summary_row.thick {
+#pyptvsnptm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xkqddscxfk .gt_last_summary_row {
+#pyptvsnptm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1107,7 +1194,7 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_grand_summary_row {
+#pyptvsnptm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1117,7 +1204,7 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xkqddscxfk .gt_first_grand_summary_row {
+#pyptvsnptm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1127,7 +1214,7 @@ Attaching package: 'pROC'</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_last_grand_summary_row_top {
+#pyptvsnptm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1137,11 +1224,11 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_striped {
+#pyptvsnptm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xkqddscxfk .gt_table_body {
+#pyptvsnptm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1150,7 +1237,7 @@ Attaching package: 'pROC'</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_footnotes {
+#pyptvsnptm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1164,7 +1251,7 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_footnote {
+#pyptvsnptm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1173,7 +1260,7 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xkqddscxfk .gt_sourcenotes {
+#pyptvsnptm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1187,7 +1274,7 @@ Attaching package: 'pROC'</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xkqddscxfk .gt_sourcenote {
+#pyptvsnptm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1195,63 +1282,63 @@ Attaching package: 'pROC'</code></pre>
   padding-right: 5px;
 }
 
-#xkqddscxfk .gt_left {
+#pyptvsnptm .gt_left {
   text-align: left;
 }
 
-#xkqddscxfk .gt_center {
+#pyptvsnptm .gt_center {
   text-align: center;
 }
 
-#xkqddscxfk .gt_right {
+#pyptvsnptm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xkqddscxfk .gt_font_normal {
+#pyptvsnptm .gt_font_normal {
   font-weight: normal;
 }
 
-#xkqddscxfk .gt_font_bold {
+#pyptvsnptm .gt_font_bold {
   font-weight: bold;
 }
 
-#xkqddscxfk .gt_font_italic {
+#pyptvsnptm .gt_font_italic {
   font-style: italic;
 }
 
-#xkqddscxfk .gt_super {
+#pyptvsnptm .gt_super {
   font-size: 65%;
 }
 
-#xkqddscxfk .gt_footnote_marks {
+#pyptvsnptm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xkqddscxfk .gt_asterisk {
+#pyptvsnptm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xkqddscxfk .gt_indent_1 {
+#pyptvsnptm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xkqddscxfk .gt_indent_2 {
+#pyptvsnptm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xkqddscxfk .gt_indent_3 {
+#pyptvsnptm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xkqddscxfk .gt_indent_4 {
+#pyptvsnptm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xkqddscxfk .gt_indent_5 {
+#pyptvsnptm .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
