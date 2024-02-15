@@ -13,7 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 The data is a `mixed variable` dataset containing 14 variables of 297 patients for their heart disease diagnosis. The data comes in an R package called [`kmed`](https://search.r-project.org/CRAN/refmans/kmed/html/heart.html) which you can read about on your own. Patients were diagnosed with heart disease in four classes. We will used this dataset to illustrate how multiple risk factors are related to a heart disease diagnosis, such as age (years), sex (FALSE = female; TRUE = male), chest pain (1 = typical angina, 2 = atypical angina, 3 = non-anginal pain, and 4 = asymptomatic) and thalach (max heart rate achieved).
 
 ```{r}
-dat <- read.csv("C:/Users/barboza-salerno.1/Documents/ph-hbhp-7534/heart.csv")
+library(kmed)
+dat <- heart
+#dat <- read.csv("C:/Users/barboza-salerno.1/Documents/ph-hbhp-7534/heart.csv")
 ```
 
 ```{r}
@@ -136,12 +138,14 @@ lower <- pred$fit - (qnorm(0.975) * pred$se.fit)
 upper <- pred$fit + (qnorm(0.975) * pred$se.fit)
 c(lower, upper)
 ```
+
 ```{r}
 # 95% confidence interval for the prediction
 lower <- pred$fit - (1.96 * pred$se.fit)
 upper <- pred$fit + (1.96 * pred$se.fit)
 c(lower, upper)
 ```
+
 ```{r}
 library(sjPlot)
 library(ggplot2)
