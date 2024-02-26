@@ -292,7 +292,12 @@
     "href": "resource/index.html",
     "title": "Resources",
     "section": "",
-    "text": "On this page, you will find a number of resources to help you with the assignments."
+    "text": "On this page, you will find a number of resources to help you with the assignments.",
+    "crumbs": [
+      "Resources",
+      "Overview",
+      "Resources"
+    ]
   },
   {
     "objectID": "resource/r.html",
@@ -558,14 +563,24 @@
     "href": "content/04-content.html",
     "title": "Mediation, Moderation and Moderated Mediation",
     "section": "",
-    "text": "Note\n\n\n\nCourse objective(s) for this module: Describe and execute the key steps in designing, conducting, and evaluating research in health behavior and health promotion."
+    "text": "Note\n\n\n\nCourse objective(s) for this module: Describe and execute the key steps in designing, conducting, and evaluating research in health behavior and health promotion.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "4: Mediation + Moderation"
+    ]
   },
   {
     "objectID": "content/04-content.html#readings",
     "href": "content/04-content.html#readings",
     "title": "Mediation, Moderation and Moderated Mediation",
     "section": "Readings",
-    "text": "Readings\n\nMeasurement\n\n Barboza-Salerno, G. E. (2020). Cognitive readiness to parent, stability and change in postpartum parenting stress and social-emotional problems in early childhood: A second order growth curve model. Children and Youth Services Review, 113, 104958. https://doi.org/10.1016/j.childyouth.2020.104958\n Barboza, G., & Siller, L. A. (2021).Child Maltreatment, School Bonds, and Adult Violence: A Serial Mediation Model. Journal of Interpersonal Violence, 36(11–12), NP5839–NP5873. https://doi.org/10.1177/0886260518805763\n Frazier, P. A., Tix, A. P., & Barron, K. E. (2004). Testing Moderator and Mediator Effects in Counseling Psychology Research. Journal of Counseling Psychology, 51(1), 115–134. https://doi.org/10.1037/0022-0167.51.1.115\n MacKinnon, D. P. (2011). Integrating Mediators and Moderators in Research Design. Research on Social Work Practice, 21(6), 675–681. https://doi.org/10.1177/1049731511414148\n\n\n\nRequired Reading for PhD Students (and recommended for others)\n\nAndrew Hayes’ book entitled Mediation, Moderation and Conditional Process Models is an excellent and rigorous introduction. Read Chapters 3 The Simple Mediation Model and Chapter 7: Fundamentals of Moderation Analysis.\n\n\n\nYour tasks to complete today\n\nSubmit your research topic by emailing the topic to me by midnight tonight\nThe subject of the email must be “Research Topic for PHHBHP7534”\nThe body should have a statement of the research topic you wish to pursue\nComplete Problem Set 2\n\n\n\nIn-class activities\n\nConducting a literature review\nCreating bibliographies in Zotero\n\n\n\n\n\n\n\nPay Attention\n\n\n\nPhD students: the annotated bibliography is due next week. To submit the bibliography, follow these instructions."
+    "text": "Readings\n\nMeasurement\n\n Barboza-Salerno, G. E. (2020). Cognitive readiness to parent, stability and change in postpartum parenting stress and social-emotional problems in early childhood: A second order growth curve model. Children and Youth Services Review, 113, 104958. https://doi.org/10.1016/j.childyouth.2020.104958\n Barboza, G., & Siller, L. A. (2021).Child Maltreatment, School Bonds, and Adult Violence: A Serial Mediation Model. Journal of Interpersonal Violence, 36(11–12), NP5839–NP5873. https://doi.org/10.1177/0886260518805763\n Frazier, P. A., Tix, A. P., & Barron, K. E. (2004). Testing Moderator and Mediator Effects in Counseling Psychology Research. Journal of Counseling Psychology, 51(1), 115–134. https://doi.org/10.1037/0022-0167.51.1.115\n MacKinnon, D. P. (2011). Integrating Mediators and Moderators in Research Design. Research on Social Work Practice, 21(6), 675–681. https://doi.org/10.1177/1049731511414148\n\n\n\nRequired Reading for PhD Students (and recommended for others)\n\nAndrew Hayes’ book entitled Mediation, Moderation and Conditional Process Models is an excellent and rigorous introduction. Read Chapters 3 The Simple Mediation Model and Chapter 7: Fundamentals of Moderation Analysis.\n\n\n\nYour tasks to complete today\n\nSubmit your research topic by emailing the topic to me by midnight tonight\nThe subject of the email must be “Research Topic for PHHBHP7534”\nThe body should have a statement of the research topic you wish to pursue\nComplete Problem Set 2\n\n\n\nIn-class activities\n\nConducting a literature review\nCreating bibliographies in Zotero\n\n\n\n\n\n\n\nPay Attention\n\n\n\nPhD students: the annotated bibliography is due next week. To submit the bibliography, follow these instructions.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "4: Mediation + Moderation"
+    ]
   },
   {
     "objectID": "content/04-content.html#slides",
@@ -586,7 +601,12 @@
     "href": "content/04-content.html#in-class-stuff",
     "title": "Mediation, Moderation and Moderated Mediation",
     "section": "In-class stuff",
-    "text": "In-class stuff\n\n📦 Additional Resources\n\nRead Chapters 1 & 2 in R for Data Science\nMediation and Moderation in R\nClass Example\n\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4, 7\nPhD Specializations: 4, 7\n\n\n\nStudent Evaluation Activity for Assessment\n\nExam 1\nProposal 1\n\n\n\nAdvanced Mediation Models\nFor an example of when I used these models in my own work, see (Elise Barboza and Siller 2021) Parallel Mediation Model:\n\n\n\n\n\nSequential mediation model:\n\n\n\n\n\n\n\nAdditional Resources\nModeration by Hayes\nInterpreting Interactions"
+    "text": "In-class stuff\n\n📦 Additional Resources\n\nRead Chapters 1 & 2 in R for Data Science\nMediation and Moderation in R\nClass Example\n\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4, 7\nPhD Specializations: 4, 7\n\n\n\nStudent Evaluation Activity for Assessment\n\nExam 1\nProposal 1\n\n\n\nAdvanced Mediation Models\nFor an example of when I used these models in my own work, see (Elise Barboza and Siller 2021) Parallel Mediation Model:\n\n\n\n\n\n\n\n\n\nSequential mediation model:\n\n\n\n\n\n\n\n\n\n\n\nAdditional Resources\nModeration by Hayes\nInterpreting Interactions",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "4: Mediation + Moderation"
+    ]
   },
   {
     "objectID": "content/04-content.html#bayesian-statistics-resources",
@@ -859,28 +879,48 @@
     "href": "assignment/01-problem-set.html",
     "title": "Problem set 1",
     "section": "",
-    "text": "Note\n\n\n\nThis assignment builds upon Public Health Foundational Knowledge GIA-1 and Foundational Competencies GIA-1."
+    "text": "Note\n\n\n\nThis assignment builds upon Public Health Foundational Knowledge GIA-1 and Foundational Competencies GIA-1.",
+    "crumbs": [
+      "Assignments",
+      "Problem sets",
+      "Problem set 1"
+    ]
   },
   {
     "objectID": "assignment/01-problem-set.html#task-1-introduce-yourself-to-r-rstudio-and-the-tidyverse",
     "href": "assignment/01-problem-set.html#task-1-introduce-yourself-to-r-rstudio-and-the-tidyverse",
     "title": "Problem set 1",
     "section": "Task 1: Introduce yourself to R, RStudio, and the tidyverse",
-    "text": "Task 1: Introduce yourself to R, RStudio, and the tidyverse\n\nGo the the example page for this week, “Welcome to R, RStudio, and the tidyverse”, and work through the different primers and videos in the four parts of the page.\nIt seems like there’s a lot on the page, but they’re short and go fairly quickly (especially as you get the hang of the syntax). Also, I have no way of seeing what you do or what you get wrong or right, and that’s totally fine! If you get stuck and want to skip some (or if it gets too easy), go right ahead and skip them!"
+    "text": "Task 1: Introduce yourself to R, RStudio, and the tidyverse\n\nGo the the example page for this week, “Welcome to R, RStudio, and the tidyverse”, and work through the different primers and videos in the four parts of the page.\nIt seems like there’s a lot on the page, but they’re short and go fairly quickly (especially as you get the hang of the syntax). Also, I have no way of seeing what you do or what you get wrong or right, and that’s totally fine! If you get stuck and want to skip some (or if it gets too easy), go right ahead and skip them!",
+    "crumbs": [
+      "Assignments",
+      "Problem sets",
+      "Problem set 1"
+    ]
   },
   {
     "objectID": "assignment/01-problem-set.html#task-2-make-an-rstudio-project",
     "href": "assignment/01-problem-set.html#task-2-make-an-rstudio-project",
     "title": "Problem set 1",
     "section": "Task 2: Make an RStudio Project",
-    "text": "Task 2: Make an RStudio Project\n\nUse either RStudio.cloud or RStudio on your computer (preferably RStudio on your computer! Follow these instructions to get started!) to create a new RStudio Project. Refer to the example page you read in Task 1 for instructions\nCreate a folder named “data” in the project folder you just made.\nDownload this CSV file and place it in that folder:\n\n cars.csv\n\nIn RStudio, go to “File” &gt; “New File…” &gt; “R Markdown…” and click “OK” in the dialog without changing anything.\nDelete all the placeholder text in that new file and replace it with this:\n---\ntitle: \"Problem set 1\"\nauthor: \"Put your name here\"\noutput: html_document\n---\n\n\n```{r load-libraries-data, warning=FALSE, message=FALSE}\nlibrary(tidyverse)\n\ncars &lt;- read_csv(\"data/cars.csv\")\n```\n\n\n\n# Learning R\n\nTell me that you worked through the primers and videos and examples at the example page for this week:\n\nWRITE SOMETHING HERE LIKE \"I did all the primers and had the time of my life!\" or whatever.\n\n\n# My first plots\n\nInsert a chunk below and use it to create a scatterplot (hint: `geom_point()`) with diplacement (`displ`) on the x-axis, city MPG (`cty`) on the y-axis, and with the points colored by drive (`drv`).\n\nPUT CHUNK HERE\n\nInsert a chunk below and use it to create a histogram (hint: `geom_histogram()`) with highway MPG (`hwy`) on the x-axis. Do not include anything on the y-axis (`geom_histogram()` will do that automatically for you). Choose an appropriate bin width. If you're brave, facet by drive (`drv`).\n\nPUT CHUNK HERE\n\n\n# My first data manipulation\n\nInsert a chunk below and use it to calculate the average city MPG (`cty`) by class of car (`class`). This won't be a plot---it'll be a table. Hint: use a combination of `group_by()` and `summarize()`.\n\nPUT CHUNK HERE\nSave the R Markdown file with some sort of name (without any spaces!)\nYour project folder should look something like this:"
+    "text": "Task 2: Make an RStudio Project\n\nUse either RStudio.cloud or RStudio on your computer (preferably RStudio on your computer! Follow these instructions to get started!) to create a new RStudio Project. Refer to the example page you read in Task 1 for instructions\nCreate a folder named “data” in the project folder you just made.\nDownload this CSV file and place it in that folder:\n\n cars.csv\n\nIn RStudio, go to “File” &gt; “New File…” &gt; “R Markdown…” and click “OK” in the dialog without changing anything.\nDelete all the placeholder text in that new file and replace it with this:\n---\ntitle: \"Problem set 1\"\nauthor: \"Put your name here\"\noutput: html_document\n---\n\n\n```{r load-libraries-data, warning=FALSE, message=FALSE}\nlibrary(tidyverse)\n\ncars &lt;- read_csv(\"data/cars.csv\")\n```\n\n\n# Learning R\n\nTell me that you worked through the primers and videos and examples at the example page for this week:\n\nWRITE SOMETHING HERE LIKE \"I did all the primers and had the time of my life!\" or whatever.\n\n\n# My first plots\n\nInsert a chunk below and use it to create a scatterplot (hint: `geom_point()`) with diplacement (`displ`) on the x-axis, city MPG (`cty`) on the y-axis, and with the points colored by drive (`drv`).\n\nPUT CHUNK HERE\n\nInsert a chunk below and use it to create a histogram (hint: `geom_histogram()`) with highway MPG (`hwy`) on the x-axis. Do not include anything on the y-axis (`geom_histogram()` will do that automatically for you). Choose an appropriate bin width. If you're brave, facet by drive (`drv`).\n\nPUT CHUNK HERE\n\n\n# My first data manipulation\n\nInsert a chunk below and use it to calculate the average city MPG (`cty`) by class of car (`class`). This won't be a plot---it'll be a table. Hint: use a combination of `group_by()` and `summarize()`.\n\nPUT CHUNK HERE\nSave the R Markdown file with some sort of name (without any spaces!)\nYour project folder should look something like this:",
+    "crumbs": [
+      "Assignments",
+      "Problem sets",
+      "Problem set 1"
+    ]
   },
   {
     "objectID": "assignment/01-problem-set.html#task-3-work-with-r",
     "href": "assignment/01-problem-set.html#task-3-work-with-r",
     "title": "Problem set 1",
     "section": "Task 3: Work with R",
-    "text": "Task 3: Work with R\n\nRemove the text that says “PUT CHUNK HERE” and insert a new R code chunk. Either type ctrl + alt + i on Windows, or ⌘ + ⌥ + i on macOS, or use the “Insert Chunk” menu:\n\n\n\n\n\n\n\n\n\n\n\nFollow the instructions for the three chunks of code.\nKnit your document as a Word file (or PDF if you’re brave and installed LaTeX). Use the “Knit” menu:\n\n\n\n\n\n\n\n\n\n\n\nEmail me the knitted document with the subject heading “Project 1”\n🎉 Party! 🎉\n\n\n\n\n\n\n\nTip\n\n\n\nYou’ll be doing this same process for all your future problem sets. Each problem set will involve an R Markdown file. You can either create a new RStudio Project directory for all your work:\n\n\n\n\n\n\n\n\n\nOr you can create individual projects for each assignment and project:"
+    "text": "Task 3: Work with R\n\nRemove the text that says “PUT CHUNK HERE” and insert a new R code chunk. Either type ctrl + alt + i on Windows, or ⌘ + ⌥ + i on macOS, or use the “Insert Chunk” menu:\n\n\n\n\n\n\n\n\n\n\n\nFollow the instructions for the three chunks of code.\nKnit your document as a Word file (or PDF if you’re brave and installed LaTeX). Use the “Knit” menu:\n\n\n\n\n\n\n\n\n\n\n\nEmail me the knitted document with the subject heading “Project 1”\n🎉 Party! 🎉\n\n\n\n\n\n\n\nTip\n\n\n\nYou’ll be doing this same process for all your future problem sets. Each problem set will involve an R Markdown file. You can either create a new RStudio Project directory for all your work:\n\n\n\n\n\n\n\n\n\nOr you can create individual projects for each assignment and project:",
+    "crumbs": [
+      "Assignments",
+      "Problem sets",
+      "Problem set 1"
+    ]
   },
   {
     "objectID": "assignment/02-problem-set.html",
@@ -1545,7 +1585,12 @@
     "href": "content/04-content.html#lecture-notes",
     "title": "Mediation, Moderation and Moderated Mediation",
     "section": "Lecture Notes",
-    "text": "Lecture Notes\nThe slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\nThe lecture notes for today can be downloaded here\n\n\n\n\n\n\nTip\n\n\n\nFun fact: If you type ? (or shift + /) while going through the slides, you can see a list of special slide-specific commands."
+    "text": "Lecture Notes\nThe slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\nThe lecture notes for today can be downloaded here\n\n\n\n\n\n\nTip\n\n\n\nFun fact: If you type ? (or shift + /) while going through the slides, you can see a list of special slide-specific commands.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "4: Mediation + Moderation"
+    ]
   },
   {
     "objectID": "content/annotated.html",
@@ -2191,14 +2236,24 @@
     "href": "content/14-content.html",
     "title": "Analytical methods+geospatial",
     "section": "",
-    "text": "TBD"
+    "text": "Course Objectives\n\n\n\nUse geographical information systems software to conduct exploratory spatial data analysis (ESDA)",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "14: Analytical methods + geospatial"
+    ]
   },
   {
     "objectID": "content/14-content.html#readings",
     "href": "content/14-content.html#readings",
     "title": "Analytical methods+geospatial",
-    "section": "",
-    "text": "TBD"
+    "section": "Readings",
+    "text": "Readings\n\nToday’s Assignments\n\n Read this introduction to QGIS available from the Geographic Information Systems: QGIS website at New York University\n\n\n\nYour tasks\n\nDownload and install QGIS\nNavigate to the Census website and familiarize yourself with the available topics\nNavigate to the Census Tigerline website and familiarize yourself with the types of boundaries you can map\nRead my write up on Making Maps in R\nDownload the QGIS plugins HCMGIS (baselayers) and MMQGIS (geocoding)",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "14: Analytical methods + geospatial"
+    ]
   },
   {
     "objectID": "content/10-content.html#readings",
@@ -2785,7 +2840,12 @@
     "href": "example/logistic.html",
     "title": "Logistic Regression",
     "section": "",
-    "text": "The Dataset\nThe data is a mixed variable dataset containing 14 variables of 297 patients for their heart disease diagnosis. The data comes in an R package called kmed which you can read about on your own. Patients were diagnosed with heart disease in four classes. We will used this dataset to illustrate how multiple risk factors are related to a heart disease diagnosis, such as age (years), sex (FALSE = female; TRUE = male), chest pain (1 = typical angina, 2 = atypical angina, 3 = non-anginal pain, and 4 = asymptomatic) and thalach (max heart rate achieved).\n\n\nCode\nlibrary(kmed)\ndat &lt;- heart\n\n\n\n\nCode\n# select variables\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\ndat &lt;- dat |&gt;\n  select(\n    age,\n    sex,\n    cp,\n    thalach,\n    class\n  )\n# print dataset's structure\nstr(dat)\n\n\n'data.frame':   297 obs. of  5 variables:\n $ age    : num  63 67 67 37 41 56 62 57 63 53 ...\n $ sex    : logi  TRUE TRUE TRUE TRUE FALSE TRUE ...\n $ cp     : Factor w/ 4 levels \"1\",\"2\",\"3\",\"4\": 1 4 4 3 2 2 4 4 4 4 ...\n $ thalach: num  150 108 129 187 172 178 160 163 147 155 ...\n $ class  : int  0 2 1 0 0 0 3 0 2 1 ...\n - attr(*, \"na.action\")= 'omit' Named int [1:6] 88 167 193 267 288 303\n  ..- attr(*, \"names\")= chr [1:6] \"88\" \"167\" \"193\" \"267\" ...\n\n\n\n\nCode\n# rename variables\ndat &lt;- dat |&gt;\n  rename(\n    chest_pain = cp,\n    max_heartrate = thalach,\n    heart_disease = class\n  )\n\n\n\n\nCode\n# recode sex\ndat$sex &lt;- factor(dat$sex,\n  levels = c(FALSE, TRUE),\n  labels = c(\"female\", \"male\")\n)\n\n\n\n\nCode\n# recode chest_pain\ndat$chest_pain &lt;- factor(dat$chest_pain,\n  levels = 1:4,\n  labels = c(\"typical angina\", \"atypical angina\", \"non-anginal pain\", \"asymptomatic\")\n)\n\n\n\n\nCode\n# recode heart_disease into 2 classes\ndat$heart_disease &lt;- ifelse(dat$heart_disease == 0,\n  0,\n  1\n)\n\n\n\n\nCode\n# set labels for heart_disease\ndat$heart_disease &lt;- factor(dat$heart_disease,\n  levels = c(0, 1),\n  labels = c(\"no disease\", \"disease\")\n)\n\n\n\n\nCode\nlevels(dat$heart_disease)\n\n\n[1] \"no disease\" \"disease\"   \n\n\n\n\nCode\n# save model\nm1 &lt;- glm(heart_disease ~ age,\n  data = dat,\n  family = \"binomial\"\n)\n\n\n\n\nCode\nsummary(m1)\n\n\n\nCall:\nglm(formula = heart_disease ~ age, family = \"binomial\", data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -3.05122    0.76862  -3.970  7.2e-05 ***\nage          0.05291    0.01382   3.829 0.000128 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 409.95  on 296  degrees of freedom\nResidual deviance: 394.25  on 295  degrees of freedom\nAIC: 398.25\n\nNumber of Fisher Scoring iterations: 4\n\n\n\n\nCode\n# OR for age\nexp(coef(m1)[\"age\"])\n\n\n     age \n1.054331 \n\n\n\n\nCode\n# prob(heart disease) for age = 0\nexp(coef(m1)[1]) / (1 + exp(coef(m1)[1]))\n\n\n(Intercept) \n 0.04516478 \n\n\n\n\nCode\n# 95% CI for the OR for age\nexp(confint(m1,\n  parm = \"age\"\n))\n\n\nWaiting for profiling to be done...\n\n\n   2.5 %   97.5 % \n1.026699 1.083987 \n\n\n\n\nCode\n# predict probability to develop heart disease\npred &lt;- predict(m1,\n  newdata = data.frame(age = c(30)),\n  type = \"response\"\n)\n\n\n\n\nCode\npred\n\n\n        1 \n0.1878525 \n\n\n\n\nCode\n# predict probability to develop heart disease\npred &lt;- predict(m1,\n  newdata = data.frame(age = c(30)),\n  type = \"response\",\n  se = TRUE\n)\n\n\n\n\nCode\npred$fit\n\n\n        1 \n0.1878525 \n\n\n\n\nCode\n# 95% confidence interval for the prediction\nlower &lt;- pred$fit - (qnorm(0.975) * pred$se.fit)\nupper &lt;- pred$fit + (qnorm(0.975) * pred$se.fit)\nc(lower, upper)\n\n\n         1          1 \n0.07873357 0.29697138 \n\n\n\n\nCode\n# 95% confidence interval for the prediction\nlower &lt;- pred$fit - (1.96 * pred$se.fit)\nupper &lt;- pred$fit + (1.96 * pred$se.fit)\nc(lower, upper)\n\n\n         1          1 \n0.07873156 0.29697339 \n\n\n\n\nCode\nlibrary(sjPlot)\n\n\nInstall package \"strengejacke\" from GitHub (`devtools::install_github(\"strengejacke/strengejacke\")`) to load all sj-packages at once!\n\n\nCode\nlibrary(ggplot2)\n\n\n\n\nCode\n# plot\nplot_model(m1,\n  type = \"pred\",\n  terms = \"age\"\n) +\n  labs(y = \"Prob(heart disease)\") + theme_bw()\n\n\nData were 'prettified'. Consider using `terms=\"age [all]\"` to get smooth\n  plots.\n\n\n\n\n\n\n\nCode\n# levels for sex\nlevels(dat$sex)\n\n\n[1] \"female\" \"male\"  \n\n\n\n\nCode\n# save model\nm2 &lt;- glm(heart_disease ~ sex,\n  data = dat,\n  family = \"binomial\"\n)\n\n\n\n\nCode\nsummary(m2)\n\n\n\nCall:\nglm(formula = heart_disease ~ sex, family = \"binomial\", data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  -1.0438     0.2326  -4.488 7.18e-06 ***\nsexmale       1.2737     0.2725   4.674 2.95e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 409.95  on 296  degrees of freedom\nResidual deviance: 386.12  on 295  degrees of freedom\nAIC: 390.12\n\nNumber of Fisher Scoring iterations: 4\n\n\n\n\nCode\nexp(coef(m2)[\"sexmale\"])\n\n\n sexmale \n3.573933 \n\n\n\n\nCode\n# prob(disease) for sex = female\nexp(coef(m2)[1]) / (1 + exp(coef(m2)[1]))\n\n\n(Intercept) \n  0.2604167 \n\n\n\n\nCode\nchisq.test(table(dat$heart_disease, dat$sex))\n\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  table(dat$heart_disease, dat$sex)\nX-squared = 21.852, df = 1, p-value = 2.946e-06\n\n\n\n\nCode\n# predict probability to develop heart disease\npred &lt;- predict(m2,\n  newdata = data.frame(sex = c(\"male\")),\n  type = \"response\"\n)\npred\n\n\n        1 \n0.5572139 \n\n\n\n\nCode\n# plot\nplot_model(m2,\n  type = \"pred\",\n  terms = \"sex\"\n) +\n  labs(y = \"Prob(heart disease)\")\n\n\n\n\n\n\n\nCode\n# create data frame of new patient\nnew_patient &lt;- data.frame(\n  age = 32,\n  sex = \"female\"\n)\n\n\n\n\nCode\nm3 &lt;- glm(heart_disease ~ sex + age,\n  data = dat,\n  family = \"binomial\"\n)\n# predict probability to develop heart disease\npred &lt;- predict(m3,\n  newdata = new_patient,\n  type = \"response\"\n)\n# print prediction\npred\n\n\n         1 \n0.06224456 \n\n\n\n\nCode\n# 1. age, sex and chest pain on prob of disease\nplot_model(m3,\n  type = \"pred\",\n  terms = c(\"age\",  \"sex\"),\n  ci.lvl = NA # remove confidence bands\n) +\n  labs(y = \"Prob(heart disease)\")\n\n\nData were 'prettified'. Consider using `terms=\"age [all]\"` to get smooth\n  plots.\n\n\n\n\n\n\n\nCode\ntab_model(m3, m2,\n  show.ci = FALSE, # remove CI\n  show.aic = TRUE, # display AIC\n  p.style = \"numeric_stars\" # display p-values and stars\n)\n\n\n\n\n\n \nheart disease\nheart disease\n\n\nPredictors\nOdds Ratios\np\nOdds Ratios\np\n\n\n(Intercept)\n0.01 ***\n&lt;0.001\n0.35 ***\n&lt;0.001\n\n\nsex [male]\n4.47 ***\n&lt;0.001\n3.57 ***\n&lt;0.001\n\n\nage\n1.07 ***\n&lt;0.001\n\n\n\n\nObservations\n297\n297\n\n\nR2 Tjur\n0.142\n0.078\n\n\nAIC\n370.435\n390.118\n\n\n* p&lt;0.05   ** p&lt;0.01   *** p&lt;0.001\n\n\n\n\n\n\n\n\n\nCode\nlibrary(pROC)\n\n\nType 'citation(\"pROC\")' for a citation.\n\n\n\nAttaching package: 'pROC'\n\n\nThe following objects are masked from 'package:stats':\n\n    cov, smooth, var\n\n\n\n\nCode\n# save roc object\nres &lt;- roc(heart_disease ~ fitted(m3),\n  data = dat\n)\n\n\nSetting levels: control = no disease, case = disease\n\n\nSetting direction: controls &lt; cases\n\n\nCode\n# plot ROC curve\nggroc(res, legacy.axes = TRUE)\n\n\n\n\n\n\n\nCode\nres$auc\n\n\nArea under the curve: 0.713\n\n\n\n\nCode\n# plot ROC curve with AUC in title\nggroc(res, legacy.axes = TRUE) +\n  labs(title = paste0(\"AUC = \", round(res$auc, 2)))\n\n\n\n\n\n\n\nCode\nlibrary(gtsummary)\n\n\n#BlackLivesMatter\n\n\n\n\nCode\n# print table of results\ntbl_regression(m3, exponentiate = TRUE)\n\n\n\n\n\n\n  \n    \n    \n      Characteristic\n      OR1\n      95% CI1\n      p-value\n    \n  \n  \n    sex\n\n\n\n        female\n—\n—\n\n        male\n4.47\n2.57, 8.05\n&lt;0.001\n    age\n1.07\n1.04, 1.10\n&lt;0.001\n  \n  \n  \n    \n      1 OR = Odds Ratio, CI = Confidence Interval\n    \n  \n\n\n\n\n\n\nCode\nlibrary(finalfit)\n# set variables\ndependent &lt;- \"heart_disease\"\nindependent &lt;- c(\"age\", \"sex\")\nindependent_final &lt;- c(\"age\", \"sex\", \"chest_pain\")\n\ndat |&gt; or_plot(dependent, independent,\n  table_text_size = 3.5 # reduce text size\n)\n\n\nWaiting for profiling to be done...\nWaiting for profiling to be done...\nWaiting for profiling to be done...\n\n\nWarning: Removed 1 rows containing missing values (`geom_errorbarh()`).\n\n\n\n\n\nlibrary(car) vif(m3) ``"
+    "text": "The Dataset\nThe data is a mixed variable dataset containing 14 variables of 297 patients for their heart disease diagnosis. The data comes in an R package called kmed which you can read about on your own. Patients were diagnosed with heart disease in four classes. We will used this dataset to illustrate how multiple risk factors are related to a heart disease diagnosis, such as age (years), sex (FALSE = female; TRUE = male), chest pain (1 = typical angina, 2 = atypical angina, 3 = non-anginal pain, and 4 = asymptomatic) and thalach (max heart rate achieved).\n\n\nCode\nlibrary(kmed)\ndat &lt;- heart\n\n\n\n\nCode\n# select variables\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\ndat &lt;- dat %&gt;%\n  dplyr::select(\n    age,\n    sex,\n    cp,\n    thalach,\n    class\n  )\n# print dataset's structure\nstr(dat)\n\n\n'data.frame':   297 obs. of  5 variables:\n $ age    : num  63 67 67 37 41 56 62 57 63 53 ...\n $ sex    : logi  TRUE TRUE TRUE TRUE FALSE TRUE ...\n $ cp     : Factor w/ 4 levels \"1\",\"2\",\"3\",\"4\": 1 4 4 3 2 2 4 4 4 4 ...\n $ thalach: num  150 108 129 187 172 178 160 163 147 155 ...\n $ class  : int  0 2 1 0 0 0 3 0 2 1 ...\n - attr(*, \"na.action\")= 'omit' Named int [1:6] 88 167 193 267 288 303\n  ..- attr(*, \"names\")= chr [1:6] \"88\" \"167\" \"193\" \"267\" ...\n\n\n\n\nCode\n# rename variables\ndat &lt;- dat %&gt;%\n  dplyr::rename(\n    chest_pain = cp,\n    max_heartrate = thalach,\n    heart_disease = class\n  )\n\n\n\n\nCode\n# recode sex\ndat$sex &lt;- factor(dat$sex,\n  levels = c(FALSE, TRUE),\n  labels = c(\"female\", \"male\")\n)\n\n\n\n\nCode\n# recode chest_pain\ndat$chest_pain &lt;- factor(dat$chest_pain,\n  levels = 1:4,\n  labels = c(\"typical angina\", \"atypical angina\", \"non-anginal pain\", \"asymptomatic\")\n)\n\n\n\n\nCode\n# recode heart_disease into 2 classes\ndat$heart_disease &lt;- ifelse(dat$heart_disease == 0,\n  0,\n  1\n)\n\n\n\n\nCode\n# set labels for heart_disease\ndat$heart_disease &lt;- factor(dat$heart_disease,\n  levels = c(0, 1),\n  labels = c(\"no disease\", \"disease\")\n)\n\n\n\n\nCode\nlevels(dat$heart_disease)\n\n\n[1] \"no disease\" \"disease\"   \n\n\n\n\nCode\n# save model\nm1 &lt;- glm(heart_disease ~ age,\n  data = dat,\n  family = \"binomial\"\n)\n\n\n\n\nCode\nsummary(m1)\n\n\n\nCall:\nglm(formula = heart_disease ~ age, family = \"binomial\", data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept) -3.05122    0.76862  -3.970  7.2e-05 ***\nage          0.05291    0.01382   3.829 0.000128 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 409.95  on 296  degrees of freedom\nResidual deviance: 394.25  on 295  degrees of freedom\nAIC: 398.25\n\nNumber of Fisher Scoring iterations: 4\n\n\n\n\nCode\n# OR for age\nexp(coef(m1)[\"age\"])\n\n\n     age \n1.054331 \n\n\n\n\nCode\n# prob(heart disease) for age = 0\nexp(coef(m1)[1]) / (1 + exp(coef(m1)[1]))\n\n\n(Intercept) \n 0.04516478 \n\n\n\n\nCode\n# 95% CI for the OR for age\nexp(confint(m1,\n  parm = \"age\"\n))\n\n\nWaiting for profiling to be done...\n\n\n   2.5 %   97.5 % \n1.026699 1.083987 \n\n\n\n\nCode\n# predict probability to develop heart disease\npred &lt;- predict(m1,\n  newdata = data.frame(age = c(30)),\n  type = \"response\"\n)\n\n\n\n\nCode\npred\n\n\n        1 \n0.1878525 \n\n\n\n\nCode\n# predict probability to develop heart disease\npred &lt;- predict(m1,\n  newdata = data.frame(age = c(30)),\n  type = \"response\",\n  se = TRUE\n)\n\n\n\n\nCode\npred$fit\n\n\n        1 \n0.1878525 \n\n\n\n\nCode\n# 95% confidence interval for the prediction\nlower &lt;- pred$fit - (qnorm(0.975) * pred$se.fit)\nupper &lt;- pred$fit + (qnorm(0.975) * pred$se.fit)\nc(lower, upper)\n\n\n         1          1 \n0.07873357 0.29697138 \n\n\n\n\nCode\n# 95% confidence interval for the prediction\nlower &lt;- pred$fit - (1.96 * pred$se.fit)\nupper &lt;- pred$fit + (1.96 * pred$se.fit)\nc(lower, upper)\n\n\n         1          1 \n0.07873156 0.29697339 \n\n\n\n\nCode\nlibrary(sjPlot)\nlibrary(ggplot2)\n\n\n\n\nCode\n# plot\nplot_model(m1,\n  type = \"pred\",\n  terms = \"age\"\n) +\n  labs(y = \"Prob(heart disease)\") + theme_bw()\n\n\nData were 'prettified'. Consider using `terms=\"age [all]\"` to get smooth\n  plots.\n\n\n\n\n\n\n\n\n\n\n\nCode\n# levels for sex\nlevels(dat$sex)\n\n\n[1] \"female\" \"male\"  \n\n\n\n\nCode\n# save model\nm2 &lt;- glm(heart_disease ~ sex,\n  data = dat,\n  family = \"binomial\"\n)\n\n\n\n\nCode\nsummary(m2)\n\n\n\nCall:\nglm(formula = heart_disease ~ sex, family = \"binomial\", data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  -1.0438     0.2326  -4.488 7.18e-06 ***\nsexmale       1.2737     0.2725   4.674 2.95e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 409.95  on 296  degrees of freedom\nResidual deviance: 386.12  on 295  degrees of freedom\nAIC: 390.12\n\nNumber of Fisher Scoring iterations: 4\n\n\n\n\nCode\nexp(coef(m2)[\"sexmale\"])\n\n\n sexmale \n3.573933 \n\n\n\n\nCode\n# prob(disease) for sex = female\nexp(coef(m2)[1]) / (1 + exp(coef(m2)[1]))\n\n\n(Intercept) \n  0.2604167 \n\n\n\n\nCode\nchisq.test(table(dat$heart_disease, dat$sex))\n\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  table(dat$heart_disease, dat$sex)\nX-squared = 21.852, df = 1, p-value = 2.946e-06\n\n\n\n\nCode\n# predict probability to develop heart disease\npred &lt;- predict(m2,\n  newdata = data.frame(sex = c(\"male\")),\n  type = \"response\"\n)\npred\n\n\n        1 \n0.5572139 \n\n\n\n\nCode\n# plot\nplot_model(m2,\n  type = \"pred\",\n  terms = \"sex\"\n) +\n  labs(y = \"Prob(heart disease)\")\n\n\n\n\n\n\n\n\n\n\n\nCode\n# create data frame of new patient\nnew_patient &lt;- data.frame(\n  age = 32,\n  sex = \"female\"\n)\n\n\n\n\nCode\nm3 &lt;- glm(heart_disease ~ sex + age,\n  data = dat,\n  family = \"binomial\"\n)\n# predict probability to develop heart disease\npred &lt;- predict(m3,\n  newdata = new_patient,\n  type = \"response\"\n)\n# print prediction\npred\n\n\n         1 \n0.06224456 \n\n\n\n\nCode\n# 1. age, sex and chest pain on prob of disease\nplot_model(m3,\n  type = \"pred\",\n  terms = c(\"age\",  \"sex\"),\n  ci.lvl = NA # remove confidence bands\n) +\n  labs(y = \"Prob(heart disease)\")\n\n\nData were 'prettified'. Consider using `terms=\"age [all]\"` to get smooth\n  plots.\n\n\n\n\n\n\n\n\n\n\n\nCode\ntab_model(m3, m2,\n  show.ci = FALSE, # remove CI\n  show.aic = TRUE, # display AIC\n  p.style = \"numeric_stars\" # display p-values and stars\n)\n\n\n\n\n\n\n \nheart disease\nheart disease\n\n\nPredictors\nOdds Ratios\np\nOdds Ratios\np\n\n\n(Intercept)\n0.01 ***\n&lt;0.001\n0.35 ***\n&lt;0.001\n\n\nsex [male]\n4.47 ***\n&lt;0.001\n3.57 ***\n&lt;0.001\n\n\nage\n1.07 ***\n&lt;0.001\n\n\n\n\nObservations\n297\n297\n\n\nR2 Tjur\n0.142\n0.078\n\n\nAIC\n370.435\n390.118\n\n\n* p&lt;0.05   ** p&lt;0.01   *** p&lt;0.001\n\n\n\n\n\n\n\n\n\n\nCode\nlibrary(pROC)\n\n\nType 'citation(\"pROC\")' for a citation.\n\n\n\nAttaching package: 'pROC'\n\n\nThe following objects are masked from 'package:stats':\n\n    cov, smooth, var\n\n\n\n\nCode\n# save roc object\nres &lt;- roc(heart_disease ~ fitted(m3),\n  data = dat\n)\n\n\nSetting levels: control = no disease, case = disease\n\n\nSetting direction: controls &lt; cases\n\n\nCode\n# plot ROC curve\nggroc(res, legacy.axes = TRUE)\n\n\n\n\n\n\n\n\n\n\n\nCode\nres$auc\n\n\nArea under the curve: 0.713\n\n\n\n\nCode\n# plot ROC curve with AUC in title\nggroc(res, legacy.axes = TRUE) +\n  labs(title = paste0(\"AUC = \", round(res$auc, 2)))\n\n\n\n\n\n\n\n\n\n\n\nCode\nlibrary(gtsummary)\n\n\n\n\nCode\n# print table of results\ntbl_regression(m3, exponentiate = TRUE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nOR1\n95% CI1\np-value\n\n\n\n\nsex\n\n\n\n\n\n\n\n\n    female\n—\n—\n\n\n\n\n    male\n4.47\n2.57, 8.05\n&lt;0.001\n\n\nage\n1.07\n1.04, 1.10\n&lt;0.001\n\n\n\n1 OR = Odds Ratio, CI = Confidence Interval\n\n\n\n\n\n\n\n\n\n\n\nCode\nlibrary(finalfit)\n# set variables\ndependent &lt;- \"heart_disease\"\nindependent &lt;- c(\"age\", \"sex\")\nindependent_final &lt;- c(\"age\", \"sex\", \"chest_pain\")\n\ndat %&gt;% or_plot(dependent, independent,\n  table_text_size = 3.5 # reduce text size\n)\n\n\nWaiting for profiling to be done...\nWaiting for profiling to be done...\nWaiting for profiling to be done...\n\n\nWarning: Removed 1 rows containing missing values (`geom_errorbarh()`).",
+    "crumbs": [
+      "Examples",
+      "Example Code",
+      "Logistic Regression"
+    ]
   },
   {
     "objectID": "assignment/research_proposal.html",
@@ -2955,6 +3015,42 @@
       "Assignments",
       "Problem sets",
       "Logistic Regression"
+    ]
+  },
+  {
+    "objectID": "content/14-content.html#lecture-notes",
+    "href": "content/14-content.html#lecture-notes",
+    "title": "Analytical methods+geospatial",
+    "section": "Lecture Notes",
+    "text": "Lecture Notes\nThe lecture notes for today can be downloaded here which was covered over two days. The second day we focused on student projects including:\n\nmappping vaccine hesitancy in Franklin County, which used the COI’s redlining data, the CDC’s SVI and the COTA bus routes;\nmapping colon cancer screening which used the CDC’s Places dataset; and\ngeocoding school-based health centers.\n\nI encourage you to download these files and see if you can make the maps we made in class. I will include a video below that illustrates how I made these maps so you can follow that.\n\n\n\n\n\n\nNote\n\n\n\nThe slides will only be made available immediately after class. Only then will the ‘Page Not Found’ error message go away.\n\n\nThe slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\n View all slides in new window  Download PDF of all slides\n\n\n\nLecture Slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nFun fact: If you type ? (or shift + /) while going through the slides, you can see a list of special slide-specific commands. Use right arrow -&gt; to scroll through slides",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "14: Analytical methods + geospatial"
+    ]
+  },
+  {
+    "objectID": "content/14-content.html#in-class-materials",
+    "href": "content/14-content.html#in-class-materials",
+    "title": "Analytical methods+geospatial",
+    "section": "In-class Materials",
+    "text": "In-class Materials\nHere are all the materials we’ll use in class:\n\nIntro to R webpage\nIntro to R data and markdown\nIntro to Plotting with R webpage\nIntro to Plotting with R data and markdown\n\n\nSoftware Packages\n\nAdd-on Packages & Modules offer additional functionality and are available for all software programs listed above\n\n\n\n📦 Additional Resources\n\nuser guide - jamovi\njamovi library\njmv r package - jamovi\ncommunity resources - jamovi\nIn addition, once jamovi is installed, there is a ‘data library’ available to you. This data library has worked examples for all modules that you install.\n\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4\nPhD Specializations: 4\n\n\n\nStudent Evaluation Activity for Assessment\n\nExam 1\nProposal 1",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "14: Analytical methods + geospatial"
+    ]
+  },
+  {
+    "objectID": "content/14-content.html#lecture-notes-in-class-materials",
+    "href": "content/14-content.html#lecture-notes-in-class-materials",
+    "title": "Analytical methods+geospatial",
+    "section": "Lecture Notes & in-class materials",
+    "text": "Lecture Notes & in-class materials\nThe lecture notes for today can be downloaded here which was covered over two days. The second day we focused on student projects including:\n\nWe mappped the context of vaccine hesitancy in Franklin County, which used the COI’s redlining data based on 2020 neighborhoods, the CDC’s SVI and the COTA bus routes. It would be easy to merge in data from the National Walkability Index or as I noted in class Walk Score Professional can also be downloaded using their API (and R).\n\n\n\n\nVaccine hesitancy contexts\n\n\n\nWe mapped colon cancer screening which used the CDC’s Places dataset;\n\n\n\n\nTarget Areas for Colon Cancer Screening\n\n\n\nWe used the HCQGIS plugin in QGIS to geocode the school-based health centers in Cleveland, Ohio.\n\n\n\n\nSchool Health Centers in Cleveland\n\n\nI encourage you to download these files and see if you can make the maps we made in class. I will include a video below that illustrates how I made these maps so you can follow that.\n\nSoftware Packages\n\nAdd-on Packages & Modules offer additional functionality and are available for all software programs listed above\n\n\n\n📦 Additional Resources\n\nAnalyzing US Census Data: The best book on mapping Census data in R\nCreating Beautiful Demographic Maps Another GREAT resource to facilitate mapping geospatial data in R\nStatic Maps More information about how to use geospatial data in analyses with an introductory focus and videos\nSpatial Data Workshop has a lot of resources\n\n\n\nCompetencies and Knowledge\n\nFoundational knowledge: 3, 6\nCompetencies: 9\nMPH Specializations: 4\nPhD Specializations: 4\n\n\n\nStudent Evaluation Activity for Assessment\n\nLiterature Review\nStart looking at Phase I which is coming due",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "14: Analytical methods + geospatial"
     ]
   }
 ]
