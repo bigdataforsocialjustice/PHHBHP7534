@@ -336,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#phd-students-use-r" id="toc-phd-students-use-r" class="nav-link" data-scroll-target="#phd-students-use-r">PhD students use R</a>
   <ul class="collapse">
-  <li><a href="#open-the-file-in-r-using-the-foreign-package." id="toc-open-the-file-in-r-using-the-foreign-package." class="nav-link" data-scroll-target="#open-the-file-in-r-using-the-foreign-package.">Open the file in R using the foreign package.</a></li>
+  <li><a href="#open-the-file-in-r-using-the-sas7bdat-package." id="toc-open-the-file-in-r-using-the-sas7bdat-package." class="nav-link" data-scroll-target="#open-the-file-in-r-using-the-sas7bdat-package.">Open the file in R using the sas7bdat package.</a></li>
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
   <li><a href="#dependent-variable" id="toc-dependent-variable" class="nav-link" data-scroll-target="#dependent-variable">Dependent variable</a></li>
   <li><a href="#independent-variable" id="toc-independent-variable" class="nav-link" data-scroll-target="#independent-variable">Independent variable</a></li>
@@ -360,12 +360,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="problem-set-5" class="level1">
 <h1>Problem Set 5</h1>
-<p>Send me the markdown file by 2/27/2024 @ 11:59. The subject line should say “Problem Set 5” or it will receive no credit!</p>
+<p>Send me the markdown file by 3/1/2024 @ 11:59. The subject line should say “Problem Set 5” or it will receive no credit!</p>
 <p>In this problem set you are going to examine the 2021 <a href="https://www.census.gov/programs-surveys/nsch/data/datasets.2021.html#list-tab-491554181">National Survey of Child Health (NSCH)</a>. First, navigate to the website and download the file called <code>Revised Stata data file</code>. The file is a zip file so you must unzip it before attempting to use it.</p>
 <section id="phd-students-use-r" class="level2">
 <h2 class="anchored" data-anchor-id="phd-students-use-r">PhD students use R</h2>
-<section id="open-the-file-in-r-using-the-foreign-package." class="level3">
-<h3 class="anchored" data-anchor-id="open-the-file-in-r-using-the-foreign-package.">Open the file in R using the foreign package.</h3>
+<section id="open-the-file-in-r-using-the-sas7bdat-package." class="level3">
+<h3 class="anchored" data-anchor-id="open-the-file-in-r-using-the-sas7bdat-package.">Open the file in R using the sas7bdat package.</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The foreign package is typically used to open files with extensions associated with STATA, SPSS, and SAS, however, this one works fine with different versions and so its easier.</p>
+</div>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sas7bdat)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>nchs <span class="ot">&lt;-</span> <span class="fu">read.sas7bdat</span>(<span class="st">"C:/Users/barboza-salerno.1/Downloads/nsch_2021_topical_SAS/nsch_2021e_topical.sas7bdat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -379,6 +392,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="dependent-variable" class="level3">
 <h3 class="anchored" data-anchor-id="dependent-variable">Dependent variable</h3>
 <p>You are to use the dependent variable <code>CONFIRMINJURY.</code> Recode the variable into a binary variable 0/1.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The dependent variable is the variable associated with a confirmed injury (i.e., from a medical provider). However, only persons who reported an injury are asked this question. So, you need to recode accordingly.</p>
+</div>
+</div>
 </section>
 <section id="independent-variable" class="level3">
 <h3 class="anchored" data-anchor-id="independent-variable">Independent variable</h3>
