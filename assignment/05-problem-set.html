@@ -240,8 +240,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignment/litreview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Literature Review</span></a>
+  <a href="../assignment/literature_review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Literature Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignment/research_proposal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Proposal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -300,18 +306,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../assignment/exam1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exam I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/literature_review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Literature Review</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignment/research_proposal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research Proposal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,6 +376,33 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sas7bdat)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>nchs <span class="ot">&lt;-</span> <span class="fu">read.sas7bdat</span>(<span class="st">"C:/Users/barboza-salerno.1/Downloads/nsch_2021_topical_SAS/nsch_2021e_topical.sas7bdat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(labelled)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">var_label</span>(nchs<span class="sc">$</span>BULLIED_R) <span class="ot">&lt;-</span> <span class="st">"Bullied in last 12 months"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(nchs<span class="sc">$</span>BULLIED_R)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1     2     3     4     5 
+18447  8017  1872   932   449 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_variable_labels</span>(nchs<span class="sc">$</span>BULLIED_R)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Bullied in last 12 months"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nchs <span class="ot">&lt;-</span> nchs <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">rename</span>(<span class="st">"Bullied"</span> <span class="ot">=</span> <span class="st">"BULLIED_R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(nchs<span class="sc">$</span>Bullied)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1     2     3     4     5 
+18447  8017  1872   932   449 </code></pre>
+</div>
 </div>
 <p>You will definitely want to use the <a href="https://www.census.gov/data-tools/demo/uccb/nschdict">codebook</a> to get a sense of the variable definitions.</p>
 </section>
