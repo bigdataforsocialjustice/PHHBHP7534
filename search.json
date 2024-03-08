@@ -3171,7 +3171,7 @@
     "href": "assignment/exam2.html#geographical-information-systems",
     "title": "Exam II",
     "section": "Geographical Information Systems",
-    "text": "Geographical Information Systems\n\nMake a map of a health outcome or behavior of interest similar to what you did in class. Your map must include two layers, one layer is to contain the health outcome/behavior and the other is to contain a social context. You have many options here. One layer can be a geocoding of some addresses of interest. In addition to what we did in class, you can also see my example mapping geographic differences in hospital discharges in California here. You can also look through my extensive list of public datasets here. Many of these files can be mapped directly using QGIS, others will be spatially referenced but need to be merged with Tiger/Line shapefiles as we discussed. Recall this is how I mapped Native American reservations and you can do something similar. In other words, the reservations are context in and of themselves, and Tiger/Line includes other contextual data such as school districts, and voting districts.\n\nAnother option is to use the sociome library in R and download the Area Deprivation Index. Once downloaded you can export the results to a file format that can be read by QGIS. You can also make your maps using R if you like as well. You can also download the SVI and merge it to a polygon boundary from the Census (Tigerline). You can find data to map yourself by looking at one of the many open data portals we have discussed, or by searching google, or by any other means necessary.\n\nDescribe the map. Include a brief 2 paragraph summary of your data sources and description of 2-3 interesting conclusions that you notice from the map that would not be possible without a GIS lens.\n\n\nArt and Public Health\nPick an art form and describe how that art form can be used to understand a specific community. The art form can be spoken word, poetry, a song, a fictional novel, a painting, some fashion piece or anything else that can be reasonably considered to be art. You can create the art or use someone else’s art. You can relate the art to your own life (recall you are the community), or a different community. Be creative. Your response should indicate how the art form can be used to improve some aspect of health and well-being. As an aside, I have previously done a lot of community-based work with youth. Once, I asked them what song described their story. Some of the responses were:\nYe’s (the artist formerly known as Kanye West) Power\n\n\n\n\n\n\n\n\n\nTI’s No Mercy feat. Dream\n\n\n\n\n\n\n\n\n\nOne of the youth also told me that ‘Most rappers wanna tell the truth but they cant; look at Biggie and Tupak they were telling the truth. Certain songs give you clues, hear the lyrics, telling you something its not just a beat…’",
+    "text": "Geographical Information Systems\n\nMake a map of a health outcome or behavior of interest similar to what you did in class. Your map must include two layers, one layer is to contain the health outcome/behavior and the other is to contain a social context. You have many options here. One layer can be a geocoding of some addresses of interest. In addition to what we did in class, you can also see my example mapping geographic differences in hospital discharges in California here. You can also look through my extensive list of public datasets here. Many of these files can be mapped directly using QGIS, others will be spatially referenced but need to be merged with Tiger/Line shapefiles as we discussed. Recall this is how I mapped Native American reservations and you can do something similar. In other words, the reservations are context in and of themselves, and Tiger/Line includes other contextual data such as school districts, and voting districts.\n\nAnother option is to use the sociome library in R and download the Area Deprivation Index. Once downloaded you can export the results to a file format that can be read by QGIS. You can also make your maps using R if you like as well. You can also download the SVI and merge it to a polygon boundary from the Census (Tigerline). You can find data to map yourself by looking at one of the many open data portals we have discussed, or by searching google, or by any other means necessary.\n\nDescribe the map. Include a brief 2 paragraph summary of your data sources and description of 2-3 interesting conclusions that you notice from the map that would not be possible without a GIS lens.",
     "crumbs": [
       "Content",
       "Course content",
@@ -3225,7 +3225,55 @@
     "href": "assignment/exam2.html#reflection",
     "title": "Exam II",
     "section": "Reflection",
+    "text": "Reflection\nWhat, if anything, have you learned so far in this course about research methods in one page? Your answer can refer to anything including software, working with vulnerable populations, or some analysis you did not previously know. As you know, I do not like to emphasize ‘being wrong’ but rather what is right about what is wrong so please feel free to do the same.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "18: Exam II"
+    ]
+  },
+  {
+    "objectID": "content/exam2.html",
+    "href": "content/exam2.html",
+    "title": "Exam II",
+    "section": "",
+    "text": "This is exam 2. Please email your answers in a word document by 3/19 @ 11:59 with the subject heading “Exam II”.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "20: No Class + Spring Break"
+    ]
+  },
+  {
+    "objectID": "content/exam2.html#reflection",
+    "href": "content/exam2.html#reflection",
+    "title": "Exam II",
+    "section": "Reflection",
     "text": "Reflection\nWhat, if anything, have you learned so far in this course about research methods? Your answer can refer to anything including software, working with vulnerable populations, or some analysis you did not previously know. As you know, I do not like to emphasize ‘being wrong’ but rather what is right about what is wrong so please feel free to do the same.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "20: No Class + Spring Break"
+    ]
+  },
+  {
+    "objectID": "content/exam2.html#geographical-information-systems",
+    "href": "content/exam2.html#geographical-information-systems",
+    "title": "Exam II",
+    "section": "Geographical Information Systems",
+    "text": "Geographical Information Systems\n\nMake a map of a health outcome or behavior of interest similar to what you did in class. Your map must include two layers, one layer is to contain the health outcome/behavior and the other is to contain a social context. You have many options here. One layer can be a geocoding of some addresses of interest. In addition to what we did in class, you can also see my example mapping geographic differences in hospital discharges in California here. You can also look through my extensive list of public datasets here. Many of these files can be mapped directly using QGIS, others will be spatially referenced but need to be merged with Tiger/Line shapefiles as we discussed. Recall this is how I mapped Native American reservations and you can do something similar. In other words, the reservations are context in and of themselves, and Tiger/Line includes other contextual data such as school districts, and voting districts.\n\nAnother option is to use the sociome library in R and download the Area Deprivation Index. Once downloaded you can export the results to a file format that can be read by QGIS. You can also make your maps using R if you like as well. You can also download the SVI and merge it to a polygon boundary from the Census (Tigerline). You can find data to map yourself by looking at one of the many open data portals we have discussed, or by searching google, or by any other means necessary.\n\nDescribe the map. Include a brief 2 paragraph summary of your data sources and description of 2-3 interesting conclusions that you notice from the map that would not be possible without a GIS lens.\n\n\nArt and Public Health\nPick an art form and describe how that art form can be used to understand a specific community. The art form can be spoken word, poetry, a song, a fictional novel, a painting, some fashion piece or anything else that can be reasonably considered to be art. You can create the art or use someone else’s art. You can relate the art to your own life (recall you are the community), or a different community. Be creative. Your response should indicate how the art form can be used to improve some aspect of health and well-being. As an aside, I have previously done a lot of community-based work with youth. Once, I asked them what song described their story. Some of the responses were:\nYe’s (the artist formerly known as Kanye West) Power\n\n\n\n\n\n\n\n\n\nTI’s No Mercy feat. Dream\n\n\n\n\n\n\n\n\n\nOne of the youth also told me that ‘Most rappers wanna tell the truth but they cant; look at Biggie and Tupak they were telling the truth. Certain songs give you clues, hear the lyrics, telling you something its not just a beat…’",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "20: No Class + Spring Break"
+    ]
+  },
+  {
+    "objectID": "assignment/exam2.html#art-and-public-health",
+    "href": "assignment/exam2.html#art-and-public-health",
+    "title": "Exam II",
+    "section": "Art and Public Health",
+    "text": "Art and Public Health\nPick an art form and describe how that art form can be used to understand a specific community. The art form can be spoken word, poetry, a song, a fictional novel, a painting, some fashion piece or anything else that can be reasonably considered to be art. You can create the art or use someone else’s art. You can relate the art to your own life (recall you are the community), or a different community. Be creative. Your response should indicate how the art form can be used to improve some aspect of health and well-being. As an aside, I have previously done a lot of community-based work with youth. Once, I asked them what song described their story. Some of the responses were:\nYe’s (the artist formerly known as Kanye West) Power\n\n\n\n\n\n\n\n\n\nTI’s No Mercy feat. Dream\n\n\n\n\n\n\n\n\n\nOne of the youth also told me that ‘Most rappers wanna tell the truth but they cant; look at Biggie and Tupak they were telling the truth. Certain songs give you clues, hear the lyrics, telling you something its not just a beat…’",
     "crumbs": [
       "Content",
       "Course content",
