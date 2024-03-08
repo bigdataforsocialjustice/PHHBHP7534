@@ -3146,5 +3146,90 @@
       "Course content",
       "15: Analytical methods + qualitative"
     ]
+  },
+  {
+    "objectID": "assignment/exam2.html",
+    "href": "assignment/exam2.html",
+    "title": "Exam II",
+    "section": "",
+    "text": "This is exam 2. Please email your answers in a word document by 3/19 @ 11:59 with the subject heading “Exam II”.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "18: Exam II"
+    ]
+  },
+  {
+    "objectID": "assignment/exam2.html#question-i",
+    "href": "assignment/exam2.html#question-i",
+    "title": "Exam II",
+    "section": "",
+    "text": "What, if anything, have you learned so far in this course about research methods? Your answer can refer to anything including software, working with vulnerable populations, or some analysis you did not previously know. As you know, I do not like to emphasize ‘being wrong’ but rather what is right about what is wrong so please feel free to do the same."
+  },
+  {
+    "objectID": "assignment/exam2.html#geographical-information-systems",
+    "href": "assignment/exam2.html#geographical-information-systems",
+    "title": "Exam II",
+    "section": "Geographical Information Systems",
+    "text": "Geographical Information Systems\n\nMake a map of a health outcome or behavior of interest similar to what you did in class. Your map must include two layers, one layer is to contain the health outcome/behavior and the other is to contain a social context. You have many options here. One layer can be a geocoding of some addresses of interest. In addition to what we did in class, you can also see my example mapping geographic differences in hospital discharges in California here. You can also look through my extensive list of public datasets here. Many of these files can be mapped directly using QGIS, others will be spatially referenced but need to be merged with Tiger/Line shapefiles as we discussed. Recall this is how I mapped Native American reservations and you can do something similar. In other words, the reservations are context in and of themselves, and Tiger/Line includes other contextual data such as school districts, and voting districts.\n\nAnother option is to use the sociome library in R and download the Area Deprivation Index. Once downloaded you can export the results to a file format that can be read by QGIS. You can also make your maps using R if you like as well. You can also download the SVI and merge it to a polygon boundary from the Census (Tigerline). You can find data to map yourself by looking at one of the many open data portals we have discussed, or by searching google, or by any other means necessary.\n\nDescribe the map. Include a brief 2 paragraph summary of your data sources and description of 2-3 interesting conclusions that you notice from the map that would not be possible without a GIS lens.\n\n\nArt and Public Health\nPick an art form and describe how that art form can be used to understand a specific community. The art form can be spoken word, poetry, a song, a fictional novel, a painting, some fashion piece or anything else that can be reasonably considered to be art. You can create the art or use someone else’s art. You can relate the art to your own life (recall you are the community), or a different community. Be creative. Your response should indicate how the art form can be used to improve some aspect of health and well-being. As an aside, I have previously done a lot of community-based work with youth. Once, I asked them what song described their story. Some of the responses were:\nYe’s (the artist formerly known as Kanye West) Power\n\n\n\n\n\n\n\n\n\nTI’s No Mercy feat. Dream\n\n\n\n\n\n\n\n\n\nOne of the youth also told me that ‘Most rappers wanna tell the truth but they cant; look at Biggie and Tupak they were telling the truth. Certain songs give you clues, hear the lyrics, telling you something its not just a beat…’",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "18: Exam II"
+    ]
+  },
+  {
+    "objectID": "assignment/exam2.html#load-the-add-health-data",
+    "href": "assignment/exam2.html#load-the-add-health-data",
+    "title": "Exam II",
+    "section": "",
+    "text": "First, set your working directory to where the data file is located. Then run the following command to load the data. You will notice that the data contains four different dataframes corresponding to each of the four waves (i.e., df1 = wave 1, df2 = wave 2, etc)\n\nlibrary(dplyr)\nload('C:/Users/barboza-salerno.1/Documents/Research/Papers/In Progress/smoking-traj/add-health-cigarette-study-master/add-health-cigarette-study-master/data/add_data.RData')"
+  },
+  {
+    "objectID": "assignment/exam2.html#selecting-the-variables",
+    "href": "assignment/exam2.html#selecting-the-variables",
+    "title": "Exam II",
+    "section": "",
+    "text": "The code below identifies variables that are common to ALL four waves. This would be useful if we wanted to see how a variable, such as depression, changed across the waves for each respondent. Simply copy and past the code to run it.\n\ndf1 &lt;- df1 %&gt;%\n  setNames(toupper(names(.))\n) %&gt;%\n rename(\n    disliked     = H1FS17,\n    sad          = H1FS16,\n    enjoy_life   = H1FS15,\n    tired        = H1FS7,\n    bothered     = H1FS1,\n    blues        = H1FS3,\n    not_good     = H1FS4,\n    depressed    = H1FS6,\n   \n) %&gt;%\n  mutate(wave = 1)\n\ndf2 &lt;- df2 %&gt;%\n  setNames(toupper(names(.))\n  ) %&gt;%\n  rename(\n    disliked     = H2FS17,\n    sad          = H2FS16,\n    enjoy_life   = H2FS15,\n    tired        = H2FS7,\n    bothered     = H2FS1,\n    blues        = H2FS3,\n    not_good     = H2FS4,\n    depressed    = H2FS6,\n   \n) %&gt;%\n  mutate(wave = 2)\n\ndf3 &lt;- df3 %&gt;%\n  setNames(toupper(names(.))\n  ) %&gt;%\n  rename(\n    disliked     = H3SP13,\n    sad          = H3SP12,\n    enjoy_life   = H3SP11,\n    tired        = H3SP10,\n    bothered     = H3SP5,\n    blues        = H3SP6,\n    not_good     = H3SP7,\n    depressed    = H3SP9,\n   \n) %&gt;%\n  mutate(wave = 3)\n\ndf4 &lt;- df4 %&gt;%\n  setNames(toupper(names(.))\n  ) %&gt;%\n  rename(\n    disliked     = H4MH27,\n    sad          = H4MH26,\n    enjoy_life   = H4MH25,\n    tired        = H4MH23,\n    bothered     = H4MH18,\n    blues        = H4MH19,\n    not_good     = H4MH20,\n    depressed    = H4MH22,\n    \n) %&gt;%\n  mutate(wave = 4)"
+  },
+  {
+    "objectID": "assignment/exam2.html#identify-the-variables-that-are-the-same-across-all-waves.-this-makes-it-easier-to-merge-them.",
+    "href": "assignment/exam2.html#identify-the-variables-that-are-the-same-across-all-waves.-this-makes-it-easier-to-merge-them.",
+    "title": "Exam II",
+    "section": "",
+    "text": "long_cols = c('disliked', 'sad', 'enjoy_life', 'tired', 'bothered', 'blues',\n              'not_good', 'depressed', 'wave')"
+  },
+  {
+    "objectID": "assignment/exam2.html#merge-the-data-by-unique-identifier",
+    "href": "assignment/exam2.html#merge-the-data-by-unique-identifier",
+    "title": "Exam II",
+    "section": "",
+    "text": "The unique identifier makes it possible to merge datasets together. Here, the unique identifier is the variable AID which identifies respondent answers across waves.\nBelow, I am creating a list of the unique identifiers associated with AID for each of the four waves. This part ensures that only respondents who answered all four waves of data are in the final dataset.\n\naid = Reduce(intersect, list(df1$AID, df2$AID, df3$AID, df4$AID))\nadd = rbind(df1[df1$AID %in% aid, c('AID', long_cols)],\n            df2[df2$AID %in% aid, c('AID', long_cols)],\n            df3[df3$AID %in% aid, c('AID', long_cols)],\n            df4[df4$AID %in% aid, c('AID', long_cols)])"
+  },
+  {
+    "objectID": "assignment/exam2.html#merge-in-covariates",
+    "href": "assignment/exam2.html#merge-in-covariates",
+    "title": "Exam II",
+    "section": "",
+    "text": "Now I can merge in other variables using the same identifier. Here I am merging sex at birth, BIO_SEX with the depressive symptoms for each wave.\n\nadd &lt;- df1 %&gt;% dplyr::select(AID, BIO_SEX) %&gt;%\n  inner_join(add)\n\nJoining with `by = join_by(AID)`"
+  },
+  {
+    "objectID": "assignment/exam2.html#clean-the-data",
+    "href": "assignment/exam2.html#clean-the-data",
+    "title": "Exam II",
+    "section": "",
+    "text": "Here I am making sure that all of the missing data is removed from the variables. For example, here the valid responses for each of the depressive symptoms is 0, 1, 2 and 3. So I am making sure that each of the variables is in the range 0:3.\nUnfortunately, we need to reverse code ‘enjoy life’ because people who enjoy life are not part of the depression construct. So, this variable needs to be coded consistent with the others (higher values = more depression). Finally, with the depression variables, I am create a variable called CESD because the variables are measuring symptoms from the common scale called Center for Epidemiologic Studies Depression Scale (CES-D).\nChallenge: This was meant to show that you can do things in multiple ways. Redo the chunk below using dplyr and the tidyverse. It can be done more elegantly that way.\n\nadd &lt;- add[add$disliked   %in% 0:3 & add$sad %in% 0:3 &\n          add$enjoy_life %in% 0:3 & add$tired %in% 0:3 &\n          add$bothered   %in% 0:3 & add$blues %in% 0:3 &\n          add$not_good   %in% 0:3 & add$depressed  %in% 0:3, ]\n\n# Reverse code enjoy_life\nadd$enjoy_life &lt;- ifelse(add$enjoy_life == 3, 0,\n                ifelse(add$enjoy_life == 2, 1,\n                ifelse(add$enjoy_life == 1, 2, 3)))\n\nadd$CESD &lt;- with(add, disliked + sad + enjoy_life + tired +\n                  bothered + blues + not_good + depressed)\n\nNow we have the data we will use for the assignment.\n\n\nNow you should have a working dataset called add that were are going to use below. Please answer the following questions. Please create an R markdown file and send the exam to me via email with subject heading “Exam 1 Part 2.” Please be sure that you have this specific subject and not something else!\nA. Remove all variables from the dataframe add' exceptAID,BIO_SEX,CESD, andwave.`\nChallenge: use dplyr’s select command with the column indicator to remove columns 3 through 10 like this c(3:10)\nB. Recode the BIO_SEX variable so that 1 is male and 2 is female.\nC. Rename the BIO_SEX variable to sex\nD. Change the sex variable from character to factor, and check the levels\nE. Group the data by wave and sex and calculate the mean and standard deviation of CESD (depressive symptoms)\nF. Create a variable called dCESD that = “Above” if CESD &gt; 5.73 (the mean of the whole sample), and “Below” otherwise\nG. Select Wave 1 only, calculate the odds of being above the mean depression score (versus below) for females (versus males)"
+  },
+  {
+    "objectID": "assignment/exam2.html#reflection",
+    "href": "assignment/exam2.html#reflection",
+    "title": "Exam II",
+    "section": "Reflection",
+    "text": "Reflection\nWhat, if anything, have you learned so far in this course about research methods? Your answer can refer to anything including software, working with vulnerable populations, or some analysis you did not previously know. As you know, I do not like to emphasize ‘being wrong’ but rather what is right about what is wrong so please feel free to do the same.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "18: Exam II"
+    ]
   }
 ]
