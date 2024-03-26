@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Barboza-Salerno">
 <meta name="description" content="develop, read, critique, design, and conduct high-quality scientific research in public health">
 
-<title>Research Methods in Public Health - Code examples</title>
+<title>Research Methods in Public Health - Calculating the Reliability Coefficient in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,14 +106,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="Research Methods in Public Health - Code examples">
+<meta property="og:title" content="Research Methods in Public Health - Calculating the Reliability Coefficient in R">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
 <meta property="og:site_name" content="Research Methods in Public Health">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="640">
 <meta property="og:image:width" content="1280">
-<meta name="twitter:title" content="Research Methods in Public Health - Code examples">
+<meta name="twitter:title" content="Research Methods in Public Health - Calculating the Reliability Coefficient in R">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://bigdataforsocialjustice/phhbhp7534.com/files/social-image-sp23.png">
 <meta name="twitter:creator" content="@bigdataforsocialjustice">
@@ -187,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../example/index.html">Overview</a></li><li class="breadcrumb-item"><a href="../example/index.html">Code examples</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../example/infant_mortality.html">Example Code</a></li><li class="breadcrumb-item"><a href="../example/cronbachs.html">Calculating the Reliability Coefficient in R</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -210,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../example/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../example/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code examples</span></a>
   </div>
 </li>
@@ -281,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../example/cronbachs.html" class="sidebar-item-text sidebar-link">
+  <a href="../example/cronbachs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Calculating the Reliability Coefficient in R</span></a>
   </div>
 </li>
@@ -293,20 +294,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-reliability-coefficient-cronbachs-alpha" id="toc-the-reliability-coefficient-cronbachs-alpha" class="nav-link active" data-scroll-target="#the-reliability-coefficient-cronbachs-alpha">The reliability coefficient: Cronbach’s alpha</a></li>
+  <li><a href="#recall-the-big-five-inventory-measure" id="toc-recall-the-big-five-inventory-measure" class="nav-link" data-scroll-target="#recall-the-big-five-inventory-measure">Recall the Big Five Inventory Measure</a></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data wrangling</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../example/index.html">Overview</a></li><li class="breadcrumb-item"><a href="../example/index.html">Code examples</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../example/infant_mortality.html">Example Code</a></li><li class="breadcrumb-item"><a href="../example/cronbachs.html">Calculating the Reliability Coefficient in R</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Code examples</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Calculating the Reliability Coefficient in R</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Barboza-Salerno </p>
+          </div>
+  </div>
     
   
     
@@ -317,11 +332,255 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This section of the website will contain the R code that I will use in class to demonstrate course concepts and/or demonstrate how to conduct the analyses used in the readings.</p>
+<section id="the-reliability-coefficient-cronbachs-alpha" class="level4">
+<h4 class="anchored" data-anchor-id="the-reliability-coefficient-cronbachs-alpha">The reliability coefficient: Cronbach’s alpha</h4>
+<p>Cronbach’s alpha is an estimate of total-score reliability for the measurement of a single construct common to all items in a test under the conditions that a one-factor model is correct (i.e., the test is unidimensional). Please note there are other assumptions that must be met but the assumption that the items fall along a single dimension is arguably most important.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psychTools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bfi <span class="ot">&lt;-</span> bfi</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bfi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>      A1 A2 A3 A4 A5 C1 C2 C3 C4 C5 E1 E2 E3 E4 E5 N1 N2 N3 N4 N5 O1 O2 O3 O4
+61617  2  4  3  4  4  2  3  3  4  4  3  3  3  4  4  3  4  2  2  3  3  6  3  4
+61618  2  4  5  2  5  5  4  4  3  4  1  1  6  4  3  3  3  3  5  5  4  2  4  3
+61620  5  4  5  4  4  4  5  4  2  5  2  4  4  4  5  4  5  4  2  3  4  2  5  5
+61621  4  4  6  5  5  4  4  3  5  5  5  3  4  4  4  2  5  2  4  1  3  3  4  3
+61622  2  3  3  4  5  4  4  5  3  2  2  2  5  4  5  2  3  4  4  3  3  3  4  3
+61623  6  6  5  6  5  6  6  6  1  3  2  1  6  5  6  3  5  2  2  3  4  3  5  6
+      O5 gender education age
+61617  3      1        NA  16
+61618  3      2        NA  18
+61620  2      2        NA  17
+61621  5      2        NA  17
+61622  3      1        NA  17
+61623  1      2         3  21</code></pre>
+</div>
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bfi.dictionary <span class="ot">&lt;-</span> bfi.dictionary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="recall-the-big-five-inventory-measure" class="level4">
+<h4 class="anchored" data-anchor-id="recall-the-big-five-inventory-measure">Recall the Big Five Inventory Measure</h4>
+<p>The Big Five Inventory is provided in the package <code>psych</code> in R. R packages frequently come with data that is useful to demonstrate various aspects of the package. You can read more about the inventory here.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">describe</span>(bfi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>          vars    n  mean    sd median trimmed   mad min max range  skew
+A1           1 2784  2.41  1.41      2    2.23  1.48   1   6     5  0.83
+A2           2 2773  4.80  1.17      5    4.98  1.48   1   6     5 -1.12
+A3           3 2774  4.60  1.30      5    4.79  1.48   1   6     5 -1.00
+A4           4 2781  4.70  1.48      5    4.93  1.48   1   6     5 -1.03
+A5           5 2784  4.56  1.26      5    4.71  1.48   1   6     5 -0.85
+C1           6 2779  4.50  1.24      5    4.64  1.48   1   6     5 -0.85
+C2           7 2776  4.37  1.32      5    4.50  1.48   1   6     5 -0.74
+C3           8 2780  4.30  1.29      5    4.42  1.48   1   6     5 -0.69
+C4           9 2774  2.55  1.38      2    2.41  1.48   1   6     5  0.60
+C5          10 2784  3.30  1.63      3    3.25  1.48   1   6     5  0.07
+E1          11 2777  2.97  1.63      3    2.86  1.48   1   6     5  0.37
+E2          12 2784  3.14  1.61      3    3.06  1.48   1   6     5  0.22
+E3          13 2775  4.00  1.35      4    4.07  1.48   1   6     5 -0.47
+E4          14 2791  4.42  1.46      5    4.59  1.48   1   6     5 -0.82
+E5          15 2779  4.42  1.33      5    4.56  1.48   1   6     5 -0.78
+N1          16 2778  2.93  1.57      3    2.82  1.48   1   6     5  0.37
+N2          17 2779  3.51  1.53      4    3.51  1.48   1   6     5 -0.08
+N3          18 2789  3.22  1.60      3    3.16  1.48   1   6     5  0.15
+N4          19 2764  3.19  1.57      3    3.12  1.48   1   6     5  0.20
+N5          20 2771  2.97  1.62      3    2.85  1.48   1   6     5  0.37
+O1          21 2778  4.82  1.13      5    4.96  1.48   1   6     5 -0.90
+O2          22 2800  2.71  1.57      2    2.56  1.48   1   6     5  0.59
+O3          23 2772  4.44  1.22      5    4.56  1.48   1   6     5 -0.77
+O4          24 2786  4.89  1.22      5    5.10  1.48   1   6     5 -1.22
+O5          25 2780  2.49  1.33      2    2.34  1.48   1   6     5  0.74
+gender      26 2800  1.67  0.47      2    1.71  0.00   1   2     1 -0.73
+education   27 2577  3.19  1.11      3    3.22  1.48   1   5     4 -0.05
+age         28 2800 28.78 11.13     26   27.43 10.38   3  86    83  1.02
+          kurtosis   se
+A1           -0.31 0.03
+A2            1.05 0.02
+A3            0.44 0.02
+A4            0.04 0.03
+A5            0.16 0.02
+C1            0.30 0.02
+C2           -0.14 0.03
+C3           -0.13 0.02
+C4           -0.62 0.03
+C5           -1.22 0.03
+E1           -1.09 0.03
+E2           -1.15 0.03
+E3           -0.47 0.03
+E4           -0.30 0.03
+E5           -0.09 0.03
+N1           -1.01 0.03
+N2           -1.05 0.03
+N3           -1.18 0.03
+N4           -1.09 0.03
+N5           -1.06 0.03
+O1            0.43 0.02
+O2           -0.81 0.03
+O3            0.30 0.02
+O4            1.08 0.02
+O5           -0.24 0.03
+gender       -1.47 0.01
+education    -0.32 0.02
+age           0.56 0.21</code></pre>
+</div>
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>keys.list <span class="ot">&lt;-</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">agree=</span><span class="fu">c</span>(<span class="st">"A1"</span>,<span class="st">"A2"</span>,<span class="st">"A3"</span>,<span class="st">"A4"</span>,<span class="st">"A5"</span>),<span class="at">conscientious=</span><span class="fu">c</span>(<span class="st">"C1"</span>,<span class="st">"C2"</span>,<span class="st">"C3"</span>,<span class="st">"C4"</span>,<span class="st">"C5"</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">extraversion=</span><span class="fu">c</span>(<span class="st">"E1"</span>,<span class="st">"E2"</span>,<span class="st">"E3"</span>,<span class="st">"E4"</span>,<span class="st">"E5"</span>),<span class="at">neuroticism=</span><span class="fu">c</span>(<span class="st">"N1"</span>,<span class="st">"N2"</span>,<span class="st">"N3"</span>,<span class="st">"N4"</span>,<span class="st">"N5"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">openness =</span> <span class="fu">c</span>(<span class="st">"O1"</span>,<span class="st">"O2"</span>,<span class="st">"O3"</span>,<span class="st">"O4"</span>,<span class="st">"O5"</span>)) </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a> <span class="co">#show the use of the fa.lookup with a dictionary</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">keys.lookup</span>(keys.list,bfi.dictionary[,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   ItemLabel                                      Item     Giant3
+A1     q_146 Am indifferent to the feelings of others.   Cohesion
+A2    q_1162         Inquire about others' well-being.   Cohesion
+A3    q_1206               Know how to comfort others.   Cohesion
+A4    q_1364                            Love children.   Cohesion
+A5    q_1419                 Make people feel at ease.   Cohesion
+C1     q_124                   Am exacting in my work.  Stability
+C2     q_530     Continue until everything is perfect.  Stability
+C3     q_619            Do things according to a plan.  Stability
+C4     q_626           Do things in a half-way manner.  Stability
+C5    q_1949                            Waste my time.  Stability
+E1     q_712                         Don't talk a lot. Plasticity
+E2     q_901     Find it difficult to approach others. Plasticity
+E3    q_1205             Know how to captivate people. Plasticity
+E4    q_1410                      Make friends easily. Plasticity
+E5    q_1768                              Take charge. Plasticity
+N1     q_952                         Get angry easily.  Stability
+N2     q_974                     Get irritated easily.  Stability
+N3    q_1099                Have frequent mood swings.  Stability
+N4    q_1479                          Often feel blue.  Stability
+N5    q_1505                             Panic easily.  Stability
+O1     q_128                         Am full of ideas. Plasticity
+O2     q_316         Avoid difficult reading material. Plasticity
+O3     q_492 Carry the conversation to a higher level. Plasticity
+O4    q_1738          Spend time reflecting on things. Plasticity
+O5    q_1964     Will not probe deeply into a subject. Plasticity
+                  Big6
+A1       Agreeableness
+A2       Agreeableness
+A3       Agreeableness
+A4       Agreeableness
+A5       Agreeableness
+C1   Conscientiousness
+C2   Conscientiousness
+C3   Conscientiousness
+C4   Conscientiousness
+C5   Conscientiousness
+E1        Extraversion
+E2        Extraversion
+E3        Extraversion
+E4        Extraversion
+E5        Extraversion
+N1 Emotional Stability
+N2 Emotional Stability
+N3 Emotional Stability
+N4 Emotional Stability
+N5 Emotional Stability
+O1            Openness
+O2            Openness
+O3            Openness
+O4            Openness
+O5            Openness</code></pre>
+</div>
+</div>
+</section>
+<section id="data-wrangling" class="level4">
+<h4 class="anchored" data-anchor-id="data-wrangling">Data wrangling</h4>
+<p>Some of the items need to be recoded, hence the minus sign in the analysis above (super nice way of reverse coding items quickly!). The recoded items below are A1,C4,C5,E1,E2, O2,O5.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>A1 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span>bfi<span class="sc">$</span>A1</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>C4 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>C4</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>C5 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>C5</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>E1 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>E1</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>E2 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>E2</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>O2 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>O2</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>O5 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>O5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(bfi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "A1"        "A2"        "A3"        "A4"        "A5"        "C1"       
+ [7] "C2"        "C3"        "C4"        "C5"        "E1"        "E2"       
+[13] "E3"        "E4"        "E5"        "N1"        "N2"        "N3"       
+[19] "N4"        "N5"        "O1"        "O2"        "O3"        "O4"       
+[25] "O5"        "gender"    "education" "age"      </code></pre>
+</div>
+</div>
+<p>From above we can see that the items for <code>Openness</code> are in positions 21 through 25. Let’s get Cronbach’s alpha for <code>Openness</code>.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">alpha</span>(bfi[, <span class="fu">c</span>(<span class="dv">21</span><span class="sc">:</span><span class="dv">25</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Reliability analysis   
+Call: alpha(x = bfi[, c(21:25)])
+
+  raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r
+       0.6      0.61    0.57      0.24 1.5 0.012  4.6 0.81     0.23
+
+    95% confidence boundaries 
+         lower alpha upper
+Feldt     0.58   0.6  0.62
+Duhachek  0.58   0.6  0.62
+
+ Reliability if an item is dropped:
+   raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r
+O1      0.53      0.53    0.48      0.22 1.1    0.014 0.0092  0.23
+O2      0.57      0.57    0.51      0.25 1.3    0.013 0.0076  0.22
+O3      0.50      0.50    0.44      0.20 1.0    0.015 0.0071  0.20
+O4      0.61      0.62    0.56      0.29 1.6    0.012 0.0044  0.29
+O5      0.51      0.53    0.47      0.22 1.1    0.015 0.0116  0.20
+
+ Item statistics 
+      n raw.r std.r r.cor r.drop mean  sd
+O1 2778  0.62  0.65  0.52   0.39  4.8 1.1
+O2 2800  0.65  0.60  0.43   0.33  4.3 1.6
+O3 2772  0.67  0.69  0.59   0.45  4.4 1.2
+O4 2786  0.50  0.52  0.29   0.22  4.9 1.2
+O5 2780  0.67  0.66  0.52   0.42  4.5 1.3
+
+Non missing response frequency for each item
+      1    2    3    4    5    6 miss
+O1 0.01 0.04 0.08 0.22 0.33 0.33 0.01
+O2 0.06 0.10 0.16 0.14 0.26 0.29 0.00
+O3 0.03 0.05 0.11 0.28 0.34 0.20 0.01
+O4 0.02 0.04 0.06 0.17 0.32 0.39 0.01
+O5 0.03 0.07 0.13 0.19 0.32 0.27 0.01</code></pre>
+</div>
+</div>
 
 
 <!-- -->
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -762,13 +1021,70 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Code examples"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>This section of the website will contain the R code that I will use in class to demonstrate course concepts and/or demonstrate how to conduct the analyses used in the readings. </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Calculating the Reliability Coefficient in R"</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Barboza-Salerno"</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup, include=FALSE} </span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::opts_chunk$set(warning = FALSE, message = FALSE) </span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">#### The reliability coefficient: Cronbach's alpha</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>Cronbach's alpha is an estimate of total-score reliability for the measurement of a single construct common to all items in a test under the conditions that a one-factor model is correct (i.e., the test is unidimensional). Please note there are other assumptions that must be met but the assumption that the items fall along a single dimension is arguably most important.</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psychTools)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>bfi <span class="ot">&lt;-</span> bfi</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bfi)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>bfi.dictionary <span class="ot">&lt;-</span> bfi.dictionary</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Recall the Big Five Inventory Measure</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>The Big Five Inventory is provided in the package <span class="in">`psych`</span> in R. R packages frequently come</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>with data that is useful to demonstrate various aspects of the package. You can read more about the inventory here.</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="fu">describe</span>(bfi)</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>keys.list <span class="ot">&lt;-</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">agree=</span><span class="fu">c</span>(<span class="st">"A1"</span>,<span class="st">"A2"</span>,<span class="st">"A3"</span>,<span class="st">"A4"</span>,<span class="st">"A5"</span>),<span class="at">conscientious=</span><span class="fu">c</span>(<span class="st">"C1"</span>,<span class="st">"C2"</span>,<span class="st">"C3"</span>,<span class="st">"C4"</span>,<span class="st">"C5"</span>),</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">extraversion=</span><span class="fu">c</span>(<span class="st">"E1"</span>,<span class="st">"E2"</span>,<span class="st">"E3"</span>,<span class="st">"E4"</span>,<span class="st">"E5"</span>),<span class="at">neuroticism=</span><span class="fu">c</span>(<span class="st">"N1"</span>,<span class="st">"N2"</span>,<span class="st">"N3"</span>,<span class="st">"N4"</span>,<span class="st">"N5"</span>),</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">openness =</span> <span class="fu">c</span>(<span class="st">"O1"</span>,<span class="st">"O2"</span>,<span class="st">"O3"</span>,<span class="st">"O4"</span>,<span class="st">"O5"</span>)) </span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a> <span class="co">#show the use of the fa.lookup with a dictionary</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="fu">keys.lookup</span>(keys.list,bfi.dictionary[,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Data wrangling</span></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>Some of the items need to be recoded, hence the minus sign in the analysis above (super nice way of reverse coding items quickly!). The recoded items below are A1,C4,C5,E1,E2, O2,O5.</span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>A1 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span>bfi<span class="sc">$</span>A1</span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>C4 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>C4</span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>C5 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>C5</span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>E1 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>E1</span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>E2 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>E2</span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>O2 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>O2</span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>bfi<span class="sc">$</span>O5 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span> bfi<span class="sc">$</span>O5</span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(bfi)</span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>From above we can see that the items for <span class="in">`Openness`</span> are in positions 21 through 25. Let's get Cronbach's alpha for <span class="in">`Openness`</span>.</span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a><span class="fu">alpha</span>(bfi[, <span class="fu">c</span>(<span class="dv">21</span><span class="sc">:</span><span class="dv">25</span>)])</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

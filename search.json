@@ -2176,14 +2176,24 @@
     "href": "content/12-content.html",
     "title": "Analytical methods+observational",
     "section": "",
-    "text": "Salazar LF, Crosby RA, DiClemente RJ. Chapter 14: Statistical techniques for analyzing observational research in health promotion. 2015. p. 397-427.\n UCLA Institute for Digital Research and Education. Choosing the correct statistical test in SAS, Stata, SPSS, and R. Available at: https://stats.idre.ucla.edu/other/mult-pkg/whatstat/"
+    "text": "Salazar LF, Crosby RA, DiClemente RJ. Chapter 14: Statistical techniques for analyzing observational research in health promotion. 2015. p. 397-427.\n UCLA Institute for Digital Research and Education. Choosing the correct statistical test in SAS, Stata, SPSS, and R. Available at: https://stats.idre.ucla.edu/other/mult-pkg/whatstat/",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "12: Analytical methods + observation"
+    ]
   },
   {
     "objectID": "content/12-content.html#readings",
     "href": "content/12-content.html#readings",
     "title": "Analytical methods+observational",
     "section": "",
-    "text": "Salazar LF, Crosby RA, DiClemente RJ. Chapter 14: Statistical techniques for analyzing observational research in health promotion. 2015. p. 397-427.\n UCLA Institute for Digital Research and Education. Choosing the correct statistical test in SAS, Stata, SPSS, and R. Available at: https://stats.idre.ucla.edu/other/mult-pkg/whatstat/"
+    "text": "Salazar LF, Crosby RA, DiClemente RJ. Chapter 14: Statistical techniques for analyzing observational research in health promotion. 2015. p. 397-427.\n UCLA Institute for Digital Research and Education. Choosing the correct statistical test in SAS, Stata, SPSS, and R. Available at: https://stats.idre.ucla.edu/other/mult-pkg/whatstat/",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "12: Analytical methods + observation"
+    ]
   },
   {
     "objectID": "content/27-content.html",
@@ -2945,21 +2955,36 @@
     "href": "content/12-content.html#lecture-notes",
     "title": "Analytical methods+observational",
     "section": "Lecture Notes",
-    "text": "Lecture Notes\nThe lecture notes for today can be downloaded here as pdf or here as a PPTX"
+    "text": "Lecture Notes\nThe lecture notes for today can be downloaded here as pdf or here as a PPTX",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "12: Analytical methods + observation"
+    ]
   },
   {
     "objectID": "content/12-content.html#in-class-examples",
     "href": "content/12-content.html#in-class-examples",
     "title": "Analytical methods+observational",
     "section": "In-class examples",
-    "text": "In-class examples\n\nExample 1: college enrollment by undergraduate gpa example is here\nExample 2: exam passage and hours studied is here\nExample 3: probability of getting heart disease based on patient medical history and demographics is here\nExample 4: probability of getting heart disease based on patient medical history and demographics using JAMOVI is here. JAMOVI allows you to predict the marginals for all independent variables in your model and also combinations of models."
+    "text": "In-class examples\n\nExample 1: college enrollment by undergraduate gpa example is here\nExample 2: exam passage and hours studied is here\nExample 3: probability of getting heart disease based on patient medical history and demographics is here\nExample 4: probability of getting heart disease based on patient medical history and demographics using JAMOVI is here. JAMOVI allows you to predict the marginals for all independent variables in your model and also combinations of models.",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "12: Analytical methods + observation"
+    ]
   },
   {
     "objectID": "content/12-content.html#example-r-code",
     "href": "content/12-content.html#example-r-code",
     "title": "Analytical methods+observational",
     "section": "Example R code",
-    "text": "Example R code\nThe example R code to estimate the probability of getting heart disease is here.\nYou can download the markdown file here"
+    "text": "Example R code\nThe example R code to estimate the probability of getting heart disease is here.\nYou can download the markdown file here",
+    "crumbs": [
+      "Content",
+      "Course content",
+      "12: Analytical methods + observation"
+    ]
   },
   {
     "objectID": "assignment/05-problem-set1.html",
@@ -3370,6 +3395,72 @@
       "Content",
       "Course content",
       "21: Data Collection + Survey Design"
+    ]
+  },
+  {
+    "objectID": "example/scraping.html",
+    "href": "example/scraping.html",
+    "title": "Text Mining Child Fatalities",
+    "section": "",
+    "text": "In order to run this you must install Docker Desktop. I describe what Docker Desktop is in this article."
+  },
+  {
+    "objectID": "example/scraping.html#requirements",
+    "href": "example/scraping.html#requirements",
+    "title": "Text Mining Child Fatalities",
+    "section": "",
+    "text": "In order to run this you must install Docker Desktop. I describe what Docker Desktop is in this article."
+  },
+  {
+    "objectID": "example/scraping.html#benefits",
+    "href": "example/scraping.html#benefits",
+    "title": "Text Mining Child Fatalities",
+    "section": "Benefits",
+    "text": "Benefits\nText data comprises up to 90% of information collected by organizations. Natural Language Processing techiques allow you to summarize large amounts of data in minutes."
+  },
+  {
+    "objectID": "example/scraping.html#example",
+    "href": "example/scraping.html#example",
+    "title": "Text Mining Child Fatalities",
+    "section": "Example",
+    "text": "Example\nThe state of Pennsylvania collects information about child fatalities and near fatalities. There is a ton of useful information that goes un-analyzed that can be used to guide interventions."
+  },
+  {
+    "objectID": "example/scraping.html#web-scraping",
+    "href": "example/scraping.html#web-scraping",
+    "title": "Text Mining Child Fatalities",
+    "section": "Web Scraping",
+    "text": "Web Scraping\nThere are a number of libraries useful for web scraping including RSelenium. Install these prior to running the code.\n\n\nCode\nlibrary(rvest)\nlibrary(jsonlite)\nlibrary(tidyverse)\nlibrary(RSelenium)\nlibrary(ggplot2)\nlibrary(ggthemes)\nlibrary(tmap)\nlibrary(sf)\nlibrary(robotstxt)"
+  },
+  {
+    "objectID": "example/scraping.html#checks",
+    "href": "example/scraping.html#checks",
+    "title": "Text Mining Child Fatalities",
+    "section": "Checks",
+    "text": "Checks\nWe do not want to scrape documents if the organization does not allow it. If the paths_allowed returns TRUE then it is ok to do.\n\n\nCode\npaths_allowed(paths=\"https://www.dhs.pa.gov/docs/OCYF/Pages/Fatality-Reports.aspx\")\n\n\n[1] TRUE\n\n\nYou need to install and run docker; you must also instal wsl from the windows powershell. Then, in the command line type\ndocker pull selenium/standalone-firefox:2.53.0 docker run -d -p 4445:4444 selenium/standalone-firefox:2.53.0\nThe following code instantiates the web browser and then we can start scraping!\n\n\nCode\nremDr &lt;- remoteDriver(port = 4445L)\nurl &lt;- 'https://www.dhs.pa.gov/docs/OCYF/Pages/Fatality-Reports.aspx'\nremDr$open(silent = FALSE) #opens a browser\n\n\n[1] \"Connecting to remote server\"\n$applicationCacheEnabled\n[1] TRUE\n\n$rotatable\n[1] FALSE\n\n$handlesAlerts\n[1] TRUE\n\n$databaseEnabled\n[1] TRUE\n\n$version\n[1] \"45.0.2\"\n\n$platform\n[1] \"LINUX\"\n\n$nativeEvents\n[1] FALSE\n\n$acceptSslCerts\n[1] TRUE\n\n$webdriver.remote.sessionid\n[1] \"acc03a39-dc06-41e9-a364-d0d25130b4c8\"\n\n$webStorageEnabled\n[1] TRUE\n\n$locationContextEnabled\n[1] TRUE\n\n$browserName\n[1] \"firefox\"\n\n$takesScreenshot\n[1] TRUE\n\n$javascriptEnabled\n[1] TRUE\n\n$cssSelectorsEnabled\n[1] TRUE\n\n$id\n[1] \"acc03a39-dc06-41e9-a364-d0d25130b4c8\"\n\n\nCode\nremDr$navigate(url)\nremDr$getTitle()\n\n\n[[1]]\n[1] \"Fatality Reports\"\n\n\nCode\nremDr$screenshot(display = TRUE)\n\n\nA lot of this is trial and error. I find the search button through the html code and then the button associated with showing ‘all’ records. I then simulate a mouse click to show all the records.\n\n\nCode\n# identify search button and select 'all' records :)\nsearchID&lt;-'//*[@id=\"ctl00_ctl49_g_2f5406ff_66ab_4f5d_b7c7_f984206b2ab7_ddlPageSizer\"]'\nwebElem&lt;-remDr$findElement(value = searchID)\nwebElem$clickElement()\noption &lt;- remDr$findElement(using = 'xpath', \"//*/option[@value = 'All']\")\noption$clickElement()\nSys.sleep(15)\n\n\nLet’s now save the resulting table showed on the website to an R dataframe\n\n\nCode\nwebpage &lt;- xml2::read_html(unlist(remDr$getPageSource()), encoding = \"UTF-8\")\nfatalities_table &lt;- rvest::html_table(webpage, fill=TRUE)[[1]]\n\n# check the data.frame\nfatalities_table %&gt;% dplyr::glimpse(78)\n\n\nRows: 3,113\nColumns: 6\n$ `Info ⇧`       &lt;chr&gt; \"Central: Central Info in Report\", \"County: Northeast…\n$ `Name ⇳`       &lt;chr&gt; \"Near Death 092515 C\", \"Black Death 022413 NE\", \"DA C…\n$ `Fatal/Near ⇳` &lt;chr&gt; \"Near Fatality\", \"Fatality\", \"Near Fatality\", \"Near F…\n$ `Year ⇳`       &lt;int&gt; 2015, 2013, 2018, 2019, 2019, 2018, 2019, 2019, 2017,…\n$ `Date ⇳`       &lt;chr&gt; \"\", \"\", \"3/23\", \"07/03\", \"07/10\", \"5/8\", \"11/01\", \"08…\n$ `DA Cert ⇳`    &lt;chr&gt; \"\", \"\", \"Yes\", \"Lifted\", \"Lifted\", \"No\", \"No\", \"\", \"L…\n\n\nCode\nbase::colnames(x = rvest::html_table(webpage, fill=TRUE)[[1]])\n\n\n[1] \"Info ⇧\"       \"Name ⇳\"       \"Fatal/Near ⇳\" \"Year ⇳\"       \"Date ⇳\"      \n[6] \"DA Cert ⇳\"   \n\n\nNow we clean the data so that we can analyze it\n\n\nCode\nChild_Fatalities &lt;- rvest::html_table(webpage, fill=TRUE)[[1]] %&gt;%\n  # fix column names for repeated columns\n  tibble::as_tibble(.name_repair = \"unique\") %&gt;%\n  # get unique names\n  janitor::clean_names(case = \"snake\") %&gt;%\n  # lower, snake case\n  dplyr::select(info, name, fatal_near, year, date, da_cert)\n# create four columns from first column that has region, county, gender and age\nChild_Fatalities$info &lt;- strsplit(Child_Fatalities$info, split = \" : \")\nstopwords = c(\"Region\",\"County\",\"Gender\",\"Age\")\nChild_Fatalities$info &lt;-gsub(paste0(stopwords,collapse = \"|\"),\"\", Child_Fatalities$info)\n# separate by colon\nChild_Fatalities &lt;- separate(data = Child_Fatalities, col = info,\n                             into = c(\"region\", \"county\",\"gender\",\"age\"), sep = \" :\")\n# get rid of white space\nChild_Fatalities$region &lt;- gsub(':\\\\s+', '', Child_Fatalities$region)\nChild_Fatalities$county &lt;- gsub('\\\\s+', '', Child_Fatalities$county)\nChild_Fatalities$gender &lt;- gsub('\\\\s+', '', Child_Fatalities$gender)\nChild_Fatalities$age &lt;- gsub('\\\\s+', '', Child_Fatalities$age)\n\nChild_Fatalities$final_date &lt;-\n  apply( Child_Fatalities[ , c(\"date\", \"year\") ] , 1 , paste , collapse = \"/\" )\nChild_Fatalities %&gt;% glimpse(78)\n\n\nRows: 3,113\nColumns: 10\n$ region     &lt;chr&gt; \"CentralCentral Info in Report\", \"Northeast Info in Repor…\n$ county     &lt;chr&gt; NA, NA, \" Blair \", \" Lebanon         \", \" Adams\", \" Adams…\n$ gender     &lt;chr&gt; NA, NA, \" Male \", \" Female                &n\", \" Female\",…\n$ age        &lt;chr&gt; NA, NA, \" 2years\", NA, \" 18Months\", \" 3weeks\", \" 12Years\"…\n$ name       &lt;chr&gt; \"Near Death 092515 C\", \"Black Death 022413 NE\", \"DA Certi…\n$ fatal_near &lt;chr&gt; \"Near Fatality\", \"Fatality\", \"Near Fatality\", \"Near Fatal…\n$ year       &lt;int&gt; 2015, 2013, 2018, 2019, 2019, 2018, 2019, 2019, 2017, 201…\n$ date       &lt;chr&gt; \"\", \"\", \"3/23\", \"07/03\", \"07/10\", \"5/8\", \"11/01\", \"08/20\"…\n$ da_cert    &lt;chr&gt; \"\", \"\", \"Yes\", \"Lifted\", \"Lifted\", \"No\", \"No\", \"\", \"Lifte…\n$ final_date &lt;chr&gt; \"/2015\", \"/2013\", \"3/23/2018\", \"07/03/2019\", \"07/10/2019\"…\n\n\nFinally, let’s look at spatial and temporal trends\n\n\nCode\nggplot(Child_Fatalities %&gt;%\n         group_by(year, fatal_near) %&gt;% count(year) %&gt;% drop_na(year), aes(x = year, n)) +\n  geom_point() +\n  geom_smooth(method = \"glm\", method.args = list(family = poisson)) +\n  facet_wrap(~fatal_near) +\n  labs(x = \"Year of Fatality or Near Fatality\", y = \"Number of Reports\", title = \"Web Scraped Child Fatality and Near Fatality Reports\") +\n  theme(text=element_text(size=16,  family=\"Arial\"))\n\n\n\n\n\n\n\n\n\n\n\nCode\npa_bounds &lt;- st_read(\"PaCounty2024_03.geojson\")\n\n\nReading layer `PaCounty2024_03' from data source \n  `C:\\Users\\barboza-salerno.1\\evalsp23.classes.andrewheiss.com\\example\\PaCounty2024_03.geojson' \n  using driver `GeoJSON'\nSimple feature collection with 67 features and 21 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -80.51939 ymin: 39.71986 xmax: -74.68956 ymax: 42.26935\nGeodetic CRS:  WGS 84\n\n\nCode\nnear_fatalities  &lt;- Child_Fatalities %&gt;%\n  filter(fatal_near == \"Near Fatality\" & county !=\"\") %&gt;%\n  drop_na() %&gt;%\n  mutate (COUNTY_NAM = str_to_upper(county)) %&gt;%\n  select(COUNTY_NAM) %&gt;%\n  group_by(COUNTY_NAM) %&gt;%\n  summarize(count = n()) %&gt;%\n  right_join(pa_bounds) %&gt;% st_as_sf()%&gt;%\n  mutate(count = replace_na(count, 0))\n\ntm_shape(near_fatalities) +    tm_borders(col = \"grey90\") +\n  tm_fill(\"count\", colorNA = \"white\",\n          style = \"quantile\",\n          palette = \"Blues\",\n          legend.hist = TRUE,\n          legend.is.portrait = TRUE,\n          legend.hist.z = 0.1) +\n  tm_layout(legend.outside = TRUE,\n            legend.height = 0.45,\n            legend.width = 5.0,\n            legend.position = c(\"right\", \"bottom\"),\n            frame = FALSE) + tm_text(\"COUNTY_NAM\", size = 1/2) +\n  tm_borders(alpha = 0.5)"
+  },
+  {
+    "objectID": "example/cronbachs.html",
+    "href": "example/cronbachs.html",
+    "title": "Calculating the Reliability Coefficient in R",
+    "section": "",
+    "text": "The reliability coefficient: Cronbach’s alpha\nCronbach’s alpha is an estimate of total-score reliability for the measurement of a single construct common to all items in a test under the conditions that a one-factor model is correct (i.e., the test is unidimensional). Please note there are other assumptions that must be met but the assumption that the items fall along a single dimension is arguably most important.\n\n\nCode\nlibrary(psych)\nlibrary(psychTools)\n\n\n\n\nCode\nbfi &lt;- bfi\nhead(bfi)\n\n\n      A1 A2 A3 A4 A5 C1 C2 C3 C4 C5 E1 E2 E3 E4 E5 N1 N2 N3 N4 N5 O1 O2 O3 O4\n61617  2  4  3  4  4  2  3  3  4  4  3  3  3  4  4  3  4  2  2  3  3  6  3  4\n61618  2  4  5  2  5  5  4  4  3  4  1  1  6  4  3  3  3  3  5  5  4  2  4  3\n61620  5  4  5  4  4  4  5  4  2  5  2  4  4  4  5  4  5  4  2  3  4  2  5  5\n61621  4  4  6  5  5  4  4  3  5  5  5  3  4  4  4  2  5  2  4  1  3  3  4  3\n61622  2  3  3  4  5  4  4  5  3  2  2  2  5  4  5  2  3  4  4  3  3  3  4  3\n61623  6  6  5  6  5  6  6  6  1  3  2  1  6  5  6  3  5  2  2  3  4  3  5  6\n      O5 gender education age\n61617  3      1        NA  16\n61618  3      2        NA  18\n61620  2      2        NA  17\n61621  5      2        NA  17\n61622  3      1        NA  17\n61623  1      2         3  21\n\n\nCode\nbfi.dictionary &lt;- bfi.dictionary\n\n\n\n\nRecall the Big Five Inventory Measure\nThe Big Five Inventory is provided in the package psych in R. R packages frequently come with data that is useful to demonstrate various aspects of the package. You can read more about the inventory here.\n\n\nCode\ndescribe(bfi)\n\n\n          vars    n  mean    sd median trimmed   mad min max range  skew\nA1           1 2784  2.41  1.41      2    2.23  1.48   1   6     5  0.83\nA2           2 2773  4.80  1.17      5    4.98  1.48   1   6     5 -1.12\nA3           3 2774  4.60  1.30      5    4.79  1.48   1   6     5 -1.00\nA4           4 2781  4.70  1.48      5    4.93  1.48   1   6     5 -1.03\nA5           5 2784  4.56  1.26      5    4.71  1.48   1   6     5 -0.85\nC1           6 2779  4.50  1.24      5    4.64  1.48   1   6     5 -0.85\nC2           7 2776  4.37  1.32      5    4.50  1.48   1   6     5 -0.74\nC3           8 2780  4.30  1.29      5    4.42  1.48   1   6     5 -0.69\nC4           9 2774  2.55  1.38      2    2.41  1.48   1   6     5  0.60\nC5          10 2784  3.30  1.63      3    3.25  1.48   1   6     5  0.07\nE1          11 2777  2.97  1.63      3    2.86  1.48   1   6     5  0.37\nE2          12 2784  3.14  1.61      3    3.06  1.48   1   6     5  0.22\nE3          13 2775  4.00  1.35      4    4.07  1.48   1   6     5 -0.47\nE4          14 2791  4.42  1.46      5    4.59  1.48   1   6     5 -0.82\nE5          15 2779  4.42  1.33      5    4.56  1.48   1   6     5 -0.78\nN1          16 2778  2.93  1.57      3    2.82  1.48   1   6     5  0.37\nN2          17 2779  3.51  1.53      4    3.51  1.48   1   6     5 -0.08\nN3          18 2789  3.22  1.60      3    3.16  1.48   1   6     5  0.15\nN4          19 2764  3.19  1.57      3    3.12  1.48   1   6     5  0.20\nN5          20 2771  2.97  1.62      3    2.85  1.48   1   6     5  0.37\nO1          21 2778  4.82  1.13      5    4.96  1.48   1   6     5 -0.90\nO2          22 2800  2.71  1.57      2    2.56  1.48   1   6     5  0.59\nO3          23 2772  4.44  1.22      5    4.56  1.48   1   6     5 -0.77\nO4          24 2786  4.89  1.22      5    5.10  1.48   1   6     5 -1.22\nO5          25 2780  2.49  1.33      2    2.34  1.48   1   6     5  0.74\ngender      26 2800  1.67  0.47      2    1.71  0.00   1   2     1 -0.73\neducation   27 2577  3.19  1.11      3    3.22  1.48   1   5     4 -0.05\nage         28 2800 28.78 11.13     26   27.43 10.38   3  86    83  1.02\n          kurtosis   se\nA1           -0.31 0.03\nA2            1.05 0.02\nA3            0.44 0.02\nA4            0.04 0.03\nA5            0.16 0.02\nC1            0.30 0.02\nC2           -0.14 0.03\nC3           -0.13 0.02\nC4           -0.62 0.03\nC5           -1.22 0.03\nE1           -1.09 0.03\nE2           -1.15 0.03\nE3           -0.47 0.03\nE4           -0.30 0.03\nE5           -0.09 0.03\nN1           -1.01 0.03\nN2           -1.05 0.03\nN3           -1.18 0.03\nN4           -1.09 0.03\nN5           -1.06 0.03\nO1            0.43 0.02\nO2           -0.81 0.03\nO3            0.30 0.02\nO4            1.08 0.02\nO5           -0.24 0.03\ngender       -1.47 0.01\neducation    -0.32 0.02\nage           0.56 0.21\n\n\nCode\nkeys.list &lt;-\n  list(agree=c(\"A1\",\"A2\",\"A3\",\"A4\",\"A5\"),conscientious=c(\"C1\",\"C2\",\"C3\",\"C4\",\"C5\"),\n  extraversion=c(\"E1\",\"E2\",\"E3\",\"E4\",\"E5\"),neuroticism=c(\"N1\",\"N2\",\"N3\",\"N4\",\"N5\"),\n  openness = c(\"O1\",\"O2\",\"O3\",\"O4\",\"O5\")) \n\n #show the use of the fa.lookup with a dictionary\nkeys.lookup(keys.list,bfi.dictionary[,1:4])\n\n\n   ItemLabel                                      Item     Giant3\nA1     q_146 Am indifferent to the feelings of others.   Cohesion\nA2    q_1162         Inquire about others' well-being.   Cohesion\nA3    q_1206               Know how to comfort others.   Cohesion\nA4    q_1364                            Love children.   Cohesion\nA5    q_1419                 Make people feel at ease.   Cohesion\nC1     q_124                   Am exacting in my work.  Stability\nC2     q_530     Continue until everything is perfect.  Stability\nC3     q_619            Do things according to a plan.  Stability\nC4     q_626           Do things in a half-way manner.  Stability\nC5    q_1949                            Waste my time.  Stability\nE1     q_712                         Don't talk a lot. Plasticity\nE2     q_901     Find it difficult to approach others. Plasticity\nE3    q_1205             Know how to captivate people. Plasticity\nE4    q_1410                      Make friends easily. Plasticity\nE5    q_1768                              Take charge. Plasticity\nN1     q_952                         Get angry easily.  Stability\nN2     q_974                     Get irritated easily.  Stability\nN3    q_1099                Have frequent mood swings.  Stability\nN4    q_1479                          Often feel blue.  Stability\nN5    q_1505                             Panic easily.  Stability\nO1     q_128                         Am full of ideas. Plasticity\nO2     q_316         Avoid difficult reading material. Plasticity\nO3     q_492 Carry the conversation to a higher level. Plasticity\nO4    q_1738          Spend time reflecting on things. Plasticity\nO5    q_1964     Will not probe deeply into a subject. Plasticity\n                  Big6\nA1       Agreeableness\nA2       Agreeableness\nA3       Agreeableness\nA4       Agreeableness\nA5       Agreeableness\nC1   Conscientiousness\nC2   Conscientiousness\nC3   Conscientiousness\nC4   Conscientiousness\nC5   Conscientiousness\nE1        Extraversion\nE2        Extraversion\nE3        Extraversion\nE4        Extraversion\nE5        Extraversion\nN1 Emotional Stability\nN2 Emotional Stability\nN3 Emotional Stability\nN4 Emotional Stability\nN5 Emotional Stability\nO1            Openness\nO2            Openness\nO3            Openness\nO4            Openness\nO5            Openness\n\n\n\n\nData wrangling\nSome of the items need to be recoded, hence the minus sign in the analysis above (super nice way of reverse coding items quickly!). The recoded items below are A1,C4,C5,E1,E2, O2,O5.\n\n\nCode\nbfi$A1 &lt;- 7-bfi$A1\nbfi$C4 &lt;- 7- bfi$C4\nbfi$C5 &lt;- 7- bfi$C5\nbfi$E1 &lt;- 7- bfi$E1\nbfi$E2 &lt;- 7- bfi$E2\nbfi$O2 &lt;- 7- bfi$O2\nbfi$O5 &lt;- 7- bfi$O5\n\n\n\n\nCode\nnames(bfi)\n\n\n [1] \"A1\"        \"A2\"        \"A3\"        \"A4\"        \"A5\"        \"C1\"       \n [7] \"C2\"        \"C3\"        \"C4\"        \"C5\"        \"E1\"        \"E2\"       \n[13] \"E3\"        \"E4\"        \"E5\"        \"N1\"        \"N2\"        \"N3\"       \n[19] \"N4\"        \"N5\"        \"O1\"        \"O2\"        \"O3\"        \"O4\"       \n[25] \"O5\"        \"gender\"    \"education\" \"age\"      \n\n\nFrom above we can see that the items for Openness are in positions 21 through 25. Let’s get Cronbach’s alpha for Openness.\n\n\nCode\nalpha(bfi[, c(21:25)])\n\n\n\nReliability analysis   \nCall: alpha(x = bfi[, c(21:25)])\n\n  raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r\n       0.6      0.61    0.57      0.24 1.5 0.012  4.6 0.81     0.23\n\n    95% confidence boundaries \n         lower alpha upper\nFeldt     0.58   0.6  0.62\nDuhachek  0.58   0.6  0.62\n\n Reliability if an item is dropped:\n   raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r\nO1      0.53      0.53    0.48      0.22 1.1    0.014 0.0092  0.23\nO2      0.57      0.57    0.51      0.25 1.3    0.013 0.0076  0.22\nO3      0.50      0.50    0.44      0.20 1.0    0.015 0.0071  0.20\nO4      0.61      0.62    0.56      0.29 1.6    0.012 0.0044  0.29\nO5      0.51      0.53    0.47      0.22 1.1    0.015 0.0116  0.20\n\n Item statistics \n      n raw.r std.r r.cor r.drop mean  sd\nO1 2778  0.62  0.65  0.52   0.39  4.8 1.1\nO2 2800  0.65  0.60  0.43   0.33  4.3 1.6\nO3 2772  0.67  0.69  0.59   0.45  4.4 1.2\nO4 2786  0.50  0.52  0.29   0.22  4.9 1.2\nO5 2780  0.67  0.66  0.52   0.42  4.5 1.3\n\nNon missing response frequency for each item\n      1    2    3    4    5    6 miss\nO1 0.01 0.04 0.08 0.22 0.33 0.33 0.01\nO2 0.06 0.10 0.16 0.14 0.26 0.29 0.00\nO3 0.03 0.05 0.11 0.28 0.34 0.20 0.01\nO4 0.02 0.04 0.06 0.17 0.32 0.39 0.01\nO5 0.03 0.07 0.13 0.19 0.32 0.27 0.01",
+    "crumbs": [
+      "Examples",
+      "Example Code",
+      "Calculating the Reliability Coefficient in R"
+    ]
+  },
+  {
+    "objectID": "assignment/06-problem-set.html",
+    "href": "assignment/06-problem-set.html",
+    "title": "Problem Set 6",
+    "section": "",
+    "text": "Latent Class Analysis\nThis problem set asks you to replicate an analysis based on a workshop on Latent Class Analysis (LCA) provided by Princeton University. The powerpoint slides are located here, the R script is here and the data file is here.\n\n\nClass Notes\nThe lecture notes are here. The jamovi file that includes my annotated notes from our LCA of greek elections is located here and the table I created of the output to help you is here\n\n\nProcedure\nUnzip the files above and get an understanding of the dataset. The data contains information about mental health facilities in 50 states and can be accessed here. The workshop powerpoint has more information about the survey. The steps are simple:\n\nRun five latent class models starting with 1 class and ending with 5 classes\nSelect the best fitting model based on the model fit statistics (AIC, BIC, etc.)\nInclude a covariate payasst and examine how the likelihood of being in each class conditional on the covariate.\n\n\n\nSoftware\nIf you are a PhD student you are encouraged to run this using R. You can simply replicate the code in the workshop and make sure you understand how to analyse the results. As you can see from the horrendous graphical output, it is much nicer and easier to run the analyses using jamovi. jamovi will also allow you to copy and paste the tables for the model fit and the graphs describing the final model.\n\n\nTurn in\n\nA table of model fit that includes a description of the class you chose and why\nA brief summary of the classes\nHow the odds of being in the omitted class change given the covariate in the model.\n\n\n\nStarting you out\nThe variables used in the structural model for the LCA:\n\nMHINTAKE: Facility offers mental health intake (Q.A1)\nMHDIAGEVAL: Facility offers mental health diagnostic evaluation (Q.A1)\nMHREFERRAL: Facility offers mental health information and/or referral (Q.A1)\nTREATMT: Facility offers substance use treatment (Q.A1)\nADMINSERV: Facility offers administrative or operational services for mental health treatment facilities (Q.A1)\n\nThe covariate is:\n\nPAYASST: Facility offers treatment at no charge or minimal payment to clients who cannot afford to pay\n\nsamhsa2015 &lt;- read.table(file=\"samhsa_2015F.csv\", header=T, as.is=T, sep=\",\")",
+    "crumbs": [
+      "Assignments",
+      "Problem sets",
+      "Problem Set 6"
     ]
   }
 ]
