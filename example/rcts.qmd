@@ -27,7 +27,7 @@ set.seed(1234)   # Make all random draws reproducible
 ```
 
 ```{r load-data-fake, eval=FALSE}
-village_randomized <- read_csv("data/village_randomized.csv")
+#village_randomized <- read_csv("data/village_randomized.csv")
 ```
 
 ```{r load-data-real, include=FALSE, warning=FALSE, message=FALSE}
@@ -53,9 +53,9 @@ income_dag <- dagify(post_income ~ program + age + sex + pre_income,
                                    y = c(program = 2, post_income = 2, age = 1,
                                          sex = 1, pre_income = 3)))
 
-ggdag_status(income_dag, use_labels = "label", text = FALSE, seed = 1234) +
-  guides(color = "none") +
-  theme_dag()
+#ggdag_status(income_dag, use_labels = "label", text = FALSE, seed = 1234) +
+#  guides(color = "none") +
+#  theme_dag()
 ```
 
 The NGO just received funding to run a randomized controlled trial (RCT) in a village, and you're excited because you can finally manipulate access to the program—you can calculate $E(\text{Post-income} | do(\text{Program})$. Following the rules of causal diagrams, you get to delete all the arrows going into the program node:
@@ -74,9 +74,9 @@ income_dag_rct <- dagify(post_income ~ program + age + sex + pre_income,
                                        y = c(program = 2, post_income = 2, age = 1,
                                              sex = 1, pre_income = 3)))
 
-ggdag_status(income_dag_rct, use_labels = "label", text = FALSE, seed = 1234) +
-  guides(color = "none") +
-  theme_dag()
+#ggdag_status(income_dag_rct, use_labels = "label", text = FALSE, seed = 1234) +
+#  guides(color = "none") +
+#  theme_dag()
 ```
 
 
@@ -131,7 +131,7 @@ plot_prop_sex <- ggplot(village_randomized, aes(x = program, fill = sex)) +
   scale_fill_manual(values = c("darkblue", "darkred"))
 
 # Show the plots side-by-side
-plot_diff_sex + plot_prop_sex
+#plot_diff_sex + plot_prop_sex
 ```
 
 The distribution of ages looks basically the same in the treatment and control groups, and there's no substantial difference in the average age across groups:
@@ -148,7 +148,7 @@ plot_hist_age <- ggplot(village_randomized, aes(x = age, fill = program)) +
   labs(x = "Age", y = "Count") +
   facet_wrap(vars(program), ncol = 1)
 
-plot_diff_age + plot_hist_age
+#plot_diff_age + plot_hist_age
 ```
 
 Pre-program income is also distributed the same—and has no substantial difference in averages—across treatment and control groups:
@@ -165,7 +165,7 @@ plot_hist_income <- ggplot(village_randomized, aes(x = pre_income, fill = progra
   labs(x = "Pre income", y = "Count") +
   facet_wrap(vars(program), ncol = 1)
 
-plot_diff_income + plot_hist_income
+#plot_diff_income + plot_hist_income
 ```
 
 All our pre-treatment covariates look good and balanced! You can now estimate the causal effect of the program.

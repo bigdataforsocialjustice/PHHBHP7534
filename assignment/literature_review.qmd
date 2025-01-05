@@ -1,0 +1,82 @@
+---
+title: "The Literature Review"
+format: html
+---
+# Writing the Literature Review
+
+## The Literature Review
+Literature Review is a coherent essay of the research that is most relevant to your research topic. It will be a review of the literature directly related to the topic or problem under study, followed by an explanation of how your research question grows out of that review, that is, showing how you identify your own research focus in term of “gap” in previous research. The purpose of the literature review is to know what others have discovered before you begin your investigation of your own, to ground your study in a particular context of what is known about a subject in order to establish a foundation for the topic (or question) being researched. You should concentrate the review on the previous research most directly relevant to the research you are proposing. 
+
+*Why are we doing this?* The purpose of this assignment is to facilitate your abilities to research a topic of study so you can learn to (1) identify and formulate an inquiry question that defines what you’d like to learn, (2) know how to search and locate research (e.g. peer reviewed journal articles and peer reviewed books) using library and internet resources; (3) analyze information found in those journal articles, and (4) synthesize new knowledge into a written literature review and (5) establish context for your inquiries.
+
+### Assignment Description:
+For this assignment you are asked to complete a literature review on a topic of your choice. You are asked to locate at least 5-12 journal articles on your topic and write a 3-6 page literature review on the articles you’ve selected (see below).
+
+#### Steps to complete your literature review:
+1.	Choose a topic that you are interested in studying
+2.	Formulate an inquiry question that specifically describes what would like to know about your topic.
+3.	Go to google scholar or the library (it’s all online) to search for and locate journals that include your topic’s information.
+4.	Find articles, read the abstracts and skim the articles to determine if they correspond well to your topic AND inquiry question.
+5.	Select at least 5-12 journal articles depending on MPH/PhD status.
+6.	Read your articles and begin to sort and classify them according to their findings (you can use the grid I handed out to organize this and then come see me in my office).
+7.	Organize your articles by sorting and classifying their findings in a meaningful way, always considering your original topic and inquiry question.
+8.	Write an outline for your literature review.
+9.	Write your review. 
+10.  Revise your review after receiving my feedback on the draft, please be sure to have the DRAFT to me by the due date.
+
+#### Outline for writing your literature review:
+1.	Introduction (without this heading)
+Write an introduction paragraph for your review. This paragraph 
+  a. states the topic and inquiry questions for this review
+  b. explains the innovation of this research, why it is necessary, what gap it fills in the existing literature
+
+2.	Body (headings should correspond to the themes below)
+Before you begin this section, be sure that you have sorted your articles into different themes based on the articles’ findings (sometimes called results). After you sort your articles, it is important to give your sorted groups a descriptive name. The names of the sorted articles will become your headings for each of the paragraphs that you write in the body of your review. The body of your literature review will include,
+
+  a.	**Theme 1:** a paragraph or several paragraphs that describe the first theme that you identified and compare, contrast and/or connect the articles you’ve selected.
+  b.	**Theme 2:**  a paragraph or several paragraphs that describes the second theme that you identified and compare, contrast and/or connect the articles you’ve selected.
+  c.	**Theme 3:**  a paragraph or several paragraphs that describes the third theme that you identified and compare, contrast and/or connect the articles you’ve selected.
+… …
+
+These themes are not a mystery they flow from a well-crafted research question. (see my example below)
+
+3. Summary
+This is the last paragraph of your literature review. In this paragraph, it is important to briefly summarize the main findings from the articles that you reviewed and to point out how your inquiry questions were answered or not answered, what the gap is (what if my questions are all answered – you then need to identify new inquiries so that you will contribute to the field. This may seem daunting but it doesn’t have to be… remember you are NOT doing the research and the point is to understand the mechanics of research dissemination… so make it easy on yourself).
+
+4. References
+This is the last pages of your review. It serves as a listing of all references that you mentioned in your paper. Please make sure that only references cited in your drafts will be listed here even if you looked at 300 sources of information. For the most part, only peer reviewed research should be cited. Please use APA style when completing this list.
+
+
+Research Proposal Draft #1: Literature Review
+
+		
+#### Example
+Here is the topic we will research: Compared to children who are not maltreated, are maltreated children who have positive school experiences less likely to commit crime as adults.
+The first step as we’ve discussed on many occasions is to define these concepts. The process of going from concept to definition is called operationalization. How are we to define each concept here? This will help direct you in the review of research, i.e. you will search the terms that you have defined.
+Survey the literature
+
+Summarize the state of the current knowledge on the topic.
+
+First, we would want to discuss the literature showing that child maltreatment is linked to future delinquency and/or violence. (this is easy to do)
+`Childhood victimization has demonstrable long-term consequences in terms of adult criminal behavior. Experiences of early childhood victimization are significantly related to adult arrest records. Overall, about 29% of those who were abused and neglected as children were arrested for a criminal (nontraffic) offense as an adult, in comparison to about 21% of the control subjects. As predicted by the violence-breeds-violence hypothesis, individuals who were abused or neglected as children had higher rates of violent crimes as adults; however, the relationship was strongest for males.” (Widom, 1989, pg. 362)`
+
+Next, we want to discuss literature that suggests schools are important factors in predicting violent criminal offending.
+
+`Research has found that maltreated children perform significantly below their non-maltreated peers in standardized tests, grades, and grade repetitions (Eckenrode, Laird, & Doris, 1993). Leiter and Johnsen (1997) found that officially recorded maltreatment elevates the subsequent risk of lower grades, grade retention, poor attendance, and adverse behaviors in elementary school. In a more recent study, Currie & Widom (2010), found that when compared to the control group, those participants with a history of childhood maltreatment obtained one year less of education on average. This study further found that maltreated children scored lower on IQ tests and were more likely to be employed in unskilled jobs as adults. On the other hand, previously incarcerated youth who received quality educational programming performed better in school and had lower recidivism and greater employment rates (Foley, 2001), indicating that both the quality of educational programming as well as the broader school context can influence the trajectories of delinquent students.`
+
+Next, we would argue that schools have not been the focus of research examining the link between child maltreatment and future violence.
+
+`In an early study, high levels of academic achievement, low rates of in-school behavior problems and good attendance mediated the maltreatment- delinquency relationship among students attending school in North Carolina (Zingraff and colleagues, 1994). Conversely, Herrenkohl, Tajima, Whitney, & Huang (2005) found that physically abused who demonstrated a strong commitment to school were less likely to engage in antisocial behavior. Using data from the Chicago Longitudinal study, Topitzes  (2006) found that reading achievement and a high school diploma mediated the impact of maltreatment on adult crime. Finally, Smith, Park, Ireland, Elwyn, & Thornberry (2012) found that the long-term impact of maltreatment on arrest, crime and violence was only weakly mediated by grade point average and high school graduation but strongly mediated by an additive index of school assets.`
+
+We might also identify other gaps in the literature at this point.
+
+What have these studies overlooked?
+
+Now we talk about why schools may be an important factor, and why.
+
+`School connectedness has been shown to increase the likelihood of academic success (Arhar & Kromrey, 1993; Connell, Spencer, & Aber, 1994; Connell & Wellborn, 1991; Finn, 1989, 1993; Finn & Rock, 1997; Mounts & Steinberg, 1995; Voelkl, 1995). As well, students who are connected to school are more likely to be engaged and involved in school activities, have better attendance, higher levels of academic achievement, and higher school completion rates (Appleton, Christenson & Furlong, 2008). Despite variability in its elements and terminology, school connectedness is concurrently and prospectively associated with fewer internalizing (i.e. anxiety, depression) and externalizing problems (i.e. conduct disorder, aggression) (Resnick et al., 1997; Shochet, Dadds, Ham, & Montague, 2006). Research in the field of education has demonstrated that contextual factors, such as school connectedness, can mediate the developmental impact of childhood abuse and neglect (for a review see Zielinski & Bradshaw, 2006). Whereas lower levels of school connectedness have been associated with an increased risk for adolescent and chronic delinquent trajectories, violent behavior in adulthood and higher odds of arrest (Widom, Weiler, & Cottler. 1999; Herrenkohl, Huang, Tajima, & Whitney, 2003; Kaplan, Pelcovitz, & Labruna, 1999; Malinosky-Rummell & Hansen, 1993; Resnick et al., 1997; Shochet, Dadds, Ham, & Montague, 2006; Ryan, Hernandez, & Herz, 2007; Chang et al., 2003 and Lederman et al., 2004; Ireland et al., 2010), higher levels of school attachment and bonding protect at-risk youth against engagement in these high-risk behaviors (Battistich, 2003; Battistich et al., 1995; Battistich & Hom, 1997; Becker & Luthar, 2002).`
+
+References
+Widom, C. S. (1989). Child abuse, neglect, and adult behavior: research design and findings on criminality, violence, and child abuse. American Journal of Orthopsychiatry, 59(3), 355.
+Chen, J. K., & Astor, R. A. (2011). Students’ personal traits, violence exposure, family factors, school dynamics and the perpetration of violence in Taiwanese elementary schools. Health education research, 26(1), 150-166.
+Hart, C. O., & Mueller, C. E. (2013). School delinquency and social bond factors: Exploring gendered differences among a national sample of 10th graders. Psychology in the Schools, 50(2), 116-133.

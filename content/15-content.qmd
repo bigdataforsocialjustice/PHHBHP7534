@@ -20,6 +20,46 @@ slide_details <- tibble::tribble(
 
 ## Readings
 - {{< fa book >}} Griffin, J. H. (2004). Black Like Me. Wings Press.
-- {{< fa book >}} Campbell, H. (2022). Hip Hop as Critical Pedagogy: Re-Imagining Education. Canadian Journal for New Scholars in Education/Revue canadienne des jeunes chercheures et chercheurs en éducation, 13(3).
-- {{< fa book >}} Lauger, T. R., & Densley, J. A. (2018). Broadcasting badness: Violence, identity, and performance in the online gang rap scene. Justice Quarterly, 35(5), 816-841.
-- {{< fa book >}} Martinez, T. A. (2007). Images of the Socially Disinherited Inner-City Youth in Rap Music. JL & Fam. Stud., 10, 111.
+- {{< fa book >}} Campbell, H. (2022). [Hip Hop as Critical Pedagogy: Re-Imagining Education](https://journalhosting.ucalgary.ca/index.php/cjnse/article/view/76558). Canadian Journal for New Scholars in Education/Revue canadienne des jeunes chercheures et chercheurs en éducation, 13(3).
+- {{< fa book >}} Lauger, T. R., & Densley, J. A. (2018). [Broadcasting badness: Violence, identity, and performance in the online gang rap scene.](https://www.tandfonline.com/doi/full/10.1080/07418825.2017.1341542) Justice Quarterly, 35(5), 816-841.
+- {{< fa book >}} Martinez, T. A. (2007). [Images of the Socially Disinherited Inner-City Youth in Rap Music.](https://heinonline.org/HOL/Page?handle=hein.journals/jlfst10&div=9&g_sent=1&casa_token=&collection=journals) JL & Fam. Stud., 10, 111.
+
+# Yo Sis
+Yo Sis has worked with teenagers in foster care for many years and currently facilitates art and recovery groups for teenagers and young adults. She works with the courts, group homes, treatment centers, etc. to assist their residence in maintaining recovery through art. I had the opportunity to hear her poetry at a conference last year and it was so amazing I asked her right away if she would come to my class.  
+```{r echo=FALSE}
+library(vembedr)
+embed_url("https://youtu.be/DcAQA7SULvs") 
+```
+
+# Spoken Word Poetry as an Intervention to Help Lower ACE Scores
+
+This was presented by poet-educator, Peter Kahn, retired teacher/Spoken Word Educator from Oak Park and River Forest High School (Chicagoland)
+and current poet-educator in five area schools. Peter talked about poetry as a source of healing particularly as a form of expression that can help address early life adversity. Peter Kahn worked in social services in Chicago before earning his MA in English Education from Ohio State.  He was a pre-employment training instructor/GED teacher at Jobs for Youth-Chicago and a caseworker/counselor and then education coordinator at Neon Street Center for Youth, a group home and shelter for homeless youth and youth in state custody.  He began a Spoken Word poetry program that was featured in the documentary Louder than a Bomb and Steve James docu-series, America to Me and, more recently, on PBS Newshour and NPR’s Morning Edition.  
+
+## Poetry: a Black Girl's Road to Visibility
+This Kara Jackson, one of Peter's former students. Kara is now a singer-songwriter, she has opened for Corrine Bailey Rae, Angel Olsen, Neko Case, Jamila Woods and Lord Huron, among others.
+
+```{r echo=FALSE}
+embed_url("https://youtu.be/r6lOr_etqTw") 
+```
+```{r echo=FALSE}
+embed_url("https://www.youtube.com/watch?v=gTMVaoLHM3A") 
+```
+
+## [Gabe Townsnell](https://open.spotify.com/artist/0TWZffkiIKifRTQirLTp5s?si=i4Vg9U79TlmXksPvWUTmdw&nd=1&dlsi=ba220d1a9b2e4279)
+Gabe is a rapper and a former student of Peter's as well. He has opened for Don Toliver, Jorja Smith, Kali Uchis and Gunna. Gabe is a national champion wrestler and a graduate of Stanford University.
+
+```{r echo=FALSE}
+embed_url("https://youtu.be/bhW3ix4c5nI")
+```
+
+Peter asks us to listen to the emotions Gabe references and poetic devices he uses in the next clip.
+
+
+```{r echo=FALSE}
+embed_url("https://youtu.be/FHbn8Kg6WD8")
+```
+## Scaffolding by Raven Hogue
+
+Read [Raven Hogue turns turmoil into triumph](https://patch.com/illinois/oakpark/for-oprf-student-words-are-a-way-out) and how she found her 'saving grace' through poetry. You can read the poem [here](https://issuu.com/crestoprf/docs/digital_form_-_crest_2011/s/17569395).
+

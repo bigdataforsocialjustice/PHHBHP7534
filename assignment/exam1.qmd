@@ -1,0 +1,214 @@
+---
+title: "Exam I"
+author: "Barboza-Salerno"
+date: "Due: 2024-02-10"
+output: html_document
+---
+# Part I
+Here is the link to part I of the [exam](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/assignment/phhbhp_exam1.docx).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part II
+The Add Health dataset is one of the most widely used datasets in public health. This part of the exam is asking you to identify variables from the codebook to use for simple statistical analyses and visualizations. For now, I am providing you with the dataset. The dataset is already in an R format, and can be [downloaded here](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/add_data.RData).
+
+To download the data click the downarrow as shown below
+
+```{r knit-button, echo=FALSE, out.width="100%"}
+knitr::include_graphics("/slides/img/01/download_git.png", error = FALSE)
+```
+
+
+## The Add Health Dataset
+If you are not familiar with the Add Health data, please familiarize yourself with it by reading the [documentation](https://addhealth.cpc.unc.edu/documentation/). There is an online codebook that you can navigate located [here](https://addhealth.cpc.unc.edu/documentation/codebook-explorer/#/). The codebook explorer enables you to search for variables by question, keyword, or variable name. As you will see once you open the dataset, there are a ton of variables and the variable names are not descriptive at all.
+
+## Load the Add Health Data
+
+First, set your working directory to where the data file is located. Then run the following command to load the data. You will notice that the data contains four different dataframes corresponding to each of the four waves (i.e., df1 = wave 1, df2 = wave 2, etc)
+
+```{r, echo = F}
+setwd('C:/Users/barboza-salerno.1/Documents/Research/Papers/In Progress/smoking-traj/add-health-cigarette-study-master/add-health-cigarette-study-master/')
+```
+
+```{r, warning=FALSE, message = FALSE}
+library(dplyr)
+load('C:/Users/barboza-salerno.1/Documents/Research/Papers/In Progress/smoking-traj/add-health-cigarette-study-master/add-health-cigarette-study-master/data/add_data.RData')
+```
+
+
+## Selecting the variables
+
+The code below identifies variables that are common to ALL four waves. This would be useful if we wanted to see how a variable, such as depression, changed across the waves for each respondent. Simply copy and past the code to run it.
+
+```{r select}
+df1 <- df1 %>%
+  setNames(toupper(names(.))
+) %>%
+ rename(
+    disliked     = H1FS17,
+    sad          = H1FS16,
+    enjoy_life   = H1FS15,
+    tired        = H1FS7,
+    bothered     = H1FS1,
+    blues        = H1FS3,
+    not_good     = H1FS4,
+    depressed    = H1FS6,
+   
+) %>%
+  mutate(wave = 1)
+
+df2 <- df2 %>%
+  setNames(toupper(names(.))
+  ) %>%
+  rename(
+    disliked     = H2FS17,
+    sad          = H2FS16,
+    enjoy_life   = H2FS15,
+    tired        = H2FS7,
+    bothered     = H2FS1,
+    blues        = H2FS3,
+    not_good     = H2FS4,
+    depressed    = H2FS6,
+   
+) %>%
+  mutate(wave = 2)
+
+df3 <- df3 %>%
+  setNames(toupper(names(.))
+  ) %>%
+  rename(
+    disliked     = H3SP13,
+    sad          = H3SP12,
+    enjoy_life   = H3SP11,
+    tired        = H3SP10,
+    bothered     = H3SP5,
+    blues        = H3SP6,
+    not_good     = H3SP7,
+    depressed    = H3SP9,
+   
+) %>%
+  mutate(wave = 3)
+
+df4 <- df4 %>%
+  setNames(toupper(names(.))
+  ) %>%
+  rename(
+    disliked     = H4MH27,
+    sad          = H4MH26,
+    enjoy_life   = H4MH25,
+    tired        = H4MH23,
+    bothered     = H4MH18,
+    blues        = H4MH19,
+    not_good     = H4MH20,
+    depressed    = H4MH22,
+    
+) %>%
+  mutate(wave = 4)
+
+```
+
+## Identify the variables that are the same across all waves. This makes it easier to merge them.
+
+```{r}
+long_cols = c('disliked', 'sad', 'enjoy_life', 'tired', 'bothered', 'blues',
+              'not_good', 'depressed', 'wave')
+```
+
+## Merge the data by unique identifier
+
+The unique identifier makes it possible to merge datasets together. Here, the unique identifier is the variable `AID` which identifies respondent answers across waves.
+
+Below, I am creating a list of the unique identifiers associated with `AID` for each of the four waves. This part ensures that only respondents who answered all four waves of data are in the final dataset.
+
+```{r}
+aid = Reduce(intersect, list(df1$AID, df2$AID, df3$AID, df4$AID))
+add = rbind(df1[df1$AID %in% aid, c('AID', long_cols)],
+            df2[df2$AID %in% aid, c('AID', long_cols)],
+            df3[df3$AID %in% aid, c('AID', long_cols)],
+            df4[df4$AID %in% aid, c('AID', long_cols)])
+```
+
+## Merge in covariates
+
+Now I can merge in other variables using the same identifier. Here I am merging sex at birth, `BIO_SEX` with the depressive symptoms for each wave.
+
+```{r}
+add <- df1 %>% dplyr::select(AID, BIO_SEX) %>%
+  inner_join(add)
+```
+## Clean the data
+
+Here I am making sure that all of the missing data is removed from the variables. For example, here the valid responses for each of the depressive symptoms is 0, 1, 2 and 3. So I am making sure that each of the variables is `in` the range 0:3.
+
+Unfortunately, we need to reverse code 'enjoy life' because people who enjoy life are not part of the depression construct. So, this variable needs to be coded consistent with the others (higher values = more depression). Finally, `with` the depression variables, I am create a variable called `CESD` because the variables are measuring symptoms from the common scale called Center for Epidemiologic Studies Depression Scale (CES-D).
+
+**Challenge:** This was meant to show that you can do things in multiple ways. Redo the chunk below using dplyr and the tidyverse. It can be done more elegantly that way.
+
+```{r}
+add <- add[add$disliked   %in% 0:3 & add$sad %in% 0:3 &
+          add$enjoy_life %in% 0:3 & add$tired %in% 0:3 &
+          add$bothered   %in% 0:3 & add$blues %in% 0:3 &
+          add$not_good   %in% 0:3 & add$depressed  %in% 0:3, ]
+
+# Reverse code enjoy_life
+add$enjoy_life <- ifelse(add$enjoy_life == 3, 0,
+                ifelse(add$enjoy_life == 2, 1,
+                ifelse(add$enjoy_life == 1, 2, 3)))
+
+add$CESD <- with(add, disliked + sad + enjoy_life + tired +
+                  bothered + blues + not_good + depressed)
+```
+
+Now we have the data we will use for the assignment.
+
+### Assignment
+Now you should have a working dataset called `add` that were are going to use below. Please answer the following questions.
+Please create an R markdown file and send the exam to me via email with subject heading "Exam 1 Part 2." Please be sure that
+you have this specific subject and not something else!
+
+A. Remove all variables from the dataframe `add' except `AID`, `BIO_SEX`, `CESD`, and `wave.` 
+
+**Challenge:** use dplyr's select command with the column indicator to remove columns 3 through 10 like this `c(3:10)` 
+
+```{r, eval = F, echo = F}
+add <- add %>% dplyr::select(-c(3:10))
+```
+
+B. Recode the `BIO_SEX` variable so that 1 is male and 2 is female.
+```{r, eval = F, echo = F}
+add$BIO_SEX = ifelse(add$BIO_SEX == 1, "male", "female")
+
+```
+
+C. Rename the `BIO_SEX` variable to `sex`
+```{r, eval = F, echo = F}
+add <- add %>% rename(sex = "BIO_SEX")
+```
+
+D. Change the `sex` variable from character to factor, and check the levels
+```{r, eval = F, echo = F}
+add$sex <- as.factor(add$sex)
+```
+
+E. Group the data by `wave` and `sex` and calculate the mean and standard deviation of CESD (depressive symptoms)
+
+```{r, eval = F, echo = F}
+add %>% group_by(wave, sex) %>% summarise(meanCESD = mean(CESD), sdCESD = sd(CESD))
+```
+
+F. Create a variable called dCESD that = "Above" if CESD > 5.73 (the mean of the whole sample), and "Below" otherwise
+```{r, eval = F, echo = F}
+add <- add %>% dplyr::mutate(dCESD = ifelse(CESD > 5.73, "Above", "Below"))
+```
+
+G. Select Wave 1 only, calculate the odds of being above the mean depression score (versus below) for females (versus males)
+
+```{r, eval = F, echo = F}
+df_odds <- add %>% filter(wave == 1)
+table(add$sex, add$dCESD)
+```
+
+
+

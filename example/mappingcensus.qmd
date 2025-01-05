@@ -1,0 +1,163 @@
+---
+title: "Using R to Map Census Data"
+author: "Barboza-Salerno"
+date: "Due: 2024-02-10"
+output: html_document
+---
+
+## Libraries
+
+I already provided you with the important packages for mapping, which include `sf` `maptools` `tmap` `mapview' and`rgdal`but there are some really important and useful packages that provide you with data to map quickly and easly including`tigris`and`tidycensus\`. Please make sure you install them.
+
+### Tigris and Tidycensus
+
+These two packages link directly to the census website and allow you to download data. For example, let's download and map the counties for Ohio.
+
+```{r}
+library(tigris)
+library(tidycensus)
+library(sf)
+library(dplyr)
+```
+
+Once the packages are loaded, simply type the following to download the county **polygons**.
+
+```{r echo=F, message=FALSE}
+#ohio_counties <- counties(state = "OH")
+```
+
+Now we can do a quickly plot to see what the map looks like.
+
+```{r}
+#plot(ohio_counties$geometry)
+```
+
+```{r  echo=F, message=FALSE}
+#oh_franklin_roads <- roads(state = "OH", county = "Franklin", class = "sf")
+#oh_landmarks <- landmarks("OH", type = "point")
+#rivers <- linear_water(state = "Ohio", "Franklin")
+#water <- area_water(state = "Ohio", "Franklin")
+```
+
+The `sf` package allows us to manipulate vector (spatial) data, including points, lines and polygons. The data will be stored into a regular `R` dataframe and can be manipulated using dplyr, etc.
+
+```{r}
+#plot(oh_landmarks$geometry)
+```
+
+```{r}
+#plot(oh_franklin_roads$geometry)
+```
+
+## Making Prettier Maps
+
+We can use mapview to make a nicer (and interactive) map
+
+```{r}
+library(mapview)
+
+#mapview(ohio_counties)
+```
+
+```{r}
+library(leafsync)
+ 
+#sync(mapview(ohio_counties), mapview(oh_franklin_roads))
+```
+
+### Mapping Area Level Deprivation
+
+The Area Deprivation Index (ADI) uses census data to create an overall measure of deprivation (Variable = ADI in the data) and three subscales (financial strength, economic hardship and inequality, and educational attainment). Higher values indicate greater levels of deprivation (ADI) and economic hardship, and lower levels of financial support and educational attainment. The scale was original published in 2003 and has been used to study everything from cancer disparities, gun violence and of course child wellbeing: Singh, G. K. (2003). [Area deprivation and widening inequalities in US mortality, 1969–1998.](https://www.proquest.com/docview/215095985?pq-origsite=360&parentSessionId=FmiwLVGgA9QcWz5q70vrUmN3xV2FonXcUSbe9tW9Zbk%3D&sourcetype=Scholarly%20Journals) American journal of public health, 93(7), 1137-1143.
+
+Note: these data include the geographic identifier from the census. There is a ton of data that can be downloaded from the internet that is similarly spatially referenced. That means that you can follow the method below to merge, and then map, any data you find that has the GEOID as I discussed in class.
+
+The measures can be downloaded using the package `sociome` which somehow stands for "Operationalizing Social Determinants of Health Data for Researchers" see [here](https://cran.r-project.org/web/packages/sociome/index.html). Read more about it [here](https://github.com/ClevelandClinicQHS/sociome). Let's map these data. Then, we will merge it with health data from the CDC's Places dataset.
+
+```{r}
+library(sociome)
+```
+
+The syntax is as follows
+
+> object_to_store_results \<- get_adi( "tract", #GEOGRAPHY CAN BE LOTS OF THINGS INCLUDING STATE, COUNTY, CENSUS TRACTS, OR CENSUS BLOCK GROUPS state = "NAME OF STATE", county = "NAME OF COUNTY", year = YEAR, dataset = "DATASET THAT YOU CAN LEAVE OUT TO GET THE DEFAULT", geometry = TRUE, #True means return the polygon data you can MAP keep_indicators = TRUE #True means to return the variables used to comprise the scales )
+
+```{r}
+#ohio_tracts_adi <- 
+#  get_adi(
+#    "tract",
+##    state = "Ohio",
+ #   county = "Franklin",
+#    year = 2020,
+#    dataset = "acs5",
+ #   geometry = TRUE,
+ #   keep_indicators = TRUE
+#  )
+```
+
+Because we said `geometry = True` we can go ahead and use one of the graphics packages to map the results
+
+```{r}
+library(ggplot2)
+
+#ohio_tracts_adi %>%
+#  ggplot() +
+#  geom_sf(aes(fill = ADI), lwd = 0) +
+ # scale_fill_viridis_c(direction = -1) + theme_void()
+```
+
+## Bonus
+
+We can add roads to the map using the tigris data from the Census. Here is how
+
+```{r}
+#ohio_tracts_adi %>%
+#  ggplot() +
+#  geom_sf(aes(fill = ADI), lwd = 0) +
+ # scale_fill_viridis_c(direction = -1) + 
+ # geom_sf(data = oh_franklin_roads, color = "white", size = .5, fill = NA) +
+#  theme_void()
+```
+
+Finally, let's subset to major roads
+
+```{r}
+
+#major_roads_geo <- oh_franklin_roads %>%
+#  dplyr::filter(RTTYP %in% c("I", "U")) %>%
+#  st_geometry()
+
+#major_roads_geoI <- oh_franklin_roads %>%
+#  dplyr::filter(RTTYP %in% c("I")) %>%
+#  st_geometry()
+
+#major_roads_geoU <- oh_franklin_roads %>%
+#  dplyr::filter(RTTYP %in% c("U")) %>%
+#  st_geometry()
+```
+
+```{r}
+#ohio_tracts_adi %>%
+ # ggplot() +
+ # geom_sf(aes(fill = ADI), lwd = 0) +
+ # scale_fill_viridis_c(direction = -1) + 
+#  geom_sf(data = major_roads_geo, color = "white", size = .8, fill = NA) +
+ # theme_void()
+```
+
+```{r}
+#ohio_tracts_adi %>%
+#  ggplot() +
+#  geom_sf(aes(fill = ADI), lwd = 0) +
+#3  scale_fill_viridis_c(direction = -1) + 
+ # geom_sf(data = major_roads_geoI, color = "white", size = .8, fill = NA) +
+ # theme_void()
+```
+
+```{r}
+#ohio_tracts_adi %>%
+#  ggplot() +
+#  geom_sf(aes(fill = ADI), lwd = 0) +
+#  scale_fill_viridis_c(direction = -1) + 
+ # geom_sf(data = major_roads_geoU, color = "white", size = .8, fill = NA) +
+ # theme_void()
+```

@@ -1,0 +1,144 @@
+---
+title: "Research Proposal"
+---
+
+# The Research Proposal/Paper
+
+## Theoretical Framework 
+Theories explains “why” you believe that your variables are related in the ways you specified (i.e., the variables in your hypothesis)
+Theories, theoretical frameworks, and lines of inquiry may be differently handled in quantitative and qualitative endeavors. 
+
+A.	“In quantitative studies, one uses theory deductively and places it toward the beginning of the plan for a study. The objective is to test or verify theory. One thus begins the study advancing a theory, collects data to test it, and reflects on whether the theory was confirmed or disconfirmed by the results in the study. The theory becomes a framework for the entire study, an organizing model for the research questions or hypotheses for the data collection procedure” (Creswell, 1994, pp. 87-88). 
+
+B.	In qualitative inquiry, the use of theory and of a line of inquiry depends on the nature of the investigation. In studies aiming at “grounded theory,” for example, theory and theoretical tenets emerge from findings. Much qualitative inquiry, however, also aims to test or verify theory, hence in these cases the theoretical framework, as in quantitative efforts, should be identified and discussed early on.
+
+C.	You need to use theory that either you uncovered in the review of research or that you’ve learned in a previous course. We have discussed some theoretical frameworks but have not covered any one theory in length except perhaps network “theory.” We can discuss in my office the theory that most suits your research if you like. Some possibilities include socioecological theory, social bond theory, behavioral model of health services use, activity spaces, trauma theory, social determinants of health. Please note that the best situation is when the theoretical lens used somehow is consistent with the methodology chosen.
+Statement of the problem
+A.	This section may be incorporated in your introduction or your purpose section, or it may stand independently (it depends on the field). Some proposals start with the statement of the problem, rather than a more general introduction. Regardless of placement, at some point you need to clearly identify the problem or knowledge gap that your project is responding to. This section should: 
+  i.	Answer the question: “What is the gap that needs to be filled?” and/or “What is the problem that needs to be solved?” 
+  ii.	State the problem clearly early in a paragraph. 
+  iii.	Carefully consider how you are framing the issue
+
+## Purpose of the Study
+
+### Purpose/Aims/Rationale/Research Questions 
+1.	Most proposals include a clear statement of the research objectives, including a description of the questions the research seeks to answer or the hypotheses the research advances. This may be included as part of the introduction, or it may be a separate section. Spend significant time brainstorming before and while you draft this section. 
+
+2.	Once you begin your research, you may find that your aims change in emphasis or in number. What is essential is that you focus of your research and to identify key concepts you will be studying. 
+
+3.	A clear statement of purpose will: 
+  a.	Explain the goals and research objectives of the study (what do you hope to find?). 
+  b.	Show the original contributions of your study by explaining how your research questions or approach are different from previous research (what will you add to the field of knowledge?). 
+  c.	Provide a more detailed account of the points summarized in the introduction. 
+  d.	Include a rationale for the study (why should we study this?). 
+
+Be clear about what your study will not address (this is especially important if you are applying for competitive funding; narrowly focused studies are more likely to win funding). In addition, this section may: 
+  
+  - Describe the research questions and/or hypotheses of the study.
+  - Include a subsection defining important terms, especially if they will be new to some readers or if you will use them in an unfamiliar way. 
+  - State limitations of the research. 
+  - Provide a rationale for the particular subjects of the study. 
+  - Examples: My objectives are twofold: (1) To …
+
+## Review of Literature see [handout](literature_review.qmd)
+
+### Questions and/or Hypotheses 
+
+A.	The questions and hypotheses come after the Review of Research because they are (at least in theory) derived from that review
+
+B.	A research question poses a relationship between two or more variables but phrases the relationship as a question; a hypothesis represents a declarative statement of the relations between two or more variables (Kerlinger, 1979; Krathwohl, 1988). 
+
+C.	Deciding whether to use questions or hypotheses depends on factors such as the purpose of the study, the nature of the design and methodology, and the audience 
+
+D.	Hypotheses can be couched in four kinds of statements. 1. Literary null—a “no difference” form in terms of theoretical constructs. For example, “There is no relationship between racial/ethnic background and justice system referral following a school disciplinary action.” Or, “There is no difference in health outcomes for students attending schools with comprehensive health centers and those that do not.” “Individuals who engage in co-occurring sexual risk behaviors are more likely to develop STIs” “Vaccine hesitancy is more likely in socially vulnerable neighborhoods due to misinformation and lack of knowledge.” The text that is bolded represent concepts that need to carefully be thought through and defined. 
+
+E.	Questions and hypotheses are testable propositions deduced and directly derived from theory (except in grounded theory studies and similar types of qualitative inquiry). This is important.
+
+F.	Make a clear and careful distinction between the dependent and independent variables and be certain they are clear to the reader. Be excruciatingly consistent in your use of terms. If appropriate, use the same pattern of wording and word order in all hypotheses. I was at a job talk last week and the presenter did not distinguish between the variables. It was extremely confusing to follow.
+
+## Methodology 
+
+A.	This section is essential to most good research proposals. 
+  i.	How you study a problem is often as important as the results you collect. This section includes a description of the general means through which the goals of the study will be achieved: data methods, materials, procedures, tasks, etc.
+
+B.	“The methods or procedures section is really the heart of the research proposal. The activities should be described with as much detail as possible, and the continuity between them should be apparent” (Wiersma, 1995, p. 409).
+
+C.	Indicate the methodological steps you will take to answer every question or to test every hypothesis illustrated in the Questions/Hypotheses section. 
+
+D.	An effective methodology section should:
+a.	Introduce the overall methodological approach for each problem or question. Is your study qualitative or quantitative? Are you going to take a special approach, such as participatory action research or use case studies? Describe and justify the approach.
+
+  i.	Indicate how the approach fits the overall research design. Your methods should have a clear connection with your research questions and/or hypotheses. In other words, make sure that your methods will actually answer your questions—The most common error is that “the proposed tests, or methods, or scientific procedures are unsuited to the stated objective.” We cannot cover everything in this class, and of course only PhD students are actually doing an analytical portion. However, the most common problem I have seen in the IPE/APE/master’s thesis tract is that students have no idea how to begin. And, while clearly research methods is necessary, it is not sufficient to help with these required assignments because you actually do need some analysis. For this reason, I am covering the “hot to” do mediation/moderation as an extension of OLS regression, as well as logistic regression, latent class analysis and spatial methods (essentially mapping). This is also why I have asked you to download JASP/JAMOVI which we will explore as well because these tools make nice tables/charts easily for other sorts of statistics (i.e. descriptive, chi-square, etc.).
+
+E.	Describe the specific methods of data collection you are going to use—e.g. surveys, interviews, questionnaires, observation, archival or traditional library research. This is critical.
+
+F.	Explain how you intend to analyze and interpret your results. Will you use statistical analysis? You do NOT need to do the analysis or even describe this in great detail. Master’s: It is enough to mention that you will be doing a statistical analysis on quantitative data at least for now.
+
+G.	Will you use specific theoretical perspectives to help you analyze text or explain observed behaviors? Note: if you plan to analyze text data there are also analytical tools by which to do that. We can talk about these in my office.
+
+H.	Address potential limitations. Are there any practical limitations that could affect your data collection? How will you attempt to control for potential confounding variables and errors?
+
+I.	Think about breaking down your methodology into easily digestible subsections.
+
+  i.	In the social sciences and for the most part public health, these sections may include selection of participants, interview process, profiles, interpretive and analytic framework, methods of analysis, etc.
+  ii.	Anticipate and pre-empt the reviewer’s methodological concerns. This is important in real life not so much here, but you must know and be able to articulate the limitations of your own research because you WILL be asked to explain.
+
+J.	All research is plagued by the presence of confounding variables (the noise that covers up the information you would like to have). Confounding variables should be minimized by various kinds of controls or be estimated and taken into account by randomization processes (Guba, 1961). In the design section, indicate 
+
+    i.	the variables you propose (or will: phd) to control and how you propose to control them, experimentally or statistically, and 
+   ii.	any potential intervening or confounding variables that are not being studied – these will be threats to internal validity (see sources of error below)
+   iii.	the variables you propose to randomize, and the nature of the randomizing unit (students, grades, schools, etc.) (assuming only you are proposing to do an experiment – i.e. you have a control group). 
+
+K.	Be aware of possible sources of error to which your design exposes you. You will not produce a perfect, error free design (no one can). However, you should anticipate possible sources of error and attempt to overcome them or take them into account in your analysis. Moreover, you should disclose to the reader the sources you have identified and what efforts you have made to account for them. 
+
+## Sampling  (we will cover this soon)
+
+A.	The key reason for being concerned with sampling is that of validity—the extent to which the interpretations of the results of the study follow from the study itself and the extent to which results may be generalized to other situations with other people (Shavelson, 1988). 
+
+B.	Sampling is critical to external validity—the extent to which findings of a study can be generalized to people or situations other than those observed in the study. To generalize the findings from a sample to some defined population requires that the sample has been drawn from that population according to one of several probability sampling plans. By a probability sample is meant that the probability of inclusion in the sample of any element in the population must be given a priori. 
+
+C.	Another reason for being concerned with sampling is that of internal validity—the extent to which the outcomes of a study result from the variables that were manipulated, measured, or selected rather than from other variables not systematically treated. Without probability sampling, error estimates cannot be constructed (Shavelson, 1988). 
+
+D.	Perhaps the key word in sampling is representative. One must ask oneself, “How representative is the sample of the survey population (the group from which the sample is selected) and how representative is the survey population of the target population (the larger group to which we wish to generalize)?” We will talk more about this but its easy to be tricked. For example, the Behavioral Risk Factor Surveillance System data appears nationally representative but it is actually focused on a dozen or so states from year to year. Is Michigan representative of California? An easy limitation that should always be noted.
+
+E.	When a sample is drawn out of convenience (a nonprobability sample), rationale and limitations must be clearly provided. 
+
+F.	If available, outline the characteristics of the sample (by gender, race/ethnicity, socioeconomic status, or other relevant group membership). 
+
+G.	Detail procedures to follow to obtain informed consent and ensure anonymity and/or confidentiality. 
+
+H.	Do not recreate the wheel. Most of you are using existing data sources. Merely describe the sample that was drawn.
+
+## Instrumentation 
+
+A.	Outline the instruments you propose to use (surveys, scales, interview protocols, observation grids). If instruments have previously been used, identify previous studies and findings related to reliability and validity. If instruments have not previously been used, outline procedures you will follow to develop and test their reliability and validity. 
+
+B.	Report Cronbach’s alpha for scales
+
+C.	Because selection of instruments in most cases provides the operational definition of constructs, this is a crucial step in the proposal. For example, it is at this step that a literary conception such as “self-efficacy is related to school achievement” becomes “scores on the Mathematics Self-Efficacy Scale are related to Grade Point Average.” Strictly speaking, results of your study will be directly relevant only to the instrumental or operational statements (Guba, 1961). 
+
+D.	PhD: in the discussion section refer to how the instruments were actually measured when discussing the implications, etc. It is important to not extrapolate from the findings, stick to what was studied. This is always something that reviewers will pick up on in my experience.
+
+E.	Include an appendix with a copy of the instruments to be used or the interview protocol to be followed. Also include sample items in the description of the instrument. 
+
+F.	Mention the response rate and dropout rate. Note any unique ways the sample was drawn. For example, in my recent study I wrote: “A two-step process was used to recruit participants for the study. The purpose of step one was to determine whether one’s current gender identity (e.g., man, woman, transgender) is different than their gender identity at birth. During step two, individuals who identified as a gender minority were invited to complete the survey. Eligibility criteria included being at least 17 years of age, having completed a sixth-grade education, and being able to complete the interview in English.”
+
+## Data Collection 
+A.	If applicable: outline the general plan for collecting the data. This may include survey administration procedures, interview or observation procedures. Include an explicit statement covering the field controls to be employed.
+
+B.	Provide a general outline of the time schedule you expect to follow, if applicable
+
+## Data Analysis 
+Potential ideas
+
+-	Descriptive
+-	Chi-square
+-	Correlation
+-	OLS
+-	Mediation
+-	Moderation
+-	Logistic regression
+-	Multilevel model
+-	Structural equation model (this includes LCA/LGCA)
+
+See appropriate JASP/JAMOVI file and R code on website.

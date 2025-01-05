@@ -40,22 +40,10 @@ slide_details <- tibble::tribble(
 - Begin writing literature review
 - Start studying for [Exam 1](resource/exam1.qmd)
 
-::: {.callout-note icon=false}
-
-:::
-
 ## Lecture Notes
 
-The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
-
-```{r show-slide-tabs, echo=FALSE, results="asis"}
-slide_buttons("/slides/06-slides")
-slide_tabs(slide_details, "/slides/day6.html")
-```
-
-:::{.callout-tip}
-**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
-:::
+The lecture notes for today can be downloaded [here](/slides/theory1.pdf) for Part I and here
+[here](/slides/theory2.pdf) for Part II
 
 
 ## Videos

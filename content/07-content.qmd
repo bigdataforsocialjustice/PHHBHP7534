@@ -20,7 +20,7 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-### Measurement
+### Validity + Reliability
 
 - {{< fa book >}} Singleton RA, Straits BC. Chapter 5: Measurement. In Approaches to Social Research, 5th ed. 2010. p. 115-149.
 - {{< fa book >}} Johfre, S. S., & Freese, J. (2021). [Reconsidering the Reference Category.](https://journals.sagepub.com/doi/full/10.1177/0081175020982632?casa_token=OUq-SxezeEQAAAAA:fzIin78vnIG63Q6iaKNOakNWIkAF6UFoZ6VUPfHddZozkvmBOOyzLENq7V6ctO0FgIm1jKf0_UZlnEQ) Sociological Methodology, 51(2), 253–269. https://doi.org/10.1177/0081175020982632
@@ -29,12 +29,8 @@ slide_details <- tibble::tribble(
 
 ## Lecture Notes
 
-The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
-
-```{r show-slide-tabs, echo=FALSE, results="asis"}
-slide_buttons("/slides/04-slides")
-slide_tabs(slide_details, "/slides/day7.html")
-```
+The lecture notes for today can be downloaded [here](/slides/day7.pdf)
+The intro to R and `tidyverse` lecture is located [here](/slides/day7_R.pdf)
 
 :::{.callout-tip}
 **Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.

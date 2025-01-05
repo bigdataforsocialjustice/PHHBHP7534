@@ -1,0 +1,55 @@
+---
+title: "Logistic Regression"
+author: "Barboza-Salerno"
+---
+
+# Problem Set 5
+
+Send me the markdown file by 3/1/2024 \@ 11:59. The subject line should say "Problem Set 5" or it will receive no credit!
+
+In this problem set you are going to examine the 2021 [National Survey of Child Health (NSCH)](https://www.census.gov/programs-surveys/nsch/data/datasets.2021.html#list-tab-491554181). First, navigate to the website and download the file called `Revised SAS data file`. The file is a zip file so you must unzip it before attempting to use it.
+
+## PhD students use R
+
+### Open the file in R using the sas7bdat package.
+
+::: callout-note
+The foreign package is typically used to open files with extensions associated with STATA, SPSS, and SAS, however, this one works fine with different versions and so its easier.
+:::
+
+```{r, echo=T, message=FALSE, results="hide"}
+library(sas7bdat)
+nchs <- read.sas7bdat("C:/Users/barboza-salerno.1/Downloads/nsch_2021_topical_SAS/nsch_2021e_topical.sas7bdat")
+```
+
+You will definitely want to use the [codebook](https://www.census.gov/data-tools/demo/uccb/nschdict) to get a sense of the variable definitions.
+
+### Research Question
+
+What individual and contextual factors are associated with brain injury among young children?
+
+### Dependent variable
+
+You are to use the dependent variable `CONFIRMINJURY.` Recode the variable into a binary variable 0/1.
+
+::: callout-note
+The dependent variable is the variable associated with a confirmed injury (i.e., from a medical provider). However, only persons who reported an injury are asked this question. So, you need to recode accordingly.
+:::
+
+### Independent variable
+
+Select two individual characteristics (e.g., age of child) and two 'contextual' characteristics (e.g., home enviornment).
+
+### Perform an appropriate multivariable analysis to adress the RQ
+
+### Presentation
+
+-   Create a table that presents your results similar to the one I use in [my example](https://phhbhp7534.netlify.app/example/logistic). Make sure you have the odds ratios in the table.
+
+-   Select an interesting result and create a graphical presentation to illustrate the result
+
+### Interpret the results
+
+Interpret the odds ratios for each variable and whether they are statistically significant.
+
+## Master's students use R, JASP or JAMOVI, your choice

@@ -61,15 +61,15 @@ simple_dag <- dagify(
 )
 
 # Adding a theme_dag() layer to the plot makes it have a white background with no axis labels
-ggdag(simple_dag) +
-  theme_dag()
+#ggdag(simple_dag) +
+ # theme_dag()
 ```
 
 If you want to plot which nodes are the exposure and outcome, use `ggdag_status()` instead:
 
 ```{r simple-status}
-ggdag_status(simple_dag) +
-  theme_dag()
+##ggdag_status(simple_dag) +
+ # theme_dag()
 ```
 
 ### Layouts and manual coordinates
@@ -90,8 +90,8 @@ simple_dag_with_coords <- dagify(
                 y = c(x = 2, a = 1, b = 3, y = 2))
 )
 
-ggdag_status(simple_dag_with_coords) +
-  theme_dag()
+#ggdag_status(simple_dag_with_coords) +
+#  theme_dag()
 ```
 
 ### Node names and labels
@@ -106,8 +106,8 @@ dag_with_var_names <- dagify(
   outcome = "outcome"
 )
 
-ggdag_status(dag_with_var_names) +
-  theme_dag()
+#ggdag_status(dag_with_var_names) +
+#  theme_dag()
 ```
 
 However, unless you use very short names, it is likely that the text will not fit inside the nodes. To get around this, you can add labels to the nodes using the `labels` argument in `dagify()`. Plot the labels by setting `use_labels = "label"` in `ggdag()`. You can turn off the text in the nodes with `text = FALSE` in `ggdag()`.
@@ -124,10 +124,10 @@ dag_with_coords_and_labels <- dagify(
                 y = c(x = 2, a = 1, b = 3, y = 2))
 )
 
-ggdag_status(dag_with_coords_and_labels,
-             use_labels = "label", text = FALSE) +
-  guides(fill = "none", color = "none") +  # Disable the legend
-  theme_dag()
+#ggdag_status(dag_with_coords_and_labels,
+#             use_labels = "label", text = FALSE) +
+#  guides(fill = "none", color = "none") +  # Disable the legend
+ # theme_dag()
 ```
 
 
@@ -148,8 +148,8 @@ paths(simple_dag)
 The first open path is fine—we want a single *d*-connected relationship between treatment and outcome—but the other two indicate that there is confounding from `a` and `b`. We can see what each of these paths are with the `ggdag_paths()` function from the **ggdag** package:
 
 ```{r plot-dag-paths, fig.width=8}
-ggdag_paths(simple_dag_with_coords) +
-  theme_dag()
+#ggdag_paths(simple_dag_with_coords) +
+#  theme_dag()
 ```
 
 Instead of listing out all the possible paths and identifying backdoors by hand, you can use the `adjustmentSets()` function in the **dagitty** package to programmatically find all the nodes that need to be adjusted. Here we see that both `a` and `b` need to be controlled for to isolate the `x -> y` relationship.
@@ -161,8 +161,8 @@ adjustmentSets(simple_dag)
 You can also visualize the adjustment sets with `ggdag_adjustment_set()` in the **ggdag** package. Make sure you set `shadow = TRUE` to draw the arrows coming out of the adjusted nodes—by default, those are not included.
 
 ```{r plot-adjustment-sets}
-ggdag_adjustment_set(simple_dag_with_coords, shadow = TRUE) +
-  theme_dag()
+#ggdag_adjustment_set(simple_dag_with_coords, shadow = TRUE) +
+#  theme_dag()
 ```
 
 R will find minimally sufficient adjustment sets, which includes the fewest number of adjustments needed to close all backdoors between `x` and `y`. In this example DAG there was only one set of variables (`a` and `b`), but in other situations there could be many possible sets, or none if the causal effect is not identifiable.
@@ -192,8 +192,8 @@ bb="0,0,1,1"
 }
 ')
 
-ggdag(model_from_dagitty) +
-  theme_dag()
+#ggdag(model_from_dagitty) +
+#  theme_dag()
 ```
 
 By default it's going to look ugly because (1) the node labels don't fit, and (2) slight differences in the coordinates make it so the nodes don't perfectly align with each other. To fix coordinate alignment, you can modify the numbers in the generated DAG code. Here I rounded the numbers so that they're all 0.3, 0.8, etc.
@@ -217,9 +217,9 @@ bb="0,0,1,1"
 }
 ')
 
-ggdag_status(model_from_dagitty_rounded, text = FALSE, use_labels = "name") +
-  guides(color = "none") +  # Turn off legend
-  theme_dag()
+#ggdag_status(model_from_dagitty_rounded, text = FALSE, use_labels = #"name") +
+ # guides(color = "none") +  # Turn off legend
+ # theme_dag()
 ```
 
 
@@ -251,9 +251,9 @@ mosquito_dag <- dagify(
              eligible = "Eligible for program", household = "Number in household")
 )
 
-ggdag_status(mosquito_dag, use_labels = "label", text = FALSE) +
-  guides(fill = "none", color = "none") +  # Disable the legend
-  theme_dag()
+#ggdag_status(mosquito_dag, use_labels = "label", text = FALSE) +
+#  guides(fill = "none", color = "none") +  # Disable the legend
+ # theme_dag()
 ```
 
 The causal graph above  outlines the complete relationship between mosquito net use and risk of malaria. Each node in the DAG is a column in the dataset collected by the researchers, and includes the following:
@@ -277,7 +277,7 @@ First, let's download the dataset, put in a folder named `data`, and load it:
 # Load the data.
 # It'd be a good idea to click on the "mosquito_nets.csv" object in the
 # Environment panel in RStudio to see what the data looks like after you load it
-mosquito_nets <- read_csv("data/mosquito_nets.csv")
+#mosquito_nets <- read_csv("data/mosquito_nets.csv")
 ```
 
 ```{r load-data-real, include=FALSE}
@@ -297,21 +297,21 @@ In the interest of space, we will not verify all these implied independencies, b
 - $\text{Health} \perp \text{Household members}$: (Read as *"Health is independent of household member count"*.) Health should be independent of the number of people in each household. In the data, the two variables should not be correlated. This is indeed the case:
 
 ```{r indent="  "}
-cor(mosquito_nets$health, mosquito_nets$household)
+#cor(mosquito_nets$health, mosquito_nets$household)
 ```
 
 - $\text{Income} \perp \text{Insecticide resistance}$: (Read as *"Income is independent of insecticide resistance"*.) Income should be independent of insecticide resistance. This is again true:
 
 ```{r indent="  "}
-cor(mosquito_nets$income, mosquito_nets$resistance)
+#cor(mosquito_nets$income, mosquito_nets$resistance)
 ```
 
 - $\text{Malaria risk} \perp \text{Household members}\ |\ \text{Health, Income, Bed net use, Temperature}$: (Read as *"Malaria risk is independent of house member count given health, income, bed net use, and temperature"*.) Malaria risk should be independent of the number of household members given similar levels of health, income, mosquito net use, and nighttime temperatures. We cannot use `cor()` to test this implication, since there are many variables involved, but we can use a regression model to check if the number of household members is significantly related to malaria risk. It is not significant ($t = -0.17$, $p = 0.863$), which means the two are independent, as expected.
 
 ```{r indent="  "}
-lm(malaria_risk ~ household + health + income + net + temperature,
-   data = mosquito_nets) %>%
-  broom::tidy()
+#lm(malaria_risk ~ household + health + income + net + temperature,
+#   data = mosquito_nets) %>%
+ # broom::tidy()
 ```
 
 We can check all the other conditional independencies to see if the DAG captures the reality of the full system of factors that influence mosquito net use and malaria risk. If there are substantial and significant correlations between nodes that should be independent, there is likely an issue with the specification of the DAG. Return to the theory of how the phenomena are generated and refine the DAG more.
@@ -330,7 +330,7 @@ Based on the relationships between all the nodes in the DAG, adjusting for healt
 We can confirm this graphically with `ggdag_adjustment_set()`:
 
 ```{r plot-mosquito-adjustment-fake}
-ggdag_adjustment_set(mosquito_dag, shadow = TRUE,
-                     use_labels = "label", text = FALSE) +
-  theme_dag()
+#ggdag_adjustment_set(mosquito_dag, shadow = TRUE,
+#                     use_labels = "label", text = FALSE) +
+#  theme_dag()
 ```

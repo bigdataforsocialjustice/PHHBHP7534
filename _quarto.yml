@@ -91,46 +91,21 @@ website:
               file: content/exam1.qmd
             - text: "10: Sampling"
               file: content/10-content.qmd
-            - text: "11: Data Collection + Survey Design"
-              file: content/11-content.qmd
             - text: "12: Analytical methods + observation"
               file: content/12-content.qmd
-            - text: "13: Analytical methods + experimental"
-              file: content/13-content.qmd
             - text: "14: Analytical methods + geospatial"
               file: content/14-content.qmd
             - text: "15: Analytical methods + qualitative"
               file: content/15-content.qmd
-            - text: "16: Presentations + Feedback"
-              file: content/16-content.qmd
-            - text: "17: Presentations + Feedback"
-              file: content/17-content.qmd
             - text: "18: Exam II"
-              file: content/18-content.qmd
+              file: assignment/exam2.qmd
             - text: "19: No Class + Spring Break"
               file: content/19-content.qmd
             - text: "20: No Class + Spring Break"
               file: content/exam2.qmd
-            - text: "21: Pre-experimental designs"
+            - text: "21: Data Collection + Survey Design"
               file: content/21-content.qmd
-            - text: "22: Quasi-experimental designs"
-              file: content/22-content.qmd
-            - text: "23: Randomized Controlled Trials"
-              file: content/23-content.qmd
-            - text: "24: Observational Designs"
-              file: content/24-content.qmd
-            - text: "25: Recruitment + Retention"
-              file: content/25-content.qmd
-            - text: "26: Ethics"
-              file: content/26-content.qmd
-            - text: "27: Reproducible Research"
-              file: content/27-content.qmd
-            - text: "28: Student Presentations I"
-              file: content/28-content.qmd
-            - text: "29: Student Presentations II"
-              file: content/29-content.qmd
-            - text: "30: Exam III"
-              file: content/exam3.qmd
+
 
     - title: "Assignments"
       contents:
@@ -141,7 +116,8 @@ website:
           contents:
             - assignment/question.qmd
             - resource/annotated.qmd
-            - assignment/litreview.qmd
+            - assignment/literature_review.qmd
+            - assignment/research_proposal.qmd
             - resource/final.qmd
         - section: "Other projects"
           contents:
@@ -151,6 +127,9 @@ website:
             - assignment/01-problem-set.qmd
             - assignment/02-problem-set.qmd
             - assignment/03-problem-set.qmd
+            - assignment/exam1.qmd
+            - assignment/05-problem-set.qmd
+            - assignment/06-problem-set.qmd
 
     - title: "Examples"
       contents:
@@ -164,7 +143,11 @@ website:
             - example/Confounding.qmd
             - example/moderation.qmd
             - example/mediation.qmd
-
+            - example/reading_from_web.qmd
+            - example/logistic.qmd
+            - example/mappingcensus.qmd
+            - example/random_numbers.qmd
+            - example/cronbachs.qmd
 
     - title: "Resources"
       contents:
@@ -181,6 +164,7 @@ website:
             - resource/Rgraphics.qmd
             - resource/annotated.qmd
             - resource/variables.qmd
+
         - section: "Study guides"
           contents:
             - resource/exam1.qmd

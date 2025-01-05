@@ -21,49 +21,50 @@ page-layout: full
 |      |       | <span style="color:red;">**Select a research topic**</span>                            |            |  
 |  4   | 1/18 | **Relationships among variables (p. 2)**  + **mediation and moderation**                                                          |     2     |
 |      |       | <span style="color:red;">**Submit research topic for approval**</span>                            |            |  
-|      |       | <span style="color:red;">**Problem Set 2**</span>                            |            |  
+|      |       | <span style="color:red;">**Problem Set 2(assignment/02-problem-set.qmd)**</span>                            |            |  
 |  5   | 1/23   | **Research questions and hypotheses**             |    3     |
 |  6   | 1/25 | **Role of theory and conceptual models**                                                            |    3     |
 |      |       | <span style="color:red;">**Annotated bibliography due**</span>                            |            |  
 |      |       | <span style="color:red;">**Begin writing literature review**</span>                            |            |  
-|      |       | <span style="color:red;">**Problem Set 3**</span>                            |            |  
+|      |       | <span style="color:red;">**Problem Set 3(assignment/03-problem-set.qmd)**</span>                            |            |  
 |  7   | 1/30 | **Measurement (p. 1): validity and reliability**                                                           |    4     |
 |      |       | <span style="color:red;">**Begin identifying measures to use in your study**</span>                            |           |  
-|      |       | <span style="color:red;">**Problem Set 4**</span>                            |            |  
 |  8   | 2/1 | **Measurement (p. 2): finding measures and scale development**                                                           |    4     |
-|  9   | 2/6 | <span style="color:red;">**[Exam I](resource/exam1.qmd)** </span>                                                          |    5     |
-|  10   | 2/8 | **Sampling**                                                           |    5     |
+|  9   | 2/6 | <span style="color:red;">**[Exam I](assignment/exam1.qmd)** </span>                                                          |    5     |
+|  10   | 2/8 | **Theory II**                                                           |    5     |
 |      |       | <span style="color:red;">**PhD students work with professor on statistical analysis**</span>                            |            |  
-|      |       | <span style="color:red;">**Draft of literature review due**</span>                            |            | |      |       | <span style="color:red;">**Problem Set 5**</span>                            |            |   
+                           |            | |    
 |  11   | 2/13 | **Data Collection+Survey Design**                                                           |    6     |
 |  12   | 2/15 | **Analytical methods+observational**                                                           |   6     |
 |      |       | <span style="color:red;">**PhD student run analyses for paper**</span>                            |            |  
-|      |       | <span style="color:red;">**Problem Set 5**</span>                            |            |  
+|      |       | <span style="color:red;">**Problem Set 4**</span>                            |            |  
 |  13   | 2/20 | **Analytical methods + experimental**                                                           |    7     |
 |  14   | 2/22 | **Analytical methods + geospatial**                                                           |    7     |
-|  15   | 2/27 | **Analytical methods + qualitative**                                                           |    8     |
-|      |       | <span style="color:red;">**Problem Set 6**</span>                            |            |  
-|  16   | 2/29 | **Presentations+Feedback**                                                           |    8     |
+|  15   | 2/27 | **Analytical methods + qualitative**                                                           |    8     
+|  16   | 2/29 | **Analytical methods+latent variables**                                                                     |    8     | |
 |      |       | <span style="color:red;">**PhD students begin drafting results section**</span>                            |            |  
-|  17   | 3/5 | **Presentations+Feedback**                                                           |    9     |
-|  18   | 3/7 | <span style="color:red;">**[Exam II](resource/exam2.qmd)** </span>                                                           |    9     |
-|      |       | <span style="color:red;">**All students submit [Phase I](http://localhost:4764/resource/final.html#phase-i) of research project**</span>                            |            |  
+|      |       | <span style="color:red;">**Draft of literature review due**</span>  | |
+|      |  3/1     | <span style="color:red;">[**Problem Set 5 due**](assignment/05-problem-set.qmd)</span>                            |            |  
+|  17   | 3/5 | **Sampling**                                                            |    9      
+|  18   | 3/7 | <span style="color:red;">**Data Collection and Survey Design** </span>                                                           |    9     |
+|      |       | <span style="color:red;">**Note Exam II will be a small assignment in class**</span>                            |            |  
+|      |       | <span style="color:red;">**All students submit [Phase I](/resource/final.qmd) of research project**</span>                            |            |  
 |  19   | 3/12 | **No Class - Spring Break**                                                           |    10     |
 |  20   | 3/14 | **No Class - Spring Break**                                                            |    10     |
-|  21   | 3/19 | **Pre-experimental designs**                                                           |    11     |
+|  21   | 3/19 | **Data Collection and Survey Design**                                                           |    11     |
 |      |       | <span style="color:red;">**Begin drafting methods section**</span>                            |            |  
-|  22   | 3/21 | **Quasi-experimental designs**                                                           |    11     |
-|  23   | 3/26 | **Randomized control trials**                                                           |    12     |
+|  22   | 3/21 | **Ethics**                                                           |    11     |
+|  23   | 3/26 | **Experimental Design**                                                           |    12     |
+|      |       | <span style="color:red;">**Problem Set 6**</span>                            |            |  
+|  24   | 3/28 | **Measurement and Scale Development**                                                           |    12     |
+|  25   | 4/2 | **Observational Design/Randomized Control**                                                           |    13     |
 |      |       | <span style="color:red;">**Problem Set 7**</span>                            |            |  
-|  24   | 3/28 | **Observational designts**                                                           |    12     |
-|  25   | 4/2 | **Recruitment and retention**                                                           |    13     |
-|      |       | <span style="color:red;">**Problem Set 8**</span>                            |            |  
-|  26   | 4/4 | **Ethics**                                                           |    13     |
+|  26   | 4/4 | **Recruitment and retention**                                                           |    13     |
 |      |       | <span style="color:red;">**PhD students complete discussion/conclusion**</span>                            |            |  
 |  27   | 4/9 | **Reproducible research/dissemination**                                                           |    14     |
-|      |       | <span style="color:red;">**Problem Set 9**</span>                            |            |  
-|  28   | 4/11 | **Student presentations I**                                                           |    14     |
-|  29   | 4/16 | **Student presentations II**                                                           |    15     |
+|      |       | <span style="color:red;">**Problem Set 8**</span>                            |            |  
+|  28   | 4/11 | **Review**                                                           |    14     |
+|  29   | 4/16 | **Student presentations I**                                                           |    15     |
 |  30   | 4/18 | <span style="color:red;">**MPH students take Exam III** </span>                                                            |    15     |
 |      |       | <span style="color:red;">**Final Research Product ([Phase I](http://localhost:4764/resource/final.html#phase-i) and [Phase II](http://localhost:4764/resource/final.html#phase-ii)) is due by today**</span>                            |            |  
 : {tbl-colwidths="\[5,20,55,30\]"}

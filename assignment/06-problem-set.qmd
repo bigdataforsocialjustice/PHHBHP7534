@@ -1,45 +1,47 @@
 ---
-title: "Problem set 6"
-date: "2023-03-30"
+title: "Problem Set 6"
+author: "Barboza-Salern0"
+date: "April 3, 2024"
 ---
 
-For this problem set, you'll practice doing regression discontinuity analysis with simulated data from a hypothetical program. This example page will be incredibly useful for you:
+# Latent Class Analysis
+This problem set asks you to replicate an analysis based on a [workshop on Latent Class Analysis (LCA)](https://pop.princeton.edu/events/2020/latent-class-analysis-using-r) provided by Princeton University. The powerpoint slides are located [here](https://pop.princeton.edu/document/5136), the R script is [here](https://pop.princeton.edu/sites/g/files/toruqf496/files/documents/2020Jan_LatentClassAnalysisPratt_LCA_0.zip) and the data file is [here](https://pop.princeton.edu/sites/g/files/toruqf496/files/documents/2020Jan_LatentClassAnalysisPratt_samhsa_2015F_0.zip).
 
-- [Regression discontinuity](/example/rdd.qmd)
+# Class Notes
+The lecture notes are [here](../slides/phhbhp7534_SEM.pdf). The jamovi file that includes my annotated notes from our LCA of greek elections is located [here](../slides/ESS4GR_short_LCA_example.omv) and the table I created of the output to help you is [here](../slides/greek_elections.pdf)
 
-You'll be doing all your R work in R Markdown. You can download a zipped file of a pre-made project here:
+# Procedure
 
-- [{{< fa file-archive >}} `problem-set-6.zip`](/projects/problem-set-6.zip)
+Unzip the files above and get an understanding of the dataset. The data contains information about mental health facilities in 50 states and can be accessed [here](https://www.datafiles.samhsa.gov/study-series/national-mental-health-services-survey-n-mhss-nid13521). The workshop powerpoint has more information about the survey. The steps are simple:
 
-And as always, if you're struggling, *please* talk to me. Work with classmates too (especially for this assignment!). Don't suffer in silence!
+1. Run five latent class models starting with 1 class and ending with 5 classes
+2. Select the best fitting model based on the model fit statistics (AIC, BIC, etc.)
+3. Include a covariate `payasst` and examine how the likelihood of being in each class conditional on the covariate.
+
+# Software
+
+If you are a PhD student you are encouraged to run this using R. You can simply replicate the code in the workshop and make sure you understand how to analyse the results. As you can see from the horrendous graphical output, it is much nicer and easier to run the analyses using jamovi. jamovi will also allow you to copy and paste the tables for the model fit and the graphs describing the final model.
+
+# Turn in
+
+1. A table of model fit that includes a description of the class you chose and why
+2. A brief summary of the classes
+3. How the odds of being in the omitted class change given the covariate in the model.
+
+# Starting you out
+
+The variables used in the structural model for the LCA:
+
+- MHINTAKE: Facility offers mental health intake (Q.A1)
+- MHDIAGEVAL: Facility offers mental health diagnostic evaluation (Q.A1)
+- MHREFERRAL: Facility offers mental health information and/or referral (Q.A1)
+- TREATMT: Facility offers substance use treatment (Q.A1)
+- ADMINSERV: Facility offers administrative or operational services for mental health treatment facilities (Q.A1)
+
+The covariate is:
+
+- PAYASST: Facility offers treatment at no charge or minimal payment to clients who cannot afford to pay
+
+`samhsa2015 <- read.table(file="samhsa_2015F.csv", header=T, as.is=T, sep=",")`
 
 
-## Instructions
-
-1. If you're using R on your own computer, download this file, [*unzip it*](/resource/unzipping.qmd), and double click on the file named `problem-set-6.Rproj`: [{{< fa file-archive >}} `problem-set-6.zip`](/projects/problem-set-6.zip)
-
-   You'll need to make sure you have these packages installed on your computer: `tidyverse`, `broom`, `rdrobust`, `rddensity`, and `modelsummary`. If you try to load one of those packages with `library(tidyverse)` or `library(rdrobust)`, etc., and R gives an error that the package is missing, use the "Packages" panel in RStudio to install it.
-
-   (Alternatively, you can open the project named "Problem Set 6" on RStudio.cloud and complete the assignment in your browser without needing to install anything. [This link should take you to the project](https://rstudio.cloud/spaces/269500/content/4357653)—if it doesn't, log in and look for the project named "Problem Set 6.")
-
-2. Rename the R Markdown file named `your-name_problem-set-6.Rmd` to something that matches your name and open it in RStudio.
-
-3. Complete the tasks given in the R Markdown file. There are questions **marked in bold**. Your job is to answer those questions. You don't need to put your answers in bold or ALL CAPS or anything, and you can remove the question text if you want.
-
-   Fill out code in the empty chunks provided (you can definitely copy, paste, and adapt from other code in the document or [the example page on regression discontinuity](/example/rdd.qmd)—don't try to write everything from scratch!).
-
-   You'll need to insert your own code chunks. Rather than typing them by hand (that's tedious!), use the "Insert" button at the top of the editing window, or press  <kbd>⌥</kbd> + <kbd>⌘</kbd> + <kbd>I</kbd> on macOS, or <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>I</kbd> on Windows.
-
-```{r insert-chunk-button, echo=FALSE, out.width="19%", indent="   ", fig.align="center"}
-knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error = FALSE)
-```
-
-   Remember that you can run an entire chunk by clicking on the green play arrow in the top right corner of the chunk. You can also run lines of code line-by-line if you place your cursor on some R code and press <kbd>⌘</kbd> + <kbd>enter</kbd> (for macOS users) or <kbd>ctrl</kbd> + <kbd>enter</kbd> (for Windows users).
-
-   Make sure you run each chunk sequentially. If you run a chunk in the middle of the document without running previous ones, it might not work, since previous chunks might do things that later chunks depend on.
-
-4. When you're all done, click on the "Knit" button at the top of the editing window and create a Word or PDF version (if you've [installed **tinytex**](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege. **Do not upload a knitted HTML file** (they don't on iCollege).
-
-```{r knit-button, echo=FALSE, out.width="30%", indent="   ", fig.align="center"}
-knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)
-```

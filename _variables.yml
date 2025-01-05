@@ -3,11 +3,11 @@ author: Gia Elise Barboza-Salerno
 instructor:
   name: Dr. Gia Elise Barboza-Salerno
   name_no_title: Gia Barboza-Salerno
-  email: barboza-salerno.1@osu.edu
+  email: "barboza-salerno.1@osu.edu"
   url: "https://bigdataforsocialjustice.github.io/"
   twitter: bigdataforsocialjustice
   github: bigdataforsocialjustice
-  office: "307 Stillman Hall"
+  office: "216F Stillman Hall"
   contact_policy: >-
     Please feel free to contact me at any time. I am always working anyway. You have multiple forms of contact including texting me. I will return your email or text within 3 hours. If I do not, chances are something happened, so try again. Please be aware that I am very busy and I always try my best to respond.
   appointment_url: https://calendly.com/barboza-salerno
@@ -16,14 +16,14 @@ instructor:
 
 course:
   number: "PHHBHP 7534"
-  semester: "Spring 2024"
+  semester: "Spring 2025"
   days: "Tue/Thus"
   time: "9:35 AM - 10:55 AM"
   location: "Smith Lab 2186"
-  dates: "Jan 8– Apr 22, 2024"
+  dates: "Jan 9– Apr 23, 2025"
   github: "https://www.github.com/bigdataforsocialjustice.com/phhbhp7534/"
   url: "https://www.netifly.com/phhbhp7534/"
-  copyright_year: "2024"
+  copyright_year: "2024-25"
   slack: "https://phhbhp7534.slack.com"
 
 university:

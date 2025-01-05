@@ -1,0 +1,64 @@
+---
+title: "Calculating the Reliability Coefficient in R"
+author: "Barboza-Salerno"
+---
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+#### The reliability coefficient: Cronbach's alpha
+Cronbach's alpha is an estimate of total-score reliability for the measurement of a single construct common to all items in a test under the conditions that a one-factor model is correct (i.e., the test is unidimensional). Please note there are other assumptions that must be met but the assumption that the items fall along a single dimension is arguably most important.
+
+
+```{r}
+library(psych)
+library(psychTools)
+```
+
+```{r}
+bfi <- bfi
+head(bfi)
+bfi.dictionary <- bfi.dictionary
+```
+
+#### Recall the Big Five Inventory Measure
+
+The Big Five Inventory is provided in the package `psych` in R. R packages frequently come
+with data that is useful to demonstrate various aspects of the package. You can read more about the inventory here.
+
+```{r}
+describe(bfi)
+ 
+keys.list <-
+  list(agree=c("A1","A2","A3","A4","A5"),conscientious=c("C1","C2","C3","C4","C5"),
+  extraversion=c("E1","E2","E3","E4","E5"),neuroticism=c("N1","N2","N3","N4","N5"),
+  openness = c("O1","O2","O3","O4","O5")) 
+
+ #show the use of the fa.lookup with a dictionary
+keys.lookup(keys.list,bfi.dictionary[,1:4])
+```
+
+#### Data wrangling
+Some of the items need to be recoded, hence the minus sign in the analysis above (super nice way of reverse coding items quickly!). The recoded items below are A1,C4,C5,E1,E2, O2,O5.
+```{r}
+bfi$A1 <- 7-bfi$A1
+bfi$C4 <- 7- bfi$C4
+bfi$C5 <- 7- bfi$C5
+bfi$E1 <- 7- bfi$E1
+bfi$E2 <- 7- bfi$E2
+bfi$O2 <- 7- bfi$O2
+bfi$O5 <- 7- bfi$O5
+```
+
+
+```{r}
+names(bfi)
+```
+From above we can see that the items for `Openness` are in positions 21 through 25. Let's get Cronbach's alpha for `Openness`.
+
+```{r}
+alpha(bfi[, c(21:25)])
+```
+
+
+

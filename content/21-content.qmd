@@ -1,6 +1,6 @@
 ---
-title: "Pre-experimental designs"
-date: "2024-03-19"
+title: "Data Collection+Survey Design"
+date: "2024-02-13"
 ---
 
 ```{r slides-videos, echo=FALSE, include=FALSE}
@@ -19,7 +19,21 @@ slide_details <- tibble::tribble(
 ```
 
 ## Readings
-- {{< fa book >}} Bauman KE. Chapter 4: Intervention designs. In Research Methods for Community Health and Welfare. 1980. p. 23-27 and 30-35.
-- {{< fa book >}} Shadish WR, Cook TD, Campbell DT. Chapter 4: Quasi-experimental designs that lack either a control group or lack pretest observations on the outcome. 2002. p. 106-115.
-- {{< fa book >}} Shadish WR, Cook TD, Campbell DT. Chapter 6: Quasi-experiments: Interrupted time-series designs. 2002. p. 175-181.
-- {{< fa book >}} Allen ML, Hurtado GA, Yon KJ, et al. Feasibility of a parenting program to prevent substance use among Latino youth: a community-based participatory research study. Am J Health Promot 2013; 27(4): 240-244.
+
+- {{< fa book >}} Salazar LF, Crosby RA, DiClemente RJ. Chapter 13: Survey research for health promotion. 2015. p. 384-390.
+- {{< fa book >}} Fanning E. *Formatting a paper-based survey questionnaire: best practices.* Practical Assessment, Research & Evaluation 2005; 10(12): 1-14.
+- {{< fa book >}} Chapter 5 *Using a Community-Inclusive Survey Process to Foster Survey Participation* in Cornelius, L. J., & Harrington, D. (2014). [A social justice approach to survey design and analysis.](https://books.google.com/books?hl=en&lr=&id=RFtuAwAAQBAJ&oi=fnd&pg=PP1&dq=social+justice+approach+to+survey+design&ots=DdB3oebcUd&sig=lTdyCQLtP0-pzWAaTk8R9H3BVGE) Pocket Guide to Social Work Research. 
+
+
+## Lecture Notes
+
+The lecture notes for today can be downloaded [here](/slides/phhbhp7534_survey_design.pdf) as pdf or
+[here](/slides/phhbhp7534_survey_design.pptx) as a PPTX
+
+## In-class examples
+
+- Example 1: creating a sample using random numbers in R [here](/example/random_numbers.qmd)
+- Example 2: analyzing your survey questions quickly and easily using jamovi's `surveymv` package [here](survey_data.omv)
+- Example 3: Web scraping & Natural Language Processing (NLP)
+
+

@@ -50,13 +50,27 @@ library(epitools)
 library(ggplot2)
 library(dplyr)
 ```
+```{r}
+
+```
+
+
+```{r}
+setwd("C:/Users/barboza-salerno.1/Downloads/")
+moderation_example = read.spss("moderation.sav", use.value.labels = F, to.data.frame = T)
+str(moderation_example)
+```
 
 ```{r}
 setwd("C:/Users/barboza-salerno.1/Downloads/")
 moderation_example = tibble::as_tibble(read.spss("moderation.sav", use.value.labels = F, to.data.frame = T))
-moderation_example
 
 ```
+
+```{r}
+str(moderation_example)
+```
+
 
 
 # Learning R: Data Wrangling

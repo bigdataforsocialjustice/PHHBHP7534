@@ -1,0 +1,67 @@
+   ***********************************************************************
+   *                       Package   GWmodel                             *
+   ***********************************************************************
+   Program starts at: 2024-03-16 10:39:20.302162 
+   Call:
+   ggwr.basic(formula = neglect ~ f1 + f2 + f3 + f4, data = neglect_bgs_SP, 
+    bw = bw.gwr, family = "poisson", kernel = "bisquare", adaptive = F, 
+    dMat = DM)
+
+   Dependent (y) variable:  neglect
+   Independent variables:  f1 f2 f3 f4
+   Number of data points: 436
+   Used family: poisson
+   ***********************************************************************
+   *              Results of Generalized linear Regression               *
+   ***********************************************************************
+
+Call:
+NULL
+
+Coefficients:
+          Estimate Std. Error z value             Pr(>|z|)    
+Intercept   1.6157     0.0233   69.21 < 0.0000000000000002 ***
+f1          0.1238     0.0299    4.15             0.000034 ***
+f2          0.1924     0.0223    8.63 < 0.0000000000000002 ***
+f3         -0.4442     0.0388  -11.44 < 0.0000000000000002 ***
+f4         -0.0812     0.0243   -3.35              0.00081 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 3327.5  on 435  degrees of freedom
+Residual deviance: 2218.3  on 431  degrees of freedom
+AIC: 2228
+
+Number of Fisher Scoring iterations: 5
+
+
+ AICc:  2228
+ Pseudo R-square value:  0.33
+   ***********************************************************************
+   *          Results of Geographically Weighted Regression              *
+   ***********************************************************************
+
+   *********************Model calibration information*********************
+   Kernel function: bisquare 
+   Fixed bandwidth: 27 
+   Regression points: the same locations as observations are used.
+   Distance metric: A distance matrix is specified for this model calibration.
+
+   ************Summary of Generalized GWR coefficient estimates:**********
+                Min. 1st Qu.  Median 3rd Qu.  Max.
+   Intercept  1.6157  1.6157  1.6157  1.6157  1.62
+   f1         0.1238  0.1238  0.1238  0.1238  0.12
+   f2         0.1924  0.1924  0.1924  0.1924  0.19
+   f3        -0.4443 -0.4442 -0.4442 -0.4442 -0.44
+   f4        -0.0813 -0.0812 -0.0812 -0.0812 -0.08
+   ************************Diagnostic information*************************
+   Number of data points: 436 
+   GW Deviance: 2218 
+   AIC : 2228 
+   AICc : 2228 
+   Pseudo R-square value:  0.33 
+
+   ***********************************************************************
+   Program stops at: 2024-03-16 10:39:20.570995 

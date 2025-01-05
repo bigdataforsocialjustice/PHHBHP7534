@@ -22,3 +22,20 @@ slide_details <- tibble::tribble(
 
 - {{< fa book >}} Salazar LF, Crosby RA, DiClemente RJ. Chapter 14: Statistical techniques for analyzing observational research in health promotion. 2015. p. 397-427.
 - {{< fa book >}} UCLA Institute for Digital Research and Education. Choosing the correct statistical test in SAS, Stata, SPSS, and R. Available at: https://stats.idre.ucla.edu/other/mult-pkg/whatstat/
+
+## Lecture Notes
+
+The lecture notes for today can be downloaded [here](/slides/logistic_regression.pdf) as pdf or
+[here](/slides/logistic_regression.pptx) as a PPTX
+
+## In-class examples
+
+- Example 1: college enrollment by undergraduate gpa example is [here](/example/gpa-college-enroll.jasp)
+- Example 2: exam passage and hours studied is [here](/example/passing.jasp)
+- Example 3: probability of getting heart disease based on patient medical history and demographics is [here](/example/heart.jasp)
+- Example 4: probability of getting heart disease based on patient medical history and demographics using JAMOVI is [here](/example/heart_disease.omv). JAMOVI allows you to predict the marginals for all independent variables in your model and also combinations of models.
+
+## Example R code
+The example R code to estimate the probability of getting heart disease is [here](/example/logistic.qmd).
+
+You can download the markdown file [here](/example/logistic.Rmd)

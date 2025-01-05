@@ -1,0 +1,44 @@
+---
+title: "Exam II"
+author: "Barboza-Salerno"
+date: "Due: 2024-03-19"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is exam 2. Please email your answers in a word document by 3/19 @ 11:59 with the subject heading "Exam II".
+
+## Reflection
+What, if anything, have you learned so far in this course about research methods in one page? Your answer can refer to anything including software, working with vulnerable populations, or some analysis you did not previously know. As you know, I do not like to emphasize 'being wrong' but rather what is *right* about what is *wrong* so please feel free to do the same.
+
+## Geographical Information Systems
+
+1. Make a map of a health outcome or behavior of interest [similar to what you did in class](content/14-content.qmd). Your map must include two layers, one layer is to contain the health outcome/behavior and the other is to contain a social context. You have many options here. One layer can be a geocoding of some addresses of interest. In addition to what we did in class, you can also see my example mapping geographic differences in hospital discharges in California [here](https://bigdataforsocialjustice.github.io/databootcamp/geographic-differences-in-discharge-dispositions.html). You can also look through my extensive list of public datasets [here](https://bigdataforsocialjustice.github.io/databootcamp/datasets.html). Many of these files can be mapped directly using QGIS, others will be spatially referenced but need to be merged with [Tiger/Line](https://www.census.gov/cgi-bin/geo/shapefiles/index.php) shapefiles as we discussed. Recall this is how I mapped Native American reservations and you can do something similar. In other words, the reservations are context in and of themselves, and Tiger/Line includes other contextual data such as school districts, and voting districts.
+
+Another option is to use the `sociome` library in R and download the [Area Deprivation Index](https://www.neighborhoodatlas.medicine.wisc.edu/). Once downloaded you can export the results to a file format that can be read by QGIS. You can also make your maps using R if you like as well. You can also download the [SVI](https://www.atsdr.cdc.gov/placeandhealth/svi/index.html) and merge it to a polygon boundary from the Census (Tigerline). You can find data to map yourself by looking at one of the many open data portals we have discussed, or by searching google, or by any other means necessary. 
+
+2. Describe the map. Include a brief 2 paragraph summary of your data sources and description of 2-3 interesting conclusions that you notice from the map that would not be possible without a GIS lens.
+
+### Art and Public Health
+
+Pick an art form and describe how that art form can be used to understand a specific community. The art form can be spoken word, poetry, a song, a fictional novel, a painting, some fashion piece or anything else that can be reasonably considered to be art. You can create the art or use someone else's art. You can relate the art to your own life (recall you are the community), or a different community. Be creative. Your response should indicate how the art form can be used to improve some aspect of health and well-being. As an aside, I have previously done a lot of community-based work with youth. Once, I asked them what song described their story. Some of the responses were: 
+
+Ye's (the artist formerly known as Kanye West) Power
+
+```{r echo=FALSE}
+library(vembedr)
+embed_url("https://youtu.be/L53gjP-TtGE")
+```
+
+TI's No Mercy feat. Dream
+```{r echo=FALSE}
+library(vembedr)
+embed_url("https://youtu.be/NX7m0W8fkf4")
+```
+One of the youth also told me that 'Most rappers wanna tell the truth but they cant; look at Biggie and Tupak they were telling the truth. Certain songs give you clues, hear the lyrics, telling you something
+its not just a beat...'
+

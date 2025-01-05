@@ -1,0 +1,60 @@
+---
+title: "Reading files from the web"
+author: "Barboza-Salerno"
+---
+# Downloading Data
+
+I am connecting to the web portal from the [Medical Examiner](https://datacatalog.cookcountyil.gov/Public-Safety/Medical-Examiner-Case-Archive/cjeq-bs86/about_data) below. The dataset contains information about deaths that occurred in Cook County that were under the Medical Examiner’s jurisdiction. We will use this to show how to download, select, filter, and summarize data. The example corresponds to our discussion of variables for this week.
+
+The example requires the following packages.
+```{r}
+library(RSocrata)
+library(dplyr)
+library(ggplot2)
+options(scipen=10000)
+```
+
+```{r}
+
+#https://datacatalog.cookcountyil.gov/api/odata/v4/cjeq-bs86
+df <-   read.socrata("https://datacatalog.cookcountyil.gov/api/odata/v4/cjeq-bs86")
+head(df)
+```
+# Wrangling
+For the sake of example, say that I am interested in infant mortality disparities. I am going download, select, filter and summarize the data in one line of code. Notice that there are over 80,000 records as it is now.
+
+Select three variables, `age`, `gender` and `race`
+```{r}
+df <- read.socrata("https://datacatalog.cookcountyil.gov/api/odata/v4/cjeq-bs86") %>%
+  select(age, gender, race) 
+```
+
+Filter the data to return ages less than or equal to 1 and only Black or White
+```{r}
+df <- read.socrata("https://datacatalog.cookcountyil.gov/api/odata/v4/cjeq-bs86") %>%
+  select(age, gender, race) %>%
+  filter(age <= 1 & (race == "Black" | race == "White")) 
+```
+
+Group by race to get the counts for Black and Whites (query: what would be returned if group_by was NOT used?)
+Return a simple count `n()` and store it in a variable called `number`
+
+```{r}
+df <- read.socrata("https://datacatalog.cookcountyil.gov/api/odata/v4/cjeq-bs86") %>%
+  select(age, gender, race) %>%
+  filter(age <= 1 & (race == "Black" | race == "White")) %>%
+  group_by(race) %>% summarize(number = n())
+
+df
+```
+
+Plot the results using ggplot
+```{r}
+read.socrata("https://datacatalog.cookcountyil.gov/api/odata/v4/cjeq-bs86") %>%
+  select(age, gender, race) %>%
+  filter(age <= 1 & (race == "Black" | race == "White")) %>%
+  group_by(race) %>% summarize(number = n()) %>%
+  ggplot(aes(x = race, y = number)) +
+  geom_bar(stat = "identity") + ggtitle("Disparities in Infant Mortality by Race, Chicago Illinois")
+```
+

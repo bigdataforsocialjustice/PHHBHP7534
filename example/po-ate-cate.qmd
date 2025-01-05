@@ -34,9 +34,9 @@ dag <- dagify(Y ~ P + G,
               coords = list(x = c(Y = 3, P = 1, G = 2),
                             y = c(Y = 1, P = 1, G = 2)))
 
-ggdag_status(dag, use_labels = "label") +
-  guides(color = "none") +  # Remove legend
-  theme_dag()
+#ggdag_status(dag, use_labels = "label") +
+ # guides(color = "none") +  # Remove legend
+ # theme_dag()
 ```
 
 ## Effect of private school on earnings, no controls
@@ -57,14 +57,14 @@ First we load the data from this CSV file (typed from the table in *Mastering 'M
 # group variable in the model, where it would be treated as a dummy variable,
 # but the reference category would be A, not B, so this is a little trick to
 # force it to show results for group A.
-schools <- read_csv("data/public_private_earnings.csv") %>%
-  mutate(private = ifelse(str_detect(enrolled, "ivy"), TRUE, FALSE)) %>%
-  mutate(group_A = ifelse(group == "A", TRUE, FALSE))
+#schools <- read_csv("data/public_private_earnings.csv") %>%
+#  mutate(private = ifelse(str_detect(enrolled, "ivy"), TRUE, FALSE)) %>%
+#  mutate(group_A = ifelse(group == "A", TRUE, FALSE))
 
 # Only look at groups A and B, since C and D don't have people in both public
 # and private schools. | means "or"
-schools_small <- schools %>%
-  filter(group == "A" | group == "B")
+#schools_small <- schools %>%
+ # filter(group == "A" | group == "B")
 ```
 
 ```{r load-data-real, echo=FALSE, warning=FALSE, message=FALSE}

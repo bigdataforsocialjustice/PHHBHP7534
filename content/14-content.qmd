@@ -18,5 +18,67 @@ slide_details <- tibble::tribble(
 )
 ```
 
+
+::: {.callout-tip title="Course Objectives"}
+Use geographical information systems software to conduct exploratory spatial data analysis (ESDA)
+:::
+
 ## Readings
-TBD
+
+### Today's Assignments
+
+- {{< fa book >}} Read [this introduction](https://drive.google.com/file/d/1VRAZIafADY2UIrRebX8hotZEB-sjtrWxvAyPFflH5YI/view) to QGIS available from the [Geographic Information Systems: QGIS](https://guides.nyu.edu/gis/qgis) website at New York University
+
+### Your tasks
+
+-   [ ] Download and install [QGIS](https://qgis.org/en/site/forusers/download.html)
+-   [ ] Navigate to the [Census website](http://data.census.gov) and familiarize yourself with the available topics
+-   [ ] Navigate to the Census Tigerline website and familiarize yourself with the types of boundaries you can map
+-   [ ] Read my write up on [Making Maps in R](https://phhbhp7534.netlify.app/example/mapping%20census.html)
+-   [ ] Download the QGIS plugins HCMGIS (baselayers) and MMQGIS (geocoding)
+
+## Lecture Notes & in-class materials
+
+The lecture notes for today can be downloaded [here](/slides/maps.pdf) which was covered over two days. The second day we focused on student projects including:
+
+- We mappped the context of [vaccine hesitancy in Franklin County](https://github.com/bigdataforsocialjustice/PHHBHP7534/blob/main/vaccine.zip), which used the [COI's redlining data](https://www.diversitydatakids.org/search?search=redlining) **based on 2020 neighborhoods**, the [CDC's SVI](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html) and the [COTA bus routes](https://www.arcgis.com/home/group.html?id=234f107841f540119fea7d45c56978e8#overview). It would be easy to merge in data from the [National Walkability Index](https://www.epa.gov/smartgrowth/national-walkability-index-user-guide-and-methodology) or as I noted in class [Walk Score Professional](https://www.walkscore.com/) can also be downloaded using their API (and R).
+
+![Vaccine hesitancy contexts](vaccine.png)
+
+- We mapped [colon cancer screening](colon.zip) which used the [CDC's Places dataset](https://data.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2023-/yjkw-uj5s/about_data); 
+
+![Target Areas for Colon Cancer Screening](colon.png)
+
+- We used the HCQGIS plugin in QGIS to geocode the [school-based health centers](health.zip) in Cleveland, Ohio. 
+
+![School Health Centers in Cleveland](schoolhealth.png)  
+
+I encourage you to download these files and see if you can make the maps we made in class. I will include a video below that illustrates how I made these maps so you can follow that.
+
+### Software Packages
+
+-   [Add-on Packages &
+    Modules](https://bigdataforsocialjustice.github.io/databootcamp/add-on-packages-&-modules.html)
+    offer additional functionality and are available for all software
+    programs listed above
+
+### 📦 Additional Resources
+
+-   [Analyzing US Census Data](https://walker-data.com/census-r/index.html): The best book on mapping Census data in R
+-   [Creating Beautiful Demographic Maps](http://zevross.com/blog/2018/10/02/creating-beautiful-demographic-maps-in-r-with-the-tidycensus-and-tmap-packages/) Another GREAT resource to facilitate mapping geospatial data in R
+-   [Static Maps](https://learn.r-journalism.com/en/mapping/static_maps/static-maps/) More information about how to use geospatial data in analyses with an introductory focus and videos
+- [Spatial Data Workshop](https://scienceparkstudygroup.github.io/2020-03-12-geospatial-data-workshop/) has a lot of resources 
+
+### Competencies and Knowledge
+
+-   Foundational knowledge: 3, 6
+-   Competencies: 9
+-   MPH Specializations: 4
+-   PhD Specializations: 4
+
+### Student Evaluation Activity for Assessment
+
+-   Literature Review
+-   Start looking at [Phase I](https://phhbhp7534.netlify.app/resource/final) which is coming due
+
+

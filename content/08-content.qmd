@@ -2,6 +2,9 @@
 title: "Measures + Scale Development"
 date: "2024-02-01"
 ---
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
 
 ```{r slides-videos, echo=FALSE, include=FALSE}
 source(here::here("R", "slide-things.R"))
@@ -25,23 +28,16 @@ slide_details <- tibble::tribble(
 - {{< fa book >}} Chapter 3 *Developing a Foundation for the Study* in Cornelius, L. J., & Harrington, D. (2014). [A social justice approach to survey design and analysis.](https://books.google.com/books?hl=en&lr=&id=RFtuAwAAQBAJ&oi=fnd&pg=PP1&dq=social+justice+approach+to+survey+design&ots=DdB3oebcUd&sig=lTdyCQLtP0-pzWAaTk8R9H3BVGE) Pocket Guide to Social Work Research. 
 - {{< fa book >}} Barboza, G. E. (2018). [Latent Classes and Cumulative Impacts of Adverse Childhood Experiences.](https://journals.sagepub.com/doi/full/10.1177/1077559517736628?casa_token=7cXsY6LHIlsAAAAA:TC5ZvFsskmwYjam-Rfk0w0sNe2AcqSuEZyvxzLy0FAh1MZM1hPjCxyuJcFE4bEwdLSNRwKmU1nJbygg) Child Maltreatment, 23(2), 111–125. https://doi.org/10.1177/1077559517736628
 
-### Required Reading for PhD Students (and recommended for others)
 
-::: {.callout-note icon=false}
-
-## Pay Attention
-
-Exam 1 will be administered next class.
-
-:::
-
-### Your tasks to complete today
-
--   [ ] Make sure that you review the study guide for Exam 1 and are prepared to take the Exam next class 
 
 ## Lecture Notes
 
-The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+The lecture notes for today can be downloaded [here](/slides/phhbhp7534_measurement_threats.pdf) as pdf or
+[here](/slides/phhbhp7534_measurement_threats.pptx) as a PPTX
+
+## In-class examples
+
+- Example 1: Calculating reliability coefficients in R [here](/example/cronbachs.qmd)
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
 slide_buttons("/slides/04-slides")

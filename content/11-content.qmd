@@ -23,3 +23,17 @@ slide_details <- tibble::tribble(
 - {{< fa book >}} Salazar LF, Crosby RA, DiClemente RJ. Chapter 13: Survey research for health promotion. 2015. p. 384-390.
 - {{< fa book >}} Fanning E. *Formatting a paper-based survey questionnaire: best practices.* Practical Assessment, Research & Evaluation 2005; 10(12): 1-14.
 - {{< fa book >}} Chapter 5 *Using a Community-Inclusive Survey Process to Foster Survey Participation* in Cornelius, L. J., & Harrington, D. (2014). [A social justice approach to survey design and analysis.](https://books.google.com/books?hl=en&lr=&id=RFtuAwAAQBAJ&oi=fnd&pg=PP1&dq=social+justice+approach+to+survey+design&ots=DdB3oebcUd&sig=lTdyCQLtP0-pzWAaTk8R9H3BVGE) Pocket Guide to Social Work Research. 
+
+
+## Lecture Notes
+
+The lecture notes for today can be downloaded [here](/slides/phhbhp7534_survey_design.pdf) as pdf or
+[here](/slides/phhbhp7534_survey_design.pptx) as a PPTX
+
+## In-class examples
+
+- Example 1: creating a sample using random numbers in R [here](/example/random_numbers.qmd)
+- Example 2: analyzing your survey questions quickly and easily using jamovi's `surveymv` package [here](survey_data.omv)
+- Example 3: Web scraping & Natural Language Processing (NLP)
+
+
